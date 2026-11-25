@@ -1,92 +1,176 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>志望理由書の極意｜三つの極意｜年内入試攻略まるごとゼミ</title>
 <meta name="description" content="型に流し込んだ「機内食みたいな志望理由書」をやめる。嘘も脚色もせず、あなたという素材の味で勝負する、総合型選抜9年選手の志望理由書の書き方。">
-<meta name="theme-color" content="#efe4fb">
+<meta name="theme-color" content="#fbfaf6">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
-<link rel="stylesheet" href="../style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
-.art-top .wrap{padding-block:20px}
-.art{padding-block:8px 72px}
-.art .wrap{max-width:760px}
-.art .sheet{background:var(--glass-strong);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);border:1px solid var(--edge);border-radius:4px;padding:clamp(22px,5vw,52px);min-width:0}
-.crumb{font-size:.74rem;letter-spacing:.14em;color:var(--ink-2);margin:0 0 14px}
-.crumb a{text-decoration:underline;text-underline-offset:3px}
-.kick{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.74rem;letter-spacing:.12em;color:var(--ink-2)}
-.kick .cat{background:var(--ink);color:#fff;padding:2px 12px;border-radius:999px;letter-spacing:.18em}
-.art h1{font-size:clamp(1.6rem,6vw,2.5rem);line-height:1.55;letter-spacing:.06em;margin:16px 0 14px;font-weight:600}
-.art h1 small{display:block;font-size:.5em;letter-spacing:.14em;color:var(--accent);transition:color 1.2s;margin-bottom:6px}
-.art .dek{font-size:1.02rem;line-height:2;margin:0}
-.art .by{margin:16px 0 0;font-size:.78rem;color:var(--ink-2);letter-spacing:.12em}
-.art h2{font-size:clamp(1.15rem,4.2vw,1.5rem);letter-spacing:.08em;line-height:1.6;margin:52px 0 14px;padding-top:16px;border-top:1px solid var(--ink);font-weight:600}
-.art h2 .no{display:block;font-family:var(--f-lat);font-weight:400;font-size:.8rem;letter-spacing:.32em;color:var(--accent);transition:color 1.2s;margin-bottom:4px;text-transform:uppercase}
-.art p{margin:0 0 1.1em;line-height:2.05}
-.art .em{background:linear-gradient(transparent 62%,rgba(111,69,192,.2) 62%)}
-.art blockquote{margin:22px 0;padding:6px 0 6px 18px;border-left:3px solid var(--accent);transition:border-color 1.2s}
-.art blockquote p{margin:0;font-size:1.1rem;line-height:1.9}
-.art blockquote cite{display:block;margin-top:6px;font-style:normal;font-size:.78rem;color:var(--ink-2);letter-spacing:.08em}
-.toc{margin:30px 0 0;padding:18px 20px;border-radius:4px;background:rgba(255,255,255,.75);border:1px solid var(--hair)}
-.toc .h{font-size:.76rem;letter-spacing:.26em;color:var(--accent);margin:0 0 6px;transition:color 1.2s}
-.toc ol{margin:0;padding-left:1.5em;line-height:2}
-.toc a{text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:4px}
-.word{margin:18px 0 22px;padding:14px 16px;border-radius:4px;background:rgba(255,255,255,.75);border:1px solid var(--hair);font-size:.92rem}
-.word b{display:block;letter-spacing:.12em;margin-bottom:4px}
-.word p{margin:0;line-height:1.9}
-.ms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 22px}
-.ms div{background:#fff;border:1px solid var(--hair);border-radius:4px;padding:14px 14px 12px;min-width:0}
-.ms b{display:block;font-size:.98rem;letter-spacing:.08em;margin-bottom:4px}
-.ms span{display:block;font-size:.82rem;line-height:1.8;color:var(--ink-2)}
-.why{list-style:none;margin:18px 0 10px;padding:0}
-.why li{position:relative;padding:0 0 14px 74px;line-height:1.9}
-.why li .q{position:absolute;left:0;top:2px;font-family:var(--f-lat);font-size:.72rem;letter-spacing:.14em;width:62px;text-align:center;padding:2px 0;border:1px solid var(--ink);border-radius:999px}
-.why li.last .q{background:var(--ink);color:#fff}
-.why li small{display:block;font-size:.8rem;color:var(--ink-2);line-height:1.7;margin-top:2px}
-.ask{margin:18px 0 22px;display:grid;gap:8px}
-.ask p{margin:0;padding:10px 16px;background:#fff;border:1px solid var(--hair);border-radius:18px 18px 18px 4px;line-height:1.8;width:fit-content;max-width:100%}
-.words{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:18px 0 22px}
-.words div{border-radius:4px;padding:14px 16px;border:1px solid var(--hair);background:#fff;min-width:0}
-.words .h{font-size:.74rem;letter-spacing:.2em;margin:0 0 6px;color:var(--ink-2)}
-.words .ng s{color:var(--ink-2);text-decoration-thickness:1px}
-.words p{margin:0;line-height:1.9}
-.chk{list-style:none;margin:18px 0 22px;padding:0;border-top:1px solid var(--hair)}
-.chk li{padding:12px 0 12px 34px;border-bottom:1px solid var(--hair);position:relative;line-height:1.85}
-.chk li::before{content:"";position:absolute;left:4px;top:17px;width:16px;height:16px;border:1.5px solid var(--accent);border-radius:3px;transition:border-color 1.2s}
-.chk li b{display:block;letter-spacing:.06em}
-.chk li span{display:block;font-size:.86rem;color:var(--ink-2)}
-.sum{margin:44px 0 0;padding:22px 20px;border-radius:4px;border:1px solid var(--ink);background:rgba(255,255,255,.75)}
-.sum .h{font-size:.76rem;letter-spacing:.26em;color:var(--accent);margin:0 0 6px;transition:color 1.2s}
-.sum p{margin:0;font-size:1.06rem;line-height:2}
-.sum .big{font-size:clamp(1.15rem,4.4vw,1.4rem);margin-top:10px;letter-spacing:.06em}
-.gift-cta{margin:28px 0 0;padding:20px;border-radius:4px;background:#fff;border:1px solid var(--hair)}
-.gift-cta p{margin:0 0 14px;line-height:1.9}
-.src{margin:36px 0 0;font-size:.78rem;color:var(--ink-2);line-height:1.8}
-.src .h{letter-spacing:.2em;margin:0 0 6px}
-.src ul{margin:0;padding-left:1.2em}
-.src a{text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
-.back{display:inline-block;margin-top:30px}
-@media (max-width:520px){.ms,.words{grid-template-columns:minmax(0,1fr)}.why li{padding-left:72px}}
-</style>
-</head>
-<body>
-<canvas id="sumi" aria-hidden="true"></canvas>
-<div class="grain" aria-hidden="true"></div>
-<header class="top art-top"><div class="wrap"><a class="logo" href="../">年内入試攻略まるごとゼミ<small>総合型選抜9年選手運営</small></a></div></header>
-<main>
-<section class="sec art" id="gokui">
-  <div class="wrap">
-  <article class="sheet">
-    <p class="crumb"><a href="../">トップ</a> ／ <a href="../#gokui">三つの極意</a> ／ 志望理由書</p>
-    <div class="kick"><span class="cat">出願書類</span><span>三つの極意 その一</span><span>読む時間 約8分</span></div>
-    <h1><small>志望理由書の極意</small>機内食みたいな<br>志望理由書を、<br>やめる。</h1>
-    <p class="dek">ネットで調べた型に、自分の人生を当てはめる。それでそれっぽい志望理由書はできあがります。でも、それはどれも似たような味がします。この章では、あなたという素材の味で勝負する書き方を伝えます。</p>
-    <p class="by">文・総合型選抜9年選手</p>
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-size:16px;line-height:2;padding-bottom:0}
+.wrap{max-width:600px;margin:0 auto;padding:0 24px}
+ul,ol{list-style:none}
+a{color:inherit}
 
-    <nav class="toc" aria-label="この章の目次">
+.x-pass{display:none}
+/* =====================================================
+   B　原稿用紙と赤ペン
+   ===================================================== */
+[data-t=e]{background:#fbfaf6;color:#23252b;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500}
+[data-t=e] .hd{padding:40px 0 46px;background-image:linear-gradient(#e9c3b4 1px,transparent 1px),linear-gradient(90deg,#e9c3b4 1px,transparent 1px);background-size:30px 30px;background-position:center top;border-bottom:2px solid #c9907c;margin:0 -24px;padding-left:24px;padding-right:24px}
+[data-t=e] .hd .frame{background:#fff;border:1.5px solid #23252b;padding:26px 20px 22px;position:relative;box-shadow:5px 6px 0 rgba(35,37,43,.12)}
+[data-t=e] .hd .frame::before{content:"";position:absolute;left:50%;top:-13px;width:86px;height:24px;margin-left:-43px;background:rgba(240,205,90,.75);transform:rotate(-2deg)}
+[data-t=e] .kick{font-family:"Klee One",cursive;font-weight:600;color:#d9382b;font-size:14px;display:inline-block;border:2px solid #d9382b;border-radius:48% 52% 50% 50%/55% 48% 52% 45%;padding:2px 16px;transform:rotate(-3deg)}
+[data-t=e] .kick i{font-style:normal}
+[data-t=e] .pre{display:block;font-size:12px;letter-spacing:.24em;font-weight:700;margin-top:18px;color:#666}
+[data-t=e] h1{font-family:"Klee One",cursive;font-weight:600;font-size:clamp(31px,9vw,42px);line-height:1.55;margin:6px 0 16px;letter-spacing:.02em}
+[data-t=e] h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(217,56,43,.28) 62%);color:#d9382b}
+[data-t=e] .dek{font-size:14.5px;line-height:2}
+[data-t=e] .by{font-size:12px;color:#666;margin-top:10px;font-family:"Klee One",cursive}
+[data-t=e] h2{font-family:"Klee One",cursive;font-weight:600;font-size:24px;line-height:1.6;margin:72px 0 26px;padding-left:64px;position:relative;min-height:50px;display:flex;align-items:center}
+[data-t=e] h2 .no{position:absolute;left:0;top:50%;margin-top:-25px;width:50px;height:50px;border:2.5px solid #d9382b;color:#d9382b;border-radius:52% 48% 46% 54%/50% 54% 46% 50%;display:grid;place-items:center;font-size:0;transform:rotate(-6deg)}
+[data-t=e] h2 .no::before{content:attr(data-n);font-size:21px;font-family:"Klee One",cursive}
+[data-t=e] p{margin:20px 0}
+[data-t=e] .em{font-weight:900;text-decoration:underline wavy #d9382b 2px;text-underline-offset:6px}
+[data-t=e] blockquote{background:#ffe98a;padding:22px 20px 18px;margin:44px 6px;transform:rotate(-1.4deg);box-shadow:3px 5px 10px rgba(0,0,0,.14);position:relative}
+[data-t=e] blockquote::before{content:"";position:absolute;left:50%;top:-11px;width:70px;height:22px;margin-left:-35px;background:rgba(255,255,255,.7);border:1px solid rgba(0,0,0,.06)}
+[data-t=e] blockquote p{font-family:"Klee One",cursive;font-weight:600;font-size:22px;line-height:1.7;margin:0}
+[data-t=e] cite{font-style:normal;font-size:12px;display:block;margin-top:10px;color:#555}
+[data-t=e] .ms{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0}
+[data-t=e] .ms div{background:#fff;border:1.5px solid #23252b;padding:14px 12px;background-image:linear-gradient(transparent 31px,#dfe6f2 31px);background-size:100% 32px}
+[data-t=e] .ms div:nth-child(odd){transform:rotate(-1deg)}[data-t=e] .ms div:nth-child(even){transform:rotate(.8deg)}
+[data-t=e] .ms b{display:block;font-family:"Klee One",cursive;font-size:17px;font-weight:600;color:#d9382b;line-height:32px}
+[data-t=e] .ms span{font-size:13px;line-height:32px;display:block;line-height:1.85}
+[data-t=e] .why{margin:36px 0}
+[data-t=e] .why li{background:#fff;border:1.5px solid #23252b;padding:16px 16px 14px;margin-bottom:34px;position:relative;font-weight:700;font-size:15.5px;line-height:1.9}
+[data-t=e] .why li:not(:last-child)::after{content:"↓ なぜ？";position:absolute;left:22px;bottom:-31px;color:#d9382b;font-family:"Klee One",cursive;font-weight:600;font-size:15px}
+[data-t=e] .why .lb{display:block;font-size:11px;letter-spacing:.16em;color:#888;font-weight:700}
+[data-t=e] .why small{display:block;font-family:"Klee One",cursive;font-weight:600;color:#d9382b;font-size:14px;margin-top:8px;padding-left:20px;position:relative;line-height:1.7}
+[data-t=e] .why small::before{content:"✎";position:absolute;left:0}
+[data-t=e] .why .last{border:2.5px solid #d9382b;box-shadow:5px 5px 0 rgba(217,56,43,.22)}
+[data-t=e] .why .last::before{content:"◎";position:absolute;right:10px;top:-22px;font-size:40px;color:#d9382b;line-height:1;transform:rotate(-10deg)}
+[data-t=e] .chk{margin:30px 0;background:#fff;border:1.5px solid #23252b;padding:6px 16px}
+[data-t=e] .chk li{padding:14px 0 14px 38px;border-bottom:1px solid #dfe6f2;position:relative}
+[data-t=e] .chk li:last-child{border:0}
+[data-t=e] .chk li::before{content:"";position:absolute;left:2px;top:20px;width:20px;height:20px;border:2px solid #23252b}
+[data-t=e] .chk li::after{content:"✓";position:absolute;left:5px;top:6px;font-size:28px;color:#d9382b;font-family:"Klee One",cursive;transform:rotate(-6deg)}
+[data-t=e] .chk b{display:block;font-weight:900;font-size:15.5px;line-height:1.6}
+[data-t=e] .chk span{display:block;font-size:13.5px;line-height:1.8;color:#444}
+[data-t=e] .sum{margin:70px 0 40px;text-align:center;padding:30px 14px;background-image:linear-gradient(#e9c3b4 1px,transparent 1px),linear-gradient(90deg,#e9c3b4 1px,transparent 1px);background-size:30px 30px;border:2px solid #c9907c;background-color:#fff}
+[data-t=e] .sum .h{display:table;margin-inline:auto!important;background:#fff;padding:0 6px;font-family:"Klee One",cursive;font-weight:600;color:#d9382b;border-bottom:2px solid #d9382b;margin:0 0 8px}
+[data-t=e] .sum p{background:#fff;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:2px 4px}
+[data-t=e] .sum .big{display:block;background:none;font-family:"Klee One",cursive;font-weight:600;font-size:25px;line-height:1.7;margin:20px 0 10px;color:#d9382b}
+
+
+/* ---- E 上書き：赤ペンで全部消す ---- */
+[data-t=e] .x-pass{display:none}
+[data-t=e] .hd{border-bottom:0;padding-top:30px}
+[data-t=e] .x-draft{display:block;margin:0 0 26px;padding:0 4px}
+[data-t=e] .x-draft li{font-family:"Shippori Mincho",serif;font-weight:700;font-size:min(7.4vw,34px);line-height:1.5;color:#9aa0a8;position:relative;display:table;margin:2px 0}
+[data-t=e] .x-draft li::after{content:"";position:absolute;left:-8px;right:-8px;top:52%;height:5px;background:#d9382b;border-radius:3px;transform:rotate(-1.6deg) scaleX(0);transform-origin:left;animation:strike .45s cubic-bezier(.6,0,.2,1) forwards}
+[data-t=e] .x-draft li:nth-child(even)::after{transform:rotate(1.2deg) scaleX(0);--r:1.2deg}
+[data-t=e] .x-draft li:nth-child(1)::after{animation-delay:.3s}[data-t=e] .x-draft li:nth-child(2)::after{animation-delay:.5s}[data-t=e] .x-draft li:nth-child(3)::after{animation-delay:.7s}[data-t=e] .x-draft li:nth-child(4)::after{animation-delay:.9s}[data-t=e] .x-draft li:nth-child(5)::after{animation-delay:1.1s}[data-t=e] .x-draft li:nth-child(6)::after{animation-delay:1.3s}[data-t=e] .x-draft li:nth-child(7)::after{animation-delay:1.5s}
+@keyframes strike{to{transform:rotate(var(--r,-1.6deg)) scaleX(1)}}
+@media (prefers-reduced-motion:reduce){[data-t=e] .x-draft li::after{animation-duration:.01s;animation-delay:0s!important}}
+[data-t=e] .hd .frame{border:3px solid #d9382b;box-shadow:8px 9px 0 #d9382b;padding:30px 18px 24px}
+[data-t=e] .hd .frame::before{display:none}
+[data-t=e] h1{font-size:min(9.3vw,50px);line-height:1.3;letter-spacing:-.02em}
+[data-t=e] h1 em{display:inline-block;white-space:nowrap;font-size:1.55em;line-height:1.15;background:none;position:relative;padding:0 .12em;margin-top:.08em}
+[data-t=e] h1 em::after{content:"";position:absolute;inset:-4px -10px -6px -10px;border:5px solid #d9382b;border-radius:50% 46% 52% 48%/58% 50% 54% 46%;transform:rotate(-3deg)}
+[data-t=e] h2{font-size:29px;line-height:1.5;margin:100px 0 30px;padding-left:0;display:block;min-height:0}
+[data-t=e] h2 .no{position:static;margin:0 0 14px;width:92px;height:92px;border-width:5px;transform:rotate(-8deg)}
+[data-t=e] h2 .no::before{font-size:52px;font-weight:600}
+[data-t=e] .em{display:block;font-family:"Klee One",cursive;font-weight:600;font-size:min(7.6vw,36px);line-height:1.5;color:#d9382b;margin:30px 0 22px;text-decoration:underline .42em rgba(255,214,40,.8);text-underline-offset:-.2em;text-decoration-skip-ink:none}
+[data-t=e] blockquote{margin:60px -8px;padding:34px 22px 26px;transform:rotate(-2.4deg);background:#ffe14d;box-shadow:6px 9px 0 #23252b;border:2.5px solid #23252b}
+[data-t=e] blockquote p{font-size:min(9vw,44px);line-height:1.4;letter-spacing:-.01em}
+[data-t=e] .ms b{font-size:21px}
+[data-t=e] .why li{font-size:17px;border-width:2.5px}
+[data-t=e] .why li:not(:last-child)::after{font-size:22px;bottom:-40px}
+[data-t=e] .why li{margin-bottom:46px}
+[data-t=e] .why small{font-size:16px}
+[data-t=e] .why .last{font-size:min(6vw,26px);line-height:1.6;font-family:"Klee One",cursive;font-weight:600;border-width:5px;box-shadow:9px 9px 0 #d9382b}
+[data-t=e] .why .last::before{font-size:84px;top:-52px;right:4px}
+[data-t=e] .chk b{font-size:18px}
+[data-t=e] .chk li::after{font-size:42px;top:-6px;left:2px}
+[data-t=e] .sum{border:5px solid #d9382b;padding:44px 14px}
+[data-t=e] .sum .big{font-size:min(8.2vw,42px);line-height:1.4;letter-spacing:-.02em}
+
+
+/* ---- 全文版の追加部品 ---- */
+html{scroll-behavior:smooth}
+.progress{position:fixed;left:0;top:0;height:5px;width:0;background:#d9382b;z-index:60}
+.site{background:#23252b;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.08em}
+.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:10px;padding-bottom:10px}
+.site a{text-decoration:none}.site small{display:block;font-size:9.5px;font-weight:500;color:#aaa;letter-spacing:.1em;line-height:1.3}
+.crumb{font-size:11px;letter-spacing:.08em;color:#666;margin:0 0 18px!important}
+.crumb a{text-underline-offset:3px}
+[data-t=e] .hd{padding-top:22px}
+[data-t=e] .meta{font-size:12px;color:#666;margin-top:6px;font-family:"Klee One",cursive}
+[data-t=e] .toc{background:#fff;border:2.5px solid #23252b;padding:22px 18px 14px;margin:46px 0 0;position:relative}
+[data-t=e] .toc .h{position:absolute;left:14px;top:-16px;background:#23252b;color:#fff;font-size:12px;letter-spacing:.2em;font-weight:700;padding:1px 14px;margin:0;transform:rotate(-2deg)}
+[data-t=e] .toc ol{counter-reset:t -1}
+[data-t=e] .toc li{counter-increment:t;border-bottom:1px solid #dfe6f2;position:relative}
+[data-t=e] .toc li:last-child{border:0}
+[data-t=e] .toc a{display:block;padding:11px 0 11px 40px;text-decoration:none;font-weight:700;font-size:14.5px;line-height:1.6}
+[data-t=e] .toc li::before{content:counter(t);position:absolute;left:2px;top:10px;width:26px;height:26px;border:2px solid #d9382b;color:#d9382b;border-radius:52% 48% 46% 54%/50% 54% 46% 50%;display:grid;place-items:center;font-family:"Klee One",cursive;font-weight:600;font-size:15px;transform:rotate(-6deg)}
+[data-t=e] .toc li:first-child::before{content:"序";font-size:13px}
+[data-t=e] strong{font-weight:900;background:linear-gradient(transparent 62%,rgba(255,214,40,.8) 62%)}
+[data-t=e] .chk.x li::after{content:"×";font-size:38px;top:-2px;left:3px}
+[data-t=e] .chk.x li::before{border-color:transparent}
+[data-t=e] .ask{margin:40px 0;display:grid;gap:18px}
+[data-t=e] .ask p{margin:0;background:#fff;border:2.5px solid #d9382b;border-radius:22px;padding:14px 18px;font-family:"Klee One",cursive;font-weight:600;font-size:18px;line-height:1.6;color:#d9382b;max-width:90%;position:relative}
+[data-t=e] .ask p::after{content:"";position:absolute;left:26px;bottom:-14px;width:20px;height:14px;background:#d9382b;clip-path:polygon(0 0,100% 0,15% 100%)}
+[data-t=e] .ask p:nth-child(even){justify-self:end;transform:rotate(1deg)}
+[data-t=e] .ask p:nth-child(odd){transform:rotate(-1deg)}
+[data-t=e] .ask p:nth-child(even)::after{left:auto;right:26px;clip-path:polygon(0 0,100% 0,85% 100%)}
+[data-t=e] .words{display:grid;gap:14px;margin:40px 0}
+[data-t=e] .words div{background:#fff;border:2.5px solid #23252b;padding:16px 16px 14px}
+[data-t=e] .words p{margin:0}
+[data-t=e] .words .h{font-size:12px;font-weight:900;letter-spacing:.1em;color:#666}
+[data-t=e] .words .ng{font-family:"Shippori Mincho",serif;font-weight:700;font-size:min(8.6vw,38px);line-height:1.5;color:#d9382b}
+[data-t=e] .words s{color:#9aa0a8;text-decoration:line-through #d9382b 5px}
+[data-t=e] .word{background:#ffe14d;border:2.5px solid #23252b;box-shadow:5px 7px 0 #23252b;padding:26px 18px 16px;margin:50px 4px 40px;position:relative;transform:rotate(-1.2deg)}
+[data-t=e] .word b{position:absolute;left:14px;top:-17px;background:#d9382b;color:#fff;font-family:"Klee One",cursive;font-weight:600;font-size:15px;padding:1px 16px;transform:rotate(-2deg)}
+[data-t=e] .word p{margin:0;font-weight:700;font-size:15.5px;line-height:1.85}
+[data-t=e] .sum p{line-height:2.3}
+[data-t=e] .gift-cta{margin:60px 0 0;text-align:center;background:#fff;border:2.5px solid #23252b;padding:28px 18px 30px}
+[data-t=e] .gift-cta p{font-weight:900;font-size:16px;line-height:1.9;margin:0 0 20px}
+[data-t=e] .btn{display:inline-block;text-decoration:none;font-weight:900;font-size:16px;padding:14px 30px;border:2.5px solid #23252b}
+[data-t=e] .btn.red{background:#06c755;color:#fff;box-shadow:6px 6px 0 #23252b}
+[data-t=e] .src{margin:60px 0 0;font-size:12.5px}
+[data-t=e] .src .h{font-weight:900;letter-spacing:.1em;font-size:12px;margin:0 0 6px;color:#666}
+[data-t=e] .src li{border-bottom:1px solid #dfe6f2;padding:7px 0;line-height:1.7}
+[data-t=e] .btn.back{display:table;margin:44px auto 0;background:#23252b;color:#fff;font-size:14px}
+footer.end{margin-top:70px;background:#23252b;color:#aaa;text-align:center;font-size:11px;padding:26px 20px 40px;letter-spacing:.06em;line-height:1.9}
+footer.end a{color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;display:block}
+.js [data-t=e] h2.rv .no{transform:rotate(-8deg) scale(.2);opacity:0;transition:transform .5s cubic-bezier(.3,1.7,.5,1),opacity .3s}
+.js [data-t=e] h2.rv.in .no{transform:rotate(-8deg) scale(1);opacity:1}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js [data-t=e] h2.rv .no{transform:rotate(-8deg);opacity:1;transition:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-t="e">
+<div class="progress" id="progress"></div>
+<div class="site"><div class="wrap"><a href="../">年内入試攻略まるごとゼミ<small>総合型選抜9年選手運営</small></a></div></div>
+<main class="wrap">
+  <header class="hd">
+    <p class="crumb"><a href="../">トップ</a> ／ <a href="../#gokui">三つの極意</a> ／ 志望理由書</p>
+    <ul class="x-draft" aria-hidden="true"><li>過去のきっかけ</li><li>現在の私</li><li>未来の夢</li><li>その大学を志望する理由</li><li>研究テーマ</li><li>社会課題</li><li>その解決策</li></ul>
+    <div class="frame">
+      <span class="kick">出願書類<i>・三つの極意 その一</i></span>
+      <span class="pre">志望理由書の極意</span>
+      <h1>機内食みたいな<br>志望理由書を、<br><em>やめる。</em></h1>
+      <p class="dek">ネットで調べた型に、自分の人生を当てはめる。それでそれっぽい志望理由書はできあがります。でも、それはどれも似たような味がします。この章では、あなたという素材の味で勝負する書き方を伝えます。</p>
+      <p class="by">文・総合型選抜9年選手　／　読む時間 約8分</p>
+    </div>
+  </header>
+<nav class="toc" aria-label="この章の目次">
       <p class="h">CONTENTS</p>
       <ol>
         <li><a href="#k0">なぜ、あなたの志望理由書はつまらないのか</a></li>
@@ -99,13 +183,13 @@
       </ol>
     </nav>
 
-    <h2 id="k0"><span class="no">Introduction</span>なぜ、あなたの志望理由書はつまらないのか</h2>
+    <h2 id="k0" class="rv"><span class="no" data-n="序">Introduction</span>なぜ、あなたの志望理由書はつまらないのか</h2>
     <p>検索すれば「志望理由書の書き方」はいくらでも出てきます。「過去のきっかけ」「現在の私」「未来の夢」「その大学を志望する理由」「研究テーマ」。そこに「社会課題」と「その解決策」を足せば、なおよし。生成AIにこの要素を箇条書きで渡せば、かなりいい感じのものが一瞬で仕上がります。</p>
     <p>その結果、<span class="em">機内食みたいな味の志望理由書</span>が量産されました。要素は満たせている。でも主役がはっきりしない。読み手の印象に残らず、その他大勢に埋没します。</p>
     <p>読むのは大学の先生です。毎年、何百食も食べさせられているグルメです。機内食を出された瞬間に、箸を置きます。</p>
     <p>総合型選抜は目立った者勝ちの入試です。なのに、わざわざ目立たない方へ行く理由はありません。必要なのは、誰よりも目立つものをつくろうという野心です。ただし、奇を衒えという意味ではありません。それはたいてい悪目立ちに終わります。</p>
 
-    <h2 id="k1"><span class="no">Gokui 01</span>嘘も脚色もせず、素材の味で勝負する</h2>
+    <h2 id="k1" class="rv"><span class="no" data-n="1">Gokui 01</span>嘘も脚色もせず、素材の味で勝負する</h2>
     <p>機内食が不味いのは、素材の味を殺して型に流し込むからです。だから、嘘も脚色もせず、等身大の自分のままを書きます。</p>
     <blockquote><p>嘘はつくな、面接でかならずバレるから。</p><cite>指導のなかで、いつも生徒に云っていること</cite></blockquote>
     <p>こう云うと、たいていの生徒は「成績が悪くて」「偏差値が高くなくて」と話し始めます。そこがズレています。総合型選抜は、出願資格を満たして受験できている時点で、もう一定認められています。模試の数値とはまったく別の軸で測られるのです。</p>
@@ -119,14 +203,14 @@
     </div>
     <p>どれも、とても知的なことです。これが<strong>経験の棚卸し</strong>の出発点になります。ふだん測られている視線を取っ払って、ありのままのあなたの中から志望理由を考える。これが本質的な志望理由書の書き方です。</p>
 
-    <h2 id="k2"><span class="no">Gokui 02</span>Whyを3回くりかえして、「私が」を出す</h2>
+    <h2 id="k2" class="rv"><span class="no" data-n="2">Gokui 02</span>Whyを3回くりかえして、「私が」を出す</h2>
     <p>面接官は、志望理由書に書かれたことを本当に本人が思っているのかを見ています。求めているのは<span class="em">主体性</span>です。誰かに言わされたのではなく、本心からそれを言っているのか。「誰かに言われたからやる」という答えは、「私が」という主語が欠けているので却下されます。</p>
     <p>主体性を掘り出すには、志望に対して<strong>Whyを3回</strong>くりかえします。教育学部を志望するAさんの例です。</p>
     <ul class="why">
-      <li><span class="q">START</span>教育学部に入りたいです。</li>
-      <li><span class="q">WHY 1</span>将来、中学校の教員になりたいからです。<small>まだ浅い。ここで止まると、面接官には刺さりません。</small></li>
-      <li><span class="q">WHY 2</span>子どもたちに、学ぶ楽しさを教えたいからです。<small>少し良くなった。でも、まだ誰でも言えそうな言葉です。</small></li>
-      <li class="last"><span class="q">WHY 3</span>中学時代、暗記ばかりの勉強で学校に行けなくなりかけたとき、恩師の探究学習に救われました。だから今度は私が、同じように苦しむ生徒の人生の選択肢を広げられる教員になりたいんです。<small>ここで初めて「私が」という主体性と、その人だけのストーリーが出てきます。</small></li>
+      <li><span class="lb">START</span>教育学部に入りたいです。</li>
+      <li><span class="lb">WHY 1</span>将来、中学校の教員になりたいからです。<small>まだ浅い。ここで止まると、面接官には刺さりません。</small></li>
+      <li><span class="lb">WHY 2</span>子どもたちに、学ぶ楽しさを教えたいからです。<small>少し良くなった。でも、まだ誰でも言えそうな言葉です。</small></li>
+      <li class="last"><span class="lb">WHY 3</span>中学時代、暗記ばかりの勉強で学校に行けなくなりかけたとき、恩師の探究学習に救われました。だから今度は私が、同じように苦しむ生徒の人生の選択肢を広げられる教員になりたいんです。<small>ここで初めて「私が」という主体性と、その人だけのストーリーが出てきます。</small></li>
     </ul>
     <p>将来の夢を職業名で考えるのも危険です。社長になりたかった人が、社長になってから「銀行に頭を下げる人生にしたかったわけじゃない」と言い出すのはよくある話です。<span class="em">なりたいもの（What）より、なりたい状態（How）</span>を考えます。行き詰まったら、こんな問いを自分に投げてみてください。</p>
     <div class="ask">
@@ -137,9 +221,9 @@
     </div>
     <p>ロールモデルや反面教師の輪郭が見えてくれば、その人が踏み出した一歩目を、自分も追いかけられます。志望理由が他人事から自分事に変わります。</p>
 
-    <h2 id="k3"><span class="no">Gokui 03</span>不自然さを消す。大学ごとに理由は違う</h2>
+    <h2 id="k3" class="rv"><span class="no" data-n="3">Gokui 03</span>不自然さを消す。大学ごとに理由は違う</h2>
     <p>「ただ聞かれたことに答える」と「心の底からやりたいことを答える」は、質が違います。その差は<span class="em">不自然さ</span>になって表れます。</p>
-    <ul class="chk">
+    <ul class="chk x">
       <li><b>弁護士になりたいのに</b><span>ロールモデルの弁護士や事務所の名前、印象に残った判例があがらない。</span></li>
       <li><b>行動経済学を学びたいのに</b><span>行動経済学者の本を一冊も読んでいない。</span></li>
       <li><b>その大学で学びたいのに</b><span>シラバスを読んでいない。卒業論文のタイトルを見ていない。入りたいゼミが曖昧。</span></li>
@@ -148,7 +232,7 @@
     <p>日本には大学が約800校、学部が約2800、学科などの募集単位に分けると約5500あります。つまり<span class="em">正解も5500通り</span>あります。総合型選抜がマッチング入試と云われる所以です。だから志望理由は大学ごとに考え直します。そして、大学の設問にしっかり答えること。聞かれていないことを答えるのは、それがどんなにスゴくても受験では絶対NGです。</p>
     <p>アドミッション・ポリシーの言葉をなぞるだけでは足りません。目指したいのは、「この勉強をすればこうなれそう、そのための環境として貴学が最適」という表層的な理由ではなく、<strong>私の人生がこの大学に呼ばれている、だから受けにきた</strong>と思わせる雰囲気を、文章からまとわせることです。</p>
 
-    <h2 id="k4"><span class="no">Gokui 04</span>型でつくって、引き算する</h2>
+    <h2 id="k4" class="rv"><span class="no" data-n="4">Gokui 04</span>型でつくって、引き算する</h2>
     <p>型が悪いわけではありません。最初につくる段階では、むしろ型どおりにやった方がいい。でも型どおりのものができたら、そこから<span class="em">イイタイコトを目立たせるための引き算</span>をします。志望理由書にはたいてい字数制限があるからです。2000字あれば全部の要素を入れてもゆとりがありますが、400字なら、一文一文に魂をかけて言葉を選ばなければなりません。</p>
     <p>そこで必要なのが<strong>言葉選びの美学</strong>です。よりわかりやすく、より伝わりやすく、より本質的に、より心に届きやすく、より印象に残りやすい言葉を選ぶための、自分の中の基準です。</p>
     <div class="words">
@@ -158,14 +242,14 @@
     <p>読みやすいリズムの語順か。パッと見て読みやすいか。言葉選びがカッコいいか。こういう感覚は、日頃から本を読み、センスのいい言葉にたくさん触れることでしか磨かれません。心をグワッと持っていかれた歌詞を分析して、志望理由書に応用できる形に換骨奪胎するのも手です。</p>
     <div class="word"><b>宿題</b><p>高橋優「現実という名の怪物と戦う者たち」を、歌詞を見ながら聴いてみてください。</p></div>
 
-    <h2 id="k5"><span class="no">Gokui 05</span>自分の手で書く。書く＝考える</h2>
+    <h2 id="k5" class="rv"><span class="no" data-n="5">Gokui 05</span>自分の手で書く。書く＝考える</h2>
     <p>生成AIを使えば、クオリティの高い志望理由書が一瞬でできます。でも、それで失われるものがあります。<span class="em">考えること</span>です。</p>
     <p>文章を書くとは、頭の中にある完成済みの考えを取り出す作業ではありません。書きながら自分の考えを発見し、整え、少しずつ自分のものにしていく作業です。この過程を飛ばすと中身が形骸化し、面接で質問に答えられなくなります。人に書いてもらった文章は、慣れた人が読むとその箇所だけ浮いて見えます。「この子の文章のレベルじゃ、こんな表現は出ないだろ」と見透かされます。</p>
     <p>AIを使うなとは言いません。ゼロからつくらせるのには向かないけれど、情報の収集や整理は人間より精緻です。おすすめは、書き上げた志望理由書を読み込ませて面接官になってもらう使い方です。</p>
     <div class="word"><b>プロンプト例</b><p>あなたは総合型選抜の面接官です。これから私が入力する「志望理由書」のPDFを読み込み、実際の面接のように30問質問を投げかけてください。</p></div>
     <p>出てきた質問に答える自分を、スマホで撮って見直す。答えに詰まったところが、志望理由書の考えが浅いところです。</p>
 
-    <h2 id="k6"><span class="no">Gokui 06</span>添削でよく直すところ</h2>
+    <h2 id="k6" class="rv"><span class="no" data-n="6">Gokui 06</span>添削でよく直すところ</h2>
     <p>提出する前に、ここまでの話を自分でチェックしてみてください。</p>
     <ul class="chk">
       <li><b>主役は誰か、はっきりしているか</b><span>要素を満たしただけで、あなたが見えない文章になっていないか。</span></li>
@@ -202,12 +286,20 @@
         <li><a href="https://note.com/sougougataao/n/n295f648cebba" target="_blank" rel="noopener">「ロジック通ってないから、全消しで」</a></li>
       </ul>
     </div>
-    <a class="btn back" href="../#gokui">三つの極意へ戻る <span aria-hidden="true">→</span></a>
-  </article>
-  </div>
-</section>
+    
+  <a class="btn back" href="../#gokui">三つの極意へ戻る →</a>
 </main>
-<footer><div class="wrap"><a class="logo" href="../">年内入試攻略まるごとゼミ<small>総合型選抜9年選手運営</small></a><div class="legal"><small>© 年内入試攻略まるごとゼミ</small></div></div></footer>
-<script src="../script.js"></script>
+<footer class="end"><a href="../">年内入試攻略まるごとゼミ</a>総合型選抜9年選手運営<br>© 年内入試攻略まるごとゼミ</footer>
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  function f(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?(h.scrollTop||document.body.scrollTop)/m*100:0)+'%';}
+  addEventListener('scroll',f,{passive:true});f();
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -10% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

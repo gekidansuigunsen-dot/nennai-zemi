@@ -313,3 +313,6 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 .zoom .btn{margin-top:24px}
 .zoom .zh{margin:12px 0 0;font-size:.8rem;color:var(--ink-2)}
 @media (max-width:600px){.zoom{padding:24px 18px}.zoom .zl br{display:none}.zoom .zf{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.zoom .zok{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.zoom .zok li{display:inline-flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:999px;background:#fff;border:1px solid var(--accent);font-size:.84rem;letter-spacing:.06em;transition:border-color 1.2s}
+.zoom .zok svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke 1.2s}

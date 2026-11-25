@@ -96,3 +96,11 @@
   if(still){addEventListener('scroll',function(){requestAnimationFrame(frame);},{passive:true});}
   addEventListener('resize',function(){size();if(still)requestAnimationFrame(frame);});
 })();
+
+/* スマホのハンバーガーメニュー */
+(function(){var b=document.querySelector('.hb'),m=document.getElementById('menu');if(!b||!m)return;
+function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'メニューを閉じる':'メニューを開く');}
+b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
+m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+document.addEventListener('click',function(e){if(m.classList.contains('open')&&!m.contains(e.target))set(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();

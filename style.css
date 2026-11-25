@@ -287,3 +287,6 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 #gokui div.gk > *:not(.go),#jiji div.nt > *:not(.more){opacity:.55}
 #gokui div.gk .go,#jiji div.nt .more{color:var(--ink-2)}
 @media (hover:hover) and (pointer:fine){#jiji a.nt:hover{background:var(--accent);border-color:var(--accent)}}
+
+/* 特典：攻略の手引きの説明ページへの入口 */
+.gift .about{margin-top:16px;background:rgba(255,255,255,.7)}

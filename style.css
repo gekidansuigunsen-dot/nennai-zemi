@@ -222,3 +222,8 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 .prof > div:first-child{display:grid;place-items:center}
 .portrait-img{display:block;width:180px;height:180px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 6px rgba(255,255,255,.7)}
 @media (max-width:760px){.portrait-img{width:150px;height:150px}}
+
+/* note記事のサムネイル（noteの見出し画像）。読み込めないときは画像だけ消えて文字のカードに戻る */
+.nt{overflow:hidden}
+.nt .thumb{display:block;width:calc(100% + 48px);max-width:none;margin:-22px -24px 8px;aspect-ratio:1280/670;object-fit:cover;background:rgba(255,255,255,.5);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.nt:hover .thumb{transform:scale(1.03)}

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>【超図解】AIのニュースが止まらない。2026年11月の6本｜ゼロから時事</title>
+<meta name="description" content="リーマン予想の証明、NVIDIAのCEO辞任と復帰、史上最大の上場、AIの買い物代行、AI楽曲の削除、開発の上限案。2026年11月のAIニュース6本を、高校生向けに図解でざっくり解説。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="side" aria-label="目次">
+  <h2>INDEX</h2>
+  <a href="#news1" data-nav="news1">① AIが数学の難問を解いた？</a>
+  <a href="#news2" data-nav="news2">② 革ジャンCEO、11日間の退場</a>
+  <a href="#news3" data-nav="news3">③ 史上最大、13兆円の上場</a>
+  <a href="#news4" data-nav="news4">④ AIが「おつかい」に行く</a>
+  <a href="#news5" data-nav="news5">⑤ AIの曲、2700万曲を削除へ</a>
+  <a href="#news6" data-nav="news6">⑥ 作る側から「ブレーキ」案</a>
+  <a href="#matome" data-nav="matome">まとめ・考えてみよう</a>
+</nav>
+
+<div class="page" id="top">
+
+<header class="topbar">
+  <a class="brand" href="#top">ゼロから<b>時事</b></a>
+  <nav class="chips" aria-label="ニュース番号">
+    <a href="#news1" data-nav="news1" aria-label="ニュース1">①</a>
+    <a href="#news2" data-nav="news2" aria-label="ニュース2">②</a>
+    <a href="#news3" data-nav="news3" aria-label="ニュース3">③</a>
+    <a href="#news4" data-nav="news4" aria-label="ニュース4">④</a>
+    <a href="#news5" data-nav="news5" aria-label="ニュース5">⑤</a>
+    <a href="#news6" data-nav="news6" aria-label="ニュース6">⑥</a>
+  </nav>
+</header>
+
+<!-- ============ 表紙 ============ -->
+<section class="band b-yellow cover dots">
+  <span class="issue">AI編 ／ 2026年11月号</span>
+  <h1>AIのニュースが<br><span>止まらない。</span></h1>
+  <p class="sub">数学、半導体、お金、<br>買い物、音楽、ルール。<br>この1か月の6本を、図解でざっくり。</p>
+  <div class="meta"><span>高校生向け</span><span>読了 約8分</span><span>2026.11.26 時点</span></div>
+  <div class="hero">
+    <svg viewBox="0 0 400 290" role="img" aria-label="中央にAIと書かれた半導体チップ。まわりに数式、お金、音楽、買い物かごのマーク">
+      <defs><pattern id="ht" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="2" fill="#0c0c10"/></pattern></defs>
+      <circle class="spin" cx="200" cy="148" r="116" fill="none" stroke="#0c0c10" stroke-width="40" stroke-dasharray="9 21.37"/>
+      <circle cx="200" cy="148" r="90" fill="#fff" stroke="#0c0c10" stroke-width="4"/>
+      <circle cx="200" cy="148" r="88" fill="url(#ht)" opacity=".16"/>
+      <g stroke="#0c0c10" stroke-width="7" stroke-linecap="round">
+        <path d="M164 82v-16M188 82v-16M212 82v-16M236 82v-16M164 230v-16M188 230v-16M212 230v-16M236 230v-16M134 112h-16M134 136h-16M134 160h-16M134 184h-16M282 112h-16M282 136h-16M282 160h-16M282 184h-16"/>
+      </g>
+      <rect x="138" y="86" width="124" height="124" rx="14" fill="#0c0c10"/>
+      <rect x="152" y="100" width="96" height="96" rx="6" fill="none" stroke="#ffe500" stroke-width="3"/>
+      <text x="200" y="170" text-anchor="middle" font-family="Anton,sans-serif" font-size="62" fill="#ffe500" letter-spacing="3">AI</text>
+      <g font-family="'Zen Kaku Gothic New',sans-serif" font-weight="900" text-anchor="middle">
+        <g transform="rotate(-12 58 62)"><circle cx="58" cy="62" r="34" fill="#2038ff" stroke="#0c0c10" stroke-width="4"/><text x="58" y="77" font-size="42" fill="#fff">∑</text></g>
+        <g transform="rotate(10 344 58)"><circle cx="344" cy="58" r="34" fill="#ff5a1f" stroke="#0c0c10" stroke-width="4"/><text x="344" y="74" font-size="44" fill="#0c0c10">$</text></g>
+        <g transform="rotate(8 52 232)"><circle cx="52" cy="232" r="34" fill="#ff3fb4" stroke="#0c0c10" stroke-width="4"/><text x="52" y="248" font-size="42" fill="#0c0c10">♪</text></g>
+        <g transform="rotate(-9 348 236)"><circle cx="348" cy="236" r="34" fill="#d4ff3a" stroke="#0c0c10" stroke-width="4"/>
+          <path d="M326 222h8l7 22h20l5-15h-28" fill="none" stroke="#0c0c10" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="344" cy="252" r="3.5" fill="#0c0c10"/><circle cx="359" cy="252" r="3.5" fill="#0c0c10"/></g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ プロローグ ============ -->
+<section class="band b-cream">
+  <div class="center"><span class="stamp pop">PROLOGUE</span></div>
+  <p class="tate rv">十一月。<br><em>ＡＩ</em>が、<br>世界を揺らした。</p>
+  <p class="lead rv">数学者が160年以上解けなかった問題に、<br><mark>AIが「解けた」と名乗りを上げた。</mark></p>
+  <p class="lead rv">世界一のAIチップ企業では、<br>社長が消えて、11日で戻ってきた。</p>
+  <p class="lead rv">AIをつくる会社は、<br><mark>史上最大のお金</mark>を集めた。</p>
+  <div class="vdots rv"><i></i><i></i><i></i></div>
+  <p class="lead big rv">バラバラに見えるニュース。<br>でも、1本の線でつながっている。</p>
+  <p class="lead rv">6本を順番に見ていこう。<small>気になる番号から読んでもOK</small></p>
+</section>
+
+<!-- ============ 目次 ============ -->
+<section class="band b-ink index">
+  <h2>INDEX</h2>
+  <ol>
+    <li class="rv"><a href="#news1"><span class="n">①</span><span class="ttl">AIが数学の難問を解いた？<small>科学 ／ リーマン予想</small></span><span class="min">約2分</span></a></li>
+    <li class="rv"><a href="#news2"><span class="n">②</span><span class="ttl">革ジャンCEO、11日間の退場<small>半導体 ／ NVIDIA</small></span><span class="min">約1.5分</span></a></li>
+    <li class="rv"><a href="#news3"><span class="n">③</span><span class="ttl">史上最大、13兆円の上場<small>お金 ／ アンソロピック</small></span><span class="min">約1.5分</span></a></li>
+    <li class="rv"><a href="#news4"><span class="n">④</span><span class="ttl">AIが「おつかい」に行く<small>くらし ／ AIエージェント</small></span><span class="min">約1分</span></a></li>
+    <li class="rv"><a href="#news5"><span class="n">⑤</span><span class="ttl">AIの曲、2700万曲を削除へ<small>文化 ／ 音楽配信</small></span><span class="min">約1分</span></a></li>
+    <li class="rv"><a href="#news6"><span class="n">⑥</span><span class="ttl">作る側から「ブレーキ」案<small>ルール ／ 超知能</small></span><span class="min">約1分</span></a></li>
+  </ol>
+</section>
+
+<!-- ============ ① リーマン予想 ============ -->
+<section class="band b-blue chap dots" id="news1" data-ch="news1">
+  <span class="no">NEWS</span>
+  <div class="circ">①</div>
+  <p class="kicker">科学</p>
+  <h2>AIが数学の<br>難問を解いた？</h2>
+  <div class="illo rv">
+    <svg viewBox="0 0 380 250" role="img" aria-label="素数が散らばる図と、点が一直線に並ぶ図">
+      <g font-family="Anton,sans-serif" fill="#fff">
+        <text x="22" y="70" font-size="46">2</text><text x="70" y="118" font-size="34">3</text><text x="28" y="160" font-size="40">5</text>
+        <text x="96" y="58" font-size="30">7</text><text x="92" y="190" font-size="36">11</text><text x="140" y="130" font-size="28">13</text>
+        <text x="150" y="80" font-size="24" opacity=".7">17</text><text x="36" y="214" font-size="24" opacity=".7">19</text><text x="150" y="212" font-size="22" opacity=".55">23</text>
+      </g>
+      <path d="M186 124h34m-12-10 12 10-12 10" fill="none" stroke="#d4ff3a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M236 222h130" stroke="#fff" stroke-width="3"/>
+      <path class="draw" style="--len:210" d="M300 226V18" stroke="#d4ff3a" stroke-width="5" stroke-dasharray="210"/>
+      <g fill="#fff" stroke="#0c0c10" stroke-width="3"><circle cx="300" cy="44" r="9"/><circle cx="300" cy="82" r="9"/><circle cx="300" cy="112" r="9"/><circle cx="300" cy="150" r="9"/><circle cx="300" cy="186" r="9"/></g>
+      <text x="300" y="246" text-anchor="middle" font-family="'Zen Kaku Gothic New',sans-serif" font-weight="900" font-size="13" fill="#d4ff3a">ぜんぶ一直線に並ぶ？</text>
+      <text x="86" y="246" text-anchor="middle" font-family="'Zen Kaku Gothic New',sans-serif" font-weight="900" font-size="13" fill="#fff">バラバラに見える素数</text>
+    </svg>
+  </div>
+  <div class="sum rv">
+    <h3>まとめ</h3>
+    <ul>
+      <li>167年間だれも解けなかった「リーマン予想」に、AIと数学者のペアが証明を出した</li>
+      <li>コンピューターによる検査は「正しい」と判定</li>
+      <li>ただし、中身を理解できた人間はまだいない</li>
+    </ul>
+  </div>
+
+  <p class="lead rv" style="margin-top:60px">11月20日。<br>AI企業アンソロピックの数学者<br>レヴェント・アルポゲ氏が発表した。</p>
+  <div class="quote rv">AIの「Claude」と一緒に、<mark>リーマン予想の証明を見つけた</mark>と考えている。<cite>アルポゲ氏が自分のサイトで公開した声明の要旨</cite></div>
+
+  <details class="term rv">
+    <summary>リーマン予想ってなに？</summary>
+    <div>2、3、5、7、11…と続く<b>素数</b>は、どんなリズムで現れるのか。その規則にかかわる予想で、1859年にドイツの数学者リーマンが言い出した。正しいと信じられてきたけれど、167年間だれも証明できなかった。解いた人に100万ドルが出る「ミレニアム懸賞問題」の1つでもある。</div>
+  </details>
+
+  <p class="lead rv">驚きは、その「出し方」にもあった。<br>証明は論文ではなく、<br><mark>プログラムのコード</mark>だったのだ。</p>
+  <div class="num rv">
+    <div class="cap">公開された証明の長さ</div>
+    <div class="v">1700<small>万行</small></div>
+    <div class="note">データ量は約1.3GB。人が読み通せる量ではない</div>
+  </div>
+
+  <details class="term rv">
+    <summary>なぜコードで証明？「Lean」とは</summary>
+    <div><b>Lean（リーン）</b>は、数学の証明をコンピューターが1行ずつ点検できる言語。人間の「たぶん合ってる」を許さず、論理の飛びがあればエラーになる。いわば<b>証明の自動採点機</b>だ。</div>
+  </details>
+
+  <ol class="tl rv">
+    <li><time>11.20</time><b>証明のコードを公開</b><span>終盤ではClaudeが重要なひらめきを出した、と本人は説明している。</span></li>
+    <li class="hot"><time>11.21</time><b>Leanの開発コミュニティが「正しい」と声明</b><span>複数の独立した検査プログラムで確認。MITの数学者も検証結果を公表した。</span></li>
+    <li><time>NOW</time><b>数学者たちが「中身」を解読中</b><span>人が読める形の論文は、まだない。</span></li>
+  </ol>
+
+  <div class="vs rv">
+    <div class="yes"><h4>確認できたこと</h4><p>コードは最後までエラーなく通った</p><p>証明している内容は、たしかにリーマン予想そのもの</p></div>
+    <div class="ng"><h4>まだのこと</h4><p>なぜ成り立つのかを、人間が説明すること</p><p>懸賞金を出すクレイ数学研究所の「解決済み」認定</p></div>
+  </div>
+
+  <div class="quote rv">証明に使われた手法を読み解くには、<mark>時間がかかる</mark>。<cite>数学者テレンス・タオ氏がブログで示した見方（報道より）</cite></div>
+
+  <p class="t rv">心配する声もある。数学者の団体からは「人間に理解できない証明をAIが生む研究のやり方」と「科学の力がAI企業に集まること」への懸念が出た。</p>
+
+  <div class="point rv">
+    <p>「正しい」と「わかった」は、<br>別のことになった。</p>
+    <small>機械が合っていると保証しても、人間がその理由を知らない。<br>そんな知識を、私たちは「知っている」と言えるだろうか。</small>
+  </div>
+</section>
+
+<!-- ============ ② NVIDIA ============ -->
+<section class="band b-lime chap dots" id="news2" data-ch="news2">
+  <span class="no">NEWS</span>
+  <div class="circ">②</div>
+  <p class="kicker">半導体</p>
+  <h2>革ジャンCEO、<br>11日間の退場</h2>
+  <div class="illo rv">
+    <svg viewBox="0 0 380 250" role="img" aria-label="革ジャンのイラストと、11 DAYSのスタンプ">
+      <path d="M112 66 164 34l26 20 26-20 52 32 50 44-22 40-24-14v102H108V136l-24 14-22-40z" fill="#0c0c10"/>
+      <path d="M164 34l26 62-22 12-30-52zM216 34l-26 62 22 12 30-52z" fill="#2b2b33" stroke="#d4ff3a" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M190 96v142" stroke="#d4ff3a" stroke-width="4" stroke-dasharray="3 6"/>
+      <path d="M124 196h44M212 196h44" stroke="#d4ff3a" stroke-width="3"/>
+      <g transform="translate(222 128)"><rect width="34" height="34" rx="4" fill="#d4ff3a"/><rect x="8" y="8" width="18" height="18" fill="#0c0c10"/>
+        <path d="M9-6v6M17-6v6M25-6v6M9 34v6M17 34v6M25 34v6M-6 9h6M-6 17h6M-6 25h6M34 9h6M34 17h6M34 25h6" stroke="#d4ff3a" stroke-width="3"/></g>
+      <g transform="rotate(12 318 58)"><rect x="262" y="34" width="112" height="48" rx="4" fill="#fff" stroke="#0c0c10" stroke-width="4"/>
+        <text x="318" y="70" text-anchor="middle" font-family="Anton,sans-serif" font-size="32" fill="#0c0c10" letter-spacing="2">11 DAYS</text></g>
+    </svg>
+  </div>
+  <div class="sum rv">
+    <h3>まとめ</h3>
+    <ul>
+      <li>AIチップ世界トップ、NVIDIAの創業者CEOが突然辞任</li>
+      <li>取締役会は「戻さない」と言ったが、11日後に全会一致で復帰</li>
+      <li>判断の決め手に「国家安全保障」が出てきた</li>
+    </ul>
+  </div>
+
+  <details class="term rv" style="margin-top:54px">
+    <summary>NVIDIA（エヌビディア）ってどんな会社？</summary>
+    <div>AIを動かすための半導体（<b>GPU</b>）で世界トップの会社。ChatGPTのようなAIは、このチップを何万個も並べた巨大な施設で動いている。AIが車なら、NVIDIAは<b>エンジン</b>をほぼ独占しているメーカーだ。創業者のジェンスン・フアン氏は、黒い革ジャンがトレードマーク。</div>
+  </details>
+
+  <ol class="tl rv">
+    <li class="hot"><time>11.12</time><b>フアンCEOが辞任</b><span>外国の<ruby>諜報<rt>ちょうほう</rt></ruby>活動（スパイ活動）の標的になっていた、との報道などを受けたもの。財務トップのコレット・クレス氏が暫定CEOに。</span></li>
+    <li><time>11.17</time><b>取締役会「復帰させる意向はない」</b><span>同じ日、中国向けAIチップ「H200」の出荷を止めたことも明かした。</span></li>
+    <li><time>11.18</time><b>フアン氏、Xで復帰に意欲</b><span>社員や投資家から「戻ってほしい」という声が届いている、と投稿。</span></li>
+    <li class="hot"><time>11.23</time><b>全会一致で復帰が決定</b><span>取締役会は米政府の高官から意見を聞き、「復帰は国家安全保障上のリスクにならない」と判断した。</span></li>
+  </ol>
+
+  <p class="lead rv">復帰の発表を受けて、<br>株価は<mark>一時35%ほど急上昇</mark>。<small>ただし翌日には上げ幅を戻している</small></p>
+
+  <p class="t rv">不思議なのは、民間企業の社長人事に<b>政府の意見</b>が入っていること。トランプ大統領自身も、復帰に関わったことを認める発言をしたと報じられている。</p>
+
+  <div class="card rv">
+    <h4>背景にあるのは「チップの行き先」</h4>
+    <p>アメリカは、高性能なAIチップが中国に渡ることを制限している。11月23日には、NVIDIA製チップを中国へ横流しした疑いが持たれているシンガポールの企業を、取引制限リストに加えた。<mark>フアン氏への議会の追及も続いている。</mark></p>
+    <p class="src">出所：AI Watch、Impress Watch、The Neuron ほか</p>
+  </div>
+
+  <div class="point rv">
+    <p>AIチップは、もう<br>「ただの部品」ではない。</p>
+    <small>石油や兵器と同じように、国どうしの力関係を左右する<br>「戦略物資」として扱われはじめている。</small>
+  </div>
+</section>
+
+<!-- ============ ③ IPO ============ -->
+<section class="band b-orange chap dots" id="news3" data-ch="news3">
+  <span class="no">NEWS</span>
+  <div class="circ">③</div>
+  <p class="kicker">お金</p>
+  <h2>史上最大、<br>13兆円の上場</h2>
+  <div class="sum rv">
+    <h3>まとめ</h3>
+    <ul>
+      <li>AI「Claude」の開発会社アンソロピックが、アメリカの株式市場に上場</li>
+      <li>集めたお金は約13兆円。上場時の調達額として史上最大</li>
+      <li>株価は急上昇のあと、5日で売り出し価格を下回った</li>
+    </ul>
+  </div>
+
+  <div class="num rv" style="margin-top:56px">
+    <div class="cap">上場で集めたお金</div>
+    <div class="v">813<small>億ドル</small></div>
+    <div class="note">日本円で約13兆円。会社全体の評価額は約240兆円</div>
+  </div>
+
+  <div class="bars rv">
+    <div class="row"><div class="lab"><span>アンソロピック（2026年11月）</span><b>813<small>億ドル</small></b></div><div class="bar" style="--w:100%"><i></i></div></div>
+    <div class="row"><div class="lab"><span>スペースX（2026年6月）</span><b>750<small>億ドル</small></b></div><div class="bar alt" style="--w:92%"><i></i></div></div>
+    <p class="src" style="color:inherit;opacity:.8">これまでの最大だったスペースXを上回った。出所：AFP、Forbes JAPAN ほか</p>
+  </div>
+
+  <details class="term rv">
+    <summary>上場（IPO）ってなに？</summary>
+    <div>会社の株を、だれでも売り買いできる市場に初めて出すこと。会社は株を売って、大きなお金を一気に集められる。かわりに、株主から「ちゃんと利益を出して」と見られ続けることになる。</div>
+  </details>
+
+  <p class="lead rv">では、株価はどう動いたか。</p>
+
+  <div class="card rv">
+    <h4>アンソロピック株の値動き（1株あたり）</h4>
+    <svg viewBox="0 0 340 220" role="img" aria-label="株価の推移。公開価格83ドル、初値111.5ドル、初日終値97.17ドル、11月24日終値81.91ドル">
+      <path d="M30 138.4h300" stroke="#ff5a1f" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="330" y="132" text-anchor="end" font-family="'Zen Kaku Gothic New',sans-serif" font-weight="900" font-size="11" fill="#ff5a1f">売り出し価格 83ドル</text>
+      <path class="draw" style="--len:330" d="M50 138.4 130 47.2 210 93.1 290 141.9" fill="none" stroke="#0c0c10" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="330"/>
+      <g fill="#fff" stroke="#0c0c10" stroke-width="4"><circle cx="50" cy="138.4" r="7"/><circle cx="130" cy="47.2" r="7"/><circle cx="210" cy="93.1" r="7"/><circle cx="290" cy="141.9" r="7" fill="#ff5a1f"/></g>
+      <g font-family="Anton,sans-serif" font-size="20" fill="#0c0c10" text-anchor="middle">
+        <text x="50" y="166">83</text><text x="130" y="30">111.5</text><text x="218" y="78">97.17</text><text x="290" y="170">81.91</text>
+      </g>
+      <g font-family="'Zen Kaku Gothic New',sans-serif" font-weight="700" font-size="11" fill="#333" text-anchor="middle">
+        <text x="50" y="206">11/18</text><text x="50" y="218">売り出し</text>
+        <text x="130" y="206">11/19</text><text x="130" y="218">最初の値</text>
+        <text x="210" y="206">11/19</text><text x="210" y="218">初日の終わり</text>
+        <text x="290" y="206">11/24</text><text x="290" y="218">終値</text>
+      </g>
+    </svg>
+    <p class="src">単位：ドル。出所：朝日新聞、日本経済新聞</p>
+  </div>
+
+  <p class="t rv">最初は売り出し価格より34%高い値がついた。ところが5日後の24日には、一時75ドル台まで下がり、<b>売り出し価格を割り込んだ</b>。</p>
+
+  <div class="vs rv">
+    <div class="yes"><h4>期待</h4><p>主要なAI開発企業として、初めてのアメリカ上場</p><p>AIはこれから、あらゆる仕事に入っていく</p></div>
+    <div class="ng"><h4>不安</h4><p>AI開発には、チップや電気代など巨額の費用がかかる</p><p>それに見合う利益を本当に出せるのか</p></div>
+  </div>
+
+  <div class="point rv">
+    <p>お金は集まった。<br>問われるのは「稼げるか」。</p>
+    <small>期待だけで値段が上がりすぎることを「バブル」と呼ぶ。<br>AIがそうなのかどうか、世界中の投資家が見極めようとしている。</small>
+  </div>
+</section>
+
+<!-- ============ ④ エージェント ============ -->
+<section class="band b-paper chap dots" id="news4" data-ch="news4">
+  <span class="no">NEWS</span>
+  <div class="circ">④</div>
+  <p class="kicker">くらし</p>
+  <h2>AIが「おつかい」<br>に行く</h2>
+  <div class="sum rv">
+    <h3>まとめ</h3>
+    <ul>
+      <li>AIが商品を探して、支払いまで済ませる機能が登場</li>
+      <li>「答えるAI」から「動くAI」へ</li>
+      <li>お店側は、歓迎と拒否に分かれている</li>
+    </ul>
+  </div>
+
+  <details class="term rv" style="margin-top:54px" open>
+    <summary>AIエージェントとは</summary>
+    <div>質問に答えるだけでなく、人のかわりに<b>作業そのもの</b>をやってくれるAIのこと。調べる、予約する、買う、といった行動まで任せられる。</div>
+  </details>
+
+  <p class="lead rv">11月13日、OpenAIが<br>「ChatGPT Wallet」を始めた。<br><mark>AIが支払いまで代行する</mark>仕組みだ。</p>
+
+  <ol class="steps rv">
+    <li><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M8 10h38v26H24l-10 9v-9H8z" fill="#2038ff" stroke="#0c0c10" stroke-width="3" stroke-linejoin="round"/><path d="M17 20h20M17 27h13" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+      <div><b>① 人がたのむ</b><span>「雨の日用のスニーカー、1万円以内で」</span></div></li>
+    <li><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="23" cy="23" r="13" fill="#fff" stroke="#0c0c10" stroke-width="4"/><path d="M33 33l13 13" stroke="#0c0c10" stroke-width="6" stroke-linecap="round"/></svg>
+      <div><b>② AIが探して比べる</b><span>いくつものお店を見て、候補をしぼる</span></div></li>
+    <li class="key"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="19" fill="#0c0c10"/><path d="M17 28l7 7 13-15" fill="none" stroke="#d4ff3a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>③ 人が「OK」を出す</b><span>顔認証や指紋で、買うたびに本人が確認</span></div></li>
+    <li><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="6" y="13" width="42" height="28" rx="4" fill="#ff5a1f" stroke="#0c0c10" stroke-width="3"/><path d="M6 22h42" stroke="#0c0c10" stroke-width="5"/><path d="M13 32h12" stroke="#0c0c10" stroke-width="3" stroke-linecap="round"/></svg>
+      <div><b>④ AIが支払う</b><span>本物のカード番号は、AIにもお店にも渡らない</span></div></li>
+  </ol>
+
+  <p class="t rv">いまはアメリカの18歳以上の有料会員が対象。Googleも、用事を代行する機能「タスク」を日本を含む6か国で無料にしたと報じられている。こちらも、買う前に確認を求める。</p>
+
+  <p class="lead rv">でも、お店の反応は割れている。</p>
+
+  <div class="vs rv">
+    <div class="yes"><h4>歓迎</h4><p>ウォルマート</p><p>外部のAIが買い物できる入口を用意した（報道）</p></div>
+    <div class="ng"><h4>お断り</h4><p>ユナイテッド航空、アマゾン</p><p>外部AIによる予約や注文を受けつけない</p></div>
+  </div>
+
+  <div class="quote rv">チェックインには、<mark>人間の確認が必要</mark>だ。<cite>AIによる予約を禁止したユナイテッド航空の説明（ITmedia AI＋の見出しより）</cite></div>
+
+  <div class="point rv">
+    <p>AIが間違えて買ったら、<br>だれの責任？</p>
+    <small>たのんだ人か、AIの会社か、お店か。<br>便利さの裏で、ルールづくりはまだ追いついていない。</small>
+  </div>
+</section>
+
+<!-- ============ ⑤ 音楽 ============ -->
+<section class="band b-pink chap dots" id="news5" data-ch="news5">
+  <span class="no">NEWS</span>
+  <div class="circ">⑤</div>
+  <p class="kicker">文化</p>
+  <h2>AIの曲、<br>2700万曲を削除へ</h2>
+  <div class="illo rv" style="max-width:250px">
+    <svg viewBox="0 0 300 300" role="img" aria-label="回るレコードに、削除へ、のスタンプ">
+      <g class="spin">
+        <circle cx="150" cy="150" r="140" fill="#0c0c10"/>
+        <g fill="none" stroke="#3a3a44" stroke-width="2"><circle cx="150" cy="150" r="124"/><circle cx="150" cy="150" r="108"/><circle cx="150" cy="150" r="92"/><circle cx="150" cy="150" r="76"/></g>
+        <path d="M150 26a124 124 0 0 1 88 36" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+        <circle cx="150" cy="150" r="52" fill="#fff"/>
+        <text x="150" y="146" text-anchor="middle" font-family="Anton,sans-serif" font-size="26" fill="#0c0c10">100% AI</text>
+        <text x="150" y="170" text-anchor="middle" font-family="Anton,sans-serif" font-size="16" fill="#ff3fb4" letter-spacing="2">TRACK</text>
+        <circle cx="150" cy="188" r="5" fill="#0c0c10"/>
+      </g>
+      <g transform="rotate(-14 150 236)"><rect x="52" y="208" width="196" height="56" rx="5" fill="#fff" stroke="#0c0c10" stroke-width="5"/><text x="150" y="250" text-anchor="middle" font-family="'Dela Gothic One',sans-serif" font-size="34" fill="#0c0c10" letter-spacing="6">削除へ</text></g>
+    </svg>
+  </div>
+  <div class="sum rv">
+    <h3>まとめ</h3>
+    <ul>
+      <li>音楽配信のTIDALが、AIだけで作った曲を全面禁止</li>
+      <li>新しく届く曲の4割以上がAI製になっていた</li>
+      <li>しかも、そのほとんどは誰にも聴かれていなかった</li>
+    </ul>
+  </div>
+
+  <p class="lead rv" style="margin-top:56px">音楽配信サービスのTIDAL（タイダル）は<br>12月9日から、<br><mark>AIだけで作った曲を受けつけない。</mark></p>
+  <p class="t rv">すでに配信している分も消す。対象は約2700万曲で、全体の6.3%にあたる。</p>
+
+  <div class="card rv">
+    <h4>直近90日間に届いた曲のうち、AIだけで作られた曲</h4>
+    <svg viewBox="0 0 300 190" role="img" aria-label="ドーナツグラフ。43パーセントがAIだけで作られた曲">
+      <circle cx="150" cy="95" r="70" fill="none" stroke="#e3dfd0" stroke-width="30"/>
+      <circle cx="150" cy="95" r="70" fill="none" stroke="#ff3fb4" stroke-width="30" stroke-dasharray="189.1 440" transform="rotate(-90 150 95)"/>
+      <text x="150" y="108" text-anchor="middle" font-family="Anton,sans-serif" font-size="46" fill="#0c0c10">43%</text>
+    </svg>
+    <p class="src">11月6日には、1日に届いた曲の60%超がAI製だった。出所：ITmedia NEWS</p>
+  </div>
+
+  <div class="num rv">
+    <div class="cap">AI製の曲のうち、3か月間いちども再生されなかった割合</div>
+    <div class="v">96<small>%</small></div>
+    <div class="note">大量に作られ、だれにも聴かれず、棚だけを埋めていた</div>
+  </div>
+
+  <p class="t rv">TIDALは、こうした曲が<b>アーティストに入るはずの再生数や収入を奪い、ファンを混乱させる</b>と説明している。なりすましの疑いで消した曲も6万5000曲を超える。</p>
+
+  <div class="vs rv">
+    <div class="ng"><h4>禁止</h4><p>最初から最後までAIだけで作った曲</p></div>
+    <div class="yes"><h4>OK</h4><p>人が作る過程の一部で、AIを道具として使った曲</p></div>
+  </div>
+
+  <p class="t rv">SpotifyやYouTubeは「AI製」と表示したり、収益の対象から外したりする対応が中心。曲そのものを消すところまで踏みこんだ点が、TIDALの新しさだ。</p>
+
+  <div class="point rv">
+    <p>「作れる」と「聴かれる」は、<br>まったく別の話。</p>
+    <small>だれでも一瞬で曲を作れる時代に、<br>人が作ることの価値はどこにあるのか。</small>
+  </div>
+</section>
+
+<!-- ============ ⑥ ブレーキ ============ -->
+<section class="band b-yellow chap dots" id="news6" data-ch="news6">
+  <span class="no">NEWS</span>
+  <div class="circ">⑥</div>
+  <p class="kicker">ルール</p>
+  <h2>作る側から<br>「ブレーキ」案</h2>
+  <div class="illo rv">
+    <svg viewBox="0 0 380 232" role="img" aria-label="速度メーター。針が上限の線に近づいている">
+      <path d="M40 200A150 150 0 0 1 340 200" fill="none" stroke="#0c0c10" stroke-width="26"/>
+      <path d="M296.07 93.93A150 150 0 0 1 340 200" fill="none" stroke="#ff5a1f" stroke-width="18"/>
+      <path d="M40 200A150 150 0 0 1 296.07 93.93" fill="none" stroke="#fff" stroke-width="18"/>
+      <path d="M274.85 115.15 315 75" stroke="#0c0c10" stroke-width="6" stroke-dasharray="7 5"/>
+      <g transform="rotate(-8 330 52)"><rect x="296" y="34" width="72" height="34" rx="3" fill="#0c0c10"/><text x="332" y="58" text-anchor="middle" font-family="'Zen Kaku Gothic New',sans-serif" font-weight="900" font-size="17" fill="#ffe500">上限？</text></g>
+      <path d="M190 200 250 96" stroke="#0c0c10" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="190" cy="200" r="16" fill="#0c0c10"/>
+      <text x="56" y="226" font-family="Anton,sans-serif" font-size="16" fill="#0c0c10">SLOW</text>
+      <text x="300" y="226" font-family="Anton,sans-serif" font-size="16" fill="#0c0c10">FAST</text>
+    </svg>
+  </div>
+  <div class="sum rv">
+    <h3>まとめ</h3>
+    <ul>
+      <li>OpenAIの研究トップが、AIの進歩に「業界共通の上限」を提案</li>
+      <li>MetaのAI責任者も「超知能が迫っている」と警告</li>
+      <li>ただし、具体的な数字も守らせる方法もまだない</li>
+    </ul>
+  </div>
+
+  <p class="lead rv" style="margin-top:56px">これまで全力で<br>アクセルを踏んできた人たちが、<br><mark>ブレーキの話を始めた。</mark></p>
+
+  <div class="card rv">
+    <h4>11月22日：OpenAI ヤクブ・パホツキ氏の提案</h4>
+    <p>AIの賢さを測る<b>共通の物差し</b>を決める。そして、AIの中身を理解して見張る技術が追いつくまで、各社とも<mark>ある上限を超えない</mark>と約束しよう、という内容。サム・アルトマンCEOも支持した。</p>
+    <p class="src">ただし、上限の数字、賛成する会社、守らせる方法は示されていない。</p>
+  </div>
+
+  <div class="quote rv">超知能の到来が迫っている。<mark>今後1年間の行動が、将来を大きく左右する。</mark><cite>Meta最高AI責任者 アレクサンダー・ワン氏が11月23日に公開した文章の要旨（GIGAZINEより）</cite></div>
+
+  <p class="t rv">ワン氏は、①のリーマン予想を「前ぶれ」と見ている。AIがAIの研究までこなすようになれば進歩は一気に加速する、だから安全の研究を急ぐべきだ、という主張だ。自社のAIの公開を、安全を理由に数か月遅らせたとも明かした。</p>
+
+  <details class="term rv">
+    <summary>超知能／再帰的自己改善（RSI）</summary>
+    <div><b>超知能</b>は、ほぼすべての分野で人間を大きく上回るAIのこと。まだ存在しない。<b>再帰的自己改善</b>は、AIが自分より賢いAIを作り、そのAIがさらに賢いAIを作る…という連鎖のこと。起きれば、人間が追いつけない速さで進む可能性がある。</div>
+  </details>
+
+  <div class="vs rv">
+    <div class="yes"><h4>評価する声</h4><p>作っている当事者が危険を認めた意味は大きい</p></div>
+    <div class="ng"><h4>疑問の声</h4><p>競争している会社どうしの「約束」は守られるのか</p><p>国が法律で決めるべきでは</p></div>
+  </div>
+
+  <div class="point rv">
+    <p>だれが、どこに、<br>線を引くのか。</p>
+    <small>会社の自主ルールか、国の法律か、国どうしの条約か。<br>答えはまだ、だれも持っていない。</small>
+  </div>
+</section>
+
+<!-- ============ まとめ ============ -->
+<section class="band b-ink" id="matome" data-ch="matome">
+  <div class="center"><span class="stamp pop">EPILOGUE</span></div>
+  <p class="lead big rv">6本を並べると、<br>1本の線が見えてくる。</p>
+  <ol class="thread rv">
+    <li><b>①</b><span>数学 → 「わかる」とは何か、という<em>知識</em>の問題</span></li>
+    <li><b>②</b><span>半導体 → 国どうしの力関係、という<em>安全保障</em>の問題</span></li>
+    <li><b>③</b><span>上場 → 期待とバブル、という<em>経済</em>の問題</span></li>
+    <li><b>④</b><span>買い物 → だれの責任か、という<em>法律</em>の問題</span></li>
+    <li><b>⑤</b><span>音楽 → 人が作る意味、という<em>文化</em>の問題</span></li>
+    <li><b>⑥</b><span>上限 → だれが決めるのか、という<em>政治</em>の問題</span></li>
+  </ol>
+  <p class="lead big rv">AIは<mark>「便利な道具」の話</mark>から、<br><mark>「社会のルール」の話</mark>になった。</p>
+  <p class="lead rv">だから、理系だけのニュースじゃない。<br>法学部でも、経済学部でも、文学部でも、<br>これから必ずぶつかるテーマだ。</p>
+</section>
+
+<section class="band b-cream">
+  <h3 class="h">考えてみよう</h3>
+  <p class="hsub">正解はない。自分の言葉で答えを作ってみよう</p>
+  <ol class="q rv">
+    <li>コンピューターが「正しい」と保証しても、人間が理由を説明できない。それは「人類の知識」と言える？<small>関連：① ／ 哲学、数学、科学論</small></li>
+    <li>AIが自分のかわりに買い物をして失敗した。責任を負うべきなのは、たのんだ人、AIの会社、お店のどれ？<small>関連：④ ／ 法学、経済学、消費者問題</small></li>
+    <li>AIの進歩に上限をもうけるとしたら、決めるのは企業、国、国際機関のどれがいい？ その理由は？<small>関連：②⑥ ／ 政治学、国際関係、情報学</small></li>
+  </ol>
+
+  <h3 class="h" style="margin-top:56px">用語ミニ辞典</h3>
+  <dl class="gloss rv">
+    <div><dt>生成AI</dt><dd>文章、画像、音楽、プログラムなどを新しく作り出せるAI。ChatGPT、Claude、Geminiなどが代表例。</dd></div>
+    <div><dt>GPU（AIチップ）</dt><dd>大量の計算を同時にこなす半導体。AIの学習と動作に欠かせない。</dd></div>
+    <div><dt>IPO（新規上場）</dt><dd>会社が株を初めて市場で売り出し、だれでも売買できるようにすること。</dd></div>
+    <div><dt>AIエージェント</dt><dd>人のかわりに、調べる・予約する・買うなどの作業を実行するAI。</dd></div>
+    <div><dt>輸出規制</dt><dd>安全保障などを理由に、特定の製品を特定の国へ売ることを国が制限する仕組み。</dd></div>
+    <div><dt>超知能</dt><dd>ほぼすべての分野で人間を大きく上回るとされる、将来のAI。まだ存在しない。</dd></div>
+  </dl>
+</section>
+
+<section class="band b-ink sources">
+  <h3 class="h" style="font-size:20px">出典・参考にした記事</h3>
+  <h3>① リーマン予想</h3>
+  <ul>
+    <li><a href="https://www.itmedia.co.jp/news/article/2611/22/2000003388/" target="_blank" rel="noopener">ITmedia NEWS「Anthropicの数学者、『Claude』と共同で『リーマン予想』を証明したと主張」</a></li>
+    <li><a href="https://news.yahoo.co.jp/articles/c6bed2e9ea95a323d4d3d5960dba7846bf5f84b1" target="_blank" rel="noopener">CNET Japan「Claudeを使い『リーマン予想』を証明か」</a></li>
+    <li><a href="https://innovatopia.jp/ai/ai-news/121493/" target="_blank" rel="noopener">innovaTopia「リーマン予想、Anthropicの数学者がClaudeと証明と主張」</a></li>
+    <li><a href="https://gigazine.net/news/20261124-riemann-hypothesis-mathematician" target="_blank" rel="noopener">GIGAZINE「AIがリーマン予想を証明したらどう感じるか？」</a></li>
+  </ul>
+  <h3>② NVIDIA</h3>
+  <ul>
+    <li><a href="https://ai.watch.impress.co.jp/docs/news/2158571.html" target="_blank" rel="noopener">AI Watch「NVIDIA、ジェンスン・フアン氏の社長兼CEO復帰を発表」</a></li>
+    <li><a href="https://www.watch.impress.co.jp/docs/news/2157382.html" target="_blank" rel="noopener">Impress Watch「ジェンスン・フアン氏がNVIDIA CEO復帰に意欲」</a></li>
+    <li><a href="https://www.gizmodo.jp/article/2611-nvidia-jensen-huang-returns-as-ceo/" target="_blank" rel="noopener">ギズモード・ジャパン「帰ってきた革ジャン」</a></li>
+    <li><a href="https://dailyai.report/archive/2026-11-25" target="_blank" rel="noopener">Daily AI Report（2026年11月25日）</a></li>
+  </ul>
+  <h3>③ アンソロピック上場</h3>
+  <ul>
+    <li><a href="https://www.afpbb.com/articles/-/3663324" target="_blank" rel="noopener">AFPBB News「アンソロピック、ナスダックに上場 初日17％高」</a></li>
+    <li><a href="https://news.yahoo.co.jp/articles/ce1c25951d0758aa0a7fc178c5e2959e8c21aa20" target="_blank" rel="noopener">朝日新聞「アンソロピック、史上最大規模の新規上場」</a></li>
+    <li><a href="https://nikkei.com/article/DGXZQOGN2301I0T21C26A1000000" target="_blank" rel="noopener">日本経済新聞「アンソロピック株一時14%安、公開価格下回る」</a></li>
+  </ul>
+  <h3>④ AIエージェント</h3>
+  <ul>
+    <li><a href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener">OpenAI「Introducing ChatGPT Wallet」</a></li>
+    <li><a href="https://www.zaikei.co.jp/article/20261114/877580.html" target="_blank" rel="noopener">財経新聞「ChatGPTのAIエージェントが決済まで代行」</a></li>
+    <li><a href="https://www.itmedia.co.jp/aiplus/subtop/news" target="_blank" rel="noopener">ITmedia AI＋ 速報（ユナイテッド航空の発表）</a></li>
+    <li><a href="https://note.com/hirokimiyano/n/n2febfb650201" target="_blank" rel="noopener">note「7 Selected AI News Today」2026年11月25日（ウォルマートの動き）</a></li>
+  </ul>
+  <h3>⑤ TIDAL</h3>
+  <ul>
+    <li><a href="https://www.itmedia.co.jp/news/article/2611/25/2000003433/" target="_blank" rel="noopener">ITmedia NEWS「音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ」</a></li>
+    <li><a href="https://www.phileweb.com/news/audio/202611/25/28445.html" target="_blank" rel="noopener">PHILE WEB「TIDALが完全AI生成楽曲を12/9から全面禁止」</a></li>
+    <li><a href="https://joho-todai.com/tidal-bans-ai-generated-music/" target="_blank" rel="noopener">情報灯台「誰にも聴かれない2700万曲」</a></li>
+  </ul>
+  <h3>⑥ 開発の上限・超知能</h3>
+  <ul>
+    <li><a href="https://gigazine.net/news/20261124-superintelligence-is-arriving" target="_blank" rel="noopener">GIGAZINE「『超知能の到来が迫っている』とMetaのAI責任者が警告」</a></li>
+    <li><a href="https://note.com/hirokimiyano/n/n6a32c0aa1f59" target="_blank" rel="noopener">note「7 AI News Stories of the Day」2026年11月23日（開発上限の提案、Googleのタスク機能）</a></li>
+    <li><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/" target="_blank" rel="noopener">The Neuron「Everything That Happened in AI Today」2026年11月25日</a></li>
+  </ul>
+  <p class="disclaimer">この記事は2026年11月26日時点の報道をもとに、高校生向けにまとめたものです。どのニュースも現在進行中で、内容は今後変わる可能性があります。円換算は各報道の表記（1ドル＝約160円）に合わせています。イラストはすべてこのサイトのオリジナルです。</p>
+</section>
+
+<footer class="end">
+  <b>ゼロから時事</b>
+  高校生のための、図解でわかるニュース解説<br>
+  <a class="totop" href="#top">↑ 最初にもどる</a>
+</footer>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop||document.body.scrollTop)/max*100:0)+'%';}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var els=document.querySelectorAll('.rv,.pop');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+  var navs=document.querySelectorAll('[data-nav]');
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.getAttribute('data-ch');navs.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-nav')===id)});}})},{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('[data-ch]').forEach(function(s){so.observe(s)});
+})();
+</script>
+</body>
+</html>

@@ -237,3 +237,16 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 .gift .samples img.wide{grid-column:1/-1;transform:rotate(-.5deg)}
 .gift .samples img.wide+img.wide{transform:rotate(.6deg)}
 .gift .samples figcaption{margin-top:14px;font-size:.74rem;line-height:1.8;color:var(--ink-2);letter-spacing:.08em}
+
+/* 三つの極意：カーソルを乗せると章の色に染まる（スマホでは動かない） */
+@media (hover:hover) and (pointer:fine){
+.gokui .gk{transition:background .45s,border-color .45s,transform .45s cubic-bezier(.2,.9,.25,1),box-shadow .45s}
+.gokui .gk h3,.gokui .gk p,.gokui .gk li,.gokui .gk .go,.gokui .gk .stage{transition:color .45s}
+.gokui .gk:hover,.fl .gokui .gk.rv.in:hover{background:var(--accent);background:color-mix(in srgb,var(--accent) 82%,#fff);border-color:var(--accent);transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,23,31,.14)}
+.gokui .gk:hover h3,.gokui .gk:hover p,.gokui .gk:hover li,.gokui .gk:hover .go,.gokui .gk:hover .go span,.gokui .gk:hover .stage{color:#fff}
+.gokui .gk:hover ul,.gokui .gk:hover li{border-color:rgba(255,255,255,.35)}
+.gokui .gk:hover li::before{background:#fff}
+}
+
+.nt .more.soon{display:flex;justify-content:space-between;gap:12px;color:var(--ink-2)}
+.nt .more.soon span{font-family:var(--f-go);letter-spacing:.14em;font-size:.72rem}

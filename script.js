@@ -101,6 +101,10 @@
 (function(){var b=document.querySelector('.hb'),m=document.getElementById('menu');if(!b||!m)return;
 function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'メニューを閉じる':'メニューを開く');}
 b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
-m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+m.addEventListener('touchstart',function(){},{passive:true});
+m.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;if(!m.classList.contains('open')){return;}
+  var h=a.getAttribute('href')||'';a.classList.add('tap');
+  if(h.charAt(0)==='#'){e.preventDefault();setTimeout(function(){set(false);a.classList.remove('tap');location.hash=h;},260);}
+  else{setTimeout(function(){set(false);a.classList.remove('tap');},260);}});
 document.addEventListener('click',function(e){if(m.classList.contains('open')&&!m.contains(e.target))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();

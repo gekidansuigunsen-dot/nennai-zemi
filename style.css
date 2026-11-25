@@ -294,3 +294,13 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 .prof .sns a{display:inline-flex;align-items:center;gap:8px;padding:8px 16px 8px 12px;border:1px solid var(--hair);border-radius:999px;background:rgba(255,255,255,.6);color:var(--ink);text-decoration:none;font-family:var(--f-lat);font-size:.8rem;letter-spacing:.12em;transition:background .2s,color .2s,border-color .2s}
 .prof .sns svg{width:17px;height:17px;fill:currentColor;flex:none}
 .prof .sns a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.gift .lead2{font-family:var(--f-min);font-size:clamp(1.1rem,2.6vw,1.35rem);color:var(--ink);letter-spacing:.08em;line-height:1.8;margin:10px 0 0}
+.gift .lead2 span{display:inline-block}
+.unis{margin-top:14px;padding:30px 32px;border-radius:4px;background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);border:1px solid var(--edge)}
+.unis .ask{margin:0 0 14px;font-size:.82rem;letter-spacing:.14em;color:var(--ink-2)}
+.unis ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.unis li{background:#fff;border:1px solid var(--hair);border-left:3px solid var(--accent);border-radius:3px;padding:12px 12px;font-family:var(--f-min);font-size:.95rem;letter-spacing:.06em;line-height:1.5;word-break:keep-all;transition:border-color 1.2s}
+.unis .more-u{margin:16px 0 0;font-size:.86rem;color:var(--ink-2);line-height:1.9}
+.unis .btn{margin-top:16px}
+@media (max-width:860px){.unis ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.unis{padding:24px 18px}.unis li{font-size:.9rem;padding:11px 10px}}

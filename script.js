@@ -12,7 +12,7 @@
     tokuten:{m:[0,1.5,1.1,34],n:[.5,.75,0,5]}};      /* 特典：丸く巻き込む渦 */
   for(var key in PM){if(PAL[key]){PAL[key].m=PM[key].m;PAL[key].n=PM[key].n;}}
   var curM=PM.top.m.slice(),curN=PM.top.n.slice();
-  var ids=['top','gokui','jiji','gakubu','daigaku','profile','tokuten'];
+  var ids=['top','gokui','jiji','gakubu','tokuten','profile'];
   var els=ids.map(function(i){return document.getElementById(i);});
   var cur=JSON.parse(JSON.stringify(PAL.top.c));
   var root=document.documentElement,lastA='';

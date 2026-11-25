@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>経営学は「社長になる勉強」じゃない。｜総合型選抜・経営学部志望者のための入門冊子</title>
+<meta name="description" content="総合型選抜で経営学部を志望する受験生のための入門冊子。経営学の考え方、分野マップ、読んでおきたい12冊、本を志望理由書に変える方法まで。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#14315e;
+  --blue-d:#0b1f3f;
+  --ink:#121212;
+  --cream:#eef1f5;
+  --paper:#fffdf7;
+  --yellow:#ffa62b;
+  --red:#ff5436;
+  --w:520px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:#081426;
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  font-weight:500;
+  line-height:1.9;
+  letter-spacing:.06em;
+  font-feature-settings:"palt";
+}
+.page{max-width:var(--w);margin:0 auto;background:var(--paper);overflow:hidden;position:relative}
+svg{display:block}
+.num{font-family:"Abril Fatface",Georgia,serif;letter-spacing:.02em;font-weight:400}
+.hand{font-family:"Yusei Magic","Zen Kaku Gothic New",sans-serif;letter-spacing:.04em}
+mark{background:linear-gradient(transparent 55%,var(--yellow) 55%);color:inherit;padding:0 .1em}
+.blue mark,.ink mark,.end mark,.chap mark{background:none;color:var(--yellow)}
+.ink .who svg{background:var(--cream);border-radius:14px;padding:4px 4px 0}
+
+/* progress */
+.home{display:block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;text-decoration:none;letter-spacing:.1em}
+.home:hover{color:var(--yellow)}
+.bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--yellow);z-index:50}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.pop{transform:scale(.86)}
+.js .rv.pop.in{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cover */
+.cover{background:var(--blue);color:#fff;padding:64px 28px 120px;clip-path:polygon(0 0,100% 0,100% 100%,0 91%);text-align:center;position:relative}
+.cover .series{display:inline-block;border:1.5px solid #fff;border-radius:99px;padding:2px 16px;font-size:12px;font-weight:700;letter-spacing:.14em}
+.faces{display:flex;justify-content:center;gap:10px;margin:44px 0 28px}
+.faces svg{width:23%;max-width:104px;height:auto}
+.cover h1{font-size:clamp(30px,8.4vw,42px);font-weight:900;line-height:1.45;letter-spacing:.08em}
+.cover h1 span{color:var(--yellow)}
+.cover .sub{margin-top:22px;font-size:14px;font-weight:700;letter-spacing:.12em}
+.cover .vol{margin-top:30px;font-size:22px}
+.cover .vol small{display:block;font-size:13px;margin-top:2px;opacity:.9}
+.kanshu{display:inline-block;margin-top:22px;background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:2px 18px;letter-spacing:.12em}
+.scroll{margin:34px auto 0;width:22px;height:36px;border:2px solid #fff;border-radius:12px;position:relative}
+.scroll:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:7px;margin-left:-2px;background:var(--yellow);border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.scroll:after{animation:none}}
+
+/* sections */
+.sec{padding:64px 28px}
+.blue{background:var(--blue);color:#fff}
+.ink{background:var(--ink);color:#fff}
+.cream{background:var(--cream)}
+.slant-t{clip-path:polygon(0 0,100% 44px,100% 100%,0 100%);padding-top:108px;margin-top:-44px}
+.center{text-align:center}
+p+p{margin-top:1.3em}
+.lead{font-size:17px;font-weight:700;line-height:2.1}
+.big{font-size:clamp(25px,7vw,34px);font-weight:900;line-height:1.6;letter-spacing:.08em}
+.mid{font-size:20px;font-weight:900;line-height:1.75}
+.note{font-size:12px;opacity:.8;line-height:1.7}
+.sp{height:44px}.sp-s{height:24px}
+
+/* index */
+.index{padding:56px 28px 64px}
+.index h2{font-size:22px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.index a{display:flex;align-items:baseline;gap:14px;padding:15px 4px;border-bottom:1px solid var(--ink);color:inherit;text-decoration:none;font-weight:700;font-size:17px}
+.index a .num{font-size:15px;color:var(--blue);min-width:86px}
+.index a:after{content:"↓";margin-left:auto;color:var(--blue)}
+.index a:hover,.index a:focus-visible{background:var(--yellow);outline:none}
+
+/* chapter head */
+.chap{background:var(--blue);color:#fff;padding:120px 28px 64px;margin-top:-1px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);text-align:center}
+.chap.ink{background:var(--ink)}
+.chap .lbl{font-size:22px}
+.chap .ttl{background:var(--cream);color:var(--ink);margin:16px auto 0;padding:34px 16px;font-size:clamp(24px,6.6vw,32px);font-weight:900;letter-spacing:.1em;line-height:1.5;border-top:6px solid var(--yellow)}
+.chap .desc{margin-top:22px;font-size:14px;font-weight:700}
+
+/* talk */
+.talk{display:flex;align-items:flex-end;gap:12px;margin:26px 0}
+.talk.r{flex-direction:row-reverse}
+.talk .who{flex:0 0 84px;text-align:center;font-size:11px;font-weight:700;line-height:1.4}
+.talk .who svg{width:84px;height:auto;margin-bottom:2px}
+.bub{position:relative;background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:18px;padding:14px 16px;font-size:16px;line-height:1.7;margin-bottom:26px;flex:1}
+.bub:after{content:"";position:absolute;bottom:14px;left:-11px;width:18px;height:18px;background:#fff;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+.talk.r .bub:after{left:auto;right:-11px;border:0;border-right:2.5px solid var(--ink);border-top:2.5px solid var(--ink)}
+.bub.y{background:var(--yellow)}.bub.y:after{background:var(--yellow)}
+
+/* cards */
+.card{background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:6px;padding:22px 20px;box-shadow:6px 6px 0 var(--ink)}
+.blue .card,.ink .card{box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.card h3{font-size:19px;font-weight:900;line-height:1.5}
+.card+.card{margin-top:22px}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:1px 10px;letter-spacing:.1em;margin-bottom:8px}
+.tag.y{background:var(--yellow);color:var(--ink)}
+.tag.b{background:var(--blue)}
+
+/* definition */
+.def{border:3px solid #fff;padding:30px 18px;text-align:center;position:relative;margin-top:36px}
+.def .cap{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:1px 16px;white-space:nowrap}
+
+/* vs */
+.vs .row{display:grid;grid-template-columns:84px 1fr;border-top:2px solid var(--ink)}
+.vs .row:last-child{border-bottom:2px solid var(--ink)}
+.vs .k{font-weight:900;font-size:17px;padding:16px 0;display:flex;align-items:center}
+.vs .v{padding:16px 0 16px 14px;font-size:14px;line-height:1.75;border-left:1px dashed var(--ink)}
+.vs .v b{display:block;font-size:15px}
+.vs .row.me{background:var(--yellow);margin:0 -12px;padding:0 12px}
+
+/* tools */
+.tool{position:relative;padding:26px 0 26px 66px;border-bottom:1px dashed rgba(255,255,255,.6)}
+.tool:last-of-type{border-bottom:0}
+.tool .n{position:absolute;left:0;top:24px;width:50px;height:50px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:26px;font-weight:900;letter-spacing:0}
+.tool h3{font-size:22px;font-weight:900;line-height:1.4}
+.tool .one{font-size:14px;font-weight:700;color:var(--yellow);margin:2px 0 8px}
+.tool p{font-size:15px;line-height:1.85}
+.tool .ex{margin-top:12px;background:rgba(255,255,255,.12);border-left:4px solid var(--yellow);padding:10px 14px;font-size:14px;line-height:1.75}
+
+/* timeline */
+.tl{position:relative;margin-left:8px;padding-left:28px;border-left:5px dotted var(--blue)}
+.tl .it{position:relative;padding-bottom:46px}
+.tl .it:last-child{padding-bottom:6px}
+.tl .it:before{content:"";position:absolute;left:-41px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid var(--cream)}
+.tl .yr{font-size:30px;line-height:1.2;color:var(--ink)}
+.tl .yr small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:700;margin-left:2px}
+.tl h3{font-size:19px;font-weight:900;color:var(--blue);line-height:1.5;margin:6px 0 4px}
+.tl p{font-size:15px;line-height:1.85}
+.tl .q{clear:both;display:inline-block;margin-top:10px;background:#fff;border:2px solid var(--ink);padding:4px 12px;font-size:14px;font-weight:700;line-height:1.6}
+.fig{float:right;width:112px;height:auto;margin:-6px 0 6px 10px}
+.bust{float:right;width:64px;margin:-4px 0 4px 10px}
+
+/* map */
+.base{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.base div{background:var(--yellow);color:var(--ink);text-align:center;padding:14px 4px;font-weight:900;font-size:16px;line-height:1.4;border:2.5px solid var(--ink)}
+.base small{display:block;font-size:11px;font-weight:700;margin-top:4px;line-height:1.5}
+.map{margin-top:10px}
+.map .m{display:grid;grid-template-columns:1fr 20px 128px;align-items:center;gap:6px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.5);font-size:14.5px;line-height:1.65}
+.map .m i{font-style:normal;color:var(--yellow);font-weight:900;text-align:center}
+.map .m b{background:#fff;color:var(--blue);text-align:center;padding:5px 2px;font-size:13.5px;font-weight:900;line-height:1.4}
+
+/* books */
+.theme{display:flex;align-items:center;gap:10px;margin:44px 0 18px;font-weight:900;font-size:18px}
+.theme:first-of-type{margin-top:8px}
+.theme:before,.theme:after{content:"";flex:1;height:2px;background:var(--ink)}
+.book{display:grid;grid-template-columns:64px 1fr;gap:16px;background:#fff;border:2.5px solid var(--ink);padding:18px 16px;box-shadow:5px 5px 0 var(--blue)}
+.book{color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.book:hover,a.book:focus-visible{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--blue);outline:none}
+.js a.book.rv.in:hover{transform:translate(-2px,-2px)}
+.amz{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;font-size:12px;font-weight:900;padding:3px 14px;border-radius:99px;letter-spacing:.08em}
+.book+.book{margin-top:20px}
+.spine{background:var(--blue);color:#fff;display:grid;place-items:center;font-size:32px;font-weight:900;letter-spacing:0;min-height:96px;border:2.5px solid var(--ink);border-left-width:7px}
+.spine.y{background:var(--yellow);color:var(--ink)}
+.spine.r{background:var(--red)}
+.spine.k{background:var(--ink)}
+.book h3{font-size:16.5px;font-weight:900;line-height:1.5}
+.book .au{font-size:12px;font-weight:700;opacity:.75;line-height:1.5;margin-top:2px}
+.book .meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;font-size:11px;font-weight:700}
+.book .meta span{border:1.5px solid var(--ink);padding:0 8px;border-radius:99px;line-height:1.8}
+.book .meta .st{background:var(--ink);color:var(--yellow);letter-spacing:.1em}
+.book p{font-size:13.5px;line-height:1.75}
+.book .ask{margin-top:8px;background:var(--cream);padding:8px 10px;font-size:13px;font-weight:700;line-height:1.65}
+.book .ask:before{content:"立てられる問い";display:block;font-size:10px;color:var(--blue);letter-spacing:.14em}
+
+/* steps */
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;padding:22px 0;border-bottom:2px solid var(--ink)}
+.step .n{font-size:44px;line-height:1;color:var(--blue)}
+.step h3{font-size:18px;font-weight:900;line-height:1.5}
+.step p{font-size:14.5px;line-height:1.8;margin-top:4px}
+.ba{margin-top:30px}
+.ba .x,.ba .o{padding:18px 16px 18px;border:2.5px solid var(--ink);font-size:14.5px;line-height:1.85;position:relative;background:#fff}
+.ba .x{color:#555}
+.ba .o{background:var(--yellow);margin-top:34px}
+.ba .x:before,.ba .o:before{position:absolute;top:-14px;left:12px;font-size:12px;font-weight:900;padding:0 12px;color:#fff;letter-spacing:.1em}
+.ba .x:before{content:"✕ 感想文で終わる例";background:#777}
+.ba .o:before{content:"◎ 問いに変換した例";background:var(--blue)}
+.ba .arrow{text-align:center;font-size:26px;font-weight:900;line-height:1;margin-top:12px;color:var(--blue)}
+
+/* list */
+.todo li{list-style:none;position:relative;padding:12px 0 12px 34px;border-bottom:1px dashed rgba(255,255,255,.55);font-size:15px;line-height:1.75}
+.todo li:before{content:"";position:absolute;left:2px;top:17px;width:18px;height:18px;border:2.5px solid var(--yellow);border-radius:3px}
+.todo li b{color:var(--yellow)}
+.cream .todo li,.paper .todo li{border-color:var(--ink)}
+.cream .todo li:before{border-color:var(--blue)}
+
+/* interview */
+.iq{background:#fff;color:var(--ink);border:2.5px solid var(--ink);padding:18px 16px 16px 60px;position:relative}
+.iq+.iq{margin-top:16px}
+.iq .n{position:absolute;left:14px;top:14px;font-size:30px;font-weight:900;color:var(--blue);line-height:1.2;letter-spacing:0}
+.iq h3{font-size:16.5px;font-weight:900;line-height:1.55}
+.iq p{font-size:13.5px;line-height:1.75;margin-top:6px;color:#333}
+.iq p:before{content:"考えるヒント｜";font-weight:900;color:var(--blue)}
+
+/* vertical statement */
+.vert{writing-mode:vertical-rl;margin:0 auto;font-size:21px;font-weight:900;line-height:2.1;letter-spacing:.16em;height:15em;text-align:left}
+.vert .hl{color:var(--yellow)}
+
+/* ending */
+.end{background:var(--blue);color:#fff;padding:120px 28px 72px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);margin-top:-1px;text-align:center}
+footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px;font-size:11px;letter-spacing:.12em;line-height:1.9}
+footer a{color:var(--yellow)}
+.top{display:inline-block;margin-top:40px;color:#fff;border:2px solid #fff;padding:6px 26px;border-radius:99px;font-weight:700;font-size:13px;text-decoration:none}
+.top:hover,.top:focus-visible{background:#fff;color:var(--blue);outline:none}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+
+<!-- character symbols (all original, fictional) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 受験生 ケイ -->
+    <symbol id="c-kei" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 108l10 10 10-10" fill="none" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 22-12 40-30 40S30 80 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M27 56C22 26 40 8 62 10c22 2 36 18 31 46-3-10-8-17-15-22-4 6-10 9-16 10 2-3 3-6 3-9-8 8-22 12-32 12-3 3-5 6-6 9z" fill="#121212"/>
+      <path d="M42 56q6-4 12-1M66 55q6-3 12 1" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="65" r="3.2" fill="#121212"/><circle cx="72" cy="65" r="3.2" fill="#121212"/>
+      <path d="M59 68q-3 7 1 9" fill="none" stroke="#121212" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M51 84q9 6 18 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <!-- 受験生 ミオ -->
+    <symbol id="c-mio" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M24 50C22 22 40 8 60 8s38 14 36 42c-1 18 2 34 4 44H20c2-10 5-26 4-44z" fill="#121212"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M31 58c0-24 12-36 29-36s29 12 29 36c0 22-12 40-29 40S31 80 31 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c2-22 12-34 30-36 18 2 28 14 30 36-10-4-18-12-22-22-8 12-24 20-38 22z" fill="#121212"/>
+      <path d="M42 62q6-5 12 0M66 62q6-5 12 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="68" r="3" fill="#121212"/><circle cx="72" cy="68" r="3" fill="#121212"/>
+      <path d="M53 84q7 5 14 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="40" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+      <circle cx="80" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </symbol>
+    <!-- 先生 -->
+    <symbol id="c-sensei" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#121212" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M48 104l12 16 12-16z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 24-12 40-30 40S30 82 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M28 50C24 24 42 10 60 10c20 0 36 12 32 40-4-12-12-20-26-22-14-2-28 2-38 22z" fill="#121212"/>
+      <rect x="36" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <rect x="64" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M56 62h8M36 62l-6-2M84 62l6-2" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="46" cy="64" r="2.6" fill="#121212"/><circle cx="74" cy="64" r="2.6" fill="#121212"/>
+      <path d="M48 82q12 9 24 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 76q-2 6 2 10M80 76q2 6-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 面接官 -->
+    <symbol id="c-mensetsu" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M56 106h8l3 22h-14z" fill="#121212"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c0-26 12-40 30-40s30 14 30 40c0 26-12 42-30 42S30 82 30 56z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M29 58c-4-14 0-28 8-34-2 10-3 22-2 30zM91 58c4-14 0-28-8-34 2 10 3 22 2 30z" fill="#121212"/>
+      <path d="M44 22q16-8 32 0" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+      <path d="M38 52l16 3M82 52l-16 3" fill="none" stroke="#121212" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="47" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="73" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <path d="M55 64h10" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="47" cy="65" r="2.4" fill="#121212"/><circle cx="73" cy="65" r="2.4" fill="#121212"/>
+      <path d="M50 86h20" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 78q4 4 2 10M80 78q-4 4-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 学説を象徴するアイコン -->
+    <symbol id="i-hand" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><path d="M22 50V30a3 3 0 0 1 6 0v-9a3 3 0 0 1 6 0v-2a3 3 0 0 1 6 0v4a3 3 0 0 1 6 0v17c0 8-5 12-12 12-6 0-9-2-12-8l-5-9a3 3 0 0 1 5-3z" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" fill="#fff"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="15" fill="none" stroke="#121212" stroke-width="9" stroke-dasharray="6.2 5.58"/><circle cx="32" cy="32" r="12" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="32" cy="32" r="4" fill="#121212"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><path d="M14 26l18-11 18 11z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31v14M27 31v14M37 31v14M46 31v14M13 49h38" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-game" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><rect x="16" y="16" width="32" height="32" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 16v32M16 32h32" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3" fill="#121212"/><path d="M37 37l6 6M43 37l-6 6" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bias" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><path d="M32 46V24M12 30l40-10" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 50h16" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="38" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="50" cy="26" r="4" fill="#121212"/><path d="M14 30v2M50 20v2" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><path d="M27 14h10M29 14v13L18 46a3 3 0 0 0 3 5h22a3 3 0 0 0 3-5L35 27V14" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 40h18" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="45" r="1.8" fill="#121212"/><circle cx="36" cy="43" r="1.4" fill="#121212"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><path d="M16 16v32h34" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="22" y="36" width="6" height="12" fill="#121212"/><rect x="32" y="29" width="6" height="19" fill="#121212"/><rect x="42" y="21" width="6" height="27" fill="#fff" stroke="#121212" stroke-width="2.5"/></symbol>
+  <symbol id="j-people" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><circle cx="23" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M12 48c1-9 5-13 11-13s10 4 11 13M30 48c1-9 5-13 11-13s10 4 11 13" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="b-watch" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="35" r="14" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M32 35V26M32 35l6 4M28 15h8M32 15v6" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="b-target" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="16" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="32" cy="32" r="9" fill="none" stroke="#121212" stroke-width="2.8"/><circle cx="32" cy="32" r="3" fill="#121212"/></symbol>
+<symbol id="b-bolt" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><path d="M36 12L20 35h10l-3 17 17-24H33z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="b-globe" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffa62b" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="16" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M16 32h32M32 16c-7 6-7 26 0 32M32 16c7 6 7 26 0 32" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="page" id="top">
+<a class="home" href="/">← 年内入試攻略まるごとゼミ トップ</a>
+<header class="cover"><span class="series">総合型選抜｜学部別・学問入門</span>
+<div class="faces" aria-hidden="true"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg></div>
+<h1>経営学は<br><span>「社長になる勉強」</span><br>じゃない。</h1>
+<p class="sub">経営学部を志望する君が<br>出願前に知っておきたいこと</p>
+<p class="vol num">Management<small>経営学部編</small></p>
+<p class="kanshu">監修｜総合型選抜9年選手</p>
+<div class="scroll" aria-hidden="true"></div></header>
+<nav class="index" aria-label="目次"><h2 class="num">Index</h2>
+<a href="#c1"><span class="num">Chapter 1</span>その志望理由、「起業したい」だけ？</a>
+<a href="#c2"><span class="num">Chapter 2</span>経営学者の「5つの道具」</a>
+<a href="#c3"><span class="num">Chapter 3</span>110年を3分で</a>
+<a href="#c4"><span class="num">Chapter 4</span>君の関心はどの分野？</a>
+<a href="#c5"><span class="num">Chapter 5</span>読んでおきたい12冊</a>
+<a href="#c6"><span class="num">Chapter 6</span>読んだ本を志望理由書に変える</a>
+<a href="#c7"><span class="num">Chapter 7</span>数字と現場の話</a>
+<a href="#c8"><span class="num">Chapter 8</span>面接で聞かれる7つの問い</a></nav>
+<section class="chap" id="c1"><div class="lbl num">Chapter 1</div><h2 class="ttl rv">その志望理由、<br>「起業したい」<br>だけ？</h2><p class="desc">まず、いちばん多い失敗から。</p></section>
+<section class="sec cream"><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">将来は起業したいので、ビジネスを実践的に学べる経営学部を志望します！</div></div><div class="talk r rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg>面接官</div><div class="bub hand">起業は、大学に行かなくてもできます。4年かけて、経営の何を明らかにしたいのですか？</div></div><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">……えっと……</div></div><div class="sp-s"></div><p class="big center rv">経営学は、<br><mark>成功のマニュアル<br>ではない。</mark></p><div class="sp-s"></div>
+<p class="rv">経営学部の志望理由書でよく見るのが、「起業したい」「マーケティングに興味がある」「リーダーシップを身につけたい」という言葉だけで組み立てられた文章だ。</p>
+<p class="rv">意欲は伝わる。でもそれだけでは、経営学という学問の入り口にまだ立っていない。大学の先生が知りたいのは、<b>君が「なぜあの組織はうまくいくのか」という問いに興味を持っているかどうか</b>だ。</p></section>
+<section class="sec blue"><p class="center lead rv">では、経営学とは何か。</p>
+<div class="def rv pop"><span class="cap">ひとことで言うと</span><p class="big">人が集まる「組織」が、<br>成果を出し続ける<br>仕組みを<br><mark>明らかにする学問</mark></p></div><div class="sp"></div>
+<p class="rv">一人でできることには限りがある。だから人は集まり、役割を分け、協力する。会社はその代表だが、部活も、病院も、NPOも、自治体も同じ「組織」だ。</p>
+<p class="rv">同じような人数、同じような資金でも、うまくいく組織とそうでない組織がある。その違いはどこから生まれるのか。</p>
+<p class="rv">経営学は、成功した社長の体験談を集める学問ではない。<mark>たくさんの組織を比べ、理論とデータで「なぜ」を説明する</mark>学問だ。</p></section>
+<section class="sec"><p class="mid center rv">同じ「コンビニ」を見ても、<br>問いがこれだけ違う。</p><div class="sp-s"></div>
+<div class="vs rv">
+<div class="row me"><div class="k">経営学</div><div class="v"><b>ひとつの組織を見る</b>この会社は、どうすればライバルより選ばれ続けるのか？</div></div>
+<div class="row"><div class="k">経済学</div><div class="v"><b>社会全体の仕組みを見る</b>なぜ日本にはこれほど多くのコンビニがあり、どこでも似た値段なのか？</div></div>
+<div class="row"><div class="k">商学</div><div class="v"><b>取引の実務を見る</b>商品はどう仕入れ、どう流通し、会計上どう記録されるのか？</div></div></div>
+<p class="note rv" style="margin-top:14px">※経営学部、商学部、経済学部経営学科など、置かれ方は大学によって違う。学べる内容が重なることも多いので、志望校の科目表は必ず自分で確認しよう。</p><div class="talk r rv" style="margin-top:36px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">「どうすれば成功するか」ではなく「なぜ差がつくのか」と問えたら、それが経営学だよ。</div></div></section>
+<section class="chap" id="c2"><div class="lbl num">Chapter 2</div><h2 class="ttl rv">経営学者の<br>「5つの道具」</h2><p class="desc">この5つで組織を見ると、<br>志望理由書の語彙が変わる。</p></section>
+<section class="sec blue" style="padding-top:20px"><div class="tool rv"><span class="n">①</span><h3>戦略</h3><p class="one">何をやらないかを決める</p><p>人もお金も時間も限られている。だから全部はできない。どこで戦い、何を捨てるかを決めることが戦略だ。</p><p class="ex">メニューを絞った専門店が、何でもある店に勝つのはなぜか。</p></div><div class="tool rv"><span class="n">②</span><h3>組織</h3><p class="one">分担と連携を設計する</p><p>仕事を分ければ効率は上がる。でも分けすぎると、全体が見えなくなる。その両立をどう設計するかを考える。</p><p class="ex">文化祭で、各係はがんばっているのに全体がまとまらないのはなぜか。</p></div><div class="tool rv"><span class="n">③</span><h3>人</h3><p class="one">人は報酬だけでは動かない</p><p>給料を上げれば人は働く、とは限らない。やりがい、成長、仲間との関係。人が力を発揮する条件を探る。</p><p class="ex">同じ練習量なのに、やる気が続く部と続かない部があるのはなぜか。</p></div><div class="tool rv"><span class="n">④</span><h3>マーケティング</h3><p class="one">売り込むのではなく、選ばれる仕組みをつくる</p><p>誰の、どんな困りごとに応えるのか。広告の技術ではなく、顧客から出発して価値を設計する考え方だ。</p><p class="ex">人がほしいのはドリルではなく、壁にあける穴だ。</p></div><div class="tool rv"><span class="n">⑤</span><h3>会計</h3><p class="one">お金の流れを、誰にでも見える形にする</p><p>会計は組織の成績表で、世界共通の言葉でもある。売上が大きいことと、利益が出ていることは別の話だ。</p><p class="ex">行列のできる店が、突然つぶれることがあるのはなぜか。</p></div></section>
+<section class="sec ink center"><div class="vert rv"><span class="hl">「なぜ、あの組織は<br>　うまくいくのか」</span><br>と問えた瞬間、<br>君の関心は<br>経営学になる。</div></section>
+<section class="chap" id="c3"><div class="lbl num">Chapter 3</div><h2 class="ttl rv">110年を3分で</h2><p class="desc">経営学は、工場の現場から生まれ、<br>問いを広げ続けてきた。</p></section>
+<section class="sec cream"><div class="tl"><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#b-watch"/></svg><div class="yr num">1911<small>年</small></div><h3>テイラー『科学的管理法』</h3><p>作業を細かく分け、時間を計り、もっとも効率のよいやり方を決める。経験や勘に頼っていた仕事を、はじめて科学の対象にした。</p><span class="q">問い｜仕事は、科学的に管理できるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#i-gear"/></svg><div class="yr num">1913<small>年</small></div><h3>フォードの流れ作業</h3><p>自動車工場に移動式の組立ラインを導入し、大量生産を実現した。車は、一部の金持ちのものから大衆のものになった。</p><span class="q">問い｜どうすれば、安く大量につくれるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-people"/></svg><div class="yr num">1924<small>年〜</small></div><h3>ホーソン実験</h3><p>照明などの作業条件より、職場の人間関係や注目されているという意識が、生産性に影響することがわかった。</p><span class="q">問い｜人は、何によってやる気を出すのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#b-target"/></svg><div class="yr num">1954<small>年</small></div><h3>ドラッカー『現代の経営』</h3><p>企業の目的は利益そのものではなく、「顧客の創造」だと論じた。マネジメントという考え方を広く世に示した。</p><span class="q">問い｜会社は、何のために存在するのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#i-game"/></svg><div class="yr num">1980<small>年</small></div><h3>ポーター『競争の戦略』</h3><p>業界の構造を分析し、どこに立てば有利に戦えるかを考える枠組みを示した。経営戦略論の土台になっている。</p><span class="q">問い｜儲かる会社と儲からない会社は、何が違うのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#b-bolt"/></svg><div class="yr num">1997<small>年</small></div><h3>クリステンセン『イノベーションのジレンマ』</h3><p>優れた大企業ほど、顧客の声にまじめに応え続けるがゆえに、新しい技術に足をすくわれると論じた。</p><span class="q">問い｜なぜ、優良企業が失敗するのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#b-globe"/></svg><div class="yr num">2015<small>年</small></div><h3>SDGsの採択</h3><p>国連で持続可能な開発目標が採択された。企業にも、利益だけでなく環境や社会への責任が強く求められるようになった。</p><span class="q">問い｜利益と社会への責任は、両立するのか？</span></div></div><div class="sp"></div><p class="mid center rv">流れをひとことで言えば、<br><mark>「効率を上げる学問」から<br>「存在する意味を問う学問」へ。</mark></p><div class="talk r rv" style="margin-top:30px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">経営学はまだ100年ちょっとの若い学問なんだ。だから、いまの社会の変化がそのまま研究テーマになる。</div></div></section>
+<section class="chap" id="c4"><div class="lbl num">Chapter 4</div><h2 class="ttl rv">君の関心は<br>どの分野？</h2><p class="desc">「経営学」はひとつじゃない。<br>自分の居場所を見つけよう。</p></section>
+<section class="sec blue" style="padding-top:24px"><p class="lead center rv">まず、全員が学ぶ3つの土台。</p><div class="sp-s"></div>
+<div class="base rv"><div>経営学概論<small>組織と経営の<br>基本を知る</small></div><div>簿記・会計<small>お金の流れを<br>記録し読む</small></div><div>統計・データ<small>数字で<br>根拠を示す</small></div></div>
+<div class="sp"></div><p class="lead center rv">その上に、テーマ別の分野が広がる。</p><div class="map"><div class="m rv"><span>同じ業界でも、儲かる会社とそうでない会社があるのはなぜか</span><i>→</i><b>経営戦略論</b></div><div class="m rv"><span>チームは、どうすればうまくまとまるのか</span><i>→</i><b>経営組織論</b></div><div class="m rv"><span>人をどう評価し、どう育てればよいのか</span><i>→</i><b>人的資源管理</b></div><div class="m rv"><span>あの商品は、なぜ売れているのか</span><i>→</i><b>マーケティング</b></div><div class="m rv"><span>人は、何を見て「買う」と決めているのか</span><i>→</i><b>消費者行動論</b></div><div class="m rv"><span>その会社は、本当に儲かっているのか</span><i>→</i><b>会計学</b></div><div class="m rv"><span>事業に必要なお金を、どう集めてどう使うのか</span><i>→</i><b>ファイナンス</b></div><div class="m rv"><span>新しい事業は、どうやって生まれるのか</span><i>→</i><b>ベンチャー論<br>イノベーション</b></div><div class="m rv"><span>日本の企業は、海外でどう戦えばよいのか</span><i>→</i><b>国際経営論</b></div><div class="m rv"><span>利益と環境・社会への責任は、両立できるのか</span><i>→</i><b>企業倫理<br>サステナビリティ</b></div></div><div class="sp"></div><div class="card rv"><span class="tag b">やってみよう</span><h3>志望校の教員一覧を開き、<br>上の分野名で探す。</h3><p style="font-size:14.5px;margin-top:8px">自分の関心に近い研究をしている先生が見つかれば、「なぜこの大学か」に具体的な答えが生まれる。ゼミ名や担当科目までメモしておこう。</p></div></section>
+<section class="chap" id="c5"><div class="lbl num">Chapter 5</div><h2 class="ttl rv">読んでおきたい<br>12冊</h2><p class="desc">全部読まなくていい。<br>関心に近い2冊を、深く。</p></section>
+<section class="sec cream" style="padding-top:28px"><p class="note center rv">カードをタップするとAmazonの検索結果が開きます。難易度は★が多いほど歯ごたえあり。読了時間は高校生が読む場合のおおよその目安。</p><div class="theme rv">最初の一冊</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%82%E3%81%97%E9%AB%98%E6%A0%A1%E9%87%8E%E7%90%83%E3%81%AE%E5%A5%B3%E5%AD%90%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%81%8C%E3%83%89%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%E3%81%AE%E3%80%8E%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%80%8F%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%89%20%E5%B2%A9%E5%B4%8E%E5%A4%8F%E6%B5%B7" target="_blank" rel="noopener"><div class="spine ">①</div><div><h3>もし高校野球の女子マネージャーがドラッカーの『マネジメント』を読んだら</h3><p class="au">岩崎夏海</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>高校野球部を舞台に、ドラッカーの考え方を物語で体験できる。「顧客は誰か」という問いの重さがわかる。</p><p class="ask">自分の部活や委員会にとって、「顧客」とは誰なのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%AF%E5%AD%A6%E3%81%B9%E3%81%AA%E3%81%84%20%E4%B8%96%E7%95%8C%E6%9C%80%E5%85%88%E7%AB%AF%E3%81%AE%E7%B5%8C%E5%96%B6%E5%AD%A6%20%E5%85%A5%E5%B1%B1%E7%AB%A0%E6%A0%84" target="_blank" rel="noopener"><div class="spine ">②</div><div><h3>ビジネススクールでは学べない 世界最先端の経営学</h3><p class="au">入山章栄</p><div class="meta"><span class="st">★★☆</span><span>約5時間</span></div><p>世界の経営学者が、いま何をどんな方法で研究しているのかを紹介する。経営学が「学問」であることがよくわかる。</p><p class="ask">ビジネス書に書かれた「常識」は、研究で確かめられているのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">戦略</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%B5%8C%E5%96%B6%E6%88%A6%E7%95%A5%E5%85%A8%E5%8F%B2%20%E4%B8%89%E8%B0%B7%E5%AE%8F%E6%B2%BB" target="_blank" rel="noopener"><div class="spine y">③</div><div><h3>経営戦略全史</h3><p class="au">三谷宏治</p><div class="meta"><span class="st">★★☆</span><span>約7時間</span></div><p>100年にわたる経営戦略論の流れを、人物と論争を追いながら一気に見渡す。Chapter 3の年表を詳しく知りたい人に。</p><p class="ask">戦略を決めるのは、市場での立ち位置か、自社の強みか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E7%AB%B6%E4%BA%89%E6%88%A6%E7%95%A5%20%E6%A5%A0%E6%9C%A8%E5%BB%BA" target="_blank" rel="noopener"><div class="spine y">④</div><div><h3>ストーリーとしての競争戦略</h3><p class="au">楠木建</p><div class="meta"><span class="st">★★★</span><span>約9時間</span></div><p>優れた戦略とは、個々の打ち手ではなく、それらがつながった「話の流れ」だと論じる。</p><p class="ask">好きな企業の強さを、一本のストーリーとして説明できるか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">組織と人</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%A2%E3%83%81%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B33.0%20%E3%83%80%E3%83%8B%E3%82%A8%E3%83%AB%E3%83%BB%E3%83%94%E3%83%B3%E3%82%AF" target="_blank" rel="noopener"><div class="spine r">⑤</div><div><h3>モチベーション3.0</h3><p class="au">ダニエル・ピンク</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>報酬と罰による動機づけの限界を示し、自律・熟達・目的が人を動かすと論じる。</p><p class="ask">ごほうびがあるとやる気が下がるのは、どんなときか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%A4%B1%E6%95%97%E3%81%AE%E6%9C%AC%E8%B3%AA%20%E6%88%B8%E9%83%A8%E8%89%AF%E4%B8%80%E3%81%BB%E3%81%8B" target="_blank" rel="noopener"><div class="spine r">⑥</div><div><h3>失敗の本質</h3><p class="au">戸部良一ほか</p><div class="meta"><span class="st">★★★</span><span>約8時間</span></div><p>旧日本軍の作戦の失敗を、組織の問題として分析した古典。現代の企業や学校にも通じる指摘が多い。</p><p class="ask">組織はなぜ、まちがいに気づいても方針を変えられないのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">マーケティング</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%89%E3%83%AA%E3%83%AB%E3%82%92%E5%A3%B2%E3%82%8B%E3%81%AB%E3%81%AF%E7%A9%B4%E3%82%92%E5%A3%B2%E3%82%8C%20%E4%BD%90%E8%97%A4%E7%BE%A9%E5%85%B8" target="_blank" rel="noopener"><div class="spine k">⑦</div><div><h3>ドリルを売るには穴を売れ</h3><p class="au">佐藤義典</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>物語と解説を交互に読みながら、マーケティングの基本的な考え方を身につけられる入門書。</p><p class="ask">身近な店は、誰に、どんな価値を売っているのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=USJ%E3%82%92%E5%8A%87%E7%9A%84%E3%81%AB%E5%A4%89%E3%81%88%E3%81%9F%E3%80%81%E3%81%9F%E3%81%A3%E3%81%9F1%E3%81%A4%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9%20%E6%A3%AE%E5%B2%A1%E6%AF%85" target="_blank" rel="noopener"><div class="spine k">⑧</div><div><h3>USJを劇的に変えた、たった1つの考え方</h3><p class="au">森岡毅</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>テーマパークの立て直しを通して、顧客の視点から考えるマーケティングの実際を語る。</p><p class="ask">「よいもの」をつくっても売れないのは、なぜか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">会計と現場</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%81%95%E3%81%8A%E3%81%A0%E3%81%91%E5%B1%8B%E3%81%AF%E3%81%AA%E3%81%9C%E6%BD%B0%E3%82%8C%E3%81%AA%E3%81%84%E3%81%AE%E3%81%8B%EF%BC%9F%20%E5%B1%B1%E7%94%B0%E7%9C%9F%E5%93%89" target="_blank" rel="noopener"><div class="spine ">⑨</div><div><h3>さおだけ屋はなぜ潰れないのか？</h3><p class="au">山田真哉（光文社新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>身近な疑問から出発して、利益や在庫といった会計の考え方をやさしく解き明かす。</p><p class="ask">近所の、客がいないのに続いている店は、どこで儲けているのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%B6%E3%83%BB%E3%82%B4%E3%83%BC%E3%83%AB%20%E3%82%A8%E3%83%AA%E3%83%A4%E3%83%95%E3%83%BB%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%89%E3%83%A9%E3%83%83%E3%83%88" target="_blank" rel="noopener"><div class="spine ">⑩</div><div><h3>ザ・ゴール</h3><p class="au">エリヤフ・ゴールドラット</p><div class="meta"><span class="st">★★☆</span><span>約8時間</span></div><p>赤字工場の立て直しを描く小説。全体の成果を決めているのは、いちばん弱い工程だという考え方が学べる。</p><p class="ask">自分のチームで、全体の足を引っぱっている工程はどこか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">イノベーション</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%BC%E3%83%AD%E3%83%BB%E3%83%88%E3%82%A5%E3%83%BB%E3%83%AF%E3%83%B3%20%E3%83%94%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%BB%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AB" target="_blank" rel="noopener"><div class="spine y">⑪</div><div><h3>ゼロ・トゥ・ワン</h3><p class="au">ピーター・ティール</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>競争に勝つより、競争のない場所をつくれ。起業家が、新しい価値を生むとはどういうことかを語る。</p><p class="ask">「賛成する人がほとんどいない、大切な真実」とは何か？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%A4%E3%83%8E%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%82%B8%E3%83%AC%E3%83%B3%E3%83%9E%20%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%88%E3%83%B3%E3%83%BB%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%86%E3%83%B3%E3%82%BB%E3%83%B3" target="_blank" rel="noopener"><div class="spine r">⑫</div><div><h3>イノベーションのジレンマ</h3><p class="au">クレイトン・クリステンセン</p><div class="meta"><span class="st">★★★</span><span>約8時間</span></div><p>優良企業が正しい経営を続けたがゆえに敗れる仕組みを、多くの事例から明らかにする。</p><p class="ask">いま強い企業のうち、同じ道をたどりそうなのはどこか？</p><span class="amz">Amazonで見る →</span></div></a><div class="talk r rv" style="margin-top:44px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">読んだ冊数は聞かれない。聞かれるのは「読んで、何を考えたか」だよ。</div></div></section>
+<section class="chap" id="c6"><div class="lbl num">Chapter 6</div><h2 class="ttl rv">読んだ本を<br>志望理由書に変える</h2><p class="desc">「面白かった」で終わらせない、<br>3つのステップ。</p></section>
+<section class="sec" style="padding-top:20px">
+<div class="step rv"><div class="n num">1</div><div><h3>著者の主張を、一文で言う</h3><p>「この本は〇〇だと主張している」。あらすじではなく主張を取り出す。一文にできなければ、まだ読めていない。</p></div></div>
+<div class="step rv"><div class="n num">2</div><div><h3>自分の経験とぶつける</h3><p>その主張は、君が見てきた現実に当てはまるか。当てはまらない場面こそが宝物になる。</p></div></div>
+<div class="step rv"><div class="n num">3</div><div><h3>大学で確かめたい問いにする</h3><p>「では〇〇の場合はどうなのか」。答えがまだ出ていない問いを立て、Chapter 4の分野と志望校の先生につなげる。</p></div></div>
+<div class="ba"><div class="x rv">『モチベーション3.0』を読み、人のやる気には自律が大切だと学びました。とても納得でき、経営学部でさらに深く学びたいと考えました。</div>
+<div class="arrow rv" aria-hidden="true">↓</div>
+<div class="o rv">『モチベーション3.0』は、人は報酬や指示よりも、自分で決められるときに力を発揮すると論じる。しかし私が文化祭の実行委員長を務めたとき、進め方を任せた班は動けず、役割と締め切りを細かく決めた班のほうが成果を出した。自律が力になるには、経験や目標の共有といった条件が必要なのではないか。貴学の経営組織論のゼミで、裁量の大きさとチームの成果の関係を、経験の差に注目して検証したいと考える。</div></div>
+<p class="note rv" style="margin-top:14px">※下の文章は型を示すための創作例。そのまま使わず、必ず自分の経験で書こう。</p>
+<div class="sp"></div><p class="mid center rv">型はこれだけ。<br><mark>主張 → 衝突 → 問い</mark></p></section>
+<section class="chap ink" id="c7"><div class="lbl num">Chapter 7</div><h2 class="ttl rv">数字と現場の話</h2><p class="desc">入学前に知っておきたい、<br>ちょっと耳の痛い現実。</p></section>
+<section class="sec ink" style="padding-top:20px"><div class="talk rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg>受験生 ミオ</div><div class="bub hand">経営学部なら、成功する方法を教えてもらえるんですよね？</div></div><div class="talk r rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">「こうすれば成功する」という正解は、経営学にもないんだ。</div></div><div class="sp-s"></div><p class="rv">成功した社長の本を読むと、そのやり方が正しく見える。でも、同じことをして失敗した会社は本を書かない。うまくいった例だけを見て結論を出すのは、経営学がいちばん警戒するまちがいだ。</p>
+<p class="rv">だから大学では、多くの企業を比べ、データで確かめる。<mark>簿記や会計、統計が必修になっている大学も多い</mark>。数字から逃げずに根拠を示す姿勢が求められ、それは面接でも見られている。</p>
+<p class="rv">もうひとつ。授業では、実際の企業を題材にした事例研究や、グループでの発表も多い。自分の意見を持ち、人と議論する場面が続くことも知っておこう。</p>
+<div class="sp-s"></div><p class="lead rv">いまからできること</p><ul class="todo"><li class="rv">身近な店をひとつ選び、<b>「誰に、何を、どうやって」</b>売っているのかを観察して書き出す。</li><li class="rv">好きな企業の<b>売上と利益</b>を、公式サイトの投資家向け資料で調べる。ライバル企業と比べる。</li><li class="rv"><b>簿記3級の入門書</b>を手に取り、会社の成績表がどう作られているかを眺めてみる。</li><li class="rv">自分の部活や委員会を、<b>目標、役割分担、情報の伝わり方</b>の3点で分析する。</li><li class="rv">成功談を読んだら、<b>「同じことをして失敗した例はないか」</b>と自分に問う。</li></ul><p class="note rv" style="margin-top:18px">※必修科目や取得を勧められる資格は大学・学科によって異なる。必ず最新の募集要項とシラバスで確認しよう。</p></section>
+<section class="chap" id="c8"><div class="lbl num">Chapter 8</div><h2 class="ttl rv">面接で聞かれる<br>7つの問い</h2><p class="desc">答えを暗記するのではなく、<br>考えた跡を持っていこう。</p></section>
+<section class="sec blue" style="padding-top:24px"><div class="iq rv"><span class="n">①</span><h3>なぜ経済学部や商学部ではなく、経営学部なのですか？</h3><p>Chapter 1の表に戻る。自分の関心が「社会全体の仕組み」ではなく、「ひとつの組織がどう成果を出すか」に向いている理由を、経験から語る。</p></div><div class="iq rv"><span class="n">②</span><h3>起業したいなら、大学に行かなくてもよいのでは？</h3><p>経営学部でとくに聞かれやすい。経験だけではわからない「なぜ」を、理論とデータで学ぶ意味を自分の言葉で答える。</p></div><div class="iq rv"><span class="n">③</span><h3>注目している企業と、その理由を教えてください。</h3><p>「好きだから」「有名だから」で終わらせない。Chapter 2の道具を使い、戦略や組織の特徴として説明する。</p></div><div class="iq rv"><span class="n">④</span><h3>リーダーとして、うまくいかなかった経験はありますか？</h3><p>成功談より失敗談のほうが評価される。なぜうまくいかなかったのかを、個人ではなく仕組みの問題として分析する。</p></div><div class="iq rv"><span class="n">⑤</span><h3>あなたの関心は、経営学のどの分野にあたりますか？</h3><p>Chapter 4の分野名で答え、志望校の科目やゼミの名前を添える。</p></div><div class="iq rv"><span class="n">⑥</span><h3>会計や統計など、数字を扱うことに不安はありませんか？</h3><p>「得意です」と言えなくていい。Chapter 7のリストのうち、実際にやったことを具体的に話す。</p></div><div class="iq rv"><span class="n">⑦</span><h3>その本を読んで、納得できなかった点はありますか？</h3><p>批判は失礼ではない。Chapter 6のステップ2で見つけた「当てはまらない場面」がそのまま答えになる。</p></div></section>
+<section class="sec cream"><p class="mid center rv">出願前の<br>最終チェックリスト</p><div class="sp-s"></div><ul class="todo"><li class="rv">「なぜ経済や商ではなく経営か」を30秒で説明できる</li><li class="rv">5つの道具のうち、ひとつを自分の経験で説明できる</li><li class="rv">自分の関心が、どの分野にあたるかを言える</li><li class="rv">本を1冊、「主張 → 衝突 → 問い」で語れる</li><li class="rv">注目する企業を、戦略や組織の言葉で説明できる</li><li class="rv">自分の失敗を、仕組みの問題として分析できる</li></ul></section>
+<section class="end"><div class="faces" aria-hidden="true" style="margin-top:0"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg></div>
+<p class="big rv">一人では<br>できないことを、<br>組織は可能にする。</p><div class="sp-s"></div>
+<p class="lead rv">その仕組みを知りたいと思ったなら、<br>君はもう、<br><mark>経営学の入り口に立っている。</mark></p>
+<a class="top" href="#top">↑ 最初に戻る</a></section>
+<footer>総合型選抜｜学部別・学問入門　経営学部編<br>監修｜総合型選抜9年選手<br>掲載書籍の版・価格は書店等で最新の情報をご確認ください。<br>登場する人物イラストはすべて架空のキャラクターです。</footer>
+</div>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+  var bar=document.getElementById('bar');
+  function prog(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',prog,{passive:true});
+  prog();
+})();
+</script>
+</body>
+</html>

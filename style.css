@@ -235,4 +235,5 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 .gift .samples img:first-child{transform:rotate(-1.5deg)}
 .gift .samples img:nth-child(2){margin-top:18px;transform:rotate(1deg)}
 .gift .samples img.wide{grid-column:1/-1;transform:rotate(-.5deg)}
+.gift .samples img.wide+img.wide{transform:rotate(.6deg)}
 .gift .samples figcaption{margin-top:14px;font-size:.74rem;line-height:1.8;color:var(--ink-2);letter-spacing:.08em}

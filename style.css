@@ -227,3 +227,11 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 .nt{overflow:hidden}
 .nt .thumb{display:block;width:calc(100% + 48px);max-width:none;margin:-22px -24px 8px;aspect-ratio:1280/670;height:auto;object-fit:cover;background:rgba(255,255,255,.5);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .nt:hover .thumb{transform:scale(1.03)}
+
+/* 特典：届く手引きの実物の例 */
+.gift .samples{margin:26px 0 0}
+.gift .samples .sm{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:12px;align-items:start}
+.gift .samples img{display:block;width:100%;height:auto;border-radius:3px;box-shadow:0 10px 24px rgba(20,23,31,.16),0 0 0 1px rgba(20,23,31,.08);background:#fff}
+.gift .samples img:first-child{transform:rotate(-1.5deg)}
+.gift .samples img:last-child{margin-top:18px;transform:rotate(1deg)}
+.gift .samples figcaption{margin-top:14px;font-size:.74rem;line-height:1.8;color:var(--ink-2);letter-spacing:.08em}

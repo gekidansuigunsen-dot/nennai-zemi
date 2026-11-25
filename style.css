@@ -290,3 +290,7 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 
 /* 特典：攻略の手引きの説明ページへの入口 */
 .gift .about{margin:4px 0 16px;background:rgba(255,255,255,.7)}
+.prof .sns{display:flex;flex-wrap:wrap;gap:10px;margin:-4px 0 22px}
+.prof .sns a{display:inline-flex;align-items:center;gap:8px;padding:8px 16px 8px 12px;border:1px solid var(--hair);border-radius:999px;background:rgba(255,255,255,.6);color:var(--ink);text-decoration:none;font-family:var(--f-lat);font-size:.8rem;letter-spacing:.12em;transition:background .2s,color .2s,border-color .2s}
+.prof .sns svg{width:17px;height:17px;fill:currentColor;flex:none}
+.prof .sns a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}

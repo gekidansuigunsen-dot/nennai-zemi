@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>社会学は「何でもあり」じゃない。｜総合型選抜・社会学部志望者のための入門冊子</title>
+<meta name="description" content="総合型選抜で社会学部を志望する受験生のための入門冊子。社会学の考え方、分野マップ、読んでおきたい12冊、本を志望理由書に変える方法まで。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0d6b5b;
+  --blue-d:#084a3f;
+  --ink:#121212;
+  --cream:#eff1e6;
+  --paper:#fffdf7;
+  --yellow:#e6f04a;
+  --red:#ff5436;
+  --w:520px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:#06251f;
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  font-weight:500;
+  line-height:1.9;
+  letter-spacing:.06em;
+  font-feature-settings:"palt";
+}
+.page{max-width:var(--w);margin:0 auto;background:var(--paper);overflow:hidden;position:relative}
+svg{display:block}
+.num{font-family:"Abril Fatface",Georgia,serif;letter-spacing:.02em;font-weight:400}
+.hand{font-family:"Yusei Magic","Zen Kaku Gothic New",sans-serif;letter-spacing:.04em}
+mark{background:linear-gradient(transparent 55%,var(--yellow) 55%);color:inherit;padding:0 .1em}
+.blue mark,.ink mark,.end mark,.chap mark{background:none;color:var(--yellow)}
+.ink .who svg{background:var(--cream);border-radius:14px;padding:4px 4px 0}
+
+/* progress */
+.home{display:block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;text-decoration:none;letter-spacing:.1em}
+.home:hover{color:var(--yellow)}
+.bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--yellow);z-index:50}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.pop{transform:scale(.86)}
+.js .rv.pop.in{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cover */
+.cover{background:var(--blue);color:#fff;padding:64px 28px 120px;clip-path:polygon(0 0,100% 0,100% 100%,0 91%);text-align:center;position:relative}
+.cover .series{display:inline-block;border:1.5px solid #fff;border-radius:99px;padding:2px 16px;font-size:12px;font-weight:700;letter-spacing:.14em}
+.faces{display:flex;justify-content:center;gap:10px;margin:44px 0 28px}
+.faces svg{width:23%;max-width:104px;height:auto}
+.cover h1{font-size:clamp(30px,8.4vw,42px);font-weight:900;line-height:1.45;letter-spacing:.08em}
+.cover h1 span{color:var(--yellow)}
+.cover .sub{margin-top:22px;font-size:14px;font-weight:700;letter-spacing:.12em}
+.cover .vol{margin-top:30px;font-size:22px}
+.cover .vol small{display:block;font-size:13px;margin-top:2px;opacity:.9}
+.kanshu{display:inline-block;margin-top:22px;background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:2px 18px;letter-spacing:.12em}
+.scroll{margin:34px auto 0;width:22px;height:36px;border:2px solid #fff;border-radius:12px;position:relative}
+.scroll:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:7px;margin-left:-2px;background:var(--yellow);border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.scroll:after{animation:none}}
+
+/* sections */
+.sec{padding:64px 28px}
+.blue{background:var(--blue);color:#fff}
+.ink{background:var(--ink);color:#fff}
+.cream{background:var(--cream)}
+.slant-t{clip-path:polygon(0 0,100% 44px,100% 100%,0 100%);padding-top:108px;margin-top:-44px}
+.center{text-align:center}
+p+p{margin-top:1.3em}
+.lead{font-size:17px;font-weight:700;line-height:2.1}
+.big{font-size:clamp(25px,7vw,34px);font-weight:900;line-height:1.6;letter-spacing:.08em}
+.mid{font-size:20px;font-weight:900;line-height:1.75}
+.note{font-size:12px;opacity:.8;line-height:1.7}
+.sp{height:44px}.sp-s{height:24px}
+
+/* index */
+.index{padding:56px 28px 64px}
+.index h2{font-size:22px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.index a{display:flex;align-items:baseline;gap:14px;padding:15px 4px;border-bottom:1px solid var(--ink);color:inherit;text-decoration:none;font-weight:700;font-size:17px}
+.index a .num{font-size:15px;color:var(--blue);min-width:86px}
+.index a:after{content:"↓";margin-left:auto;color:var(--blue)}
+.index a:hover,.index a:focus-visible{background:var(--yellow);outline:none}
+
+/* chapter head */
+.chap{background:var(--blue);color:#fff;padding:120px 28px 64px;margin-top:-1px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);text-align:center}
+.chap.ink{background:var(--ink)}
+.chap .lbl{font-size:22px}
+.chap .ttl{background:var(--cream);color:var(--ink);margin:16px auto 0;padding:34px 16px;font-size:clamp(24px,6.6vw,32px);font-weight:900;letter-spacing:.1em;line-height:1.5;border-top:6px solid var(--yellow)}
+.chap .desc{margin-top:22px;font-size:14px;font-weight:700}
+
+/* talk */
+.talk{display:flex;align-items:flex-end;gap:12px;margin:26px 0}
+.talk.r{flex-direction:row-reverse}
+.talk .who{flex:0 0 84px;text-align:center;font-size:11px;font-weight:700;line-height:1.4}
+.talk .who svg{width:84px;height:auto;margin-bottom:2px}
+.bub{position:relative;background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:18px;padding:14px 16px;font-size:16px;line-height:1.7;margin-bottom:26px;flex:1}
+.bub:after{content:"";position:absolute;bottom:14px;left:-11px;width:18px;height:18px;background:#fff;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+.talk.r .bub:after{left:auto;right:-11px;border:0;border-right:2.5px solid var(--ink);border-top:2.5px solid var(--ink)}
+.bub.y{background:var(--yellow)}.bub.y:after{background:var(--yellow)}
+
+/* cards */
+.card{background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:6px;padding:22px 20px;box-shadow:6px 6px 0 var(--ink)}
+.blue .card,.ink .card{box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.card h3{font-size:19px;font-weight:900;line-height:1.5}
+.card+.card{margin-top:22px}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:1px 10px;letter-spacing:.1em;margin-bottom:8px}
+.tag.y{background:var(--yellow);color:var(--ink)}
+.tag.b{background:var(--blue)}
+
+/* definition */
+.def{border:3px solid #fff;padding:30px 18px;text-align:center;position:relative;margin-top:36px}
+.def .cap{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:1px 16px;white-space:nowrap}
+
+/* vs */
+.vs .row{display:grid;grid-template-columns:84px 1fr;border-top:2px solid var(--ink)}
+.vs .row:last-child{border-bottom:2px solid var(--ink)}
+.vs .k{font-weight:900;font-size:17px;padding:16px 0;display:flex;align-items:center}
+.vs .v{padding:16px 0 16px 14px;font-size:14px;line-height:1.75;border-left:1px dashed var(--ink)}
+.vs .v b{display:block;font-size:15px}
+.vs .row.me{background:var(--yellow);margin:0 -12px;padding:0 12px}
+
+/* tools */
+.tool{position:relative;padding:26px 0 26px 66px;border-bottom:1px dashed rgba(255,255,255,.6)}
+.tool:last-of-type{border-bottom:0}
+.tool .n{position:absolute;left:0;top:24px;width:50px;height:50px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:26px;font-weight:900;letter-spacing:0}
+.tool h3{font-size:22px;font-weight:900;line-height:1.4}
+.tool .one{font-size:14px;font-weight:700;color:var(--yellow);margin:2px 0 8px}
+.tool p{font-size:15px;line-height:1.85}
+.tool .ex{margin-top:12px;background:rgba(255,255,255,.12);border-left:4px solid var(--yellow);padding:10px 14px;font-size:14px;line-height:1.75}
+
+/* timeline */
+.tl{position:relative;margin-left:8px;padding-left:28px;border-left:5px dotted var(--blue)}
+.tl .it{position:relative;padding-bottom:46px}
+.tl .it:last-child{padding-bottom:6px}
+.tl .it:before{content:"";position:absolute;left:-41px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid var(--cream)}
+.tl .yr{font-size:30px;line-height:1.2;color:var(--ink)}
+.tl .yr small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:700;margin-left:2px}
+.tl h3{font-size:19px;font-weight:900;color:var(--blue);line-height:1.5;margin:6px 0 4px}
+.tl p{font-size:15px;line-height:1.85}
+.tl .q{clear:both;display:inline-block;margin-top:10px;background:#fff;border:2px solid var(--ink);padding:4px 12px;font-size:14px;font-weight:700;line-height:1.6}
+.fig{float:right;width:112px;height:auto;margin:-6px 0 6px 10px}
+.bust{float:right;width:64px;margin:-4px 0 4px 10px}
+
+/* map */
+.base{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.base div{background:var(--yellow);color:var(--ink);text-align:center;padding:14px 4px;font-weight:900;font-size:16px;line-height:1.4;border:2.5px solid var(--ink)}
+.base small{display:block;font-size:11px;font-weight:700;margin-top:4px;line-height:1.5}
+.map{margin-top:10px}
+.map .m{display:grid;grid-template-columns:1fr 20px 128px;align-items:center;gap:6px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.5);font-size:14.5px;line-height:1.65}
+.map .m i{font-style:normal;color:var(--yellow);font-weight:900;text-align:center}
+.map .m b{background:#fff;color:var(--blue);text-align:center;padding:5px 2px;font-size:13.5px;font-weight:900;line-height:1.4}
+
+/* books */
+.theme{display:flex;align-items:center;gap:10px;margin:44px 0 18px;font-weight:900;font-size:18px}
+.theme:first-of-type{margin-top:8px}
+.theme:before,.theme:after{content:"";flex:1;height:2px;background:var(--ink)}
+.book{display:grid;grid-template-columns:64px 1fr;gap:16px;background:#fff;border:2.5px solid var(--ink);padding:18px 16px;box-shadow:5px 5px 0 var(--blue)}
+.book{color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.book:hover,a.book:focus-visible{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--blue);outline:none}
+.js a.book.rv.in:hover{transform:translate(-2px,-2px)}
+.amz{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;font-size:12px;font-weight:900;padding:3px 14px;border-radius:99px;letter-spacing:.08em}
+.book+.book{margin-top:20px}
+.spine{background:var(--blue);color:#fff;display:grid;place-items:center;font-size:32px;font-weight:900;letter-spacing:0;min-height:96px;border:2.5px solid var(--ink);border-left-width:7px}
+.spine.y{background:var(--yellow);color:var(--ink)}
+.spine.r{background:var(--red)}
+.spine.k{background:var(--ink)}
+.book h3{font-size:16.5px;font-weight:900;line-height:1.5}
+.book .au{font-size:12px;font-weight:700;opacity:.75;line-height:1.5;margin-top:2px}
+.book .meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;font-size:11px;font-weight:700}
+.book .meta span{border:1.5px solid var(--ink);padding:0 8px;border-radius:99px;line-height:1.8}
+.book .meta .st{background:var(--ink);color:var(--yellow);letter-spacing:.1em}
+.book p{font-size:13.5px;line-height:1.75}
+.book .ask{margin-top:8px;background:var(--cream);padding:8px 10px;font-size:13px;font-weight:700;line-height:1.65}
+.book .ask:before{content:"立てられる問い";display:block;font-size:10px;color:var(--blue);letter-spacing:.14em}
+
+/* steps */
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;padding:22px 0;border-bottom:2px solid var(--ink)}
+.step .n{font-size:44px;line-height:1;color:var(--blue)}
+.step h3{font-size:18px;font-weight:900;line-height:1.5}
+.step p{font-size:14.5px;line-height:1.8;margin-top:4px}
+.ba{margin-top:30px}
+.ba .x,.ba .o{padding:18px 16px 18px;border:2.5px solid var(--ink);font-size:14.5px;line-height:1.85;position:relative;background:#fff}
+.ba .x{color:#555}
+.ba .o{background:var(--yellow);margin-top:34px}
+.ba .x:before,.ba .o:before{position:absolute;top:-14px;left:12px;font-size:12px;font-weight:900;padding:0 12px;color:#fff;letter-spacing:.1em}
+.ba .x:before{content:"✕ 感想文で終わる例";background:#777}
+.ba .o:before{content:"◎ 問いに変換した例";background:var(--blue)}
+.ba .arrow{text-align:center;font-size:26px;font-weight:900;line-height:1;margin-top:12px;color:var(--blue)}
+
+/* list */
+.todo li{list-style:none;position:relative;padding:12px 0 12px 34px;border-bottom:1px dashed rgba(255,255,255,.55);font-size:15px;line-height:1.75}
+.todo li:before{content:"";position:absolute;left:2px;top:17px;width:18px;height:18px;border:2.5px solid var(--yellow);border-radius:3px}
+.todo li b{color:var(--yellow)}
+.cream .todo li,.paper .todo li{border-color:var(--ink)}
+.cream .todo li:before{border-color:var(--blue)}
+
+/* interview */
+.iq{background:#fff;color:var(--ink);border:2.5px solid var(--ink);padding:18px 16px 16px 60px;position:relative}
+.iq+.iq{margin-top:16px}
+.iq .n{position:absolute;left:14px;top:14px;font-size:30px;font-weight:900;color:var(--blue);line-height:1.2;letter-spacing:0}
+.iq h3{font-size:16.5px;font-weight:900;line-height:1.55}
+.iq p{font-size:13.5px;line-height:1.75;margin-top:6px;color:#333}
+.iq p:before{content:"考えるヒント｜";font-weight:900;color:var(--blue)}
+
+/* vertical statement */
+.vert{writing-mode:vertical-rl;margin:0 auto;font-size:21px;font-weight:900;line-height:2.1;letter-spacing:.16em;height:15em;text-align:left}
+.vert .hl{color:var(--yellow)}
+
+/* ending */
+.end{background:var(--blue);color:#fff;padding:120px 28px 72px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);margin-top:-1px;text-align:center}
+footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px;font-size:11px;letter-spacing:.12em;line-height:1.9}
+footer a{color:var(--yellow)}
+.top{display:inline-block;margin-top:40px;color:#fff;border:2px solid #fff;padding:6px 26px;border-radius:99px;font-weight:700;font-size:13px;text-decoration:none}
+.top:hover,.top:focus-visible{background:#fff;color:var(--blue);outline:none}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+
+<!-- character symbols (all original, fictional) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 受験生 ケイ -->
+    <symbol id="c-kei" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 108l10 10 10-10" fill="none" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 22-12 40-30 40S30 80 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M27 56C22 26 40 8 62 10c22 2 36 18 31 46-3-10-8-17-15-22-4 6-10 9-16 10 2-3 3-6 3-9-8 8-22 12-32 12-3 3-5 6-6 9z" fill="#121212"/>
+      <path d="M42 56q6-4 12-1M66 55q6-3 12 1" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="65" r="3.2" fill="#121212"/><circle cx="72" cy="65" r="3.2" fill="#121212"/>
+      <path d="M59 68q-3 7 1 9" fill="none" stroke="#121212" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M51 84q9 6 18 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <!-- 受験生 ミオ -->
+    <symbol id="c-mio" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M24 50C22 22 40 8 60 8s38 14 36 42c-1 18 2 34 4 44H20c2-10 5-26 4-44z" fill="#121212"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M31 58c0-24 12-36 29-36s29 12 29 36c0 22-12 40-29 40S31 80 31 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c2-22 12-34 30-36 18 2 28 14 30 36-10-4-18-12-22-22-8 12-24 20-38 22z" fill="#121212"/>
+      <path d="M42 62q6-5 12 0M66 62q6-5 12 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="68" r="3" fill="#121212"/><circle cx="72" cy="68" r="3" fill="#121212"/>
+      <path d="M53 84q7 5 14 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="40" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+      <circle cx="80" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </symbol>
+    <!-- 先生 -->
+    <symbol id="c-sensei" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#121212" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M48 104l12 16 12-16z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 24-12 40-30 40S30 82 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M28 50C24 24 42 10 60 10c20 0 36 12 32 40-4-12-12-20-26-22-14-2-28 2-38 22z" fill="#121212"/>
+      <rect x="36" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <rect x="64" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M56 62h8M36 62l-6-2M84 62l6-2" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="46" cy="64" r="2.6" fill="#121212"/><circle cx="74" cy="64" r="2.6" fill="#121212"/>
+      <path d="M48 82q12 9 24 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 76q-2 6 2 10M80 76q2 6-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 面接官 -->
+    <symbol id="c-mensetsu" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M56 106h8l3 22h-14z" fill="#121212"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c0-26 12-40 30-40s30 14 30 40c0 26-12 42-30 42S30 82 30 56z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M29 58c-4-14 0-28 8-34-2 10-3 22-2 30zM91 58c4-14 0-28-8-34 2 10 3 22 2 30z" fill="#121212"/>
+      <path d="M44 22q16-8 32 0" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+      <path d="M38 52l16 3M82 52l-16 3" fill="none" stroke="#121212" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="47" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="73" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <path d="M55 64h10" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="47" cy="65" r="2.4" fill="#121212"/><circle cx="73" cy="65" r="2.4" fill="#121212"/>
+      <path d="M50 86h20" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 78q4 4 2 10M80 78q-4 4-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 学説を象徴するアイコン -->
+    <symbol id="i-hand" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M22 50V30a3 3 0 0 1 6 0v-9a3 3 0 0 1 6 0v-2a3 3 0 0 1 6 0v4a3 3 0 0 1 6 0v17c0 8-5 12-12 12-6 0-9-2-12-8l-5-9a3 3 0 0 1 5-3z" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" fill="#fff"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="15" fill="none" stroke="#121212" stroke-width="9" stroke-dasharray="6.2 5.58"/><circle cx="32" cy="32" r="12" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="32" cy="32" r="4" fill="#121212"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M14 26l18-11 18 11z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31v14M27 31v14M37 31v14M46 31v14M13 49h38" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-game" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><rect x="16" y="16" width="32" height="32" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 16v32M16 32h32" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3" fill="#121212"/><path d="M37 37l6 6M43 37l-6 6" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bias" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M32 46V24M12 30l40-10" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 50h16" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="38" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="50" cy="26" r="4" fill="#121212"/><path d="M14 30v2M50 20v2" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M27 14h10M29 14v13L18 46a3 3 0 0 0 3 5h22a3 3 0 0 0 3-5L35 27V14" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 40h18" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="45" r="1.8" fill="#121212"/><circle cx="36" cy="43" r="1.4" fill="#121212"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M16 16v32h34" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="22" y="36" width="6" height="12" fill="#121212"/><rect x="32" y="29" width="6" height="19" fill="#121212"/><rect x="42" y="21" width="6" height="27" fill="#fff" stroke="#121212" stroke-width="2.5"/></symbol>
+  <symbol id="j-doc" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M20 14h18l8 8v28H20z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 14v8h8M26 30h14M26 37h14M26 44h9" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="j-people" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><circle cx="23" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M12 48c1-9 5-13 11-13s10 4 11 13M30 48c1-9 5-13 11-13s10 4 11 13" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="k-city" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M14 48V28h10v20M24 48V18h14v30M38 48V32h12v16M10 48h44" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 25h4M29 32h4M29 39h4" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="k-lens" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><circle cx="28" cy="28" r="11" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M36 36l12 12" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="k-link" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M24 32h16" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="32" r="7" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="45" cy="32" r="7" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M19 20c8-8 18-8 26 0M19 44c8 8 18 8 26 0" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/></symbol>
+<symbol id="k-warn" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e6f04a" stroke="#121212" stroke-width="2.5"/><path d="M32 14l19 34H13z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 26v11" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="42.5" r="2" fill="#121212"/></symbol>
+  </defs>
+</svg>
+
+<div class="page" id="top">
+<a class="home" href="/">← 年内入試攻略まるごとゼミ トップ</a>
+<header class="cover"><span class="series">総合型選抜｜学部別・学問入門</span>
+<div class="faces" aria-hidden="true"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg></div>
+<h1>社会学は<br><span>「何でもあり」</span><br>じゃない。</h1>
+<p class="sub">社会学部を志望する君が<br>出願前に知っておきたいこと</p>
+<p class="vol num">Sociology<small>社会学部編</small></p>
+<p class="kanshu">監修｜総合型選抜9年選手</p>
+<div class="scroll" aria-hidden="true"></div></header>
+<nav class="index" aria-label="目次"><h2 class="num">Index</h2>
+<a href="#c1"><span class="num">Chapter 1</span>その志望理由、どの学部でも言えない？</a>
+<a href="#c2"><span class="num">Chapter 2</span>社会学者の「5つの道具」</a>
+<a href="#c3"><span class="num">Chapter 3</span>200年を3分で</a>
+<a href="#c4"><span class="num">Chapter 4</span>君の関心はどの分野？</a>
+<a href="#c5"><span class="num">Chapter 5</span>読んでおきたい12冊</a>
+<a href="#c6"><span class="num">Chapter 6</span>読んだ本を志望理由書に変える</a>
+<a href="#c7"><span class="num">Chapter 7</span>調査とデータの話</a>
+<a href="#c8"><span class="num">Chapter 8</span>面接で聞かれる7つの問い</a></nav>
+<section class="chap" id="c1"><div class="lbl num">Chapter 1</div><h2 class="ttl rv">その志望理由、<br>どの学部でも<br>言えない？</h2><p class="desc">まず、いちばん多い失敗から。</p></section>
+<section class="sec cream"><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">社会問題に関心があるので、幅広く学べる社会学部を志望します！</div></div><div class="talk r rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg>面接官</div><div class="bub hand">社会問題は、法学部でも経済学部でも扱います。社会学では何を明らかにしたいのですか？</div></div><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">……えっと……</div></div><div class="sp-s"></div><p class="big center rv">「幅広く学べる」は、<br><mark>志望理由に<br>ならない。</mark></p><div class="sp-s"></div>
+<p class="rv">社会学部の志望理由書でよく見るのが、「社会問題を解決したい」「人と関わることが好き」「いろいろなことに興味がある」という言葉だけで組み立てられた文章だ。</p>
+<p class="rv">たしかに社会学は、家族も、学校も、SNSも、推し活も研究の対象にできる。でも「何でも扱える」ことと「何でもあり」は違う。大学の先生が知りたいのは、<b>君が社会学ならではの「ものの見方」に興味を持っているかどうか</b>だ。</p></section>
+<section class="sec blue"><p class="center lead rv">では、社会学とは何か。</p>
+<div class="def rv pop"><span class="cap">ひとことで言うと</span><p class="big">「当たり前」を疑い、<br>人と人のあいだの<br>仕組みを<br><mark>明らかにする学問</mark></p></div><div class="sp"></div>
+<p class="rv">「学校には行くものだ」「結婚したら一緒に住むものだ」「空気は読むものだ」。私たちは、誰が決めたのか分からないルールの中で暮らしている。</p>
+<p class="rv">社会学は、その見えないルールがどこから来て、誰を楽にし、誰を苦しめているのかを、調査によって明らかにする。</p>
+<p class="rv">だから社会学の決めゼリフは、<mark>「それは本当に、その人だけの問題なのか」</mark>だ。個人の悩みに見えるものを、社会の仕組みから読み解いていく。</p></section>
+<section class="sec"><p class="mid center rv">同じ「不登校」を見ても、<br>問いがこれだけ違う。</p><div class="sp-s"></div>
+<div class="vs rv">
+<div class="row me"><div class="k">社会学</div><div class="v"><b>当たり前と仕組みを見る</b>なぜ「学校に行くのが普通」とされ、行かないことが問題になるのか？</div></div>
+<div class="row"><div class="k">心理学</div><div class="v"><b>個人のこころを見る</b>本人の内面で、何が起きているのか？</div></div>
+<div class="row"><div class="k">教育学</div><div class="v"><b>育ちと支え方を見る</b>どんな学びの場や支援があれば、その子は育つのか？</div></div></div>
+<p class="note rv" style="margin-top:14px">※社会学部の中にメディア、福祉、観光、心理などの学科を置く大学も多い。学科の分け方やカリキュラムは大学によって異なるので、志望校の科目表は必ず自分で確認しよう。</p><div class="talk r rv" style="margin-top:36px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">「どう解決するか」の前に「なぜそれが問題とされるのか」を問う。そこが社会学の入り口だよ。</div></div></section>
+<section class="chap" id="c2"><div class="lbl num">Chapter 2</div><h2 class="ttl rv">社会学者の<br>「5つの道具」</h2><p class="desc">この5つで日常を見ると、<br>志望理由書の語彙が変わる。</p></section>
+<section class="sec blue" style="padding-top:20px"><div class="tool rv"><span class="n">①</span><h3>社会学的想像力</h3><p class="one">個人の悩みを、社会の問題として見る</p><p>一人が仕事に就けないなら本人の事情かもしれない。でも同じ世代の多くが就けないなら、それは社会の仕組みの問題だ。</p><p class="ex">「自分は友達づくりが下手だ」ではなく「なぜ今の教室では、友達づくりがこれほど大変なのか」と問う。</p></div><div class="tool rv"><span class="n">②</span><h3>常識を疑う</h3><p class="one">「昔からそう」は、だいたい最近</p><p>当たり前に見える習慣や価値観の多くは、ある時代に、ある事情で生まれたものだ。由来を知ると、変えられることが見えてくる。</p><p class="ex">「結婚は恋愛でするもの」。日本でお見合い結婚より恋愛結婚が多くなったのは、戦後しばらく経ってからのことだ。</p></div><div class="tool rv"><span class="n">③</span><h3>比較</h3><p class="one">比べないと、特徴は見えない</p><p>時代で、国で、地域で、集団で比べる。比べることではじめて「ここが特殊だ」と言える。</p><p class="ex">「日本の高校生は忙しい」。それは他の国と比べて？ 30年前と比べて？</p></div><div class="tool rv"><span class="n">④</span><h3>規範と役割</h3><p class="one">誰も決めていないのに、みんな従うルール</p><p>法律に書かれていなくても、人は「こうすべき」に従って動く。その見えないルールが、行動や生き方をしばっている。</p><p class="ex">エスカレーターで片側を空ける。誰に命令されたわけでもないのに、破ると視線が痛い。</p></div><div class="tool rv"><span class="n">⑤</span><h3>社会調査</h3><p class="one">思い込みではなく、調べて言う</p><p>アンケートで全体の傾向をつかむ（量的調査）。インタビューや現場に入ることで、当事者の意味づけを知る（質的調査）。社会学はこの両輪で進む。</p><p class="ex">「最近の若者は〇〇だ」。それは何人に、どう聞いた結果なのか。</p></div></section>
+<section class="sec ink center"><div class="vert rv"><span class="hl">「それ、本当に<br>　自己責任？」</span><br>と問えた瞬間、<br>君の関心は<br>社会学になる。</div></section>
+<section class="chap" id="c3"><div class="lbl num">Chapter 3</div><h2 class="ttl rv">200年を3分で</h2><p class="desc">社会が大きく揺れるたびに、<br>社会学は新しい問いを立ててきた。</p></section>
+<section class="sec cream"><div class="tl"><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-doc"/></svg><div class="yr num">1838<small>年</small></div><h3>「社会学」という言葉が生まれる</h3><p>フランスのコントが、社会を科学的に研究する学問を「社会学」と名づけた。革命と産業化で社会が激変した時代だった。</p><span class="q">問い｜社会は、科学の対象になるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#i-chart"/></svg><div class="yr num">1897<small>年</small></div><h3>デュルケーム『自殺論』</h3><p>もっとも個人的な決断に見える自殺でさえ、その発生率は国や宗教、家族のあり方によって違うことを統計で示した。個人の心ではなく、人と社会の結びつきの強さから説明した、実証的な社会学の出発点。</p><span class="q">問い｜個人的に見える行為にも、社会の力は働くのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#i-gear"/></svg><div class="yr num">1905<small>年</small></div><h3>ウェーバー『プロテスタンティズムの倫理と資本主義の精神』</h3><p>人々の信仰や価値観が、経済の仕組みを生み出す力になったと論じた。人の行為の「意味」を理解する社会学を切り開いた。</p><span class="q">問い｜人の信じるものは、社会をどう動かすか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#k-link"/></svg><div class="yr num">1908<small>年</small></div><h3>ジンメル『社会学』</h3><p>社会とは個人の寄せ集めではなく、人と人のあいだで起きる「相互作用」そのものだと考えた。二人と三人の違い、秘密、よそ者、流行など、身近な関係の「かたち」を分析の対象にした。</p><span class="q">問い｜人と人の「あいだ」では、何が起きているのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#k-city"/></svg><div class="yr num">1920<small>年代</small></div><h3>シカゴ学派の都市研究</h3><p>移民が急増したシカゴで、研究者が街に出て人々の暮らしを直接調べた。フィールドワークという手法がここで花開く。</p><span class="q">問い｜都市は、人の生き方をどう変えるか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#k-lens"/></svg><div class="yr num">1959<small>年</small></div><h3>ミルズ『社会学的想像力』</h3><p>個人の悩みと社会の問題を結びつけて考える力こそ、社会学の核心だと訴えた。いまも入門で必ず紹介される一冊。</p><span class="q">問い｜私の悩みは、社会とどうつながるか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-people"/></svg><div class="yr num">1979<small>年</small></div><h3>ブルデュー『ディスタンクシオン』</h3><p>趣味や好み、言葉づかいまでが、育った家庭の階層と結びついていることを大規模な調査で示した。「文化資本」という考え方が広まる。</p><span class="q">問い｜「好み」は、本当に自分で選んだものか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#k-warn"/></svg><div class="yr num">1986<small>年</small></div><h3>ベック『リスク社会』</h3><p>豊かさを生んだ科学技術そのものが、新しい危険を生み出す時代になったと論じた。環境問題や感染症を考える土台になっている。</p><span class="q">問い｜豊かさが生むリスクを、誰が引き受けるか？</span></div></div><div class="sp"></div><p class="mid center rv">流れをひとことで言えば、<br><mark>「社会全体を語る学問」から<br>「日常を調べる学問」へ。</mark></p><div class="talk r rv" style="margin-top:30px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">大きな理論を覚える必要はないよ。「身近な当たり前」をひとつ、調べてみたいと思えるかどうかだ。</div></div></section>
+<section class="chap" id="c4"><div class="lbl num">Chapter 4</div><h2 class="ttl rv">君の関心は<br>どの分野？</h2><p class="desc">「社会学」はひとつじゃない。<br>自分の居場所を見つけよう。</p></section>
+<section class="sec blue" style="padding-top:24px"><p class="lead center rv">まず、全員が学ぶ3つの土台。</p><div class="sp-s"></div>
+<div class="base rv"><div>理論<small>社会を見る<br>視点を学ぶ</small></div><div>量的調査<small>アンケートと<br>統計で調べる</small></div><div>質的調査<small>聞き取りと<br>観察で調べる</small></div></div>
+<div class="sp"></div><p class="lead center rv">その上に、テーマ別の分野が広がる。</p><div class="map"><div class="m rv"><span>結婚しない人が増えているのはなぜか</span><i>→</i><b>家族社会学</b></div><div class="m rv"><span>親の学歴や収入は、子の進路にどう影響するか</span><i>→</i><b>教育社会学</b></div><div class="m rv"><span>「男らしさ」「女らしさ」は誰が決めたのか</span><i>→</i><b>ジェンダー論</b></div><div class="m rv"><span>SNSでは、なぜ炎上が起きるのか</span><i>→</i><b>メディア論<br>情報社会学</b></div><div class="m rv"><span>地元の商店街や祭りは、なぜ続かないのか</span><i>→</i><b>地域社会学<br>都市社会学</b></div><div class="m rv"><span>推し活やファン文化は、なぜ広がったのか</span><i>→</i><b>文化社会学</b></div><div class="m rv"><span>非正規で働く人が増えたのはなぜか</span><i>→</i><b>労働社会学</b></div><div class="m rv"><span>介護や子育ては、誰が担うべきなのか</span><i>→</i><b>福祉社会学</b></div><div class="m rv"><span>外国にルーツを持つ人は、どう暮らしているか</span><i>→</i><b>国際社会学</b></div><div class="m rv"><span>「非行」や「不良」は、誰がそう呼ぶのか</span><i>→</i><b>逸脱の社会学</b></div></div><div class="sp"></div><div class="card rv"><span class="tag b">やってみよう</span><h3>志望校の教員一覧を開き、<br>上の分野名で探す。</h3><p style="font-size:14.5px;margin-top:8px">自分の関心に近い研究をしている先生が見つかれば、「なぜこの大学か」に具体的な答えが生まれる。ゼミ名や担当科目までメモしておこう。</p></div></section>
+<section class="chap" id="c5"><div class="lbl num">Chapter 5</div><h2 class="ttl rv">読んでおきたい<br>12冊</h2><p class="desc">全部読まなくていい。<br>関心に近い2冊を、深く。</p></section>
+<section class="sec cream" style="padding-top:28px"><p class="note center rv">カードをタップするとAmazonの検索結果が開きます。難易度は★が多いほど歯ごたえあり。読了時間は高校生が読む場合のおおよその目安。</p><div class="theme rv">最初の一冊</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%A4%BE%E4%BC%9A%E5%AD%A6%E3%82%92%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%20%E5%AE%AE%E5%86%85%E6%B3%B0%E4%BB%8B" target="_blank" rel="noopener"><div class="spine ">①</div><div><h3>社会学をはじめる</h3><p class="au">宮内泰介（ちくまプリマー新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>問いの立て方から調べ方、まとめ方まで、社会学という営みの全体を中高生向けに案内する。迷ったらここから。</p><p class="ask">自分の身近な疑問は、どうすれば「調べられる問い」になるのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%A4%BE%E4%BC%9A%E3%82%92%E7%9F%A5%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E3%81%AF%20%E7%AD%92%E4%BA%95%E6%B7%B3%E4%B9%9F" target="_blank" rel="noopener"><div class="spine ">②</div><div><h3>社会を知るためには</h3><p class="au">筒井淳也（ちくまプリマー新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>社会はなぜ思いどおりにならず、分かりにくいのか。社会を「知る」とはどういうことかを考える。</p><p class="ask">社会のことは、どこまで「分かった」と言えるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">身近な人間関係</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%8F%8B%E3%81%A0%E3%81%A1%E5%9C%B0%E7%8D%84%20%E5%9C%9F%E4%BA%95%E9%9A%86%E7%BE%A9" target="_blank" rel="noopener"><div class="spine y">③</div><div><h3>友だち地獄</h3><p class="au">土井隆義（ちくま新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>対立を避け、互いに傷つけないよう気をつかい合う若者の人間関係を「優しい関係」と名づけて読み解く。</p><p class="ask">教室の人間関係は、なぜこれほど気をつかうものになったのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%B5%B6%E6%9C%9B%E3%81%AE%E5%9B%BD%E3%81%AE%E5%B9%B8%E7%A6%8F%E3%81%AA%E8%8B%A5%E8%80%85%E3%81%9F%E3%81%A1%20%E5%8F%A4%E5%B8%82%E6%86%B2%E5%AF%BF" target="_blank" rel="noopener"><div class="spine y">④</div><div><h3>絶望の国の幸福な若者たち</h3><p class="au">古市憲寿</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>「若者は不幸だ」と語られる一方で、若者自身の生活満足度は高い。そのずれを調査データと現場取材から考える。</p><p class="ask">「かわいそうな若者」という見方は、誰のものなのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">家族とジェンダー</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%B5%90%E5%A9%9A%E3%81%A8%E5%AE%B6%E6%97%8F%E3%81%AE%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%20%E7%AD%92%E4%BA%95%E6%B7%B3%E4%B9%9F" target="_blank" rel="noopener"><div class="spine r">⑤</div><div><h3>結婚と家族のこれから</h3><p class="au">筒井淳也（光文社新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>家族のかたちの歴史をたどり、共働きが広がる社会で何が起きるのかを考える。</p><p class="ask">「ふつうの家族」は、いつから「ふつう」になったのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%80%E3%83%BC%E8%AB%96%20%E5%8A%A0%E8%97%A4%E7%A7%80%E4%B8%80" target="_blank" rel="noopener"><div class="spine r">⑥</div><div><h3>はじめてのジェンダー論</h3><p class="au">加藤秀一（有斐閣）</p><div class="meta"><span class="st">★★☆</span><span>約5時間</span></div><p>性別をめぐる「当たり前」を、ひとつずつ丁寧に問い直していく入門書。</p><p class="ask">性別による「らしさ」は、どこで身につくのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">教育と格差</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%95%99%E8%82%B2%E6%A0%BC%E5%B7%AE%20%E6%9D%BE%E5%B2%A1%E4%BA%AE%E4%BA%8C" target="_blank" rel="noopener"><div class="spine k">⑦</div><div><h3>教育格差</h3><p class="au">松岡亮二（ちくま新書）</p><div class="meta"><span class="st">★★☆</span><span>約5時間</span></div><p>生まれ育った家庭や地域によって学力や進路に差がつく実態を、大量のデータで示す。</p><p class="ask">努力できるかどうかも、環境に左右されるのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%8F%E3%83%9E%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E3%81%AE%E9%87%8E%E9%83%8E%E3%81%A9%E3%82%82%20%E3%83%9D%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%A6%E3%82%A3%E3%83%AA%E3%82%B9" target="_blank" rel="noopener"><div class="spine k">⑧</div><div><h3>ハマータウンの野郎ども</h3><p class="au">ポール・ウィリス（ちくま学芸文庫）</p><div class="meta"><span class="st">★★★</span><span>約8時間</span></div><p>イギリスの労働者階級の少年たちが、学校に反抗しながら、自ら肉体労働の道へ進んでいく過程を描いた古典。</p><p class="ask">学校への反抗は、なぜ格差を固定してしまうのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">調べる技法</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%A4%BE%E4%BC%9A%E8%AA%BF%E6%9F%BB%E3%81%AE%E3%82%A6%E3%82%BD%20%E8%B0%B7%E5%B2%A1%E4%B8%80%E9%83%8E" target="_blank" rel="noopener"><div class="spine ">⑨</div><div><h3>社会調査のウソ</h3><p class="au">谷岡一郎（文春新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>世の中に出回るアンケートや調査の問題点を、実例で次々に指摘する。データを疑う目が身につく。</p><p class="ask">そのアンケート結果は、どこまで信じてよいのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%96%AD%E7%89%87%E7%9A%84%E3%81%AA%E3%82%82%E3%81%AE%E3%81%AE%E7%A4%BE%E4%BC%9A%E5%AD%A6%20%E5%B2%B8%E6%94%BF%E5%BD%A6" target="_blank" rel="noopener"><div class="spine ">⑩</div><div><h3>断片的なものの社会学</h3><p class="au">岸政彦</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>聞き取り調査の中で出会った、うまく解釈できない人生の断片をつづるエッセイ。質的調査の手ざわりが伝わる。</p><p class="ask">人の話を「聞く」とは、どういうことなのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">古典に挑む</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%A4%BE%E4%BC%9A%E5%AD%A6%E5%85%A5%E9%96%80%20%E8%A6%8B%E7%94%B0%E5%AE%97%E4%BB%8B" target="_blank" rel="noopener"><div class="spine y">⑪</div><div><h3>社会学入門</h3><p class="au">見田宗介（岩波新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>日本を代表する社会学者が、近代から現代への流れと、その先の社会の姿を大きなスケールで描く。</p><p class="ask">「豊かな社会」のあとに、人は何を求めるのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%A4%BE%E4%BC%9A%E5%AD%A6%E7%9A%84%E6%83%B3%E5%83%8F%E5%8A%9B%20C%E3%83%BB%E3%83%A9%E3%82%A4%E3%83%88%E3%83%BB%E3%83%9F%E3%83%AB%E3%82%BA" target="_blank" rel="noopener"><div class="spine r">⑫</div><div><h3>社会学的想像力</h3><p class="au">C・ライト・ミルズ（ちくま学芸文庫）</p><div class="meta"><span class="st">★★★</span><span>約7時間</span></div><p>Chapter 2の道具①の出どころ。まずは第1章だけでも読む価値がある。</p><p class="ask">自分の悩みのうち、社会の問題と言えるものはどれか？</p><span class="amz">Amazonで見る →</span></div></a><div class="talk r rv" style="margin-top:44px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">読んだ冊数は聞かれない。聞かれるのは「読んで、何を考えたか」だよ。</div></div></section>
+<section class="chap" id="c6"><div class="lbl num">Chapter 6</div><h2 class="ttl rv">読んだ本を<br>志望理由書に変える</h2><p class="desc">「面白かった」で終わらせない、<br>3つのステップ。</p></section>
+<section class="sec" style="padding-top:20px">
+<div class="step rv"><div class="n num">1</div><div><h3>著者の主張を、一文で言う</h3><p>「この本は〇〇だと主張している」。あらすじではなく主張を取り出す。一文にできなければ、まだ読めていない。</p></div></div>
+<div class="step rv"><div class="n num">2</div><div><h3>自分の経験とぶつける</h3><p>その主張は、君が見てきた現実に当てはまるか。当てはまらない場面こそが宝物になる。</p></div></div>
+<div class="step rv"><div class="n num">3</div><div><h3>大学で確かめたい問いにする</h3><p>「では〇〇の場合はどうなのか」。答えがまだ出ていない問いを立て、どう調べるかまで書く。Chapter 4の分野と志望校の先生につなげる。</p></div></div>
+<div class="ba"><div class="x rv">『友だち地獄』を読み、現代の若者の人間関係について学びました。とても共感でき、社会学部でさらに深く学びたいと考えました。</div>
+<div class="arrow rv" aria-hidden="true">↓</div>
+<div class="o rv">『友だち地獄』は、現代の若者が対立を避け、互いに傷つけない関係の維持に神経をすり減らしていると論じる。しかし私は、オンラインゲームで知り合った学校外の友人とは、意見をぶつけ合える。息苦しさは若者の性質ではなく、逃げ場のない教室という場から生まれているのではないか。貴学で質問紙調査を学び、居場所の数と友人関係の質の関連を検証したいと考える。</div></div>
+<p class="note rv" style="margin-top:14px">※下の文章は型を示すための創作例。そのまま使わず、必ず自分の経験で書こう。</p>
+<div class="sp"></div><p class="mid center rv">型はこれだけ。<br><mark>主張 → 衝突 → 問い</mark></p></section>
+<section class="chap ink" id="c7"><div class="lbl num">Chapter 7</div><h2 class="ttl rv">調査とデータの話</h2><p class="desc">入学前に知っておきたい、<br>ちょっと耳の痛い現実。</p></section>
+<section class="sec ink" style="padding-top:20px"><div class="talk rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg>受験生 ミオ</div><div class="bub hand">社会学部は、好きなテーマを自由に学べるんですよね？</div></div><div class="talk r rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">テーマは自由。でも「調べ方」は自由じゃない。そこが学問になるかどうかの分かれ目だよ。</div></div><div class="sp-s"></div><p class="rv">社会学部では、アンケートを設計して統計で分析する方法と、インタビューや現場での観察から読み解く方法の両方を学ぶ。卒業論文では、自分で調査をして書く人も多い。</p>
+<p class="rv">つまり、意見や感想を語るだけでは終わらない。<mark>「誰に、何を、どう聞けば確かめられるか」まで考える姿勢</mark>が求められる。それは面接でも見られている。</p>
+<p class="rv">統計を使うので、数字から逃げることもできない。「社会調査士」という資格の課程を置く大学も多いので、志望校にあるか調べておこう。</p>
+<div class="sp-s"></div><p class="lead rv">いまからできること</p><ul class="todo"><li class="rv">身のまわりの<b>「当たり前」を3つ</b>書き出し、いつ、どうして始まったのかを調べる。</li><li class="rv">家族や祖父母に<b>「自分と同じ年のころ」</b>の話を聞く。それはもう聞き取り調査の第一歩だ。</li><li class="rv">ニュースでアンケート結果を見たら、<b>「誰に、何人に、どう聞いたか」</b>を確かめる。</li><li class="rv">政府統計のポータルサイト<b>「e-Stat」</b>で、自分のテーマに関するデータをひとつ探す。</li><li class="rv">探究活動で<b>10人でもいいから</b>聞き取りやアンケートをしてみる。質問の作り方で結果が変わることを体験する。</li></ul><p class="note rv" style="margin-top:18px">※調査科目や資格課程の有無は大学・学科によって異なる。必ず最新の募集要項とシラバスで確認しよう。</p></section>
+<section class="chap" id="c8"><div class="lbl num">Chapter 8</div><h2 class="ttl rv">面接で聞かれる<br>7つの問い</h2><p class="desc">答えを暗記するのではなく、<br>考えた跡を持っていこう。</p></section>
+<section class="sec blue" style="padding-top:24px"><div class="iq rv"><span class="n">①</span><h3>なぜ心理学や教育学ではなく、社会学なのですか？</h3><p>Chapter 1の表に戻る。自分の関心が「個人の内面」や「支え方」ではなく、「当たり前とその仕組み」に向いている理由を、経験から語る。</p></div><div class="iq rv"><span class="n">②</span><h3>それは個人の問題ではありませんか？</h3><p>社会学部でとくに聞かれやすい。同じ悩みを持つ人が多いこと、時代や地域で違いがあることを根拠に、社会の問題だと言えるかを考えておく。</p></div><div class="iq rv"><span class="n">③</span><h3>それを、どうやって調べますか？</h3><p>「誰に、何を、どう聞くか」を具体的に。アンケートか聞き取りか、理由も添える。</p></div><div class="iq rv"><span class="n">④</span><h3>最近気になった社会現象は何ですか？</h3><p>紹介で終わらせない。「なぜ今、それが起きているのか」に自分なりの仮説を持つ。</p></div><div class="iq rv"><span class="n">⑤</span><h3>あなたの関心は、社会学のどの分野にあたりますか？</h3><p>Chapter 4の分野名で答え、志望校の科目やゼミの名前を添える。</p></div><div class="iq rv"><span class="n">⑥</span><h3>その本を読んで、納得できなかった点はありますか？</h3><p>批判は失礼ではない。Chapter 6のステップ2で見つけた「当てはまらない場面」がそのまま答えになる。</p></div><div class="iq rv"><span class="n">⑦</span><h3>卒業後、学んだことをどう生かしますか？</h3><p>職業名だけで終わらせず、「当たり前を疑い、調べて確かめる力」をどこで使いたいかで語る。</p></div></section>
+<section class="sec cream"><p class="mid center rv">出願前の<br>最終チェックリスト</p><div class="sp-s"></div><ul class="todo"><li class="rv">「なぜ社会学でなければならないか」を30秒で説明できる</li><li class="rv">5つの道具のうち、ひとつを自分の経験で説明できる</li><li class="rv">自分の関心が、どの分野にあたるかを言える</li><li class="rv">本を1冊、「主張 → 衝突 → 問い」で語れる</li><li class="rv">自分の問いを「どう調べるか」まで言える</li><li class="rv">志望校で学びたい科目・ゼミを具体的に挙げられる</li></ul></section>
+<section class="end"><div class="faces" aria-hidden="true" style="margin-top:0"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg></div>
+<p class="big rv">「当たり前」は、<br>誰かが作った<br>ものだ。</p><div class="sp-s"></div>
+<p class="lead rv">それを疑い、確かめてみたいと思ったなら、<br>君はもう、<br><mark>社会学の入り口に立っている。</mark></p>
+<a class="top" href="#top">↑ 最初に戻る</a></section>
+<footer>総合型選抜｜学部別・学問入門　社会学部編<br>監修｜総合型選抜9年選手<br>掲載書籍の版・価格は書店等で最新の情報をご確認ください。<br>登場する人物イラストはすべて架空のキャラクターです。</footer>
+</div>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+  var bar=document.getElementById('bar');
+  function prog(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',prog,{passive:true});
+  prog();
+})();
+</script>
+</body>
+</html>

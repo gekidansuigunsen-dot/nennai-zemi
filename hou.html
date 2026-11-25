@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>法学は「暗記の学問」じゃない。｜総合型選抜・法学部法学科志望者のための入門冊子</title>
+<meta name="description" content="総合型選抜で法学部法学科を志望する受験生のための入門冊子。法学の考え方、分野マップ、読んでおきたい12冊、本を志望理由書に変える方法まで。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#8c1d2f;
+  --blue-d:#5e1320;
+  --ink:#121212;
+  --cream:#f4ede4;
+  --paper:#fffdf7;
+  --yellow:#f3c94a;
+  --red:#ff5436;
+  --w:520px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:#2a0d13;
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  font-weight:500;
+  line-height:1.9;
+  letter-spacing:.06em;
+  font-feature-settings:"palt";
+}
+.page{max-width:var(--w);margin:0 auto;background:var(--paper);overflow:hidden;position:relative}
+svg{display:block}
+.num{font-family:"Abril Fatface",Georgia,serif;letter-spacing:.02em;font-weight:400}
+.hand{font-family:"Yusei Magic","Zen Kaku Gothic New",sans-serif;letter-spacing:.04em}
+mark{background:linear-gradient(transparent 55%,var(--yellow) 55%);color:inherit;padding:0 .1em}
+.blue mark,.ink mark,.end mark,.chap mark{background:none;color:var(--yellow)}
+.ink .who svg{background:var(--cream);border-radius:14px;padding:4px 4px 0}
+
+/* progress */
+.home{display:block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;text-decoration:none;letter-spacing:.1em}
+.home:hover{color:var(--yellow)}
+.bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--yellow);z-index:50}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.pop{transform:scale(.86)}
+.js .rv.pop.in{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cover */
+.cover{background:var(--blue);color:#fff;padding:64px 28px 120px;clip-path:polygon(0 0,100% 0,100% 100%,0 91%);text-align:center;position:relative}
+.cover .series{display:inline-block;border:1.5px solid #fff;border-radius:99px;padding:2px 16px;font-size:12px;font-weight:700;letter-spacing:.14em}
+.faces{display:flex;justify-content:center;gap:10px;margin:44px 0 28px}
+.faces svg{width:23%;max-width:104px;height:auto}
+.cover h1{font-size:clamp(30px,8.4vw,42px);font-weight:900;line-height:1.45;letter-spacing:.08em}
+.cover h1 span{color:var(--yellow)}
+.cover .sub{margin-top:22px;font-size:14px;font-weight:700;letter-spacing:.12em}
+.cover .vol{margin-top:30px;font-size:22px}
+.cover .vol small{display:block;font-size:13px;margin-top:2px;opacity:.9}
+.kanshu{display:inline-block;margin-top:22px;background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:2px 18px;letter-spacing:.12em}
+.scroll{margin:34px auto 0;width:22px;height:36px;border:2px solid #fff;border-radius:12px;position:relative}
+.scroll:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:7px;margin-left:-2px;background:var(--yellow);border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.scroll:after{animation:none}}
+
+/* sections */
+.sec{padding:64px 28px}
+.blue{background:var(--blue);color:#fff}
+.ink{background:var(--ink);color:#fff}
+.cream{background:var(--cream)}
+.slant-t{clip-path:polygon(0 0,100% 44px,100% 100%,0 100%);padding-top:108px;margin-top:-44px}
+.center{text-align:center}
+p+p{margin-top:1.3em}
+.lead{font-size:17px;font-weight:700;line-height:2.1}
+.big{font-size:clamp(25px,7vw,34px);font-weight:900;line-height:1.6;letter-spacing:.08em}
+.mid{font-size:20px;font-weight:900;line-height:1.75}
+.note{font-size:12px;opacity:.8;line-height:1.7}
+.sp{height:44px}.sp-s{height:24px}
+
+/* index */
+.index{padding:56px 28px 64px}
+.index h2{font-size:22px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.index a{display:flex;align-items:baseline;gap:14px;padding:15px 4px;border-bottom:1px solid var(--ink);color:inherit;text-decoration:none;font-weight:700;font-size:17px}
+.index a .num{font-size:15px;color:var(--blue);min-width:86px}
+.index a:after{content:"↓";margin-left:auto;color:var(--blue)}
+.index a:hover,.index a:focus-visible{background:var(--yellow);outline:none}
+
+/* chapter head */
+.chap{background:var(--blue);color:#fff;padding:120px 28px 64px;margin-top:-1px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);text-align:center}
+.chap.ink{background:var(--ink)}
+.chap .lbl{font-size:22px}
+.chap .ttl{background:var(--cream);color:var(--ink);margin:16px auto 0;padding:34px 16px;font-size:clamp(24px,6.6vw,32px);font-weight:900;letter-spacing:.1em;line-height:1.5;border-top:6px solid var(--yellow)}
+.chap .desc{margin-top:22px;font-size:14px;font-weight:700}
+
+/* talk */
+.talk{display:flex;align-items:flex-end;gap:12px;margin:26px 0}
+.talk.r{flex-direction:row-reverse}
+.talk .who{flex:0 0 84px;text-align:center;font-size:11px;font-weight:700;line-height:1.4}
+.talk .who svg{width:84px;height:auto;margin-bottom:2px}
+.bub{position:relative;background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:18px;padding:14px 16px;font-size:16px;line-height:1.7;margin-bottom:26px;flex:1}
+.bub:after{content:"";position:absolute;bottom:14px;left:-11px;width:18px;height:18px;background:#fff;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+.talk.r .bub:after{left:auto;right:-11px;border:0;border-right:2.5px solid var(--ink);border-top:2.5px solid var(--ink)}
+.bub.y{background:var(--yellow)}.bub.y:after{background:var(--yellow)}
+
+/* cards */
+.card{background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:6px;padding:22px 20px;box-shadow:6px 6px 0 var(--ink)}
+.blue .card,.ink .card{box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.card h3{font-size:19px;font-weight:900;line-height:1.5}
+.card+.card{margin-top:22px}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:1px 10px;letter-spacing:.1em;margin-bottom:8px}
+.tag.y{background:var(--yellow);color:var(--ink)}
+.tag.b{background:var(--blue)}
+
+/* definition */
+.def{border:3px solid #fff;padding:30px 18px;text-align:center;position:relative;margin-top:36px}
+.def .cap{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:1px 16px;white-space:nowrap}
+
+/* vs */
+.vs .row{display:grid;grid-template-columns:84px 1fr;border-top:2px solid var(--ink)}
+.vs .row:last-child{border-bottom:2px solid var(--ink)}
+.vs .k{font-weight:900;font-size:17px;padding:16px 0;display:flex;align-items:center}
+.vs .v{padding:16px 0 16px 14px;font-size:14px;line-height:1.75;border-left:1px dashed var(--ink)}
+.vs .v b{display:block;font-size:15px}
+.vs .row.me{background:var(--yellow);margin:0 -12px;padding:0 12px}
+
+/* tools */
+.tool{position:relative;padding:26px 0 26px 66px;border-bottom:1px dashed rgba(255,255,255,.6)}
+.tool:last-of-type{border-bottom:0}
+.tool .n{position:absolute;left:0;top:24px;width:50px;height:50px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:26px;font-weight:900;letter-spacing:0}
+.tool h3{font-size:22px;font-weight:900;line-height:1.4}
+.tool .one{font-size:14px;font-weight:700;color:var(--yellow);margin:2px 0 8px}
+.tool p{font-size:15px;line-height:1.85}
+.tool .ex{margin-top:12px;background:rgba(255,255,255,.12);border-left:4px solid var(--yellow);padding:10px 14px;font-size:14px;line-height:1.75}
+
+/* timeline */
+.tl{position:relative;margin-left:8px;padding-left:28px;border-left:5px dotted var(--blue)}
+.tl .it{position:relative;padding-bottom:46px}
+.tl .it:last-child{padding-bottom:6px}
+.tl .it:before{content:"";position:absolute;left:-41px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid var(--cream)}
+.tl .yr{font-size:30px;line-height:1.2;color:var(--ink)}
+.tl .yr small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:700;margin-left:2px}
+.tl h3{font-size:19px;font-weight:900;color:var(--blue);line-height:1.5;margin:6px 0 4px}
+.tl p{font-size:15px;line-height:1.85}
+.tl .q{clear:both;display:inline-block;margin-top:10px;background:#fff;border:2px solid var(--ink);padding:4px 12px;font-size:14px;font-weight:700;line-height:1.6}
+.fig{float:right;width:112px;height:auto;margin:-6px 0 6px 10px}
+.bust{float:right;width:64px;margin:-4px 0 4px 10px}
+
+/* map */
+.base{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.base div{background:var(--yellow);color:var(--ink);text-align:center;padding:14px 4px;font-weight:900;font-size:16px;line-height:1.4;border:2.5px solid var(--ink)}
+.base small{display:block;font-size:11px;font-weight:700;margin-top:4px;line-height:1.5}
+.map{margin-top:10px}
+.map .m{display:grid;grid-template-columns:1fr 20px 128px;align-items:center;gap:6px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.5);font-size:14.5px;line-height:1.65}
+.map .m i{font-style:normal;color:var(--yellow);font-weight:900;text-align:center}
+.map .m b{background:#fff;color:var(--blue);text-align:center;padding:5px 2px;font-size:13.5px;font-weight:900;line-height:1.4}
+
+/* books */
+.theme{display:flex;align-items:center;gap:10px;margin:44px 0 18px;font-weight:900;font-size:18px}
+.theme:first-of-type{margin-top:8px}
+.theme:before,.theme:after{content:"";flex:1;height:2px;background:var(--ink)}
+.book{display:grid;grid-template-columns:64px 1fr;gap:16px;background:#fff;border:2.5px solid var(--ink);padding:18px 16px;box-shadow:5px 5px 0 var(--blue)}
+.book{color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.book:hover,a.book:focus-visible{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--blue);outline:none}
+.js a.book.rv.in:hover{transform:translate(-2px,-2px)}
+.amz{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;font-size:12px;font-weight:900;padding:3px 14px;border-radius:99px;letter-spacing:.08em}
+.book+.book{margin-top:20px}
+.spine{background:var(--blue);color:#fff;display:grid;place-items:center;font-size:32px;font-weight:900;letter-spacing:0;min-height:96px;border:2.5px solid var(--ink);border-left-width:7px}
+.spine.y{background:var(--yellow);color:var(--ink)}
+.spine.r{background:var(--red)}
+.spine.k{background:var(--ink)}
+.book h3{font-size:16.5px;font-weight:900;line-height:1.5}
+.book .au{font-size:12px;font-weight:700;opacity:.75;line-height:1.5;margin-top:2px}
+.book .meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;font-size:11px;font-weight:700}
+.book .meta span{border:1.5px solid var(--ink);padding:0 8px;border-radius:99px;line-height:1.8}
+.book .meta .st{background:var(--ink);color:var(--yellow);letter-spacing:.1em}
+.book p{font-size:13.5px;line-height:1.75}
+.book .ask{margin-top:8px;background:var(--cream);padding:8px 10px;font-size:13px;font-weight:700;line-height:1.65}
+.book .ask:before{content:"立てられる問い";display:block;font-size:10px;color:var(--blue);letter-spacing:.14em}
+
+/* steps */
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;padding:22px 0;border-bottom:2px solid var(--ink)}
+.step .n{font-size:44px;line-height:1;color:var(--blue)}
+.step h3{font-size:18px;font-weight:900;line-height:1.5}
+.step p{font-size:14.5px;line-height:1.8;margin-top:4px}
+.ba{margin-top:30px}
+.ba .x,.ba .o{padding:18px 16px 18px;border:2.5px solid var(--ink);font-size:14.5px;line-height:1.85;position:relative;background:#fff}
+.ba .x{color:#555}
+.ba .o{background:var(--yellow);margin-top:34px}
+.ba .x:before,.ba .o:before{position:absolute;top:-14px;left:12px;font-size:12px;font-weight:900;padding:0 12px;color:#fff;letter-spacing:.1em}
+.ba .x:before{content:"✕ 感想文で終わる例";background:#777}
+.ba .o:before{content:"◎ 問いに変換した例";background:var(--blue)}
+.ba .arrow{text-align:center;font-size:26px;font-weight:900;line-height:1;margin-top:12px;color:var(--blue)}
+
+/* list */
+.todo li{list-style:none;position:relative;padding:12px 0 12px 34px;border-bottom:1px dashed rgba(255,255,255,.55);font-size:15px;line-height:1.75}
+.todo li:before{content:"";position:absolute;left:2px;top:17px;width:18px;height:18px;border:2.5px solid var(--yellow);border-radius:3px}
+.todo li b{color:var(--yellow)}
+.cream .todo li,.paper .todo li{border-color:var(--ink)}
+.cream .todo li:before{border-color:var(--blue)}
+
+/* interview */
+.iq{background:#fff;color:var(--ink);border:2.5px solid var(--ink);padding:18px 16px 16px 60px;position:relative}
+.iq+.iq{margin-top:16px}
+.iq .n{position:absolute;left:14px;top:14px;font-size:30px;font-weight:900;color:var(--blue);line-height:1.2;letter-spacing:0}
+.iq h3{font-size:16.5px;font-weight:900;line-height:1.55}
+.iq p{font-size:13.5px;line-height:1.75;margin-top:6px;color:#333}
+.iq p:before{content:"考えるヒント｜";font-weight:900;color:var(--blue)}
+
+/* vertical statement */
+.vert{writing-mode:vertical-rl;margin:0 auto;font-size:21px;font-weight:900;line-height:2.1;letter-spacing:.16em;height:15em;text-align:left}
+.vert .hl{color:var(--yellow)}
+
+/* ending */
+.end{background:var(--blue);color:#fff;padding:120px 28px 72px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);margin-top:-1px;text-align:center}
+footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px;font-size:11px;letter-spacing:.12em;line-height:1.9}
+footer a{color:var(--yellow)}
+.top{display:inline-block;margin-top:40px;color:#fff;border:2px solid #fff;padding:6px 26px;border-radius:99px;font-weight:700;font-size:13px;text-decoration:none}
+.top:hover,.top:focus-visible{background:#fff;color:var(--blue);outline:none}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+
+<!-- character symbols (all original, fictional) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 受験生 ケイ -->
+    <symbol id="c-kei" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 108l10 10 10-10" fill="none" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 22-12 40-30 40S30 80 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M27 56C22 26 40 8 62 10c22 2 36 18 31 46-3-10-8-17-15-22-4 6-10 9-16 10 2-3 3-6 3-9-8 8-22 12-32 12-3 3-5 6-6 9z" fill="#121212"/>
+      <path d="M42 56q6-4 12-1M66 55q6-3 12 1" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="65" r="3.2" fill="#121212"/><circle cx="72" cy="65" r="3.2" fill="#121212"/>
+      <path d="M59 68q-3 7 1 9" fill="none" stroke="#121212" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M51 84q9 6 18 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <!-- 受験生 ミオ -->
+    <symbol id="c-mio" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M24 50C22 22 40 8 60 8s38 14 36 42c-1 18 2 34 4 44H20c2-10 5-26 4-44z" fill="#121212"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M31 58c0-24 12-36 29-36s29 12 29 36c0 22-12 40-29 40S31 80 31 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c2-22 12-34 30-36 18 2 28 14 30 36-10-4-18-12-22-22-8 12-24 20-38 22z" fill="#121212"/>
+      <path d="M42 62q6-5 12 0M66 62q6-5 12 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="68" r="3" fill="#121212"/><circle cx="72" cy="68" r="3" fill="#121212"/>
+      <path d="M53 84q7 5 14 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="40" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+      <circle cx="80" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </symbol>
+    <!-- 先生 -->
+    <symbol id="c-sensei" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#121212" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M48 104l12 16 12-16z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 24-12 40-30 40S30 82 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M28 50C24 24 42 10 60 10c20 0 36 12 32 40-4-12-12-20-26-22-14-2-28 2-38 22z" fill="#121212"/>
+      <rect x="36" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <rect x="64" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M56 62h8M36 62l-6-2M84 62l6-2" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="46" cy="64" r="2.6" fill="#121212"/><circle cx="74" cy="64" r="2.6" fill="#121212"/>
+      <path d="M48 82q12 9 24 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 76q-2 6 2 10M80 76q2 6-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 面接官 -->
+    <symbol id="c-mensetsu" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M56 106h8l3 22h-14z" fill="#121212"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c0-26 12-40 30-40s30 14 30 40c0 26-12 42-30 42S30 82 30 56z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M29 58c-4-14 0-28 8-34-2 10-3 22-2 30zM91 58c4-14 0-28-8-34 2 10 3 22 2 30z" fill="#121212"/>
+      <path d="M44 22q16-8 32 0" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+      <path d="M38 52l16 3M82 52l-16 3" fill="none" stroke="#121212" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="47" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="73" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <path d="M55 64h10" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="47" cy="65" r="2.4" fill="#121212"/><circle cx="73" cy="65" r="2.4" fill="#121212"/>
+      <path d="M50 86h20" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 78q4 4 2 10M80 78q-4 4-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 学説を象徴するアイコン -->
+    <symbol id="i-hand" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><path d="M22 50V30a3 3 0 0 1 6 0v-9a3 3 0 0 1 6 0v-2a3 3 0 0 1 6 0v4a3 3 0 0 1 6 0v17c0 8-5 12-12 12-6 0-9-2-12-8l-5-9a3 3 0 0 1 5-3z" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" fill="#fff"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="15" fill="none" stroke="#121212" stroke-width="9" stroke-dasharray="6.2 5.58"/><circle cx="32" cy="32" r="12" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="32" cy="32" r="4" fill="#121212"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><path d="M14 26l18-11 18 11z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31v14M27 31v14M37 31v14M46 31v14M13 49h38" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-game" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><rect x="16" y="16" width="32" height="32" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 16v32M16 32h32" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3" fill="#121212"/><path d="M37 37l6 6M43 37l-6 6" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bias" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><path d="M32 46V24M12 30l40-10" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 50h16" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="38" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="50" cy="26" r="4" fill="#121212"/><path d="M14 30v2M50 20v2" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><path d="M27 14h10M29 14v13L18 46a3 3 0 0 0 3 5h22a3 3 0 0 0 3-5L35 27V14" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 40h18" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="45" r="1.8" fill="#121212"/><circle cx="36" cy="43" r="1.4" fill="#121212"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><path d="M16 16v32h34" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="22" y="36" width="6" height="12" fill="#121212"/><rect x="32" y="29" width="6" height="19" fill="#121212"/><rect x="42" y="21" width="6" height="27" fill="#fff" stroke="#121212" stroke-width="2.5"/></symbol>
+  <symbol id="j-doc" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><path d="M20 14h18l8 8v28H20z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 14v8h8M26 30h14M26 37h14M26 44h9" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="j-people" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><circle cx="23" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M12 48c1-9 5-13 11-13s10 4 11 13M30 48c1-9 5-13 11-13s10 4 11 13" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="j-book" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><path d="M32 20c-5-4-12-4-18-2v28c6-2 13-2 18 2 5-4 12-4 18-2V18c-6-2-13-2-18 2z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 20v28" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="j-seat" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><rect x="14" y="30" width="36" height="10" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 40v9M46 40v9" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="22" r="4" fill="#121212"/><circle cx="32" cy="22" r="4" fill="#121212"/><circle cx="42" cy="22" r="4" fill="#121212"/></symbol>
+<symbol id="j-18" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f3c94a" stroke="#121212" stroke-width="2.5"/><text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#121212">18</text></symbol>
+  </defs>
+</svg>
+
+<div class="page" id="top">
+<a class="home" href="/">← 年内入試攻略まるごとゼミ トップ</a>
+<header class="cover"><span class="series">総合型選抜｜学部別・学問入門</span>
+<div class="faces" aria-hidden="true"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg></div>
+<h1>法学は<br><span>「暗記の学問」</span><br>じゃない。</h1>
+<p class="sub">法学部法学科を志望する君が<br>出願前に知っておきたいこと</p>
+<p class="vol num">Law<small>法学部 法学科編</small></p>
+<p class="kanshu">監修｜総合型選抜9年選手</p>
+<div class="scroll" aria-hidden="true"></div></header>
+<nav class="index" aria-label="目次"><h2 class="num">Index</h2>
+<a href="#c1"><span class="num">Chapter 1</span>その志望理由、法学じゃなくてもよくない？</a>
+<a href="#c2"><span class="num">Chapter 2</span>法律家の「5つの道具」</a>
+<a href="#c3"><span class="num">Chapter 3</span>800年を3分で</a>
+<a href="#c4"><span class="num">Chapter 4</span>君の関心はどの分野？</a>
+<a href="#c5"><span class="num">Chapter 5</span>読んでおきたい12冊</a>
+<a href="#c6"><span class="num">Chapter 6</span>読んだ本を志望理由書に変える</a>
+<a href="#c7"><span class="num">Chapter 7</span>条文と判例の話</a>
+<a href="#c8"><span class="num">Chapter 8</span>面接で聞かれる7つの問い</a></nav>
+<section class="chap" id="c1"><div class="lbl num">Chapter 1</div><h2 class="ttl rv">その志望理由、<br>法学じゃなくても<br>よくない？</h2><p class="desc">まず、いちばん多い失敗から。</p></section>
+<section class="sec cream"><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg>受験生 ミオ</div><div class="bub hand">困っている人を助けたいので、法学部を志望します！</div></div><div class="talk r rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg>面接官</div><div class="bub hand">人を助けるなら、福祉や医療や政治でもできますよね。なぜ法学なのですか？</div></div><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg>受験生 ミオ</div><div class="bub hand">……えっと……</div></div><div class="sp-s"></div><p class="big center rv">「正義感」だけでは、<br><mark>法学部の理由に<br>ならない。</mark></p><div class="sp-s"></div>
+<p class="rv">法学部の志望理由書でよく見るのが、「弱い立場の人を守りたい」「弁護士になりたい」「法律の知識を身につけたい」という言葉だけで組み立てられた文章だ。</p>
+<p class="rv">気持ちは本物だろう。でもそれは、法学という学問の入り口にまだ立っていない。大学の先生が知りたいのは、<b>君が法学の「考え方」に興味を持っているかどうか</b>だ。</p></section>
+<section class="sec blue"><p class="center lead rv">では、法学とは何か。</p>
+<div class="def rv pop"><span class="cap">ひとことで言うと</span><p class="big">ぶつかり合う<br>利益を、<br>ルールと理屈で<br><mark>調整する学問</mark></p></div><div class="sp"></div>
+<p class="rv">社会では、人と人の利益が必ずぶつかる。表現したい人と傷つく人。貸した人と借りた人。被害者と、疑われている人。</p>
+<p class="rv">どちらにも言い分がある中で、どんなルールを置き、どんな理由で線を引くのか。それを言葉と論理で突きつめるのが法学だ。</p>
+<p class="rv">だから法学は、条文の暗記ではない。<mark>「なぜその結論が正しいと言えるのか」を説明し続ける学問</mark>だ。大学の試験では六法の持ち込みが認められることも多い。覚えるのではなく、使いこなす。</p></section>
+<section class="sec"><p class="mid center rv">同じ「SNSの誹謗中傷」を見ても、<br>問いがこれだけ違う。</p><div class="sp-s"></div>
+<div class="vs rv">
+<div class="row me"><div class="k">法学</div><div class="v"><b>ルールと線引きを見る</b>どこからが違法で、表現の自由とどう両立させるのか？</div></div>
+<div class="row"><div class="k">政治学</div><div class="v"><b>決め方と権力を見る</b>その規制は、誰がどんな力関係の中で決めているのか？</div></div>
+<div class="row"><div class="k">社会学</div><div class="v"><b>背景と構造を見る</b>なぜ人は、ネット上で攻撃的になるのか？</div></div></div>
+<p class="note rv" style="margin-top:14px">※法学部の中に「法律学科」と「政治学科」を置く大学も多い。学科の分け方やカリキュラムは大学によって異なるので、志望校の科目表は必ず自分で確認しよう。</p><div class="talk r rv" style="margin-top:36px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">「どうすれば助けられるか」ではなく「どこに線を引くべきか」と問えたら、それはもう法学だよ。</div></div></section>
+<section class="chap" id="c2"><div class="lbl num">Chapter 2</div><h2 class="ttl rv">法律家の<br>「5つの道具」</h2><p class="desc">「リーガルマインド」と呼ばれる<br>考え方の中身。</p></section>
+<section class="sec blue" style="padding-top:20px"><div class="tool rv"><span class="n">①</span><h3>条文</h3><p class="one">ルールから出発する</p><p>法律家は「自分はこう思う」から話を始めない。まず、どのルールが当てはまるかを探す。</p><p class="ex">「ひどいと思う」ではなく「どの法律の、どの条文に反するのか」と考える。</p></div><div class="tool rv"><span class="n">②</span><h3>解釈</h3><p class="one">言葉の意味を決める</p><p>条文の言葉は、現実のすべてを先回りできない。だから意味を読み解く作業が必要になる。法学の面白さの中心はここにある。</p><p class="ex">公園に「車両進入禁止」の看板。自転車は？ ベビーカーは？ 救急車は？</p></div><div class="tool rv"><span class="n">③</span><h3>法的三段論法</h3><p class="one">ルール → 事実 → 結論</p><p>ルール（大前提）に事実（小前提）を当てはめて、結論を出す。法律の文章はすべてこの型でできている。</p><p class="ex">「人の物を盗んだ者は罰する」→「AはBの自転車を盗んだ」→「だからAは罰せられる」</p></div><div class="tool rv"><span class="n">④</span><h3>利益衡量</h3><p class="one">両方の言い分を、はかりにかける</p><p>一方が100％正しいことは少ない。それぞれの利益の重さを比べ、納得できる落としどころを探す。</p><p class="ex">夜の騒音。「自宅で自由に過ごす権利」と「静かに眠る権利」は、どちらがどこまで優先されるか。</p></div><div class="tool rv"><span class="n">⑤</span><h3>適正手続</h3><p class="one">結論だけでなく、決め方も問う</p><p>正しい結論でも、決め方が不公正なら認めない。言い分を聞く機会を与えたか、証拠は正しく集めたか。</p><p class="ex">明らかに怪しい人でも、裁判で反論の機会を与えずに罰することは許されない。</p></div></section>
+<section class="sec ink center"><div class="vert rv"><span class="hl">「反対側なら<br>　どう主張するか」</span><br>と考えられた瞬間、<br>君の関心は<br>法学になる。</div></section>
+<section class="chap" id="c3"><div class="lbl num">Chapter 3</div><h2 class="ttl rv">800年を3分で</h2><p class="desc">法は、権力をしばる道具として生まれ、<br>市民が使う道具へ変わってきた。</p></section>
+<section class="sec cream"><div class="tl"><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-doc"/></svg><div class="yr num">1215<small>年</small></div><h3>マグナ・カルタ</h3><p>イングランドの貴族たちが、王に約束を認めさせた文書。「王であっても法に従う」という考え方の出発点になった。</p><span class="q">問い｜権力者は、何にしばられるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-people"/></svg><div class="yr num">1789<small>年</small></div><h3>フランス人権宣言</h3><p>人は生まれながらに自由で、権利において平等である。近代の憲法が守ろうとする価値が、ここで言葉になった。</p><span class="q">問い｜人が生まれつき持つ権利とは何か？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-book"/></svg><div class="yr num">1804<small>年</small></div><h3>ナポレオン法典</h3><p>市民どうしの関係を定めたフランスの民法典。契約や所有権のルールが整理され、各国の民法の手本になった。</p><span class="q">問い｜個人どうしの約束を、国はどこまで守るか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#i-gov"/></svg><div class="yr num">1889<small>年</small></div><h3>大日本帝国憲法の発布</h3><p>日本が近代的な憲法を持った年。1898年には民法も施行され、西洋の法を取り入れた国づくりが進んだ。</p><span class="q">問い｜外から来た法は、社会に根づくのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#i-bias"/></svg><div class="yr num">1946<small>年</small></div><h3>日本国憲法の公布</h3><p>国民主権、基本的人権の尊重、平和主義を掲げ、翌1947年に施行。裁判所が法律を憲法に照らして審査する仕組みも整った。</p><span class="q">問い｜多数決でも奪えないものは何か？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-seat"/></svg><div class="yr num">2009<small>年</small></div><h3>裁判員制度のスタート</h3><p>くじで選ばれた市民が、重大な刑事裁判に参加するようになった。法は「専門家だけのもの」ではなくなった。</p><span class="q">問い｜市民は、人を裁けるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#j-18"/></svg><div class="yr num">2022<small>年</small></div><h3>成年年齢が18歳に</h3><p>民法の改正で、18歳から一人で契約ができるようになった。高校生にとって、法は「自分ごと」になった。</p><span class="q">問い｜大人と子どもの線は、どこに引くべきか？</span></div></div><div class="sp"></div><p class="mid center rv">流れをひとことで言えば、<br><mark>「権力をしばる法」から<br>「市民が使う法」へ。</mark></p><div class="talk r rv" style="margin-top:30px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">法律は「昔から決まっているもの」じゃない。誰かが作り、誰かが変えてきたものなんだ。</div></div></section>
+<section class="chap" id="c4"><div class="lbl num">Chapter 4</div><h2 class="ttl rv">君の関心は<br>どの分野？</h2><p class="desc">「法学」はひとつじゃない。<br>自分の居場所を見つけよう。</p></section>
+<section class="sec blue" style="padding-top:24px"><p class="lead center rv">まず、全員が学ぶ3つの土台。</p><div class="sp-s"></div>
+<div class="base rv"><div>憲法<small>国家と個人の<br>関係を定める</small></div><div>民法<small>個人どうしの<br>関係を定める</small></div><div>刑法<small>犯罪と刑罰を<br>定める</small></div></div>
+<div class="sp"></div><p class="lead center rv">その上に、テーマ別の分野が広がる。</p><div class="map"><div class="m rv"><span>校則は、髪型や服装をどこまでしばれるのか</span><i>→</i><b>憲法（人権）</b></div><div class="m rv"><span>ネットで買った商品が届かない。お金は戻るのか</span><i>→</i><b>民法・消費者法</b></div><div class="m rv"><span>少年事件は、なぜ大人と扱いが違うのか</span><i>→</i><b>少年法<br>刑事政策</b></div><div class="m rv"><span>えん罪は、なぜ起きてしまうのか</span><i>→</i><b>刑事訴訟法</b></div><div class="m rv"><span>アルバイトでも有給休暇は取れるのか</span><i>→</i><b>労働法</b></div><div class="m rv"><span>AIが作った絵や文章は、誰のものなのか</span><i>→</i><b>知的財産法<br>情報法</b></div><div class="m rv"><span>会社は誰のもので、誰が責任を負うのか</span><i>→</i><b>商法・会社法</b></div><div class="m rv"><span>国や自治体の決定に、納得できないときは</span><i>→</i><b>行政法</b></div><div class="m rv"><span>戦争や難民の問題に、ルールはあるのか</span><i>→</i><b>国際法</b></div><div class="m rv"><span>そもそも法とは何か。悪い法にも従うべきか</span><i>→</i><b>法哲学<br>法社会学</b></div></div><div class="sp"></div><div class="card rv"><span class="tag b">やってみよう</span><h3>志望校の教員一覧を開き、<br>上の分野名で探す。</h3><p style="font-size:14.5px;margin-top:8px">自分の関心に近い研究をしている先生が見つかれば、「なぜこの大学か」に具体的な答えが生まれる。ゼミ名や担当科目までメモしておこう。</p></div></section>
+<section class="chap" id="c5"><div class="lbl num">Chapter 5</div><h2 class="ttl rv">読んでおきたい<br>12冊</h2><p class="desc">全部読まなくていい。<br>関心に近い2冊を、深く。</p></section>
+<section class="sec cream" style="padding-top:28px"><p class="note center rv">カードをタップするとAmazonの検索結果が開きます。難易度は★が多いほど歯ごたえあり。読了時間は高校生が読む場合のおおよその目安。</p><div class="theme rv">最初の一冊</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%AD%E3%83%A8%E3%83%9F%E3%82%BA%E5%87%86%E6%95%99%E6%8E%88%E3%81%AE%E6%B3%95%E5%AD%A6%E5%85%A5%E9%96%80%20%E6%9C%A8%E6%9D%91%E8%8D%89%E5%A4%AA" target="_blank" rel="noopener"><div class="spine ">①</div><div><h3>キヨミズ准教授の法学入門</h3><p class="au">木村草太（星海社新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>高校生と風変わりな准教授の会話で進む物語形式。法学の全体像と考え方が、小説を読む感覚でつかめる。</p><p class="ask">法的に考えるとは、ふつうに考えることと何が違うのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E9%AB%98%E6%A0%A1%E7%94%9F%E3%81%8B%E3%82%89%E3%81%AE%E6%B3%95%E5%AD%A6%E5%85%A5%E9%96%80%20%E4%B8%AD%E5%A4%AE%E5%A4%A7%E5%AD%A6%E6%B3%95%E5%AD%A6%E9%83%A8" target="_blank" rel="noopener"><div class="spine ">②</div><div><h3>高校生からの法学入門</h3><p class="au">中央大学法学部 編</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>いじめ、SNS、アルバイトなど、高校生の日常を入り口に各分野の教員が解説する。関心のある章から読める。</p><p class="ask">自分の学校生活のどこに、法は関わっているのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">法学の考え方</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%B3%95%E5%AD%A6%E3%82%92%E5%AD%A6%E3%81%B6%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%9C%EF%BC%9F%20%E6%A3%AE%E7%94%B0%E6%9E%9C" target="_blank" rel="noopener"><div class="spine y">③</div><div><h3>法学を学ぶのはなぜ？</h3><p class="au">森田果（有斐閣）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>法は社会の中でどんな役割を果たしているのか。「なぜ学ぶのか」という問いに正面から答えてくれる。</p><p class="ask">ルールを変えると、人の行動はどう変わるのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%B3%95%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%20%E6%96%B0%E7%89%88%20%E6%B8%A1%E8%BE%BA%E6%B4%8B%E4%B8%89" target="_blank" rel="noopener"><div class="spine y">④</div><div><h3>法とは何か 新版</h3><p class="au">渡辺洋三（岩波新書）</p><div class="meta"><span class="st">★★☆</span><span>約5時間</span></div><p>法と道徳の違い、権利とは何か。法の本質を根本から考える定番の入門書。</p><p class="ask">法と道徳は、どこが違うのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">憲法</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%AA%BB%E3%81%AE%E4%B8%AD%E3%81%AE%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3%20%E6%A5%BE%E5%A4%A7%E6%A8%B9" target="_blank" rel="noopener"><div class="spine r">⑤</div><div><h3>檻の中のライオン</h3><p class="au">楾大樹</p><div class="meta"><span class="st">★☆☆</span><span>約2時間</span></div><p>権力をライオン、憲法を檻にたとえ、イラストで憲法の役割を説明する。憲法の入門の入門。</p><p class="ask">なぜ権力は、しばられなければならないのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%86%B2%E6%B3%95%E3%81%A8%E3%81%84%E3%81%86%E5%B8%8C%E6%9C%9B%20%E6%9C%A8%E6%9D%91%E8%8D%89%E5%A4%AA" target="_blank" rel="noopener"><div class="spine r">⑥</div><div><h3>憲法という希望</h3><p class="au">木村草太（講談社現代新書）</p><div class="meta"><span class="st">★★☆</span><span>約3時間</span></div><p>現実の社会問題を素材に、憲法が実際の争いの中でどう使われるかを示す。</p><p class="ask">憲法は、身近な問題の解決にどこまで使えるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">民法と刑法</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%B0%91%E6%B3%95%E3%81%AF%E3%81%8A%E3%82%82%E3%81%97%E3%82%8D%E3%81%84%20%E6%B1%A0%E7%94%B0%E7%9C%9F%E6%9C%97" target="_blank" rel="noopener"><div class="spine k">⑦</div><div><h3>民法はおもしろい</h3><p class="au">池田真朗（講談社現代新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>契約、保証、相続など、生活に直結する民法の世界を、改正の動きも含めて紹介する。</p><p class="ask">18歳が結んだ契約は、どこまで守られるべきか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%88%91%E6%B3%95%E5%85%A5%E9%96%80%20%E5%B1%B1%E5%8F%A3%E5%8E%9A" target="_blank" rel="noopener"><div class="spine k">⑧</div><div><h3>刑法入門</h3><p class="au">山口厚（岩波新書）</p><div class="meta"><span class="st">★★★</span><span>約5時間</span></div><p>犯罪とは何か、なぜ刑罰を科すのか。刑法学の基本的な考え方を、第一人者が丁寧に説く。</p><p class="ask">人はなぜ、どんな理由で罰せられるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">裁判の現場</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E8%A3%81%E5%88%A4%E3%81%AE%E9%9D%9E%E6%83%85%E3%81%A8%E4%BA%BA%E6%83%85%20%E5%8E%9F%E7%94%B0%E5%9C%8B%E7%94%B7" target="_blank" rel="noopener"><div class="spine ">⑨</div><div><h3>裁判の非情と人情</h3><p class="au">原田國男（岩波新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>元裁判官によるエッセイ。判決を書く人が何に悩み、何を考えているのかが伝わる。</p><p class="ask">人を裁く立場の人は、何を迷うのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%B5%B6%E6%9C%9B%E3%81%AE%E8%A3%81%E5%88%A4%E6%89%80%20%E7%80%AC%E6%9C%A8%E6%AF%94%E5%91%82%E5%BF%97" target="_blank" rel="noopener"><div class="spine ">⑩</div><div><h3>絶望の裁判所</h3><p class="au">瀬木比呂志（講談社現代新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>元裁判官が、日本の裁判所の組織の問題点を内側から批判する。賛否の分かれる本だからこそ、自分の立場を鍛えられる。</p><p class="ask">裁判官の独立は、どうすれば守れるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">正義と社会</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E3%81%AE%E3%80%8C%E6%AD%A3%E7%BE%A9%E3%80%8D%E3%81%AE%E8%A9%B1%E3%82%92%E3%81%97%E3%82%88%E3%81%86%20%E3%83%9E%E3%82%A4%E3%82%B1%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%87%E3%83%AB" target="_blank" rel="noopener"><div class="spine y">⑪</div><div><h3>これからの「正義」の話をしよう</h3><p class="au">マイケル・サンデル</p><div class="meta"><span class="st">★★☆</span><span>約7時間</span></div><p>「正しさ」をめぐる考え方を、具体的なジレンマで比べていく。法の背後にある価値観を考える土台になる。</p><p class="ask">多数の幸福のために、少数の権利を制限してよいか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E6%97%A5%E6%9C%AC%E4%BA%BA%E3%81%AE%E6%B3%95%E6%84%8F%E8%AD%98%20%E5%B7%9D%E5%B3%B6%E6%AD%A6%E5%AE%9C" target="_blank" rel="noopener"><div class="spine r">⑫</div><div><h3>日本人の法意識</h3><p class="au">川島武宜（岩波新書）</p><div class="meta"><span class="st">★★★</span><span>約5時間</span></div><p>日本人は権利の主張や裁判を避けがちだと論じた古典。半世紀以上前の本だからこそ、今と比べる面白さがある。</p><p class="ask">現代の若者の法意識は、当時と同じなのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="talk r rv" style="margin-top:44px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">読んだ冊数は聞かれない。聞かれるのは「読んで、何を考えたか」だよ。</div></div></section>
+<section class="chap" id="c6"><div class="lbl num">Chapter 6</div><h2 class="ttl rv">読んだ本を<br>志望理由書に変える</h2><p class="desc">「面白かった」で終わらせない、<br>3つのステップ。</p></section>
+<section class="sec" style="padding-top:20px">
+<div class="step rv"><div class="n num">1</div><div><h3>著者の主張を、一文で言う</h3><p>「この本は〇〇だと主張している」。あらすじではなく主張を取り出す。一文にできなければ、まだ読めていない。</p></div></div>
+<div class="step rv"><div class="n num">2</div><div><h3>自分の経験とぶつける</h3><p>その主張は、君が見てきた現実に当てはまるか。当てはまらない場面こそが宝物になる。</p></div></div>
+<div class="step rv"><div class="n num">3</div><div><h3>大学で確かめたい問いにする</h3><p>「では〇〇の場合はどうなのか」。答えがまだ出ていない問いを立て、Chapter 4の分野と志望校の先生につなげる。</p></div></div>
+<div class="ba"><div class="x rv">『日本人の法意識』を読み、日本人の法に対する考え方を学びました。とても興味深く、法学部でさらに深く学びたいと考えました。</div>
+<div class="arrow rv" aria-hidden="true">↓</div>
+<div class="o rv">『日本人の法意識』は、日本人は権利を主張することや裁判を避ける傾向があると論じる。しかし私の高校では、生徒会が校則の見直しを求め、学校と話し合って合意内容を文書に残した。若い世代では、ルールを交渉して決める意識が育っているのではないか。貴学の法社会学のゼミで、校則改定の事例を通して現代の法意識を検証したいと考える。</div></div>
+<p class="note rv" style="margin-top:14px">※下の文章は型を示すための創作例。そのまま使わず、必ず自分の経験で書こう。</p>
+<div class="sp"></div><p class="mid center rv">型はこれだけ。<br><mark>主張 → 衝突 → 問い</mark></p></section>
+<section class="chap ink" id="c7"><div class="lbl num">Chapter 7</div><h2 class="ttl rv">条文と判例の話</h2><p class="desc">入学前に知っておきたい、<br>ちょっと耳の痛い現実。</p></section>
+<section class="sec ink" style="padding-top:20px"><div class="talk rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">暗記は得意なので、法学部は向いていると思います！</div></div><div class="talk r rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">法学部の試験は、ほとんどが論述。覚えた量より、書いて説明する力が問われるよ。</div></div><div class="sp-s"></div><p class="rv">入学すると、条文を引き、判例（過去の裁判所の判断）を読み、自分の結論を文章で論じる日々が始まる。読む量も書く量も、文系の中でかなり多い学部だ。</p>
+<p class="rv">ただし、怖がる必要はない。求められるのは記憶力ではなく、<mark>反対の立場にも耳を傾けながら、理由をつけて結論を出す姿勢</mark>だ。それは面接でも見られている。</p>
+<p class="rv">もうひとつ。法学部の卒業生がみな法曹（弁護士・検察官・裁判官）になるわけではない。公務員や民間企業に進む人のほうが多い大学がほとんどだ。「弁護士になりたい」以外の語り方も用意しておこう。</p>
+<div class="sp-s"></div><p class="lead rv">いまからできること</p><ul class="todo"><li class="rv">気になるニュースの<b>条文をひとつ</b>読む。政府の「e-Gov法令検索」で、誰でも無料で調べられる。</li><li class="rv">裁判のニュースを見たら、<b>「何と何がぶつかっているのか」</b>を一文で書く。</li><li class="rv">自分の意見を<b>「主張 → 理由 → 予想される反論 → 再反論」</b>の順で書く練習をする。</li><li class="rv">近くの裁判所で<b>裁判を傍聴</b>する。公開の法廷は、原則として誰でも見学できる。</li><li class="rv">校則や部活のルールなど、<b>身近なルールの「目的」</b>を考え、手段が釣り合っているか検討する。</li></ul><p class="note rv" style="margin-top:18px">※法曹を目指す場合の進路（法科大学院、法曹コース、予備試験など）や、傍聴の可否・手続は、大学・裁判所ごとに異なる。必ず最新の公式情報で確認しよう。</p></section>
+<section class="chap" id="c8"><div class="lbl num">Chapter 8</div><h2 class="ttl rv">面接で聞かれる<br>7つの問い</h2><p class="desc">答えを暗記するのではなく、<br>考えた跡を持っていこう。</p></section>
+<section class="sec blue" style="padding-top:24px"><div class="iq rv"><span class="n">①</span><h3>なぜ政治学科や他学部ではなく、法学科なのですか？</h3><p>Chapter 1の表に戻る。自分の関心が「誰が決めるか」や「なぜ起きるか」ではなく、「どこに線を引くか」に向いている理由を、経験から語る。</p></div><div class="iq rv"><span class="n">②</span><h3>最近気になった判決や法改正は何ですか？</h3><p>ニュースの紹介で終わらせない。「何と何の利益がぶつかっていたのか」まで話せると法学の視点になる。</p></div><div class="iq rv"><span class="n">③</span><h3>その意見に反対する人は、どう主張すると思いますか？</h3><p>法学部の面接でとくに聞かれやすい。自分の立場を決める前に、相手のいちばん強い言い分を考えておく。</p></div><div class="iq rv"><span class="n">④</span><h3>悪い法律にも、従うべきだと思いますか？</h3><p>正解はない。従う理由と従わない理由を両方挙げ、変えるための手続にふれると深みが出る。</p></div><div class="iq rv"><span class="n">⑤</span><h3>あなたの関心は、法学のどの分野にあたりますか？</h3><p>Chapter 4の分野名で答え、志望校の科目やゼミの名前を添える。</p></div><div class="iq rv"><span class="n">⑥</span><h3>その本を読んで、納得できなかった点はありますか？</h3><p>批判は失礼ではない。Chapter 6のステップ2で見つけた「当てはまらない場面」がそのまま答えになる。</p></div><div class="iq rv"><span class="n">⑦</span><h3>卒業後、学んだことをどう生かしますか？</h3><p>職業名だけで終わらせず、「どんな対立を、法のどの考え方で解きたいか」で語る。法曹志望でなくてもかまわない。</p></div></section>
+<section class="sec cream"><p class="mid center rv">出願前の<br>最終チェックリスト</p><div class="sp-s"></div><ul class="todo"><li class="rv">「なぜ法学でなければならないか」を30秒で説明できる</li><li class="rv">5つの道具のうち、ひとつを自分の経験で説明できる</li><li class="rv">自分の関心が、どの分野にあたるかを言える</li><li class="rv">本を1冊、「主張 → 衝突 → 問い」で語れる</li><li class="rv">志望校で学びたい科目・ゼミを具体的に挙げられる</li><li class="rv">自分の意見への、いちばん強い反論を言える</li></ul></section>
+<section class="end"><div class="faces" aria-hidden="true" style="margin-top:0"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg></div>
+<p class="big rv">ルールは、<br>誰かが作り、<br>誰かが変えてきた。</p><div class="sp-s"></div>
+<p class="lead rv">その線引きを自分で考えたいと思ったなら、<br>君はもう、<br><mark>法学の入り口に立っている。</mark></p>
+<a class="top" href="#top">↑ 最初に戻る</a></section>
+<footer>総合型選抜｜学部別・学問入門　法学部 法学科編<br>監修｜総合型選抜9年選手<br>掲載書籍の版・価格は書店等で最新の情報をご確認ください。<br>登場する人物イラストはすべて架空のキャラクターです。</footer>
+</div>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+  var bar=document.getElementById('bar');
+  function prog(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',prog,{passive:true});
+  prog();
+})();
+</script>
+</body>
+</html>

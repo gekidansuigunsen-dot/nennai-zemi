@@ -217,3 +217,8 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 .gift .qr{margin:0;display:flex;align-items:center;gap:12px;font-size:.72rem;line-height:1.7;color:var(--ink-2);letter-spacing:.1em}
 .gift .qr img{display:block;width:96px;height:96px;background:#fff;padding:6px;border-radius:4px;border:1px solid var(--hair)}
 @media (max-width:860px){.gift .qr{display:none}}
+
+/* プロフィールのアイコン（丸） */
+.prof > div:first-child{display:grid;place-items:center}
+.portrait-img{display:block;width:180px;height:180px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 6px rgba(255,255,255,.7)}
+@media (max-width:760px){.portrait-img{width:150px;height:150px}}

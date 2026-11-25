@@ -242,10 +242,10 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 @media (hover:hover) and (pointer:fine){
 .gokui .gk{transition:background .45s,border-color .45s,transform .45s cubic-bezier(.2,.9,.25,1),box-shadow .45s}
 .gokui .gk h3,.gokui .gk p,.gokui .gk li,.gokui .gk .go,.gokui .gk .stage{transition:color .45s}
-.gokui .gk:hover,.fl .gokui .gk.rv.in:hover{background:var(--accent);background:color-mix(in srgb,var(--accent) 82%,#fff);border-color:var(--accent);transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,23,31,.14)}
-.gokui .gk:hover h3,.gokui .gk:hover p,.gokui .gk:hover li,.gokui .gk:hover .go,.gokui .gk:hover .go span,.gokui .gk:hover .stage{color:#fff}
-.gokui .gk:hover ul,.gokui .gk:hover li{border-color:rgba(255,255,255,.35)}
-.gokui .gk:hover li::before{background:#fff}
+.gokui a.gk:hover,.fl .gokui a.gk.rv.in:hover{background:var(--accent);background:color-mix(in srgb,var(--accent) 82%,#fff);border-color:var(--accent);transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,23,31,.14)}
+.gokui a.gk:hover h3,.gokui a.gk:hover p,.gokui a.gk:hover li,.gokui a.gk:hover .go,.gokui a.gk:hover .go span,.gokui a.gk:hover .stage{color:#fff}
+.gokui a.gk:hover ul,.gokui a.gk:hover li{border-color:rgba(255,255,255,.35)}
+.gokui a.gk:hover li::before{background:#fff}
 }
 
 .nt .more.soon{display:flex;justify-content:space-between;gap:12px;color:var(--ink-2)}
@@ -272,3 +272,18 @@ main .sec > .wrap,.gift-sec > .wrap{transform-origin:50% 50%;will-change:transfo
 /* 縦書きの詩：本物の縦組みにして、句読点と小書きカナを正しい位置に置く */
 .poem{display:block;writing-mode:vertical-rl;-webkit-writing-mode:vertical-rl;text-orientation:mixed;line-height:2;letter-spacing:.22em;font-family:var(--f-min);font-feature-settings:normal}
 .poem .vl{display:block}
+
+/* 読めるカードと、まだ読めないカードを見分けやすく（学部カードと同じ考え方：読める＝濃い色、まだ＝薄く点線） */
+#gokui a.gk,#jiji a.nt{background:var(--ink);color:#fff;border:1px solid var(--ink);box-shadow:0 12px 28px rgba(20,23,31,.18)}
+#gokui a.gk p,#gokui a.gk li,#jiji a.nt .t{color:#fff}
+#gokui a.gk p{color:rgba(255,255,255,.82)}
+#gokui a.gk ul,#gokui a.gk li{border-color:rgba(255,255,255,.22)}
+#gokui a.gk li::before{background:#fff}
+#gokui a.gk .stage,#jiji a.nt .tag{color:rgba(255,255,255,.72)}
+#gokui a.gk .go,#jiji a.nt .more{color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px}
+#jiji a.nt .more::after{content:"→";font-family:var(--f-go);letter-spacing:0;font-size:1rem}
+#gokui a.gk .go span{font-size:1rem;letter-spacing:0}
+#gokui div.gk,#jiji div.nt{background:rgba(255,255,255,.4);border:1px dashed rgba(20,23,31,.28);box-shadow:none}
+#gokui div.gk > *:not(.go),#jiji div.nt > *:not(.more){opacity:.55}
+#gokui div.gk .go,#jiji div.nt .more{color:var(--ink-2)}
+@media (hover:hover) and (pointer:fine){#jiji a.nt:hover{background:var(--accent);border-color:var(--accent)}}

@@ -339,3 +339,6 @@ nav.menu a{-webkit-tap-highlight-color:transparent}
 }
 @media (max-width:600px){.rack .rh{flex-wrap:nowrap;gap:10px;padding:10px 12px}.rack .rn{letter-spacing:.18em;font-size:.7rem;white-space:nowrap}.rack h3{font-size:1rem;letter-spacing:.06em;min-width:0}.rack .cnt{font-size:.7rem;letter-spacing:.06em}}
 @media (max-width:360px){.rack .rn{display:none}.rack h3{white-space:nowrap}}
+#gokui .gk ul{display:none}
+#gokui .gk{gap:10px;padding:24px 24px 20px}
+@media (max-width:600px){#gokui .gokui{gap:10px}#gokui .gk{padding:18px 20px 16px;gap:6px}#gokui .gk h3{font-size:1.3rem}#gokui .gk p{font-size:.88rem;line-height:1.85}#gokui .gk .go{padding-top:4px}}

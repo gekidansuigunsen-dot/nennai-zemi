@@ -321,3 +321,4 @@ nav.menu a{-webkit-tap-highlight-color:transparent}
   nav.menu a:active,nav.menu a.tap{background:var(--accent);color:#fff;transition:none}
   nav.menu a.gift-link:active,nav.menu a.gift-link.tap{background:var(--accent)}
 }
+@media (max-width:360px){.f .n.lg{letter-spacing:.02em;font-size:.92rem}}

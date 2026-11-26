@@ -342,3 +342,5 @@ nav.menu a{-webkit-tap-highlight-color:transparent}
 #gokui .gk ul{display:none}
 #gokui .gk{gap:10px;padding:24px 24px 20px}
 @media (max-width:600px){#gokui .gokui{gap:10px}#gokui .gk{padding:18px 20px 16px;gap:6px}#gokui .gk h3{font-size:1.3rem}#gokui .gk p{font-size:.88rem;line-height:1.85}#gokui .gk .go{padding-top:4px}}
+.unis li{position:relative;border-left:1px solid var(--hair);padding-left:18px}
+.unis li::before{content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:6px;border-radius:3px 0 0 3px;background:var(--ub,var(--accent))}

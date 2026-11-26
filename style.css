@@ -322,3 +322,21 @@ nav.menu a{-webkit-tap-highlight-color:transparent}
   nav.menu a.gift-link:active,nav.menu a.gift-link.tap{background:var(--accent)}
 }
 @media (max-width:360px){.f .n.lg{letter-spacing:.02em;font-size:.92rem}}
+.armory{display:grid;gap:22px}
+.rack .rh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 10px;padding:10px 16px;border-radius:4px;background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);border:1px solid var(--edge)}
+.rack .rn{font-family:var(--f-lat);font-size:.78rem;letter-spacing:.3em;color:var(--accent);transition:color 1.2s}
+.rack h3{margin:0;font-family:var(--f-min);font-size:1.12rem;letter-spacing:.12em;font-weight:500}
+.rack .cnt{margin-left:auto;font-size:.76rem;letter-spacing:.12em;color:var(--ink-2);white-space:nowrap}
+.rack .cnt b{font-family:var(--f-lat);font-size:1.1rem;font-weight:500;color:var(--accent);transition:color 1.2s}
+.rack.next .slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.rack.next .slots span{display:grid;place-items:center;height:84px;border:1px dashed rgba(20,23,31,.28);border-radius:4px;background:rgba(255,255,255,.28);font-size:1.4rem;color:var(--ink-2);font-family:var(--f-lat)}
+.rack.next .nx{margin:12px 0 0;display:inline-block;padding:6px 14px;border-radius:4px;background:var(--glass);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid var(--edge);font-size:.84rem;color:var(--ink-2);line-height:1.8}
+@media (max-width:900px){
+  .notes.shelf{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  .notes.shelf::-webkit-scrollbar{display:none}
+  .notes.shelf > *{scroll-snap-align:start}
+  .rack.next .slots{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .rack.next .slots span{height:64px}
+}
+@media (max-width:600px){.rack .rh{flex-wrap:nowrap;gap:10px;padding:10px 12px}.rack .rn{letter-spacing:.18em;font-size:.7rem;white-space:nowrap}.rack h3{font-size:1rem;letter-spacing:.06em;min-width:0}.rack .cnt{font-size:.7rem;letter-spacing:.06em}}
+@media (max-width:360px){.rack .rn{display:none}.rack h3{white-space:nowrap}.notes.shelf{grid-auto-columns:88%}.notes.shelf .more.soon{letter-spacing:.14em;white-space:nowrap}}

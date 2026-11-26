@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>アクセスのようす</title>
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f3f1ec; --card:#ffffff; --ink:#11141b; --ink-2:#4a5160; --ink-3:#7a8190;
+  --hair:rgba(20,23,31,.10); --bar:#1d7fbf; --bar-soft:#cfe3f1; --shu:#e2553f; --tip:#11141b; --tip-ink:#fff;
+  --f:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-lat:"Cormorant Garamond","Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121419; --card:#1b1e25; --ink:#eceef2; --ink-2:#b4bac6; --ink-3:#8a90a0;
+    --hair:rgba(255,255,255,.10); --bar:#5aa9de; --bar-soft:#22384a; --shu:#f07a66; --tip:#eceef2; --tip-ink:#11141b;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:var(--f);line-height:1.7;-webkit-text-size-adjust:100%;padding:24px 16px 56px}
+.wrap{max-width:760px;margin:0 auto}
+.eyebrow{font-family:var(--f-lat);letter-spacing:.24em;text-transform:uppercase;font-size:13px;color:var(--ink-3)}
+h1{font-size:26px;font-weight:500;letter-spacing:.08em;margin:4px 0 2px}
+.sub{color:var(--ink-2);font-size:13px;margin:0 0 18px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.tabs button{font:inherit;font-size:14px;border:1px solid var(--hair);background:var(--card);color:var(--ink-2);padding:7px 14px;border-radius:999px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (min-width:640px){.tiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.tile,.card{background:var(--card);border:1px solid var(--hair);border-radius:14px}
+.tile{padding:14px 14px 12px}
+.tile .k{font-size:12px;color:var(--ink-2);letter-spacing:.06em}
+.tile .v{font-size:30px;font-weight:500;line-height:1.2;margin-top:4px;font-variant-numeric:tabular-nums}
+.tile .v small{font-size:14px;margin-left:2px;color:var(--ink-2)}
+.tile .n{font-size:11px;color:var(--ink-3);margin-top:2px}
+.live .v{color:var(--shu)}
+.card{padding:16px 14px;margin-bottom:12px}
+.card h2{font-size:16px;font-weight:600;letter-spacing:.06em;margin:0 0 2px}
+.card .note{font-size:12px;color:var(--ink-3);margin:0 0 12px}
+.chart{position:relative;height:170px}
+.chart svg{display:block;width:100%;height:100%;overflow:visible}
+.chart .grid{stroke:var(--hair);stroke-width:1}
+.chart .axis{fill:var(--ink-3);font-size:10px;font-family:var(--f-lat)}
+.chart rect.b{fill:var(--bar)}
+.chart rect.b.dim{fill:var(--bar-soft)}
+.chart rect.hit{fill:transparent;cursor:pointer}
+.tip{position:absolute;pointer-events:none;background:var(--tip);color:var(--tip-ink);font-size:12px;line-height:1.5;padding:6px 9px;border-radius:8px;white-space:nowrap;transform:translate(-50%,-100%);opacity:0;transition:opacity .12s}
+.tip.on{opacity:1}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:9px 0;border-top:1px solid var(--hair);font-size:14px}
+.rows li:first-child{border-top:0}
+.rows .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rows .num{font-variant-numeric:tabular-nums;text-align:right;color:var(--ink-2);font-size:13px}
+.rows .num b{color:var(--ink);font-weight:600;font-size:14px}
+.rows .meter{grid-column:1/-1;height:4px;border-radius:4px;background:var(--bar-soft);overflow:hidden}
+.rows .meter i{display:block;height:100%;background:var(--bar);border-radius:4px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+@media (min-width:640px){.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2 .card{margin-bottom:0}}
+.empty{color:var(--ink-3);font-size:13px;padding:6px 0}
+.gate{max-width:420px;margin:12vh auto 0;text-align:center}
+.gate input{font:inherit;font-size:16px;width:100%;padding:12px 14px;border:1px solid var(--hair);border-radius:10px;background:var(--card);color:var(--ink);margin:14px 0 10px}
+.gate button{font:inherit;font-size:15px;padding:11px 22px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);cursor:pointer}
+.err{color:var(--shu);font-size:13px;min-height:1.5em}
+.foot{font-size:12px;color:var(--ink-3);margin-top:20px;line-height:1.8}
+.foot a{color:var(--ink-2)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section id="gate" class="gate" hidden>
+    <div class="eyebrow">Private</div>
+    <h1>アクセスのようす</h1>
+    <p class="sub">運営者専用のページです。合言葉を入れてください。</p>
+    <form id="gateForm">
+      <input id="keyIn" type="password" autocomplete="current-password" placeholder="合言葉" aria-label="合言葉">
+      <div class="err" id="gateErr"></div>
+      <button type="submit">ひらく</button>
+    </form>
+  </section>
+
+  <main id="app" hidden>
+    <div class="eyebrow">Access</div>
+    <h1>アクセスのようす</h1>
+    <p class="sub" id="sub">年内入試攻略まるごとゼミ</p>
+
+    <div class="tabs" role="group" aria-label="期間">
+      <button data-d="1">今日</button>
+      <button data-d="7" aria-pressed="true">7日間</button>
+      <button data-d="30">30日間</button>
+      <button data-d="0">全期間</button>
+    </div>
+
+    <div class="tiles">
+      <div class="tile"><div class="k">訪問した人（の目安）</div><div class="v" id="tVisits">–</div><div class="n">訪問の回数</div></div>
+      <div class="tile"><div class="k">見られたページ数</div><div class="v" id="tPv">–</div><div class="n">ページビュー</div></div>
+      <div class="tile"><div class="k">1回の訪問の滞在</div><div class="v" id="tStay">–</div><div class="n">平均</div></div>
+      <div class="tile live"><div class="k">いま見ている人</div><div class="v" id="tLive">–</div><div class="n">5分以内に動きがあった訪問</div></div>
+    </div>
+
+    <div class="card">
+      <h2>日ごとの訪問</h2>
+      <p class="note">直近30日。棒にふれると数字が出ます。</p>
+      <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+    </div>
+
+    <div class="card">
+      <h2>ページごと</h2>
+      <p class="note">見られた回数と、1ページあたりの平均滞在時間。</p>
+      <ul class="rows" id="pages"></ul>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h2>滞在時間の分布</h2>
+        <p class="note">1回の訪問でサイトにいた合計時間。</p>
+        <ul class="rows" id="stay"></ul>
+      </div>
+      <div class="card">
+        <h2>どこから来たか</h2>
+        <p class="note">検索やSNSなど、来た元のサイト（訪問数）。</p>
+        <ul class="rows" id="refs"></ul>
+        <h2 style="margin-top:16px">スマホとパソコン</h2>
+        <ul class="rows" id="devs"></ul>
+      </div>
+    </div>
+
+    <p class="foot">
+      数字は2026年11月26日から記録しています。それ以前の訪問数はCloudflareのWeb Analyticsにあります。<br>
+      Cookieは使わず、名前・IPアドレス・端末を特定する情報は記録していません。「訪問した人」は、ブラウザのタブを開いてから閉じるまでを1回と数えた目安です。<br>
+      このページを開いた端末からのアクセスは数えないようにしています。<br>
+      <a href="#" id="logout">この端末から合言葉を消す</a>
+    </p>
+  </main>
+</div>
+
+<script>
+(function(){
+  var LS = {
+    get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
+    set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}},
+    del:function(k){try{localStorage.removeItem(k)}catch(e){}}
+  };
+  // この端末の訪問は数えない
+  LS.set('nz_notrack','1');
+
+  var m = location.hash.match(/k=([A-Za-z0-9]+)/);
+  if (m) { LS.set('nz_statskey', m[1]); history.replaceState(null,'',location.pathname); }
+  var key = LS.get('nz_statskey') || '';
+  var days = 7;
+
+  var NAMES = {
+    '/':'トップページ', '/tebiki':'攻略の手引きとは', '/gokui/shibou':'志望理由書の極意',
+    '/jiji/':'時事ニュース解説', '/jiji':'時事ニュース解説',
+    '/hou':'法学部', '/keiei':'経営学部', '/keizai':'経済学部', '/kyoiku':'教育学部',
+    '/shakai':'社会学部', '/shinri':'心理学部'
+  };
+  var $ = function(id){return document.getElementById(id)};
+  var esc = function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  var fmtN = function(n){return Number(n||0).toLocaleString('ja-JP')};
+  function fmtT(sec){
+    sec = Math.round(sec||0);
+    if (sec < 60) return sec + '<small>秒</small>';
+    var mm = Math.floor(sec/60), ss = sec%60;
+    if (mm < 60) return mm + '<small>分</small>' + (ss ? ss + '<small>秒</small>' : '');
+    return Math.floor(mm/60) + '<small>時間</small>' + (mm%60) + '<small>分</small>';
+  }
+  var plain = function(h){return h.replace(/<[^>]+>/g,'')};
+
+  function showGate(msg){ $('app').hidden = true; $('gate').hidden = false; $('gateErr').textContent = msg||''; }
+  $('gateForm').addEventListener('submit', function(e){
+    e.preventDefault(); key = $('keyIn').value.trim(); if (!key) return;
+    LS.set('nz_statskey', key); load();
+  });
+  $('logout').addEventListener('click', function(e){ e.preventDefault(); LS.del('nz_statskey'); key=''; showGate(); });
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      days = +b.dataset.d;
+      document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false')});
+      load();
+    });
+  });
+
+  function load(){
+    if (!key) return showGate();
+    fetch('/api/stats?days=' + days, {headers:{'X-Key':key}, cache:'no-store'})
+      .then(function(r){
+        if (r.status === 403) { LS.del('nz_statskey'); key=''; throw new Error('gate'); }
+        if (!r.ok) throw new Error('http'); return r.json();
+      })
+      .then(render)
+      .catch(function(e){
+        if (e.message === 'gate') showGate('合言葉がちがうようです。');
+        else { $('gate').hidden = true; $('app').hidden = false; $('sub').textContent = '読み込めませんでした。少し待ってから開き直してください。'; }
+      });
+  }
+
+  function rows(el, list, max, fmt){
+    if (!list.length) { el.innerHTML = '<li class="empty">まだ記録がありません</li>'; return; }
+    el.innerHTML = list.map(function(r){
+      var w = max ? Math.max(2, Math.round(r.v / max * 100)) : 0;
+      return '<li><span class="name">' + esc(r.name) + '</span><span class="num">' + fmt(r) + '</span><span class="meter"><i style="width:' + w + '%"></i></span></li>';
+    }).join('');
+  }
+
+  function render(d){
+    $('gate').hidden = true; $('app').hidden = false;
+    var label = {1:'今日', 7:'直近7日間', 30:'直近30日間', 0:'全期間'}[d.days] || '';
+    $('sub').textContent = label + '（' + (d.days===0 ? '記録開始から' : d.since.replace(/-/g,'/') + '〜') + '）・' + new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}) + ' 時点';
+    var t = d.totals || {};
+    $('tVisits').innerHTML = fmtN(t.visits) + '<small>人</small>';
+    $('tPv').innerHTML = fmtN(t.pv);
+    $('tStay').innerHTML = t.visits ? fmtT(t.tsec / t.visits) : '–';
+    $('tLive').innerHTML = fmtN(d.live) + '<small>人</small>';
+
+    chart(d.daily, d.today);
+
+    var pages = d.pages.map(function(p){ return {name: NAMES[p.path] || p.path, v: p.pv, a: p.avgsec}; });
+    var pmax = pages.length ? pages[0].v : 0;
+    rows($('pages'), pages, pmax, function(r){ return '<b>' + fmtN(r.v) + '</b> 回 ・ ' + (r.a ? plain(fmtT(r.a)) : '–'); });
+
+    var B = ['10秒未満','10秒〜1分','1〜3分','3〜10分','10分以上'], cnt = [0,0,0,0,0];
+    d.stay.forEach(function(s){ cnt[s.b] = s.n; });
+    var st = B.map(function(n,i){ return {name:n, v:cnt[i]}; });
+    var smax = Math.max.apply(null, cnt);
+    var stotal = cnt.reduce(function(a,b){return a+b},0);
+    rows($('stay'), stotal ? st : [], smax, function(r){ return '<b>' + fmtN(r.v) + '</b> 人' + (stotal ? '（' + Math.round(r.v/stotal*100) + '%）' : ''); });
+
+    var refs = d.refs.map(function(r){ return {name: refName(r.ref), v: r.visits}; });
+    rows($('refs'), refs, refs.length ? refs[0].v : 0, function(r){ return '<b>' + fmtN(r.v) + '</b> 人'; });
+
+    var dv = {m:0,d:0}; d.devices.forEach(function(x){ dv[x.dev] = x.visits; });
+    var dtotal = dv.m + dv.d;
+    rows($('devs'), dtotal ? [{name:'スマホ・タブレット', v:dv.m},{name:'パソコン', v:dv.d}] : [], Math.max(dv.m, dv.d), function(r){ return '<b>' + fmtN(r.v) + '</b> 人（' + Math.round(r.v/dtotal*100) + '%）'; });
+  }
+
+  function refName(h){
+    var map = [[/(^|\.)google\./,'Google検索'],[/(^|\.)yahoo\./,'Yahoo!'],[/(^|\.)bing\.com$/,'Bing'],[/^t\.co$|(^|\.)x\.com$|twitter\.com$/,'X（旧Twitter）'],
+      [/threads\.(net|com)$/,'Threads'],[/instagram\.com$/,'Instagram'],[/note\.com$/,'note'],[/line\.me$|lin\.ee$/,'LINE'],[/facebook\.com$/,'Facebook'],[/youtube\.com$/,'YouTube'],[/tiktok\.com$/,'TikTok']];
+    for (var i=0;i<map.length;i++) if (map[i][0].test(h)) return map[i][1] + '（' + h + '）';
+    return h;
+  }
+
+  function chart(daily, today){
+    var el = $('chart'), tip = $('tip');
+    var byDay = {}; daily.forEach(function(r){ byDay[r.day] = r; });
+    var T = new Date(today + 'T00:00:00Z').getTime(), list = [];
+    for (var i=29;i>=0;i--){ var dd = new Date(T - i*86400000).toISOString().slice(0,10); list.push(byDay[dd] || {day:dd, pv:0, visits:0, tsec:0}); }
+    var W = el.clientWidth || 320, H = 170, L = 26, R = 4, TOP = 10, BOT = 20;
+    var max = Math.max(1, Math.max.apply(null, list.map(function(r){return r.visits})));
+    var step = Math.pow(10, Math.floor(Math.log10(max))); var nice = Math.ceil(max/step)*step;
+    var ticks = [0, Math.round(nice/2), nice].filter(function(v,i,a){return a.indexOf(v)===i});
+    var iw = W - L - R, ih = H - TOP - BOT, slot = iw / list.length, bw = Math.max(3, slot - 2);
+    var y = function(v){ return TOP + ih - v/nice*ih; };
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="直近30日の日ごとの訪問数">';
+    ticks.forEach(function(v){ s += '<line class="grid" x1="' + L + '" x2="' + (W-R) + '" y1="' + y(v) + '" y2="' + y(v) + '"/><text class="axis" x="' + (L-6) + '" y="' + (y(v)+3) + '" text-anchor="end">' + v + '</text>'; });
+    list.forEach(function(r,i){
+      var x = L + i*slot + (slot-bw)/2, h = r.visits ? Math.max(2, r.visits/nice*ih) : 0;
+      if (h) s += '<rect class="b" x="' + x.toFixed(1) + '" y="' + (TOP+ih-h).toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + h.toFixed(1) + '" rx="' + Math.min(2, bw/2) + '"/>';
+      if (i % 7 === 2 || i === 29) s += '<text class="axis" x="' + (L + i*slot + slot/2).toFixed(1) + '" y="' + (H-4) + '" text-anchor="middle">' + (+r.day.slice(5,7)) + '/' + (+r.day.slice(8)) + '</text>';
+      s += '<rect class="hit" data-i="' + i + '" x="' + (L + i*slot).toFixed(1) + '" y="' + TOP + '" width="' + slot.toFixed(1) + '" height="' + ih + '"/>';
+    });
+    s += '</svg>';
+    el.innerHTML = s; el.appendChild(tip);
+    function show(e){
+      var t = e.target; if (!t.dataset || t.dataset.i === undefined) return;
+      var r = list[+t.dataset.i], x = L + (+t.dataset.i)*slot + slot/2;
+      var avg = r.visits ? plain(fmtT(r.tsec / r.visits)) : '–';
+      tip.innerHTML = (+r.day.slice(5,7)) + '月' + (+r.day.slice(8)) + '日<br>訪問 ' + r.visits + '人 ・ ' + r.pv + 'ページ<br>平均滞在 ' + avg;
+      tip.style.left = Math.min(Math.max(x, 70), W - 70) + 'px';
+      tip.style.top = (y(r.visits) - 6) + 'px';
+      tip.classList.add('on');
+    }
+    el.querySelector('svg').addEventListener('pointerover', show);
+    el.querySelector('svg').addEventListener('pointerdown', show);
+    el.querySelector('svg').addEventListener('pointerleave', function(){ tip.classList.remove('on'); });
+  }
+
+  var rt; addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(load, 300); });
+  load();
+  setInterval(function(){ if (!document.hidden && key) load(); }, 60000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Cloudflare Pages の設定（アクセス計測用の D1 データベースをつなぐ）
+name = "nennai-zemi"
+pages_build_output_dir = "."
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nennai-zemi-stats"
+database_id = "60181912-2e66-434e-b23d-c374387d0573"

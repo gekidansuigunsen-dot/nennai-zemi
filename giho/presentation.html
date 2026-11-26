@@ -24,8 +24,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="/sheet.css">
 </head>
 <body>
+<canvas id="sumi" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div>
 <div class="progress" id="progress"></div>
 <nav class="side" aria-label="この記事の目次"><h2>CONTENTS</h2><a href="#k0" data-nav="k0">なぜ、あなたのプレゼンは伝わらないのか</a><a href="#k1" data-nav="k1">① 言いたいことを、一文にする</a><a href="#k2" data-nav="k2">② 結論は最初と最後に。中身は3つに分ける</a><a href="#k3" data-nav="k3">③ 根拠を見せる。事実と意見を分ける</a><a href="#k4" data-nav="k4">④ スライドは、読ませない</a><a href="#k5" data-nav="k5">⑤ 声に出して、時間を計って、撮る</a><a href="#k6" data-nav="k6">⑥ 質疑応答は、対話の時間</a><a href="#k7" data-nav="k7">⑦ 本番前のチェック</a></nav>
 <div class="page" id="top">
@@ -228,6 +230,7 @@
   document.querySelectorAll('[data-ch]').forEach(function(s){so.observe(s)});
 })();
 </script>
+<script src="/script.js"></script>
 <script src="/t.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>福祉は「やさしさの勉強」じゃない。｜総合型選抜・社会福祉学部志望者のための入門冊子</title>
+<meta name="description" content="総合型選抜で社会福祉学部を志望する受験生のための入門冊子。社会福祉学の考え方、分野マップ、読んでおきたい12冊、本を志望理由書に変える方法まで。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2c7a34;
+  --blue-d:#1b5222;
+  --ink:#121212;
+  --cream:#f1f5e9;
+  --paper:#fffdf7;
+  --yellow:#ffe45c;
+  --red:#ff5436;
+  --w:520px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:#0f2a12;
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  font-weight:500;
+  line-height:1.9;
+  letter-spacing:.06em;
+  font-feature-settings:"palt";
+}
+.page{max-width:var(--w);margin:0 auto;background:var(--paper);overflow:hidden;position:relative}
+svg{display:block}
+.num{font-family:"Abril Fatface",Georgia,serif;letter-spacing:.02em;font-weight:400}
+.hand{font-family:"Yusei Magic","Zen Kaku Gothic New",sans-serif;letter-spacing:.04em}
+mark{background:linear-gradient(transparent 55%,var(--yellow) 55%);color:inherit;padding:0 .1em}
+.blue mark,.ink mark,.end mark,.chap mark{background:none;color:var(--yellow)}
+.ink .who svg{background:var(--cream);border-radius:14px;padding:4px 4px 0}
+
+/* progress */
+.home{display:block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;text-decoration:none;letter-spacing:.1em}
+.home:hover{color:var(--yellow)}
+.bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--yellow);z-index:50}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.pop{transform:scale(.86)}
+.js .rv.pop.in{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cover */
+.cover{background:var(--blue);color:#fff;padding:64px 28px 120px;clip-path:polygon(0 0,100% 0,100% 100%,0 91%);text-align:center;position:relative}
+.cover .series{display:inline-block;border:1.5px solid #fff;border-radius:99px;padding:2px 16px;font-size:12px;font-weight:700;letter-spacing:.14em}
+.faces{display:flex;justify-content:center;gap:10px;margin:44px 0 28px}
+.faces svg{width:23%;max-width:104px;height:auto}
+.cover h1{font-size:clamp(30px,8.4vw,42px);font-weight:900;line-height:1.45;letter-spacing:.08em}
+.cover h1 span{color:var(--yellow)}
+.cover .sub{margin-top:22px;font-size:14px;font-weight:700;letter-spacing:.12em}
+.cover .vol{margin-top:30px;font-size:22px}
+.cover .vol small{display:block;font-size:13px;margin-top:2px;opacity:.9}
+.kanshu{display:inline-block;margin-top:22px;background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:2px 18px;letter-spacing:.12em}
+.scroll{margin:34px auto 0;width:22px;height:36px;border:2px solid #fff;border-radius:12px;position:relative}
+.scroll:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:7px;margin-left:-2px;background:var(--yellow);border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.scroll:after{animation:none}}
+
+/* sections */
+.sec{padding:64px 28px}
+.blue{background:var(--blue);color:#fff}
+.ink{background:var(--ink);color:#fff}
+.cream{background:var(--cream)}
+.slant-t{clip-path:polygon(0 0,100% 44px,100% 100%,0 100%);padding-top:108px;margin-top:-44px}
+.center{text-align:center}
+p+p{margin-top:1.3em}
+.lead{font-size:17px;font-weight:700;line-height:2.1}
+.big{font-size:clamp(25px,7vw,34px);font-weight:900;line-height:1.6;letter-spacing:.08em}
+.mid{font-size:20px;font-weight:900;line-height:1.75}
+.note{font-size:12px;opacity:.8;line-height:1.7}
+.sp{height:44px}.sp-s{height:24px}
+
+/* index */
+.index{padding:56px 28px 64px}
+.index h2{font-size:22px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.index a{display:flex;align-items:baseline;gap:14px;padding:15px 4px;border-bottom:1px solid var(--ink);color:inherit;text-decoration:none;font-weight:700;font-size:17px}
+.index a .num{font-size:15px;color:var(--blue);min-width:86px}
+.index a:after{content:"↓";margin-left:auto;color:var(--blue)}
+.index a:hover,.index a:focus-visible{background:var(--yellow);outline:none}
+
+/* chapter head */
+.chap{background:var(--blue);color:#fff;padding:120px 28px 64px;margin-top:-1px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);text-align:center}
+.chap.ink{background:var(--ink)}
+.chap .lbl{font-size:22px}
+.chap .ttl{background:var(--cream);color:var(--ink);margin:16px auto 0;padding:34px 16px;font-size:clamp(24px,6.6vw,32px);font-weight:900;letter-spacing:.1em;line-height:1.5;border-top:6px solid var(--yellow)}
+.chap .desc{margin-top:22px;font-size:14px;font-weight:700}
+
+/* talk */
+.talk{display:flex;align-items:flex-end;gap:12px;margin:26px 0}
+.talk.r{flex-direction:row-reverse}
+.talk .who{flex:0 0 84px;text-align:center;font-size:11px;font-weight:700;line-height:1.4}
+.talk .who svg{width:84px;height:auto;margin-bottom:2px}
+.bub{position:relative;background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:18px;padding:14px 16px;font-size:16px;line-height:1.7;margin-bottom:26px;flex:1}
+.bub:after{content:"";position:absolute;bottom:14px;left:-11px;width:18px;height:18px;background:#fff;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+.talk.r .bub:after{left:auto;right:-11px;border:0;border-right:2.5px solid var(--ink);border-top:2.5px solid var(--ink)}
+.bub.y{background:var(--yellow)}.bub.y:after{background:var(--yellow)}
+
+/* cards */
+.card{background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:6px;padding:22px 20px;box-shadow:6px 6px 0 var(--ink)}
+.blue .card,.ink .card{box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.card h3{font-size:19px;font-weight:900;line-height:1.5}
+.card+.card{margin-top:22px}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:1px 10px;letter-spacing:.1em;margin-bottom:8px}
+.tag.y{background:var(--yellow);color:var(--ink)}
+.tag.b{background:var(--blue)}
+
+/* definition */
+.def{border:3px solid #fff;padding:30px 18px;text-align:center;position:relative;margin-top:36px}
+.def .cap{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:1px 16px;white-space:nowrap}
+
+/* vs */
+.vs .row{display:grid;grid-template-columns:84px 1fr;border-top:2px solid var(--ink)}
+.vs .row:last-child{border-bottom:2px solid var(--ink)}
+.vs .k{font-weight:900;font-size:17px;padding:16px 0;display:flex;align-items:center}
+.vs .v{padding:16px 0 16px 14px;font-size:14px;line-height:1.75;border-left:1px dashed var(--ink)}
+.vs .v b{display:block;font-size:15px}
+.vs .row.me{background:var(--yellow);margin:0 -12px;padding:0 12px}
+
+/* tools */
+.tool{position:relative;padding:26px 0 26px 66px;border-bottom:1px dashed rgba(255,255,255,.6)}
+.tool:last-of-type{border-bottom:0}
+.tool .n{position:absolute;left:0;top:24px;width:50px;height:50px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:26px;font-weight:900;letter-spacing:0}
+.tool h3{font-size:22px;font-weight:900;line-height:1.4}
+.tool .one{font-size:14px;font-weight:700;color:var(--yellow);margin:2px 0 8px}
+.tool p{font-size:15px;line-height:1.85}
+.tool .ex{margin-top:12px;background:rgba(255,255,255,.12);border-left:4px solid var(--yellow);padding:10px 14px;font-size:14px;line-height:1.75}
+
+/* timeline */
+.tl{position:relative;margin-left:8px;padding-left:28px;border-left:5px dotted var(--blue)}
+.tl .it{position:relative;padding-bottom:46px}
+.tl .it:last-child{padding-bottom:6px}
+.tl .it:before{content:"";position:absolute;left:-41px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid var(--cream)}
+.tl .yr{font-size:30px;line-height:1.2;color:var(--ink)}
+.tl .yr small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:700;margin-left:2px}
+.tl h3{font-size:19px;font-weight:900;color:var(--blue);line-height:1.5;margin:6px 0 4px}
+.tl p{font-size:15px;line-height:1.85}
+.tl .q{clear:both;display:inline-block;margin-top:10px;background:#fff;border:2px solid var(--ink);padding:4px 12px;font-size:14px;font-weight:700;line-height:1.6}
+.fig{float:right;width:112px;height:auto;margin:-6px 0 6px 10px}
+.bust{float:right;width:64px;margin:-4px 0 4px 10px}
+
+/* map */
+.base{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.base div{background:var(--yellow);color:var(--ink);text-align:center;padding:14px 4px;font-weight:900;font-size:16px;line-height:1.4;border:2.5px solid var(--ink)}
+.base small{display:block;font-size:11px;font-weight:700;margin-top:4px;line-height:1.5}
+.map{margin-top:10px}
+.map .m{display:grid;grid-template-columns:1fr 20px 128px;align-items:center;gap:6px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.5);font-size:14.5px;line-height:1.65}
+.map .m i{font-style:normal;color:var(--yellow);font-weight:900;text-align:center}
+.map .m b{background:#fff;color:var(--blue);text-align:center;padding:5px 2px;font-size:13.5px;font-weight:900;line-height:1.4}
+
+/* books */
+.theme{display:flex;align-items:center;gap:10px;margin:44px 0 18px;font-weight:900;font-size:18px}
+.theme:first-of-type{margin-top:8px}
+.theme:before,.theme:after{content:"";flex:1;height:2px;background:var(--ink)}
+.book{display:grid;grid-template-columns:64px 1fr;gap:16px;background:#fff;border:2.5px solid var(--ink);padding:18px 16px;box-shadow:5px 5px 0 var(--blue)}
+.book{color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.book:hover,a.book:focus-visible{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--blue);outline:none}
+.js a.book.rv.in:hover{transform:translate(-2px,-2px)}
+.amz{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;font-size:12px;font-weight:900;padding:3px 14px;border-radius:99px;letter-spacing:.08em}
+.book+.book{margin-top:20px}
+.spine{background:var(--blue);color:#fff;display:grid;place-items:center;font-size:32px;font-weight:900;letter-spacing:0;min-height:96px;border:2.5px solid var(--ink);border-left-width:7px}
+.spine.y{background:var(--yellow);color:var(--ink)}
+.spine.r{background:var(--red)}
+.spine.k{background:var(--ink)}
+.book h3{font-size:16.5px;font-weight:900;line-height:1.5}
+.book .au{font-size:12px;font-weight:700;opacity:.75;line-height:1.5;margin-top:2px}
+.book .meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;font-size:11px;font-weight:700}
+.book .meta span{border:1.5px solid var(--ink);padding:0 8px;border-radius:99px;line-height:1.8}
+.book .meta .st{background:var(--ink);color:var(--yellow);letter-spacing:.1em}
+.book p{font-size:13.5px;line-height:1.75}
+.book .ask{margin-top:8px;background:var(--cream);padding:8px 10px;font-size:13px;font-weight:700;line-height:1.65}
+.book .ask:before{content:"立てられる問い";display:block;font-size:10px;color:var(--blue);letter-spacing:.14em}
+
+/* steps */
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;padding:22px 0;border-bottom:2px solid var(--ink)}
+.step .n{font-size:44px;line-height:1;color:var(--blue)}
+.step h3{font-size:18px;font-weight:900;line-height:1.5}
+.step p{font-size:14.5px;line-height:1.8;margin-top:4px}
+.ba{margin-top:30px}
+.ba .x,.ba .o{padding:18px 16px 18px;border:2.5px solid var(--ink);font-size:14.5px;line-height:1.85;position:relative;background:#fff}
+.ba .x{color:#555}
+.ba .o{background:var(--yellow);margin-top:34px}
+.ba .x:before,.ba .o:before{position:absolute;top:-14px;left:12px;font-size:12px;font-weight:900;padding:0 12px;color:#fff;letter-spacing:.1em}
+.ba .x:before{content:"✕ 感想文で終わる例";background:#777}
+.ba .o:before{content:"◎ 問いに変換した例";background:var(--blue)}
+.ba .arrow{text-align:center;font-size:26px;font-weight:900;line-height:1;margin-top:12px;color:var(--blue)}
+
+/* list */
+.todo li{list-style:none;position:relative;padding:12px 0 12px 34px;border-bottom:1px dashed rgba(255,255,255,.55);font-size:15px;line-height:1.75}
+.todo li:before{content:"";position:absolute;left:2px;top:17px;width:18px;height:18px;border:2.5px solid var(--yellow);border-radius:3px}
+.todo li b{color:var(--yellow)}
+.cream .todo li,.paper .todo li{border-color:var(--ink)}
+.cream .todo li:before{border-color:var(--blue)}
+
+/* interview */
+.iq{background:#fff;color:var(--ink);border:2.5px solid var(--ink);padding:18px 16px 16px 60px;position:relative}
+.iq+.iq{margin-top:16px}
+.iq .n{position:absolute;left:14px;top:14px;font-size:30px;font-weight:900;color:var(--blue);line-height:1.2;letter-spacing:0}
+.iq h3{font-size:16.5px;font-weight:900;line-height:1.55}
+.iq p{font-size:13.5px;line-height:1.75;margin-top:6px;color:#333}
+.iq p:before{content:"考えるヒント｜";font-weight:900;color:var(--blue)}
+
+/* vertical statement */
+.vert{writing-mode:vertical-rl;margin:0 auto;font-size:21px;font-weight:900;line-height:2.1;letter-spacing:.16em;height:15em;text-align:left}
+.vert .hl{color:var(--yellow)}
+
+/* ending */
+.end{background:var(--blue);color:#fff;padding:120px 28px 72px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);margin-top:-1px;text-align:center}
+footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px;font-size:11px;letter-spacing:.12em;line-height:1.9}
+footer a{color:var(--yellow)}
+.top{display:inline-block;margin-top:40px;color:#fff;border:2px solid #fff;padding:6px 26px;border-radius:99px;font-weight:700;font-size:13px;text-decoration:none}
+.top:hover,.top:focus-visible{background:#fff;color:var(--blue);outline:none}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+
+<!-- character symbols (all original, fictional) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 受験生 ケイ -->
+    <symbol id="c-kei" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 108l10 10 10-10" fill="none" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 22-12 40-30 40S30 80 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M27 56C22 26 40 8 62 10c22 2 36 18 31 46-3-10-8-17-15-22-4 6-10 9-16 10 2-3 3-6 3-9-8 8-22 12-32 12-3 3-5 6-6 9z" fill="#121212"/>
+      <path d="M42 56q6-4 12-1M66 55q6-3 12 1" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="65" r="3.2" fill="#121212"/><circle cx="72" cy="65" r="3.2" fill="#121212"/>
+      <path d="M59 68q-3 7 1 9" fill="none" stroke="#121212" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M51 84q9 6 18 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <!-- 受験生 ミオ -->
+    <symbol id="c-mio" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M24 50C22 22 40 8 60 8s38 14 36 42c-1 18 2 34 4 44H20c2-10 5-26 4-44z" fill="#121212"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M31 58c0-24 12-36 29-36s29 12 29 36c0 22-12 40-29 40S31 80 31 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c2-22 12-34 30-36 18 2 28 14 30 36-10-4-18-12-22-22-8 12-24 20-38 22z" fill="#121212"/>
+      <path d="M42 62q6-5 12 0M66 62q6-5 12 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="68" r="3" fill="#121212"/><circle cx="72" cy="68" r="3" fill="#121212"/>
+      <path d="M53 84q7 5 14 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="40" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+      <circle cx="80" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </symbol>
+    <!-- 先生 -->
+    <symbol id="c-sensei" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#121212" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M48 104l12 16 12-16z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 24-12 40-30 40S30 82 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M28 50C24 24 42 10 60 10c20 0 36 12 32 40-4-12-12-20-26-22-14-2-28 2-38 22z" fill="#121212"/>
+      <rect x="36" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <rect x="64" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M56 62h8M36 62l-6-2M84 62l6-2" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="46" cy="64" r="2.6" fill="#121212"/><circle cx="74" cy="64" r="2.6" fill="#121212"/>
+      <path d="M48 82q12 9 24 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 76q-2 6 2 10M80 76q2 6-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 面接官 -->
+    <symbol id="c-mensetsu" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M56 106h8l3 22h-14z" fill="#121212"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c0-26 12-40 30-40s30 14 30 40c0 26-12 42-30 42S30 82 30 56z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M29 58c-4-14 0-28 8-34-2 10-3 22-2 30zM91 58c4-14 0-28-8-34 2 10 3 22 2 30z" fill="#121212"/>
+      <path d="M44 22q16-8 32 0" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+      <path d="M38 52l16 3M82 52l-16 3" fill="none" stroke="#121212" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="47" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="73" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <path d="M55 64h10" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="47" cy="65" r="2.4" fill="#121212"/><circle cx="73" cy="65" r="2.4" fill="#121212"/>
+      <path d="M50 86h20" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 78q4 4 2 10M80 78q-4 4-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 学説を象徴するアイコン -->
+    <symbol id="i-hand" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M22 50V30a3 3 0 0 1 6 0v-9a3 3 0 0 1 6 0v-2a3 3 0 0 1 6 0v4a3 3 0 0 1 6 0v17c0 8-5 12-12 12-6 0-9-2-12-8l-5-9a3 3 0 0 1 5-3z" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" fill="#fff"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="15" fill="none" stroke="#121212" stroke-width="9" stroke-dasharray="6.2 5.58"/><circle cx="32" cy="32" r="12" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="32" cy="32" r="4" fill="#121212"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M14 26l18-11 18 11z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31v14M27 31v14M37 31v14M46 31v14M13 49h38" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-game" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><rect x="16" y="16" width="32" height="32" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 16v32M16 32h32" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3" fill="#121212"/><path d="M37 37l6 6M43 37l-6 6" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bias" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M32 46V24M12 30l40-10" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 50h16" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="38" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="50" cy="26" r="4" fill="#121212"/><path d="M14 30v2M50 20v2" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M27 14h10M29 14v13L18 46a3 3 0 0 0 3 5h22a3 3 0 0 0 3-5L35 27V14" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 40h18" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="45" r="1.8" fill="#121212"/><circle cx="36" cy="43" r="1.4" fill="#121212"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M16 16v32h34" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="22" y="36" width="6" height="12" fill="#121212"/><rect x="32" y="29" width="6" height="19" fill="#121212"/><rect x="42" y="21" width="6" height="27" fill="#fff" stroke="#121212" stroke-width="2.5"/></symbol>
+  <symbol id="f-doc" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M20 14h18l8 8v28H20z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 14v8h8M26 30h14M26 37h14M26 44h9" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="f-people" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><circle cx="23" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="41" cy="26" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M12 48c1-9 5-13 11-13s10 4 11 13M30 48c1-9 5-13 11-13s10 4 11 13" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="f-shield" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M32 13l15 5v12c0 10-6 17-15 21-9-4-15-11-15-21V18z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 31l5 5 9-10" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="f-home" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M14 30l18-15 18 15v19H14z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 49V37h10v12" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="f-eq" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M20 26h24M20 38h24" fill="none" stroke="#121212" stroke-width="5" stroke-linecap="round"/></symbol>
+<symbol id="f-heart" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><path d="M32 48C20 39 15 33 15 26a8.5 8.5 0 0 1 17-2 8.5 8.5 0 0 1 17 2c0 7-5 13-17 22z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="f-globe" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe45c" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="16" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M16 32h32M32 16c-7 6-7 26 0 32M32 16c7 6 7 26 0 32" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="page" id="top">
+<a class="home" href="/">← 年内入試攻略まるごとゼミ トップ</a>
+<header class="cover"><span class="series">総合型選抜｜学部別・学問入門</span>
+<div class="faces" aria-hidden="true"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg></div>
+<h1>福祉は<br><span>「やさしさの勉強」</span><br>じゃない。</h1>
+<p class="sub">社会福祉学部を志望する君が<br>出願前に知っておきたいこと</p>
+<p class="vol num">Social Welfare<small>社会福祉学部編</small></p>
+<p class="kanshu">監修｜総合型選抜9年選手</p>
+<div class="scroll" aria-hidden="true"></div></header>
+<nav class="index" aria-label="目次"><h2 class="num">Index</h2>
+<a href="#c1"><span class="num">Chapter 1</span>その志望理由、「人の役に立ちたい」だけ？</a>
+<a href="#c2"><span class="num">Chapter 2</span>福祉を見る「5つの道具」</a>
+<a href="#c3"><span class="num">Chapter 3</span>400年を3分で</a>
+<a href="#c4"><span class="num">Chapter 4</span>君の関心はどの分野？</a>
+<a href="#c5"><span class="num">Chapter 5</span>読んでおきたい12冊</a>
+<a href="#c6"><span class="num">Chapter 6</span>読んだ本を志望理由書に変える</a>
+<a href="#c7"><span class="num">Chapter 7</span>資格と実習の話</a>
+<a href="#c8"><span class="num">Chapter 8</span>面接で聞かれる7つの問い</a></nav>
+<section class="chap" id="c1"><div class="lbl num">Chapter 1</div><h2 class="ttl rv">その志望理由、<br>「人の役に立ちたい」<br>だけ？</h2><p class="desc">まず、いちばん多い失敗から。</p></section>
+<section class="sec cream"><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg>受験生 ミオ</div><div class="bub hand">祖母の介護を見て、困っている人の役に立ちたいと思い、福祉学部を志望します！</div></div><div class="talk r rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg>面接官</div><div class="bub hand">人の役に立つ仕事は、医療にも教育にもあります。福祉は、やさしい気持ちがあればできると思いますか？</div></div><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg>受験生 ミオ</div><div class="bub hand">……えっと……</div></div><div class="sp-s"></div><p class="big center rv">福祉は、<br><mark>「善意」ではなく<br>「仕組み」の話だ。</mark></p><div class="sp-s"></div>
+<p class="rv">福祉学部の志望理由書でよく見るのが、「人の役に立ちたい」「困っている人を助けたい」「家族の介護を見て」という言葉だけで組み立てられた文章だ。</p>
+<p class="rv">きっかけとしては十分に強い。でもそれだけでは、社会福祉学という学問の入り口にまだ立っていない。大学の先生が知りたいのは、<b>君が「人を支える仕組み」そのものに興味を持っているかどうか</b>だ。</p></section>
+<section class="sec blue"><p class="center lead rv">では、社会福祉学とは何か。</p>
+<div class="def rv pop"><span class="cap">ひとことで言うと</span><p class="big">困りごとがあっても<br>暮らし続けられる<br>仕組みを<br><mark>つくり、つなぐ学問</mark></p></div><div class="sp"></div>
+<p class="rv">病気、障害、失業、介護、ひとり親。暮らしが立ちゆかなくなるきっかけは、誰にでも起こりうる。それは本人の弱さではなく、その人と周りの環境がかみ合わなくなった状態だ。</p>
+<p class="rv">社会福祉学は、困っている人に寄り添う方法と、その人を支える制度の両方を扱う。本人に働きかけ、同時に、家族、地域、制度にも働きかける。</p>
+<p class="rv">だから福祉は、やさしさだけでは成り立たない。<mark>法律や制度の知識、人の話を聴く技術、そして社会を変える視点</mark>が必要になる。</p></section>
+<section class="sec"><p class="mid center rv">同じ「ヤングケアラー」を見ても、<br>問いがこれだけ違う。</p><div class="sp-s"></div>
+<div class="vs rv">
+<div class="row me"><div class="k">福祉学</div><div class="v"><b>暮らしと支援を見る</b>その子と家族を、どの制度や支援につなげば、暮らしを立て直せるのか？</div></div>
+<div class="row"><div class="k">心理学</div><div class="v"><b>個人の心を見る</b>その子の心には、どんな負担がかかっているのか？</div></div>
+<div class="row"><div class="k">社会学</div><div class="v"><b>社会の当たり前を見る</b>なぜ「家族が世話をするのが当然」と考えられてきたのか？</div></div></div>
+<p class="note rv" style="margin-top:14px">※福祉を学べる学部には、社会福祉学部のほか、人間福祉学部、総合福祉学部、社会学部の福祉系学科などがある。介護、保育、相談援助のどれに重点を置くかは大学によって違うので、志望校の科目表は必ず自分で確認しよう。</p><div class="talk r rv" style="margin-top:36px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">「助けたい」を「どんな仕組みがあれば、この人は暮らし続けられるか」に言い換えられたら、もう福祉学の入り口だよ。</div></div></section>
+<section class="chap" id="c2"><div class="lbl num">Chapter 2</div><h2 class="ttl rv">ソーシャルワーカーの<br>「5つの道具」</h2><p class="desc">この5つで人と社会を見ると、<br>志望理由書の語彙が変わる。</p></section>
+<section class="sec blue" style="padding-top:20px"><div class="tool rv"><span class="n">①</span><h3>人と環境</h3><p class="one">困りごとは、人と環境の「あいだ」にある</p><p>問題は本人の中だけにあるのではない。家族、学校、職場、地域、制度との関係の中で起きている。だから本人と環境の両方に働きかける。</p><p class="ex">車いすの人が店に入れないのは、足のせいか。それとも、入口の段差のせいか。</p></div><div class="tool rv"><span class="n">②</span><h3>権利</h3><p class="one">ほどこしではなく、権利として</p><p>福祉は「かわいそうだから助けてあげる」ものではない。人が人らしく暮らすことは、憲法が保障する権利だ。</p><p class="ex">生活保護を使うことは、恥ずかしいことなのか。それとも、認められた権利なのか。</p></div><div class="tool rv"><span class="n">③</span><h3>自己決定</h3><p class="one">決めるのは、本人だ</p><p>支援する側が「あなたのため」と考えたことが、押しつけになることがある。どう暮らすかを決めるのは、支援を受ける本人だ。</p><p class="ex">安全のために施設をすすめるか。本人が望む自宅での暮らしを支えるか。</p></div><div class="tool rv"><span class="n">④</span><h3>強みを見る</h3><p class="one">できないことより、できること</p><p>足りない部分ばかりを数えるのではなく、本人が持っている力、好きなこと、支えてくれる人に注目する。そこから支援を組み立てる。</p><p class="ex">「一人で買い物に行けない人」ではなく、「近所に声をかけてくれる人がいる人」と見る。</p></div><div class="tool rv"><span class="n">⑤</span><h3>つなぐ・つくる</h3><p class="one">制度は、知らなければ使えない</p><p>日本の福祉制度の多くは、本人が申請してはじめて使える。必要な人を制度につなぎ、足りなければ新しい仕組みをつくるのも福祉の仕事だ。</p><p class="ex">使える支援があるのに、知らないまま困り続けている人は、なぜ生まれるのか。</p></div></section>
+<section class="sec ink center"><div class="vert rv"><span class="hl">「どんな仕組みが<br>　あればいい？」</span><br>と問えた瞬間、<br>君の関心は<br>福祉学になる。</div></section>
+<section class="chap" id="c3"><div class="lbl num">Chapter 3</div><h2 class="ttl rv">400年を3分で</h2><p class="desc">福祉は「ほどこし」から始まり、<br>「権利」へと変わってきた。</p></section>
+<section class="sec cream"><div class="tl"><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#f-doc"/></svg><div class="yr num">1601<small>年</small></div><h3>エリザベス救貧法</h3><p>イギリスで、貧しい人への対応を国の仕事として定めた法律。ただし、働ける人には労働を強制するなど、「救う」より「管理する」色合いが強かった。</p><span class="q">問い｜貧しさは、本人の責任なのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#f-people"/></svg><div class="yr num">1917<small>年</small></div><h3>リッチモンド『社会診断』</h3><p>アメリカのリッチモンドが、困っている人への関わり方を、勘や善意ではなく、専門的な方法としてまとめた。相談援助という仕事の出発点。</p><span class="q">問い｜人を支えることは、専門技術になるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#f-shield"/></svg><div class="yr num">1942<small>年</small></div><h3>ベヴァリッジ報告</h3><p>戦時中のイギリスで、生まれてから亡くなるまでの暮らしを国が支える構想が示された。「ゆりかごから墓場まで」と呼ばれる福祉国家の設計図になった。</p><span class="q">問い｜国は、どこまで暮らしを保障すべきか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#f-home"/></svg><div class="yr num">1950<small>年</small></div><h3>現在の生活保護法</h3><p>憲法25条の「健康で文化的な最低限度の生活を営む権利」を具体化した法律。最低限の暮らしは、国が保障するものと定められた。</p><span class="q">問い｜「最低限度の生活」とは、どんな暮らしか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#f-eq"/></svg><div class="yr num">1981<small>年</small></div><h3>国際障害者年</h3><p>国連が「完全参加と平等」を掲げた年。障害のある人も、ない人と同じように地域でふつうに暮らせる社会を目指す考え方が、世界に広がった。</p><span class="q">問い｜「ふつうの暮らし」は、誰のものか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#f-heart"/></svg><div class="yr num">2000<small>年</small></div><h3>介護保険制度のスタート</h3><p>家族が担うのが当たり前だった高齢者の介護を、社会全体で支える仕組みが日本で始まった。サービスを自分で選んで契約する形に変わった。</p><span class="q">問い｜介護は、誰が担うべきなのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#f-globe"/></svg><div class="yr num">2006<small>年</small></div><h3>障害者権利条約の採択</h3><p>国連で採択された、障害のある人の権利を定めた条約。「私たちのことを、私たち抜きに決めないで」という当事者の声が、つくる過程を動かした。</p><span class="q">問い｜支援のあり方は、誰が決めるのか？</span></div></div><div class="sp"></div><p class="mid center rv">流れをひとことで言えば、<br><mark>「ほどこされる福祉」から<br>「自分で選ぶ福祉」へ。</mark></p><div class="talk r rv" style="margin-top:30px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">いま当たり前の制度も、誰かが声をあげてできたものなんだ。足りないものは、これからもつくれる。</div></div></section>
+<section class="chap" id="c4"><div class="lbl num">Chapter 4</div><h2 class="ttl rv">君の関心は<br>どの分野？</h2><p class="desc">「福祉」はひとつじゃない。<br>自分の居場所を見つけよう。</p></section>
+<section class="sec blue" style="padding-top:24px"><p class="lead center rv">まず、全員が学ぶ3つの土台。</p><div class="sp-s"></div>
+<div class="base rv"><div>相談援助<small>人を支える<br>理論と技術</small></div><div>制度と政策<small>社会保障の<br>しくみを知る</small></div><div>現場実習<small>施設や機関で<br>実際に学ぶ</small></div></div>
+<div class="sp"></div><p class="lead center rv">その上に、テーマ別の分野が広がる。</p><div class="map"><div class="m rv"><span>認知症になっても、自分らしく暮らせるか</span><i>→</i><b>高齢者福祉</b></div><div class="m rv"><span>障害のある人が、地域で暮らすには何がいるか</span><i>→</i><b>障害者福祉</b></div><div class="m rv"><span>家で安心して過ごせない子を、どう守るのか</span><i>→</i><b>児童・家庭福祉</b></div><div class="m rv"><span>働いても暮らしが苦しいのは、なぜなのか</span><i>→</i><b>貧困・公的扶助</b></div><div class="m rv"><span>退院したあとの暮らしを、誰が支えるのか</span><i>→</i><b>医療福祉</b></div><div class="m rv"><span>こころの病を抱えながら、どう働き暮らすか</span><i>→</i><b>精神保健福祉</b></div><div class="m rv"><span>近所づきあいのない人の孤立を、どう防ぐか</span><i>→</i><b>地域福祉</b></div><div class="m rv"><span>罪を犯した人は、どうすれば立ち直れるのか</span><i>→</i><b>司法福祉</b></div><div class="m rv"><span>外国から来た人の暮らしを、どう支えるか</span><i>→</i><b>多文化<br>ソーシャルワーク</b></div><div class="m rv"><span>北欧の福祉は、なぜ手厚いと言われるのか</span><i>→</i><b>福祉政策<br>国際比較</b></div></div><div class="sp"></div><div class="card rv"><span class="tag b">やってみよう</span><h3>志望校の教員一覧を開き、<br>上の分野名で探す。</h3><p style="font-size:14.5px;margin-top:8px">自分の関心に近い研究をしている先生が見つかれば、「なぜこの大学か」に具体的な答えが生まれる。実習先にどんな施設や機関があるかも見ておこう。</p></div></section>
+<section class="chap" id="c5"><div class="lbl num">Chapter 5</div><h2 class="ttl rv">読んでおきたい<br>12冊</h2><p class="desc">全部読まなくていい。<br>関心に近い2冊を、深く。</p></section>
+<section class="sec cream" style="padding-top:28px"><p class="note center rv">カードをタップするとAmazonの検索結果が開きます。難易度は★が多いほど歯ごたえあり。読了時間は高校生が読む場合のおおよその目安。</p><div class="theme rv">最初の一冊</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%A6%8F%E7%A5%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%82%93%E3%81%A0%20%E5%8F%A4%E5%B7%9D%E5%AD%9D%E9%A0%86" target="_blank" rel="noopener"><div class="spine ">①</div><div><h3>福祉ってなんだ</h3><p class="au">古川孝順（岩波ジュニア新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>福祉とは何か、なぜ必要なのかを、中高生に向けて基本から語る。迷ったらここから。</p><p class="ask">福祉は、特別な人のためのものか。自分にも関係があるものか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%A8%E3%81%84%E3%81%86%E4%BB%95%E4%BA%8B%20%E5%AE%AE%E6%9C%AC%E7%AF%80%E5%AD%90" target="_blank" rel="noopener"><div class="spine ">②</div><div><h3>ソーシャルワーカーという仕事</h3><p class="au">宮本節子（ちくまプリマー新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>相談援助の現場で長く働いた著者が、この仕事の中身と難しさを具体的に伝える。</p><p class="ask">人の相談に乗ることは、友達の相談に乗ることと何が違うのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">子どもと家族</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E8%B2%A7%E5%9B%B0%20%E9%98%BF%E9%83%A8%E5%BD%A9" target="_blank" rel="noopener"><div class="spine y">③</div><div><h3>子どもの貧困</h3><p class="au">阿部彩（岩波新書）</p><div class="meta"><span class="st">★★☆</span><span>約5時間</span></div><p>日本の子どもの貧困の実態と、それが将来に与える影響をデータで示す。</p><p class="ask">生まれた家庭による差を、社会はどこまで埋めるべきか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%A4%E3%83%B3%E3%82%B0%E3%82%B1%E3%82%A2%E3%83%A9%E3%83%BC%20%E6%BE%81%E8%B0%B7%E6%99%BA%E5%AD%90" target="_blank" rel="noopener"><div class="spine y">④</div><div><h3>ヤングケアラー</h3><p class="au">澁谷智子（中公新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>家族の世話や介護を担う子どもたちの実態を、調査と当事者の声から描く。</p><p class="ask">家族を支える子どもを、誰がどう支えればよいのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">貧困と制度</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%8F%8D%E8%B2%A7%E5%9B%B0%20%E6%B9%AF%E6%B5%85%E8%AA%A0" target="_blank" rel="noopener"><div class="spine r">⑤</div><div><h3>反貧困</h3><p class="au">湯浅誠（岩波新書）</p><div class="meta"><span class="st">★★☆</span><span>約5時間</span></div><p>一度つまずくと、どこにも引っかからずに落ちてしまう社会の構造を、支援の現場から描く。</p><p class="ask">「自己責任」という言葉は、何を見えなくしているのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%81%A5%E5%BA%B7%E3%81%A7%E6%96%87%E5%8C%96%E7%9A%84%E3%81%AA%E6%9C%80%E4%BD%8E%E9%99%90%E5%BA%A6%E3%81%AE%E7%94%9F%E6%B4%BB%20%E6%9F%8F%E6%9C%A8%E3%83%8F%E3%83%AB%E3%82%B3" target="_blank" rel="noopener"><div class="spine r">⑥</div><div><h3>健康で文化的な最低限度の生活</h3><p class="au">柏木ハルコ</p><div class="meta"><span class="st">★☆☆</span><span>約2時間</span></div><p>生活保護の担当になった新人公務員を主人公にした漫画。制度と現実のあいだで揺れる現場がよくわかる。まず1巻から。</p><p class="ask">支援する側は、相手の暮らしにどこまで踏み込んでよいのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">障害と自立</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%81%93%E3%82%93%E3%81%AA%E5%A4%9C%E6%9B%B4%E3%81%91%E3%81%AB%E3%83%90%E3%83%8A%E3%83%8A%E3%81%8B%E3%82%88%20%E6%B8%A1%E8%BE%BA%E4%B8%80%E5%8F%B2" target="_blank" rel="noopener"><div class="spine k">⑦</div><div><h3>こんな夜更けにバナナかよ</h3><p class="au">渡辺一史</p><div class="meta"><span class="st">★☆☆</span><span>約6時間</span></div><p>重い障害がありながら、多くのボランティアに支えられて自宅で暮らした男性の記録。「自立」の意味が変わる。</p><p class="ask">人に頼ることと、自立することは、矛盾するのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%BD%93%E4%BA%8B%E8%80%85%E4%B8%BB%E6%A8%A9%20%E4%B8%AD%E8%A5%BF%E6%AD%A3%E5%8F%B8" target="_blank" rel="noopener"><div class="spine k">⑧</div><div><h3>当事者主権</h3><p class="au">中西正司、上野千鶴子（岩波新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>自分に必要な支援は、自分がいちばんよく知っている。専門家まかせの福祉を問い直す一冊。</p><p class="ask">「あなたのため」という支援は、誰のためのものか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">ケアを考える</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%B1%E3%82%A2%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%20%E6%9D%91%E4%B8%8A%E9%9D%96%E5%BD%A6" target="_blank" rel="noopener"><div class="spine ">⑨</div><div><h3>ケアとは何か</h3><p class="au">村上靖彦（中公新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>看護や福祉の現場の語りから、人をケアするとはどういうことかを考える。</p><p class="ask">そばにいることは、何かをしてあげることと、どう違うのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E8%AA%8D%E7%9F%A5%E7%97%87%E4%B8%96%E7%95%8C%E3%81%AE%E6%AD%A9%E3%81%8D%E6%96%B9%20%E7%AD%A7%E8%A3%95%E4%BB%8B" target="_blank" rel="noopener"><div class="spine ">⑩</div><div><h3>認知症世界の歩き方</h3><p class="au">筧裕介</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>認知症のある人に世界がどう見えているのかを、旅行ガイドの形で紹介する。本人の視点に立つ練習になる。</p><p class="ask">相手の「困った行動」は、本人から見ると何が起きているのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">現場から</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%B1%E3%83%BC%E3%82%AD%E3%81%AE%E5%88%87%E3%82%8C%E3%81%AA%E3%81%84%E9%9D%9E%E8%A1%8C%E5%B0%91%E5%B9%B4%E3%81%9F%E3%81%A1%20%E5%AE%AE%E5%8F%A3%E5%B9%B8%E6%B2%BB" target="_blank" rel="noopener"><div class="spine y">⑪</div><div><h3>ケーキの切れない非行少年たち</h3><p class="au">宮口幸治（新潮新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>少年院で出会った少年たちの中に、見る力や聞く力の弱さが見過ごされてきた子が多いことを指摘する。</p><p class="ask">「反省しない子」は、反省する力を持てていたのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E8%AA%B0%E3%82%82%E6%96%AD%E3%82%89%E3%81%AA%E3%81%84%20%E7%AF%A0%E5%8E%9F%E5%8C%A1" target="_blank" rel="noopener"><div class="spine r">⑫</div><div><h3>誰も断らない</h3><p class="au">篠原匡</p><div class="meta"><span class="st">★☆☆</span><span>約5時間</span></div><p>どんな相談も断らないと決めた市役所の部署を追ったルポ。制度のすきまを、人と地域でどう埋めるかが描かれる。</p><p class="ask">制度に当てはまらない困りごとは、誰が受け止めるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="talk r rv" style="margin-top:44px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">読んだ冊数は聞かれない。聞かれるのは「読んで、何を考えたか」だよ。</div></div></section>
+<section class="chap" id="c6"><div class="lbl num">Chapter 6</div><h2 class="ttl rv">読んだ本を<br>志望理由書に変える</h2><p class="desc">「面白かった」で終わらせない、<br>3つのステップ。</p></section>
+<section class="sec" style="padding-top:20px">
+<div class="step rv"><div class="n num">1</div><div><h3>著者の主張を、一文で言う</h3><p>「この本は〇〇だと主張している」。あらすじではなく主張を取り出す。一文にできなければ、まだ読めていない。</p></div></div>
+<div class="step rv"><div class="n num">2</div><div><h3>自分の経験とぶつける</h3><p>その主張は、君が見てきた現実に当てはまるか。当てはまらない場面こそが宝物になる。</p></div></div>
+<div class="step rv"><div class="n num">3</div><div><h3>大学で確かめたい問いにする</h3><p>「では〇〇の場合はどうなのか」。答えがまだ出ていない問いを立て、Chapter 4の分野と志望校の先生につなげる。</p></div></div>
+<div class="ba"><div class="x rv">『当事者主権』を読み、本人の気持ちを大切にすることの重要さを学びました。とても感銘を受け、福祉学部でさらに深く学びたいと考えました。</div>
+<div class="arrow rv" aria-hidden="true">↓</div>
+<div class="o rv">『当事者主権』は、支援のあり方は専門家ではなく、支援を受ける本人が決めるべきだと論じる。しかし私の家では、祖母が「最期まで家にいたい」と望んだ結果、介護を担った母が体調を崩した。本人の決定を尊重することが、支える家族の暮らしを追いつめる場合があるのではないか。貴学の高齢者福祉のゼミで、在宅介護における本人の意思と家族の負担の両立について、介護者への聞き取りを通して検証したいと考える。</div></div>
+<p class="note rv" style="margin-top:14px">※下の文章は型を示すための創作例。そのまま使わず、必ず自分の経験で書こう。</p>
+<div class="sp"></div><p class="mid center rv">型はこれだけ。<br><mark>主張 → 衝突 → 問い</mark></p></section>
+<section class="chap ink" id="c7"><div class="lbl num">Chapter 7</div><h2 class="ttl rv">資格と実習の話</h2><p class="desc">入学前に知っておきたい、<br>ちょっと耳の痛い現実。</p></section>
+<section class="sec ink" style="padding-top:20px"><div class="talk rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">人と話すのが好きなので、福祉の仕事は向いていると思います！</div></div><div class="talk r rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">福祉の仕事は、気持ちだけでなく、知識と手続きで人を守る仕事なんだ。</div></div><div class="sp-s"></div><p class="rv">福祉の資格にはいくつもの種類がある。相談にのり、制度につなぐ社会福祉士や精神保健福祉士。体に直接ふれて介護をする介護福祉士。子どもを育てる保育士。<b>どの資格を目指せるかは、大学と学科によって違う。</b></p>
+<p class="rv">資格を目指す場合、法律や制度の科目を数多く学び、施設や相談機関での長い実習に出る。そこでは、すぐには解決できない現実に向き合うことになる。そのうえで国家試験がある。</p>
+<p class="rv">そして、<mark>福祉の現場は人手が足りず、待遇にも課題がある</mark>。それを知ったうえで、なぜ福祉に関わりたいのかを語れるかが、面接で見られている。福祉を学んで、公務員や一般企業、NPOに進む人も多い。</p>
+<div class="sp-s"></div><p class="lead rv">いまからできること</p><ul class="todo"><li class="rv">志望校で<b>どの資格の受験資格が取れるか</b>、実習はどこで何日あるかを、公式サイトで確認する。</li><li class="rv">自分の住む市区町村のサイトで、<b>福祉の制度をひとつ</b>調べる。誰が、どんな条件で、どこに申請するのか。</li><li class="rv">地域の<b>ボランティア活動</b>に参加する。うまく関われなかった場面を、そのまま記録しておく。</li><li class="rv">支援を受ける<b>当事者が書いた本や記事</b>を読む。支援する側の視点だけで語らないために。</li><li class="rv">福祉のニュースを見たら、<b>「誰の、どんな権利の話か」</b>を一文で書いてみる。</li></ul><p class="note rv" style="margin-top:18px">※取得できる資格、必要な科目、実習の内容は大学・学科によって異なり、制度の変更もある。必ず最新の募集要項とシラバスで確認しよう。</p></section>
+<section class="chap" id="c8"><div class="lbl num">Chapter 8</div><h2 class="ttl rv">面接で聞かれる<br>7つの問い</h2><p class="desc">答えを暗記するのではなく、<br>考えた跡を持っていこう。</p></section>
+<section class="sec blue" style="padding-top:24px"><div class="iq rv"><span class="n">①</span><h3>なぜ看護や心理ではなく、福祉なのですか？</h3><p>Chapter 1の表に戻る。体や心そのものではなく、「暮らしと、それを支える仕組み」に関心がある理由を、経験から語る。</p></div><div class="iq rv"><span class="n">②</span><h3>どの資格を目指していますか。その仕事の内容を説明してください。</h3><p>福祉学部でとくに聞かれやすい。相談援助と介護の違いを理解したうえで、自分が目指す仕事を具体的に話す。</p></div><div class="iq rv"><span class="n">③</span><h3>「かわいそう」という気持ちで支援することを、どう思いますか？</h3><p>気持ちを否定する必要はない。ただ、相手を下に見る関係にならないか、権利や自己決定の視点から考える。</p></div><div class="iq rv"><span class="n">④</span><h3>ボランティアなどで、うまくいかなかった経験はありますか？</h3><p>成功談より、戸惑った経験のほうが評価される。なぜうまくいかなかったのか、次にどうするかまで話す。</p></div><div class="iq rv"><span class="n">⑤</span><h3>あなたの関心は、福祉のどの分野にあたりますか？</h3><p>Chapter 4の分野名で答え、志望校の科目やゼミ、実習先の名前を添える。</p></div><div class="iq rv"><span class="n">⑥</span><h3>福祉の仕事の人手不足や待遇について、どう考えますか？</h3><p>現実を知っていることを示す。個人のがんばりではなく、制度や社会の評価の問題として話せると強い。</p></div><div class="iq rv"><span class="n">⑦</span><h3>その本を読んで、納得できなかった点はありますか？</h3><p>批判は失礼ではない。Chapter 6のステップ2で見つけた「当てはまらない場面」がそのまま答えになる。</p></div></section>
+<section class="sec cream"><p class="mid center rv">出願前の<br>最終チェックリスト</p><div class="sp-s"></div><ul class="todo"><li class="rv">「なぜ看護や心理ではなく福祉か」を30秒で説明できる</li><li class="rv">5つの道具のうち、ひとつを自分の経験で説明できる</li><li class="rv">自分の関心が、どの分野にあたるかを言える</li><li class="rv">本を1冊、「主張 → 衝突 → 問い」で語れる</li><li class="rv">目指す資格と、その仕事の内容を説明できる</li><li class="rv">地域の福祉制度を、ひとつ具体的に説明できる</li></ul></section>
+<section class="end"><div class="faces" aria-hidden="true" style="margin-top:0"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg></div>
+<p class="big rv">困ることは、<br>誰にでも<br>起きる。</p><div class="sp-s"></div>
+<p class="lead rv">そのときも暮らしが続く仕組みを考えたいなら、<br>君はもう、<br><mark>福祉学の入り口に立っている。</mark></p>
+<a class="top" href="#top">↑ 最初に戻る</a></section>
+<footer>総合型選抜｜学部別・学問入門　社会福祉学部編<br>監修｜総合型選抜9年選手<br>掲載書籍の版・価格は書店等で最新の情報をご確認ください。<br>登場する人物イラストはすべて架空のキャラクターです。</footer>
+</div>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+  var bar=document.getElementById('bar');
+  function prog(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',prog,{passive:true});
+  prog();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>データサイエンスは「プログラミングの勉強」じゃない。｜総合型選抜・データサイエンス学部志望者のための入門冊子</title>
+<meta name="description" content="総合型選抜でデータサイエンス学部を志望する受験生のための入門冊子。データサイエンスの考え方、分野マップ、読んでおきたい12冊、本を志望理由書に変える方法まで。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#a3145f;
+  --blue-d:#6e0c40;
+  --ink:#121212;
+  --cream:#f6edf2;
+  --paper:#fffdf7;
+  --yellow:#ffe24a;
+  --red:#ff5436;
+  --w:520px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:#2b0619;
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  font-weight:500;
+  line-height:1.9;
+  letter-spacing:.06em;
+  font-feature-settings:"palt";
+}
+.page{max-width:var(--w);margin:0 auto;background:var(--paper);overflow:hidden;position:relative}
+svg{display:block}
+.num{font-family:"Abril Fatface",Georgia,serif;letter-spacing:.02em;font-weight:400}
+.hand{font-family:"Yusei Magic","Zen Kaku Gothic New",sans-serif;letter-spacing:.04em}
+mark{background:linear-gradient(transparent 55%,var(--yellow) 55%);color:inherit;padding:0 .1em}
+.blue mark,.ink mark,.end mark,.chap mark{background:none;color:var(--yellow)}
+.ink .who svg{background:var(--cream);border-radius:14px;padding:4px 4px 0}
+
+/* progress */
+.home{display:block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;text-decoration:none;letter-spacing:.1em}
+.home:hover{color:var(--yellow)}
+.bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--yellow);z-index:50}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.pop{transform:scale(.86)}
+.js .rv.pop.in{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cover */
+.cover{background:var(--blue);color:#fff;padding:64px 28px 120px;clip-path:polygon(0 0,100% 0,100% 100%,0 91%);text-align:center;position:relative}
+.cover .series{display:inline-block;border:1.5px solid #fff;border-radius:99px;padding:2px 16px;font-size:12px;font-weight:700;letter-spacing:.14em}
+.faces{display:flex;justify-content:center;gap:10px;margin:44px 0 28px}
+.faces svg{width:23%;max-width:104px;height:auto}
+.cover h1{font-size:clamp(30px,8.4vw,42px);font-weight:900;line-height:1.45;letter-spacing:.08em}
+.cover h1 span{color:var(--yellow)}
+.cover .sub{margin-top:22px;font-size:14px;font-weight:700;letter-spacing:.12em}
+.cover .vol{margin-top:30px;font-size:22px}
+.cover .vol small{display:block;font-size:13px;margin-top:2px;opacity:.9}
+.kanshu{display:inline-block;margin-top:22px;background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:2px 18px;letter-spacing:.12em}
+.scroll{margin:34px auto 0;width:22px;height:36px;border:2px solid #fff;border-radius:12px;position:relative}
+.scroll:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:7px;margin-left:-2px;background:var(--yellow);border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.scroll:after{animation:none}}
+
+/* sections */
+.sec{padding:64px 28px}
+.blue{background:var(--blue);color:#fff}
+.ink{background:var(--ink);color:#fff}
+.cream{background:var(--cream)}
+.slant-t{clip-path:polygon(0 0,100% 44px,100% 100%,0 100%);padding-top:108px;margin-top:-44px}
+.center{text-align:center}
+p+p{margin-top:1.3em}
+.lead{font-size:17px;font-weight:700;line-height:2.1}
+.big{font-size:clamp(25px,7vw,34px);font-weight:900;line-height:1.6;letter-spacing:.08em}
+.mid{font-size:20px;font-weight:900;line-height:1.75}
+.note{font-size:12px;opacity:.8;line-height:1.7}
+.sp{height:44px}.sp-s{height:24px}
+
+/* index */
+.index{padding:56px 28px 64px}
+.index h2{font-size:22px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.index a{display:flex;align-items:baseline;gap:14px;padding:15px 4px;border-bottom:1px solid var(--ink);color:inherit;text-decoration:none;font-weight:700;font-size:17px}
+.index a .num{font-size:15px;color:var(--blue);min-width:86px}
+.index a:after{content:"↓";margin-left:auto;color:var(--blue)}
+.index a:hover,.index a:focus-visible{background:var(--yellow);outline:none}
+
+/* chapter head */
+.chap{background:var(--blue);color:#fff;padding:120px 28px 64px;margin-top:-1px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);text-align:center}
+.chap.ink{background:var(--ink)}
+.chap .lbl{font-size:22px}
+.chap .ttl{background:var(--cream);color:var(--ink);margin:16px auto 0;padding:34px 16px;font-size:clamp(24px,6.6vw,32px);font-weight:900;letter-spacing:.1em;line-height:1.5;border-top:6px solid var(--yellow)}
+.chap .desc{margin-top:22px;font-size:14px;font-weight:700}
+
+/* talk */
+.talk{display:flex;align-items:flex-end;gap:12px;margin:26px 0}
+.talk.r{flex-direction:row-reverse}
+.talk .who{flex:0 0 84px;text-align:center;font-size:11px;font-weight:700;line-height:1.4}
+.talk .who svg{width:84px;height:auto;margin-bottom:2px}
+.bub{position:relative;background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:18px;padding:14px 16px;font-size:16px;line-height:1.7;margin-bottom:26px;flex:1}
+.bub:after{content:"";position:absolute;bottom:14px;left:-11px;width:18px;height:18px;background:#fff;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+.talk.r .bub:after{left:auto;right:-11px;border:0;border-right:2.5px solid var(--ink);border-top:2.5px solid var(--ink)}
+.bub.y{background:var(--yellow)}.bub.y:after{background:var(--yellow)}
+
+/* cards */
+.card{background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:6px;padding:22px 20px;box-shadow:6px 6px 0 var(--ink)}
+.blue .card,.ink .card{box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.card h3{font-size:19px;font-weight:900;line-height:1.5}
+.card+.card{margin-top:22px}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:1px 10px;letter-spacing:.1em;margin-bottom:8px}
+.tag.y{background:var(--yellow);color:var(--ink)}
+.tag.b{background:var(--blue)}
+
+/* definition */
+.def{border:3px solid #fff;padding:30px 18px;text-align:center;position:relative;margin-top:36px}
+.def .cap{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--ink);font-size:13px;font-weight:900;padding:1px 16px;white-space:nowrap}
+
+/* vs */
+.vs .row{display:grid;grid-template-columns:84px 1fr;border-top:2px solid var(--ink)}
+.vs .row:last-child{border-bottom:2px solid var(--ink)}
+.vs .k{font-weight:900;font-size:17px;padding:16px 0;display:flex;align-items:center}
+.vs .v{padding:16px 0 16px 14px;font-size:14px;line-height:1.75;border-left:1px dashed var(--ink)}
+.vs .v b{display:block;font-size:15px}
+.vs .row.me{background:var(--yellow);margin:0 -12px;padding:0 12px}
+
+/* tools */
+.tool{position:relative;padding:26px 0 26px 66px;border-bottom:1px dashed rgba(255,255,255,.6)}
+.tool:last-of-type{border-bottom:0}
+.tool .n{position:absolute;left:0;top:24px;width:50px;height:50px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:26px;font-weight:900;letter-spacing:0}
+.tool h3{font-size:22px;font-weight:900;line-height:1.4}
+.tool .one{font-size:14px;font-weight:700;color:var(--yellow);margin:2px 0 8px}
+.tool p{font-size:15px;line-height:1.85}
+.tool .ex{margin-top:12px;background:rgba(255,255,255,.12);border-left:4px solid var(--yellow);padding:10px 14px;font-size:14px;line-height:1.75}
+
+/* timeline */
+.tl{position:relative;margin-left:8px;padding-left:28px;border-left:5px dotted var(--blue)}
+.tl .it{position:relative;padding-bottom:46px}
+.tl .it:last-child{padding-bottom:6px}
+.tl .it:before{content:"";position:absolute;left:-41px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid var(--cream)}
+.tl .yr{font-size:30px;line-height:1.2;color:var(--ink)}
+.tl .yr small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:700;margin-left:2px}
+.tl h3{font-size:19px;font-weight:900;color:var(--blue);line-height:1.5;margin:6px 0 4px}
+.tl p{font-size:15px;line-height:1.85}
+.tl .q{clear:both;display:inline-block;margin-top:10px;background:#fff;border:2px solid var(--ink);padding:4px 12px;font-size:14px;font-weight:700;line-height:1.6}
+.fig{float:right;width:112px;height:auto;margin:-6px 0 6px 10px}
+.bust{float:right;width:64px;margin:-4px 0 4px 10px}
+
+/* map */
+.base{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.base div{background:var(--yellow);color:var(--ink);text-align:center;padding:14px 4px;font-weight:900;font-size:16px;line-height:1.4;border:2.5px solid var(--ink)}
+.base small{display:block;font-size:11px;font-weight:700;margin-top:4px;line-height:1.5}
+.map{margin-top:10px}
+.map .m{display:grid;grid-template-columns:1fr 20px 128px;align-items:center;gap:6px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.5);font-size:14.5px;line-height:1.65}
+.map .m i{font-style:normal;color:var(--yellow);font-weight:900;text-align:center}
+.map .m b{background:#fff;color:var(--blue);text-align:center;padding:5px 2px;font-size:13.5px;font-weight:900;line-height:1.4}
+
+/* books */
+.theme{display:flex;align-items:center;gap:10px;margin:44px 0 18px;font-weight:900;font-size:18px}
+.theme:first-of-type{margin-top:8px}
+.theme:before,.theme:after{content:"";flex:1;height:2px;background:var(--ink)}
+.book{display:grid;grid-template-columns:64px 1fr;gap:16px;background:#fff;border:2.5px solid var(--ink);padding:18px 16px;box-shadow:5px 5px 0 var(--blue)}
+.book{color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.book:hover,a.book:focus-visible{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--blue);outline:none}
+.js a.book.rv.in:hover{transform:translate(-2px,-2px)}
+.amz{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;font-size:12px;font-weight:900;padding:3px 14px;border-radius:99px;letter-spacing:.08em}
+.book+.book{margin-top:20px}
+.spine{background:var(--blue);color:#fff;display:grid;place-items:center;font-size:32px;font-weight:900;letter-spacing:0;min-height:96px;border:2.5px solid var(--ink);border-left-width:7px}
+.spine.y{background:var(--yellow);color:var(--ink)}
+.spine.r{background:var(--red)}
+.spine.k{background:var(--ink)}
+.book h3{font-size:16.5px;font-weight:900;line-height:1.5}
+.book .au{font-size:12px;font-weight:700;opacity:.75;line-height:1.5;margin-top:2px}
+.book .meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;font-size:11px;font-weight:700}
+.book .meta span{border:1.5px solid var(--ink);padding:0 8px;border-radius:99px;line-height:1.8}
+.book .meta .st{background:var(--ink);color:var(--yellow);letter-spacing:.1em}
+.book p{font-size:13.5px;line-height:1.75}
+.book .ask{margin-top:8px;background:var(--cream);padding:8px 10px;font-size:13px;font-weight:700;line-height:1.65}
+.book .ask:before{content:"立てられる問い";display:block;font-size:10px;color:var(--blue);letter-spacing:.14em}
+
+/* steps */
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;padding:22px 0;border-bottom:2px solid var(--ink)}
+.step .n{font-size:44px;line-height:1;color:var(--blue)}
+.step h3{font-size:18px;font-weight:900;line-height:1.5}
+.step p{font-size:14.5px;line-height:1.8;margin-top:4px}
+.ba{margin-top:30px}
+.ba .x,.ba .o{padding:18px 16px 18px;border:2.5px solid var(--ink);font-size:14.5px;line-height:1.85;position:relative;background:#fff}
+.ba .x{color:#555}
+.ba .o{background:var(--yellow);margin-top:34px}
+.ba .x:before,.ba .o:before{position:absolute;top:-14px;left:12px;font-size:12px;font-weight:900;padding:0 12px;color:#fff;letter-spacing:.1em}
+.ba .x:before{content:"✕ 感想文で終わる例";background:#777}
+.ba .o:before{content:"◎ 問いに変換した例";background:var(--blue)}
+.ba .arrow{text-align:center;font-size:26px;font-weight:900;line-height:1;margin-top:12px;color:var(--blue)}
+
+/* list */
+.todo li{list-style:none;position:relative;padding:12px 0 12px 34px;border-bottom:1px dashed rgba(255,255,255,.55);font-size:15px;line-height:1.75}
+.todo li:before{content:"";position:absolute;left:2px;top:17px;width:18px;height:18px;border:2.5px solid var(--yellow);border-radius:3px}
+.todo li b{color:var(--yellow)}
+.cream .todo li,.paper .todo li{border-color:var(--ink)}
+.cream .todo li:before{border-color:var(--blue)}
+
+/* interview */
+.iq{background:#fff;color:var(--ink);border:2.5px solid var(--ink);padding:18px 16px 16px 60px;position:relative}
+.iq+.iq{margin-top:16px}
+.iq .n{position:absolute;left:14px;top:14px;font-size:30px;font-weight:900;color:var(--blue);line-height:1.2;letter-spacing:0}
+.iq h3{font-size:16.5px;font-weight:900;line-height:1.55}
+.iq p{font-size:13.5px;line-height:1.75;margin-top:6px;color:#333}
+.iq p:before{content:"考えるヒント｜";font-weight:900;color:var(--blue)}
+
+/* vertical statement */
+.vert{writing-mode:vertical-rl;margin:0 auto;font-size:21px;font-weight:900;line-height:2.1;letter-spacing:.16em;height:15em;text-align:left}
+.vert .hl{color:var(--yellow)}
+
+/* ending */
+.end{background:var(--blue);color:#fff;padding:120px 28px 72px;clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);margin-top:-1px;text-align:center}
+footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px;font-size:11px;letter-spacing:.12em;line-height:1.9}
+footer a{color:var(--yellow)}
+.top{display:inline-block;margin-top:40px;color:#fff;border:2px solid #fff;padding:6px 26px;border-radius:99px;font-weight:700;font-size:13px;text-decoration:none}
+.top:hover,.top:focus-visible{background:#fff;color:var(--blue);outline:none}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+
+<!-- character symbols (all original, fictional) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 受験生 ケイ -->
+    <symbol id="c-kei" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 108l10 10 10-10" fill="none" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 22-12 40-30 40S30 80 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M27 56C22 26 40 8 62 10c22 2 36 18 31 46-3-10-8-17-15-22-4 6-10 9-16 10 2-3 3-6 3-9-8 8-22 12-32 12-3 3-5 6-6 9z" fill="#121212"/>
+      <path d="M42 56q6-4 12-1M66 55q6-3 12 1" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="65" r="3.2" fill="#121212"/><circle cx="72" cy="65" r="3.2" fill="#121212"/>
+      <path d="M59 68q-3 7 1 9" fill="none" stroke="#121212" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M51 84q9 6 18 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <!-- 受験生 ミオ -->
+    <symbol id="c-mio" viewBox="0 0 120 132">
+      <path d="M22 132c2-20 16-28 38-28s36 8 38 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M24 50C22 22 40 8 60 8s38 14 36 42c-1 18 2 34 4 44H20c2-10 5-26 4-44z" fill="#121212"/>
+      <path d="M50 90v16q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M31 58c0-24 12-36 29-36s29 12 29 36c0 22-12 40-29 40S31 80 31 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c2-22 12-34 30-36 18 2 28 14 30 36-10-4-18-12-22-22-8 12-24 20-38 22z" fill="#121212"/>
+      <path d="M42 62q6-5 12 0M66 62q6-5 12 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="68" r="3" fill="#121212"/><circle cx="72" cy="68" r="3" fill="#121212"/>
+      <path d="M53 84q7 5 14 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="40" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+      <circle cx="80" cy="78" r="4" fill="none" stroke="#121212" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </symbol>
+    <!-- 先生 -->
+    <symbol id="c-sensei" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#121212" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M48 104l12 16 12-16z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="64" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 58c0-26 12-40 30-40s30 14 30 40c0 24-12 40-30 40S30 82 30 58z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M28 50C24 24 42 10 60 10c20 0 36 12 32 40-4-12-12-20-26-22-14-2-28 2-38 22z" fill="#121212"/>
+      <rect x="36" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <rect x="64" y="56" width="20" height="16" rx="5" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M56 62h8M36 62l-6-2M84 62l6-2" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="46" cy="64" r="2.6" fill="#121212"/><circle cx="74" cy="64" r="2.6" fill="#121212"/>
+      <path d="M48 82q12 9 24 0" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 76q-2 6 2 10M80 76q2 6-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 面接官 -->
+    <symbol id="c-mensetsu" viewBox="0 0 120 132">
+      <path d="M20 132c2-20 16-28 40-28s38 8 40 28z" fill="#fff" stroke="#121212" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M56 106h8l3 22h-14z" fill="#121212"/>
+      <path d="M50 90v14q10 8 20 0V90" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="29" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <ellipse cx="91" cy="66" rx="5" ry="8" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M30 56c0-26 12-40 30-40s30 14 30 40c0 26-12 42-30 42S30 82 30 56z" fill="#fff" stroke="#121212" stroke-width="3"/>
+      <path d="M29 58c-4-14 0-28 8-34-2 10-3 22-2 30zM91 58c4-14 0-28-8-34 2 10 3 22 2 30z" fill="#121212"/>
+      <path d="M44 22q16-8 32 0" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+      <path d="M38 52l16 3M82 52l-16 3" fill="none" stroke="#121212" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="47" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="73" cy="64" r="8" fill="#fff" stroke="#121212" stroke-width="2.5"/>
+      <path d="M55 64h10" stroke="#121212" stroke-width="2.5"/>
+      <circle cx="47" cy="65" r="2.4" fill="#121212"/><circle cx="73" cy="65" r="2.4" fill="#121212"/>
+      <path d="M50 86h20" fill="none" stroke="#121212" stroke-width="3" stroke-linecap="round"/>
+      <path d="M40 78q4 4 2 10M80 78q-4 4-2 10" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 学説を象徴するアイコン -->
+    <symbol id="i-hand" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M22 50V30a3 3 0 0 1 6 0v-9a3 3 0 0 1 6 0v-2a3 3 0 0 1 6 0v4a3 3 0 0 1 6 0v17c0 8-5 12-12 12-6 0-9-2-12-8l-5-9a3 3 0 0 1 5-3z" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" fill="#fff"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="15" fill="none" stroke="#121212" stroke-width="9" stroke-dasharray="6.2 5.58"/><circle cx="32" cy="32" r="12" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="32" cy="32" r="4" fill="#121212"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M14 26l18-11 18 11z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31v14M27 31v14M37 31v14M46 31v14M13 49h38" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-game" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><rect x="16" y="16" width="32" height="32" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 16v32M16 32h32" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3" fill="#121212"/><path d="M37 37l6 6M43 37l-6 6" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bias" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M32 46V24M12 30l40-10" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 50h16" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="38" r="6" fill="#fff" stroke="#121212" stroke-width="2.8"/><circle cx="50" cy="26" r="4" fill="#121212"/><path d="M14 30v2M50 20v2" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M27 14h10M29 14v13L18 46a3 3 0 0 0 3 5h22a3 3 0 0 0 3-5L35 27V14" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 40h18" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="45" r="1.8" fill="#121212"/><circle cx="36" cy="43" r="1.4" fill="#121212"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M16 16v32h34" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="22" y="36" width="6" height="12" fill="#121212"/><rect x="32" y="29" width="6" height="19" fill="#121212"/><rect x="42" y="21" width="6" height="27" fill="#fff" stroke="#121212" stroke-width="2.5"/></symbol>
+  <symbol id="d-pin" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M32 50c-8-11-13-17-13-24a13 13 0 0 1 26 0c0 7-5 13-13 24z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="26" r="4.5" fill="#121212"/></symbol>
+<symbol id="d-pie" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><circle cx="32" cy="32" r="16" fill="#fff" stroke="#121212" stroke-width="2.8"/><path d="M32 32V16M32 32l13 9M32 32l-14 7" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="d-doc" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M20 14h18l8 8v28H20z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 14v8h8M26 30h14M26 37h14M26 44h9" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="d-net" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M18 22l14 10M18 42l14-10M32 32l14-10M32 32l14 10M18 22v20M46 22v20" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="22" r="4.5" fill="#fff" stroke="#121212" stroke-width="2.6"/><circle cx="18" cy="42" r="4.5" fill="#fff" stroke="#121212" stroke-width="2.6"/><circle cx="32" cy="32" r="5" fill="#121212"/><circle cx="46" cy="22" r="4.5" fill="#fff" stroke="#121212" stroke-width="2.6"/><circle cx="46" cy="42" r="4.5" fill="#fff" stroke="#121212" stroke-width="2.6"/></symbol>
+<symbol id="d-school" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M14 48V30l18-10 18 10v18z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 20v-8h8l-2 3 2 3h-8M28 48V38h8v10M19 34h4M41 34h4" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="d-chat" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffe24a" stroke="#121212" stroke-width="2.5"/><path d="M14 18h36v22H30l-9 8v-8h-7z" fill="#fff" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 26h20M22 33h13" fill="none" stroke="#121212" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="page" id="top">
+<a class="home" href="/">← 年内入試攻略まるごとゼミ トップ</a>
+<header class="cover"><span class="series">総合型選抜｜学部別・学問入門</span>
+<div class="faces" aria-hidden="true"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg></div>
+<h1 style="font-size:clamp(26px,7.2vw,38px)">データサイエンスは<br><span>「プログラミングの勉強」</span><br>じゃない。</h1>
+<p class="sub">データサイエンス学部を志望する君が<br>出願前に知っておきたいこと</p>
+<p class="vol num">Data Science<small>データサイエンス学部編</small></p>
+<p class="kanshu">監修｜総合型選抜9年選手</p>
+<div class="scroll" aria-hidden="true"></div></header>
+<nav class="index" aria-label="目次"><h2 class="num">Index</h2>
+<a href="#c1"><span class="num">Chapter 1</span>その志望理由、「AIに興味がある」だけ？</a>
+<a href="#c2"><span class="num">Chapter 2</span>データ分析の「5つの道具」</a>
+<a href="#c3"><span class="num">Chapter 3</span>170年を3分で</a>
+<a href="#c4"><span class="num">Chapter 4</span>君の関心はどの分野？</a>
+<a href="#c5"><span class="num">Chapter 5</span>読んでおきたい12冊</a>
+<a href="#c6"><span class="num">Chapter 6</span>読んだ本を志望理由書に変える</a>
+<a href="#c7"><span class="num">Chapter 7</span>数学とコードの話</a>
+<a href="#c8"><span class="num">Chapter 8</span>面接で聞かれる7つの問い</a></nav>
+<section class="chap" id="c1"><div class="lbl num">Chapter 1</div><h2 class="ttl rv">その志望理由、<br>「AIに興味がある」<br>だけ？</h2><p class="desc">まず、いちばん多い失敗から。</p></section>
+<section class="sec cream"><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">これからはAIとデータの時代なので、データサイエンス学部を志望します！</div></div><div class="talk r rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-mensetsu"/></svg>面接官</div><div class="bub hand">プログラミングやAIは、情報系の学部でも学べます。あなたはデータを使って、何を明らかにしたいのですか？</div></div><div class="talk rv"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg>受験生 ケイ</div><div class="bub hand">……えっと……</div></div><div class="sp-s"></div><p class="big center rv">「時代だから」は、<br><mark>君の志望理由に<br>ならない。</mark></p><div class="sp-s"></div>
+<p class="rv">データサイエンス学部の志望理由書でよく見るのが、「AIに興味がある」「将来性がある」「プログラミングが好き」という言葉だけで組み立てられた文章だ。</p>
+<p class="rv">関心の方向は合っている。でもそれだけでは、データサイエンスという学問の入り口にまだ立っていない。大学の先生が知りたいのは、<b>君が「データで確かめたい問い」を持っているかどうか</b>だ。</p></section>
+<section class="sec blue"><p class="center lead rv">では、データサイエンスとは何か。</p>
+<div class="def rv pop"><span class="cap">ひとことで言うと</span><p class="big">データから<br>意味を引き出し、<br>よりよい判断に<br><mark>つなげる学問</mark></p></div><div class="sp"></div>
+<p class="rv">世の中には、売上、気温、検索履歴、試合の記録など、膨大なデータがたまっている。でもデータは、置いておくだけでは何も語らない。</p>
+<p class="rv">何を知りたいのかを決め、データを集めて整え、分析し、結果を読み解いて、現実の判断に生かす。この一連の流れすべてがデータサイエンスだ。</p>
+<p class="rv">だから必要なのは、プログラミングだけではない。<mark>統計学、情報学、そして課題のある現場への理解</mark>。この3つが重なるところに、データサイエンスがある。</p></section>
+<section class="sec"><p class="mid center rv">同じ「おすすめ動画」を見ても、<br>問いがこれだけ違う。</p><div class="sp-s"></div>
+<div class="vs rv">
+<div class="row me"><div class="k" style="font-size:14px;line-height:1.4">データ<br>サイエンス</div><div class="v"><b>データから判断を導く</b>視聴の記録から、何を薦めれば満足度が上がると言えるのか？</div></div>
+<div class="row"><div class="k">情報工学</div><div class="v"><b>動かす仕組みをつくる</b>何億人もの利用者に、一瞬で結果を返すにはどう設計するか？</div></div>
+<div class="row"><div class="k">数学</div><div class="v"><b>理論の正しさを示す</b>その推定の方法は、なぜ正しいと言えるのか？</div></div></div>
+<p class="note rv" style="margin-top:14px">※データサイエンスを学べる場所は、データサイエンス学部のほか、情報学部、経営学部、理工学部の学科などさまざまだ。学べる内容の比重は大学によって違うので、志望校の科目表は必ず自分で確認しよう。</p><div class="talk r rv" style="margin-top:36px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">「AIを使いたい」ではなく「データで〇〇を確かめたい」と言えたら、もうデータサイエンスの入り口だよ。</div></div></section>
+<section class="chap" id="c2"><div class="lbl num">Chapter 2</div><h2 class="ttl rv">データ分析の<br>「5つの道具」</h2><p class="desc">分析は、この順番で進む。<br>コードを書くのは、その一部だ。</p></section>
+<section class="sec blue" style="padding-top:20px"><div class="tool rv"><span class="n">①</span><h3>問いを立てる</h3><p class="one">データの前に、目的がある</p><p>何を知りたいのか、それが分かると何が変わるのか。ここがあいまいなまま分析を始めても、役に立つ結果は出ない。</p><p class="ex">「売上のデータを分析する」ではなく「雨の日に売れる商品はどれか」と問う。</p></div><div class="tool rv"><span class="n">②</span><h3>データを整える</h3><p class="one">集めて、そろえて、きれいにする</p><p>現実のデータは、抜けや入力ミス、表記のゆれだらけだ。分析にかける時間の多くは、実はこの下ごしらえに使われる。</p><p class="ex">アンケートの「東京」「東京都」「とうきょう」を、同じものとして数えられるようにする。</p></div><div class="tool rv"><span class="n">③</span><h3>可視化する</h3><p class="one">まず、グラフにして見る</p><p>数字の表をながめても、傾向は見えない。グラフにすることで、かたよりや外れた値、意外な関係に気づける。</p><p class="ex">クラスの平均点が同じでも、全員が60点の組と、0点と100点が半々の組はまったく違う。</p></div><div class="tool rv"><span class="n">④</span><h3>モデルをつくる</h3><p class="one">データから、規則を取り出す</p><p>過去のデータにひそむ規則を数式やプログラムで表し、予測や分類に使う。機械学習やAIはこの段階の技術だ。</p><p class="ex">過去の気温と売上の関係から、明日のアイスの仕入れ数を予測する。</p></div><div class="tool rv"><span class="n">⑤</span><h3>読み解き、責任を持つ</h3><p class="one">結果を、うのみにしない</p><p>一緒に増えているだけで、原因とは限らない。データがかたよっていれば、結論もかたよる。人の情報を扱う以上、使い方の責任も問われる。</p><p class="ex">過去の採用データで学んだAIが、過去の偏見までそのまま引き継いでしまうことがある。</p></div></section>
+<section class="sec ink center"><div class="vert rv"><span class="hl">「そのデータで、<br>　何が言える？」</span><br>と問えた瞬間、<br>君の関心は<br>データサイエンスになる。</div></section>
+<section class="chap" id="c3"><div class="lbl num">Chapter 3</div><h2 class="ttl rv">170年を3分で</h2><p class="desc">データで社会を変える試みは、<br>コンピュータより前から始まっていた。</p></section>
+<section class="sec cream"><div class="tl"><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#d-pin"/></svg><div class="yr num">1854<small>年</small></div><h3>スノウのコレラ地図</h3><p>ロンドンでコレラが流行したとき、医師スノウは死者の出た家を地図に書き込んだ。すると、ひとつの井戸のまわりに集中していることがわかった。</p><span class="q">問い｜データを地図に重ねると、何が見えるか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#d-pie"/></svg><div class="yr num">1858<small>年</small></div><h3>ナイチンゲールのグラフ</h3><p>戦場の兵士の多くは、戦闘ではなく病院の不衛生で亡くなっていた。ナイチンゲールはそれをひと目でわかる図にして、政府を動かした。</p><span class="q">問い｜グラフは、人の判断を変えられるか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#i-chart"/></svg><div class="yr num">1962<small>年</small></div><h3>テューキーの「データ解析」</h3><p>統計学者テューキーが、数式の理論だけでなく、データそのものをよく見て探ることの大切さを説いた。</p><span class="q">問い｜理論の前に、データをどう見るか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#d-doc"/></svg><div class="yr num">2001<small>年</small></div><h3>「データサイエンス」の提唱</h3><p>統計学者クリーブランドが、統計学を計算機の技術と結びつけて広げる新しい分野として、「データサイエンス」という名前を掲げた。</p><span class="q">問い｜統計学は、どこまで広がるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#d-net"/></svg><div class="yr num">2012<small>年</small></div><h3>ディープラーニングの衝撃</h3><p>画像を見分ける技術を競う国際大会で、ディープラーニングを使ったチームが大差で優勝した。現在のAIブームの出発点になった。</p><span class="q">問い｜機械は、データから自分で学べるのか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#d-school"/></svg><div class="yr num">2017<small>年</small></div><h3>日本初のデータサイエンス学部</h3><p>滋賀大学に、日本で最初のデータサイエンス学部ができた。その後、同じ分野の学部や学科が全国で次々に生まれている。</p><span class="q">問い｜データを扱える人を、どう育てるか？</span></div><div class="it rv"><svg class="bust" aria-hidden="true" viewBox="0 0 64 64"><use href="#d-chat"/></svg><div class="yr num">2022<small>年</small></div><h3>ChatGPTの公開</h3><p>文章で質問すると文章で答えるAIが、誰でも使えるようになった。データから学んだAIが、日常の道具になった。</p><span class="q">問い｜AIの答えを、人はどう確かめるのか？</span></div></div><div class="sp"></div><p class="mid center rv">流れをひとことで言えば、<br><mark>「数える技術」から<br>「社会を動かす技術」へ。</mark></p><div class="talk r rv" style="margin-top:30px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">スノウもナイチンゲールも、コンピュータは持っていなかった。大事なのは道具より、問いと見せ方なんだ。</div></div></section>
+<section class="chap" id="c4"><div class="lbl num">Chapter 4</div><h2 class="ttl rv">君の関心は<br>どの分野？</h2><p class="desc">データサイエンスは、<br>「何に使うか」で分野が決まる。</p></section>
+<section class="sec blue" style="padding-top:24px"><p class="lead center rv">まず、全員が学ぶ3つの土台。</p><div class="sp-s"></div>
+<div class="base rv"><div>数学<small>微積分・行列<br>確率</small></div><div>統計学<small>データから<br>推測する方法</small></div><div><span style="font-size:13px">プログラミング</span><small>データを<br>処理する技術</small></div></div>
+<div class="sp"></div><p class="lead center rv">その上に、使い道ごとの分野が広がる。</p><div class="map"><div class="m rv"><span>試合に勝つ作戦を、データから立てられるか</span><i>→</i><b>スポーツ<br>データ分析</b></div><div class="m rv"><span>お客さんは、何をきっかけに買うと決めるのか</span><i>→</i><b>マーケティング<br>分析</b></div><div class="m rv"><span>病気のなりやすさを、早く見つけられるか</span><i>→</i><b>医療統計<br>疫学</b></div><div class="m rv"><span>画像や音声を、機械に見分けさせるには</span><i>→</i><b>機械学習<br>画像認識</b></div><div class="m rv"><span>AIは、どうやって文章を理解しているのか</span><i>→</i><b>自然言語処理</b></div><div class="m rv"><span>その政策に、本当に効果はあったのか</span><i>→</i><b>公共政策<br>因果推論</b></div><div class="m rv"><span>株価やお金の動きを、予測できるのか</span><i>→</i><b>金融データ分析</b></div><div class="m rv"><span>大雨や猛暑の被害を、データで減らせるか</span><i>→</i><b>環境・防災<br>データ</b></div><div class="m rv"><span>一人ひとりに合った学び方を、見つけられるか</span><i>→</i><b>教育データ分析</b></div><div class="m rv"><span>個人のデータは、どこまで使ってよいのか</span><i>→</i><b>データ倫理<br>情報法</b></div></div><div class="sp"></div><div class="card rv"><span class="tag b">やってみよう</span><h3>志望校の教員一覧を開き、<br>上の分野名で探す。</h3><p style="font-size:14.5px;margin-top:8px">自分の関心に近い研究をしている先生が見つかれば、「なぜこの大学か」に具体的な答えが生まれる。企業や自治体と組んだ演習があるかどうかも見ておこう。</p></div></section>
+<section class="chap" id="c5"><div class="lbl num">Chapter 5</div><h2 class="ttl rv">読んでおきたい<br>12冊</h2><p class="desc">全部読まなくていい。<br>関心に近い2冊を、深く。</p></section>
+<section class="sec cream" style="padding-top:28px"><p class="note center rv">カードをタップするとAmazonの検索結果が開きます。難易度は★が多いほど歯ごたえあり。読了時間は高校生が読む場合のおおよその目安。</p><div class="theme rv">最初の一冊</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9%E5%85%A5%E9%96%80%20%E7%AB%B9%E6%9D%91%E5%BD%B0%E9%80%9A" target="_blank" rel="noopener"><div class="spine ">①</div><div><h3>データサイエンス入門</h3><p class="au">竹村彰通（岩波新書）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>日本初のデータサイエンス学部の立ち上げに関わった著者が、この分野の全体像をコンパクトに示す。迷ったらここから。</p><p class="ask">データサイエンスは、統計学や情報学と何が違うのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%B5%B1%E8%A8%88%E5%AD%A6%E3%81%8C%E6%9C%80%E5%BC%B7%E3%81%AE%E5%AD%A6%E5%95%8F%E3%81%A7%E3%81%82%E3%82%8B%20%E8%A5%BF%E5%86%85%E5%95%93" target="_blank" rel="noopener"><div class="spine ">②</div><div><h3>統計学が最強の学問である</h3><p class="au">西内啓</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>統計学が、医療からビジネスまでどんな場面で力を発揮するのかを、豊富な例で紹介する。</p><p class="ask">身のまわりの判断のうち、データで決められるものはどれか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">データにだまされない</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E7%B5%B1%E8%A8%88%E3%81%A7%E3%82%A6%E3%82%BD%E3%82%92%E3%81%A4%E3%81%8F%E6%B3%95%20%E3%83%80%E3%83%AC%E3%83%AB%E3%83%BB%E3%83%8F%E3%83%95" target="_blank" rel="noopener"><div class="spine y">③</div><div><h3>統計でウソをつく法</h3><p class="au">ダレル・ハフ（講談社ブルーバックス）</p><div class="meta"><span class="st">★☆☆</span><span>約3時間</span></div><p>平均、グラフ、標本の選び方。数字で人をだます手口を知ることで、だまされない目が育つ古典。</p><p class="ask">最近見たグラフの中に、誤解を誘うものはなかったか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=FACTFULNESS%20%E3%83%8F%E3%83%B3%E3%82%B9%E3%83%BB%E3%83%AD%E3%82%B9%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%BB%E3%81%8B" target="_blank" rel="noopener"><div class="spine y">④</div><div><h3>FACTFULNESS</h3><p class="au">ハンス・ロスリングほか</p><div class="meta"><span class="st">★☆☆</span><span>約6時間</span></div><p>世界についての思い込みを、データでひとつずつ正していく。事実を見るのを邪魔する人間のクセがわかる。</p><p class="ask">自分が「常識」だと思っていることを、データで確かめたことがあるか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">因果と予測</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E5%8A%9B%20%E5%9B%A0%E6%9E%9C%E9%96%A2%E4%BF%82%E3%81%AB%E8%BF%AB%E3%82%8B%E6%80%9D%E8%80%83%E6%B3%95%20%E4%BC%8A%E8%97%A4%E5%85%AC%E4%B8%80%E6%9C%97" target="_blank" rel="noopener"><div class="spine r">⑤</div><div><h3>データ分析の力<br>因果関係に迫る思考法</h3><p class="au">伊藤公一朗（光文社新書）</p><div class="meta"><span class="st">★★☆</span><span>約4時間</span></div><p>数式を使わずに、データから原因と結果を見きわめる方法を解説する。探究活動の質が一段上がる。</p><p class="ask">その取り組みに効果があったと、どうすれば言えるのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%26%E3%83%8E%E3%82%A4%E3%82%BA%20%E3%83%8D%E3%82%A4%E3%83%88%E3%83%BB%E3%82%B7%E3%83%AB%E3%83%90%E3%83%BC" target="_blank" rel="noopener"><div class="spine r">⑥</div><div><h3>シグナル&ノイズ</h3><p class="au">ネイト・シルバー</p><div class="meta"><span class="st">★★★</span><span>約10時間</span></div><p>選挙、天気、野球、経済。予測が当たる分野と外れる分野の違いを、予測の専門家が掘り下げる。</p><p class="ask">予測は、なぜ外れるのか。外れたとき、何を学べるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">データで人と勝負を読む</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%83%9E%E3%83%8D%E3%83%BC%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%AB%20%E3%83%9E%E3%82%A4%E3%82%B1%E3%83%AB%E3%83%BB%E3%83%AB%E3%82%A4%E3%82%B9" target="_blank" rel="noopener"><div class="spine k">⑦</div><div><h3>マネー・ボール</h3><p class="au">マイケル・ルイス</p><div class="meta"><span class="st">★☆☆</span><span>約6時間</span></div><p>資金の少ない野球チームが、データによる選手評価で強豪に挑んだ実話。データ分析が現場を変える瞬間が描かれる。</p><p class="ask">自分の部活で、見過ごされている大事な数字は何か？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E8%AA%B0%E3%82%82%E3%81%8C%E5%98%98%E3%82%92%E3%81%A4%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%20%E3%82%BB%E3%82%B9%E3%83%BB%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%B4%E3%83%B3%E3%82%BA%3D%E3%83%80%E3%83%B4%E3%82%A3%E3%83%89%E3%82%A6%E3%82%A3%E3%83%83%E3%83%84" target="_blank" rel="noopener"><div class="spine k">⑧</div><div><h3>誰もが嘘をついている</h3><p class="au">セス・スティーヴンズ=ダヴィドウィッツ</p><div class="meta"><span class="st">★☆☆</span><span>約5時間</span></div><p>アンケートでは本音を言わない人も、検索では本音を打ち込む。ネット上のデータから人間の実像に迫る。</p><p class="ask">アンケートの答えと実際の行動は、なぜずれるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">AIを知る</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E4%BA%BA%E9%96%93%E3%82%92%E8%B6%85%E3%81%88%E3%82%8B%E3%81%8B%20%E6%9D%BE%E5%B0%BE%E8%B1%8A" target="_blank" rel="noopener"><div class="spine ">⑨</div><div><h3>人工知能は人間を超えるか</h3><p class="au">松尾豊</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>AI研究の歴史と、ディープラーニングが何を変えたのかを、日本を代表する研究者がやさしく解説する。</p><p class="ask">AIにできることと、できないことの境目はどこにあるのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=AI%20vs.%20%E6%95%99%E7%A7%91%E6%9B%B8%E3%81%8C%E8%AA%AD%E3%82%81%E3%81%AA%E3%81%84%E5%AD%90%E3%81%A9%E3%82%82%E3%81%9F%E3%81%A1%20%E6%96%B0%E4%BA%95%E7%B4%80%E5%AD%90" target="_blank" rel="noopener"><div class="spine ">⑩</div><div><h3>AI vs. 教科書が読めない子どもたち</h3><p class="au">新井紀子</p><div class="meta"><span class="st">★☆☆</span><span>約4時間</span></div><p>AIに大学入試を解かせる研究から、AIの限界と、人間の読解力の問題を明らかにする。</p><p class="ask">AIが苦手なことの中に、人が学ぶべきことのヒントはあるか？</p><span class="amz">Amazonで見る →</span></div></a><div class="theme rv">責任と基礎</div><a class="book rv" href="https://www.amazon.co.jp/s?k=%E3%81%82%E3%81%AA%E3%81%9F%E3%82%92%E6%94%AF%E9%85%8D%E3%81%97%E3%80%81%E7%A4%BE%E4%BC%9A%E3%82%92%E7%A0%B4%E5%A3%8A%E3%81%99%E3%82%8B%E3%80%81AI%E3%83%BB%E3%83%93%E3%83%83%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E7%BD%A0%20%E3%82%AD%E3%83%A3%E3%82%B7%E3%83%BC%E3%83%BB%E3%82%AA%E3%83%8B%E3%83%BC%E3%83%AB" target="_blank" rel="noopener"><div class="spine y">⑪</div><div><h3>あなたを支配し、社会を破壊する、AI・ビッグデータの罠</h3><p class="au">キャシー・オニール</p><div class="meta"><span class="st">★★☆</span><span>約6時間</span></div><p>データによる判定が、採用やローンの場面で人を不当に扱ってしまう仕組みを、元データサイエンティストが告発する。</p><p class="ask">公平なAIとは、誰にとっての公平なのか？</p><span class="amz">Amazonで見る →</span></div></a><a class="book rv" href="https://www.amazon.co.jp/s?k=%E5%AE%8C%E5%85%A8%E7%8B%AC%E7%BF%92%20%E7%B5%B1%E8%A8%88%E5%AD%A6%E5%85%A5%E9%96%80%20%E5%B0%8F%E5%B3%B6%E5%AF%9B%E4%B9%8B" target="_blank" rel="noopener"><div class="spine r">⑫</div><div><h3>完全独習 統計学入門</h3><p class="au">小島寛之</p><div class="meta"><span class="st">★★☆</span><span>約6時間</span></div><p>中学校までの数学で、統計学の考え方の核心まで連れていってくれる。手を動かして学びたい人に。</p><p class="ask">平均とばらつきだけで、どこまでのことが言えるのか？</p><span class="amz">Amazonで見る →</span></div></a><div class="talk r rv" style="margin-top:44px"><div class="who"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">読んだ冊数は聞かれない。聞かれるのは「読んで、何を考えたか」だよ。</div></div></section>
+<section class="chap" id="c6"><div class="lbl num">Chapter 6</div><h2 class="ttl rv">読んだ本を<br>志望理由書に変える</h2><p class="desc">「面白かった」で終わらせない、<br>3つのステップ。</p></section>
+<section class="sec" style="padding-top:20px">
+<div class="step rv"><div class="n num">1</div><div><h3>著者の主張を、一文で言う</h3><p>「この本は〇〇だと主張している」。あらすじではなく主張を取り出す。一文にできなければ、まだ読めていない。</p></div></div>
+<div class="step rv"><div class="n num">2</div><div><h3>自分の経験とぶつける</h3><p>その主張は、君が見てきた現実に当てはまるか。当てはまらない場面こそが宝物になる。</p></div></div>
+<div class="step rv"><div class="n num">3</div><div><h3>大学で確かめたい問いにする</h3><p>「では〇〇の場合はどうなのか」。答えがまだ出ていない問いを立て、どんなデータで確かめるかまで書く。Chapter 4の分野と志望校の先生につなげる。</p></div></div>
+<div class="ba"><div class="x rv">『マネー・ボール』を読み、データ分析の力のすごさを学びました。とても感動し、データサイエンス学部でさらに深く学びたいと考えました。</div>
+<div class="arrow rv" aria-hidden="true">↓</div>
+<div class="o rv">『マネー・ボール』は、勘や見た目ではなく、勝利に結びつく数字で選手を評価すれば、資金の少ないチームでも勝てると論じる。しかし私がバスケットボール部でシュート成功率を記録して起用に生かそうとしたところ、試合数が少なく数字が安定しなかった。守備や声かけなど、記録に残らない貢献も見落とされた。少ないデータの中で、数値にしにくい貢献をどう評価できるのか。貴学のスポーツデータ分析のゼミで、動きを記録するデータを使って検証したいと考える。</div></div>
+<p class="note rv" style="margin-top:14px">※下の文章は型を示すための創作例。そのまま使わず、必ず自分の経験で書こう。</p>
+<div class="sp"></div><p class="mid center rv">型はこれだけ。<br><mark>主張 → 衝突 → 問い</mark></p></section>
+<section class="chap ink" id="c7"><div class="lbl num">Chapter 7</div><h2 class="ttl rv">数学とコードの話</h2><p class="desc">入学前に知っておきたい、<br>ちょっと耳の痛い現実。</p></section>
+<section class="sec ink" style="padding-top:20px"><div class="talk rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg>受験生 ミオ</div><div class="bub hand">文系でも入れると聞いたので、数学は苦手でも大丈夫ですよね？</div></div><div class="talk r rv"><div class="who" style="color:#fff"><svg viewBox="0 0 120 132"><use href="#c-sensei"/></svg>先生</div><div class="bub y hand">入口は広い大学が多い。でも入学後は、数学とプログラミングから逃げられないよ。</div></div><div class="sp-s"></div><p class="rv">文系・理系のどちらからでも受けられるデータサイエンス学部は多い。ただし入学すると、微積分、行列、確率・統計といった数学と、プログラミングが必修になっているのがふつうだ。</p>
+<p class="rv">とはいえ、求められるのは難問を解く力だけではない。<mark>地味な下ごしらえをていねいに続け、結果を疑い、人に伝わる形で説明する力</mark>が同じくらい大切だ。その姿勢は面接でも見られている。</p>
+<p class="rv">授業では、企業や自治体の実際のデータを使って課題に取り組む演習も多い。チームで分析し、発表する場面が続くことも知っておこう。</p>
+<div class="sp-s"></div><p class="lead rv">いまからできること</p><ul class="todo"><li class="rv"><b>数学Ⅰ「データの分析」と数学B「統計的な推測」</b>を固める。大学の統計学に直接つながる単元だ。</li><li class="rv">政府統計のポータルサイト<b>「e-Stat」</b>から、関心のあるデータをひとつダウンロードし、表計算ソフトでグラフにする。</li><li class="rv"><b>Python</b>を無料の学習サイトで動かしてみる。まずは「データを読み込んでグラフを描く」まででいい。</li><li class="rv">部活や学校生活の中で、<b>自分でデータを集める</b>。10件でもいいから、記録して、整理して、気づいたことを書く。</li><li class="rv">ニュースのグラフを見たら、<b>「縦軸はゼロから始まっているか」「誰に聞いた数字か」</b>を確かめる。</li></ul><p class="note rv" style="margin-top:18px">※入試で必要な数学の範囲、入学後の必修科目、補習の有無は大学によって大きく異なる。必ず最新の募集要項とシラバスで確認しよう。</p></section>
+<section class="chap" id="c8"><div class="lbl num">Chapter 8</div><h2 class="ttl rv">面接で聞かれる<br>7つの問い</h2><p class="desc">答えを暗記するのではなく、<br>考えた跡を持っていこう。</p></section>
+<section class="sec blue" style="padding-top:24px"><div class="iq rv"><span class="n">①</span><h3>なぜ情報学部や経済学部ではなく、データサイエンス学部なのですか？</h3><p>Chapter 1の表に戻る。「仕組みをつくる」ことより「データから判断を導く」ことに関心がある理由を、経験から語る。</p></div><div class="iq rv"><span class="n">②</span><h3>データを使って、どんな課題を解決したいですか？</h3><p>データサイエンス学部でとくに聞かれやすい。「AIで社会をよくしたい」で終わらせず、具体的な場面と問いで答える。</p></div><div class="iq rv"><span class="n">③</span><h3>そのデータは、どうやって集めますか？</h3><p>誰が持っているデータか、自分で集めるならどう測るか。集め方によるかたよりにも一言ふれる。</p></div><div class="iq rv"><span class="n">④</span><h3>AIやデータの活用には、どんな危険があると思いますか？</h3><p>便利さだけを語らない。個人情報、かたよった判定、まちがった結果を信じてしまうことなど、具体例を挙げて対策まで考える。</p></div><div class="iq rv"><span class="n">⑤</span><h3>数学やプログラミングの準備はしていますか？</h3><p>「得意です」と言えなくていい。Chapter 7のリストのうち、実際にやったことを具体的に話す。</p></div><div class="iq rv"><span class="n">⑥</span><h3>あなたの関心は、どの分野にあたりますか？</h3><p>Chapter 4の分野名で答え、志望校の科目やゼミの名前を添える。</p></div><div class="iq rv"><span class="n">⑦</span><h3>その本を読んで、納得できなかった点はありますか？</h3><p>批判は失礼ではない。Chapter 6のステップ2で見つけた「当てはまらない場面」がそのまま答えになる。</p></div></section>
+<section class="sec cream"><p class="mid center rv">出願前の<br>最終チェックリスト</p><div class="sp-s"></div><ul class="todo"><li class="rv">「データで何を確かめたいか」を30秒で説明できる</li><li class="rv">5つの道具のうち、ひとつを自分の経験で説明できる</li><li class="rv">自分の関心が、どの分野にあたるかを言える</li><li class="rv">本を1冊、「主張 → 衝突 → 問い」で語れる</li><li class="rv">自分でデータを集めて、グラフにしたことがある</li><li class="rv">データ活用の危険性を、具体例で1つ挙げられる</li></ul></section>
+<section class="end"><div class="faces" aria-hidden="true" style="margin-top:0"><svg viewBox="0 0 120 132"><use href="#c-mio"/></svg><svg viewBox="0 0 120 132"><use href="#c-kei"/></svg></div>
+<p class="big rv">データは、<br>黙っている。<br>問うのは、人間だ。</p><div class="sp-s"></div>
+<p class="lead rv">確かめてみたい問いがあるなら、<br>君はもう、<br><mark>データサイエンスの入り口に立っている。</mark></p>
+<a class="top" href="#top">↑ 最初に戻る</a></section>
+<footer>総合型選抜｜学部別・学問入門　データサイエンス学部編<br>監修｜総合型選抜9年選手<br>掲載書籍の版・価格は書店等で最新の情報をご確認ください。<br>登場する人物イラストはすべて架空のキャラクターです。</footer>
+</div>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+  var bar=document.getElementById('bar');
+  function prog(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',prog,{passive:true});
+  prog();
+})();
+</script>
+</body>
+</html>

@@ -360,3 +360,15 @@ nav.menu a{-webkit-tap-highlight-color:transparent}
 .badges em{font-style:normal;font-size:.68rem;letter-spacing:.1em;padding:3px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.45);color:#fff}
 .badges em.new{background:#e2553f;border-color:#e2553f;font-weight:700}
 @media (max-width:360px){.go3 a{padding:12px 12px;gap:2px 10px}.go3 a b{font-size:.94rem;letter-spacing:.02em}.go3 a i{width:30px;height:30px}}
+
+/* トップの入口：あなたは、いまどれ？（一画面目に4つの入口） */
+.hub{position:relative;z-index:2}
+.hub .box{padding:16px 14px 6px;border-radius:14px;background:var(--glass-strong);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--edge);box-shadow:0 6px 16px rgba(20,23,31,.1)}
+.hub .hh{font-family:var(--f-min);font-size:1.05rem;font-weight:600;margin:0 0 6px;letter-spacing:.08em}
+.hub a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 10px;align-items:center;padding:11px 2px;border-top:1px solid var(--hair);text-decoration:none;color:var(--ink)}
+.hub a b{font-size:.9rem;font-weight:700;letter-spacing:.02em;line-height:1.5}
+.hub a span{grid-column:1;font-size:.72rem;color:var(--accent);letter-spacing:.04em;transition:color 1.2s}
+.hub a i{grid-row:1/3;grid-column:2;font-style:normal;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-size:.8rem;transition:transform .2s}
+.hub a:hover i,.hub a:active i{transform:translateX(3px)}
+.hub a:active{background:rgba(255,255,255,.6)}
+@media (min-width:861px){.hub .box{padding:20px 24px 14px}.hub .opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.hub a{padding:14px 2px}.hub a b{font-size:1rem}}

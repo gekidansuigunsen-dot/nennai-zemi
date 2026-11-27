@@ -1,5 +1,5 @@
 // アクセス計測の受け口。Cookie なし・IP や端末情報は保存しない。
-// 保存するのは「ページ」「来た元のサイト名」「スマホかPCか」「表示していた秒数」と、
+// 保存するのは「ページ（URLと見出し）」「来た元のサイト名」「スマホかPCか」「表示していた秒数」と、
 // タブを閉じると消えるランダムな番号だけ。
 const ID = /^[a-z0-9]{8,40}$/;
 const MAX_SEC = 3600;
@@ -28,9 +28,10 @@ export async function onRequestPost({ request, env }) {
       if (!ID.test(String(b.sid))) return ok;
       const ref = String(b.r || '').toLowerCase().replace(/[^a-z0-9.\-]/g, '').slice(0, 100);
       const dev = b.d === 'm' ? 'm' : 'd';
+      const title = String(b.ti || '').replace(/\s+/g, ' ').trim().slice(0, 120);
       await env.DB.prepare(
-        'INSERT OR IGNORE INTO views (id, ts, last, day, path, sid, ref, dev, sec) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)'
-      ).bind(b.id, now, now, jstDay(now), cleanPath(b.p), b.sid, ref, dev).run();
+        'INSERT OR IGNORE INTO views (id, ts, last, day, path, sid, ref, dev, sec, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, ?)'
+      ).bind(b.id, now, now, jstDay(now), cleanPath(b.p), b.sid, ref, dev, title).run();
     } else if (b.t === 's') {
       const sec = Math.max(0, Math.min(MAX_SEC, Math.round(Number(b.s) || 0)));
       await env.DB.prepare(

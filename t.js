@@ -1,5 +1,5 @@
 /* アクセス計測（Cookieなし・個人を特定する情報なし）
-   記録するもの：見たページ、来た元のサイト名、スマホかPCか、画面に表示していた秒数。
+   記録するもの：見たページ（URLと見出し）、来た元のサイト名、スマホかPCか、画面に表示していた秒数。
    タブごとのランダムな番号はタブを閉じると消える。 */
 (function () {
   try { if (localStorage.getItem('nz_notrack') === '1') return; } catch (e) {}
@@ -26,7 +26,7 @@
     if (beacon && navigator.sendBeacon) { try { if (navigator.sendBeacon(URL_, body)) return; } catch (e) {} }
     try { fetch(URL_, { method: 'POST', body: body, keepalive: true }).catch(function () {}); } catch (e) {}
   }
-  send({ t: 'v', id: id, sid: sid, p: location.pathname, r: ref, d: dev });
+  send({ t: 'v', id: id, sid: sid, p: location.pathname, r: ref, d: dev, ti: document.title });
 
   var acc = 0, start = document.visibilityState === 'hidden' ? 0 : Date.now(), lastSent = -1;
   function stop() { if (start) { acc += Date.now() - start; start = 0; } }

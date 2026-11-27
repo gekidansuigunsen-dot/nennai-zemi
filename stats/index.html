@@ -161,8 +161,15 @@ h1{font-size:26px;font-weight:500;letter-spacing:.08em;margin:4px 0 2px}
     '/':'トップページ', '/tebiki':'攻略の手引きとは', '/gokui/shibou':'志望理由書の極意',
     '/jiji/':'時事ニュース解説', '/jiji':'時事ニュース解説',
     '/hou':'法学部', '/keiei':'経営学部', '/keizai':'経済学部', '/kyoiku':'教育学部',
-    '/shakai':'社会学部', '/shinri':'心理学部'
+    '/shakai':'社会学部', '/shinri':'心理学部', '/ds':'データサイエンス学部', '/fukushi':'社会福祉学部',
+    '/kokusai':'国際系学部', '/giho/kincho':'緊張のほぐし方', '/giho/presentation':'プレゼンの技法',
+    '/giho/interview':'インタビューの技法', '(broken)':'崩れたURLからの訪問'
   };
+  function pageName(p){
+    if (NAMES[p.path]) return NAMES[p.path];
+    var t = String(p.title || '').split(/[｜|]/)[0].replace(/^【[^】]*】/, '').trim();
+    return t || p.path;
+  }
   var $ = function(id){return document.getElementById(id)};
   var esc = function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
   var fmtN = function(n){return Number(n||0).toLocaleString('ja-JP')};
@@ -223,7 +230,7 @@ h1{font-size:26px;font-weight:500;letter-spacing:.08em;margin:4px 0 2px}
 
     chart(d.daily, d.today);
 
-    var pages = d.pages.map(function(p){ return {name: NAMES[p.path] || p.path, v: p.pv, a: p.avgsec}; });
+    var pages = d.pages.map(function(p){ return {name: pageName(p), v: p.pv, a: p.avgsec}; });
     var pmax = pages.length ? pages[0].v : 0;
     rows($('pages'), pages, pmax, function(r){ return '<b>' + fmtN(r.v) + '</b> 回 ・ ' + (r.a ? plain(fmtT(r.a)) : '–'); });
 

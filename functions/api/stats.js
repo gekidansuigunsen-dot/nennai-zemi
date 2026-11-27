@@ -22,15 +22,19 @@ export async function onRequestGet({ request, env }) {
   const chartSince = jstDay(now - 29 * 86400000);
   const db = env.DB;
 
-  const [tot, daily, pages, refs, devs, live, stay] = await db.batch([
+  const [tot, daily, pages, refs, devs, live, stay, titles] = await db.batch([
     db.prepare("SELECT COUNT(*) pv, COUNT(DISTINCT sid) visits, COALESCE(SUM(sec),0) tsec, SUM(CASE WHEN sec > 0 THEN 1 ELSE 0 END) nsec FROM views WHERE day >= ?").bind(since),
     db.prepare("SELECT day, COUNT(*) pv, COUNT(DISTINCT sid) visits, COALESCE(SUM(sec),0) tsec FROM views WHERE day >= ? GROUP BY day ORDER BY day").bind(chartSince),
-    db.prepare("SELECT path, COUNT(*) pv, COUNT(DISTINCT sid) visits, COALESCE(AVG(NULLIF(sec,0)),0) avgsec FROM views WHERE day >= ? GROUP BY path ORDER BY pv DESC LIMIT 60").bind(since),
+    db.prepare("SELECT g AS path, COUNT(*) pv, COUNT(DISTINCT sid) visits, COALESCE(AVG(NULLIF(sec,0)),0) avgsec FROM (SELECT *, CASE WHEN path GLOB '*[^A-Za-z0-9/_.-]*' THEN '(broken)' ELSE path END g FROM views WHERE day >= ?) t GROUP BY g ORDER BY pv DESC LIMIT 60").bind(since),
     db.prepare("SELECT ref, COUNT(DISTINCT sid) visits FROM views WHERE day >= ? AND ref != '' GROUP BY ref ORDER BY visits DESC LIMIT 15").bind(since),
     db.prepare("SELECT dev, COUNT(DISTINCT sid) visits FROM views WHERE day >= ? GROUP BY dev").bind(since),
     db.prepare("SELECT COUNT(DISTINCT sid) n FROM views WHERE last > ?").bind(now - 5 * 60000),
     db.prepare("SELECT b, COUNT(*) n FROM (SELECT CASE WHEN t < 10 THEN 0 WHEN t < 60 THEN 1 WHEN t < 180 THEN 2 WHEN t < 600 THEN 3 ELSE 4 END b FROM (SELECT sid, SUM(sec) t FROM views WHERE day >= ? GROUP BY sid)) GROUP BY b").bind(since),
+    db.prepare("SELECT path, title, MAX(ts) t FROM views WHERE title != '' GROUP BY path"),
   ]);
+  const titleOf = {};
+  titles.results.forEach(r => { titleOf[r.path] = r.title; });
+  pages.results.forEach(p => { p.title = titleOf[p.path] || ''; });
 
   return json({
     days, since, today: jstDay(now),

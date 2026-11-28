@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /stats/
+Disallow: /api/
+
+Sitemap: https://nennai-zemi.pages.dev/sitemap.xml

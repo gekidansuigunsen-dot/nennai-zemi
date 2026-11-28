@@ -140,3 +140,11 @@ footer.end b{display:block;color:var(--ink);font-family:var(--serif)}
 @media (min-width:1040px){.side{display:block;position:fixed;left:20px;top:120px;width:220px;z-index:40}.side h2{font-size:11px;color:#fff;letter-spacing:.2em;margin-bottom:8px}.side a{display:block;color:#cfcfcf;text-decoration:none;font-size:12.5px;line-height:1.5;padding:5px 0}.side a.on{color:#fff;font-weight:900}}
 @media (max-width:370px){.band{padding-left:18px;padding-right:18px}.cover h1{font-size:28px}.tategaki{font-size:38px}}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.bars .bar i{transition:none}}
+/* 挿絵 */
+.ill{margin:0 -24px 30px}
+.ill svg{width:100%;height:auto;display:block}
+.ill figcaption{font-family:var(--serif);font-weight:700;font-size:13px;color:var(--sub);padding:8px 24px 0;line-height:1.6}
+.ill figcaption::before{content:"── "}
+.cover .ill.cov{grid-column:1/-1;margin:26px -24px 0}
+.chap#kc .ill figcaption{color:#aaa}
+.final .lead:last-of-type{font-size:16px}

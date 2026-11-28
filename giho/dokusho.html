@@ -21,29 +21,8 @@
 <meta name="twitter:image" content="https://nennai-zemi.pages.dev/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-/* この記事だけの部品 */
-.who{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.06em;background:var(--ink);color:#fff;padding:2px 10px;margin:4px 0 0}
-.b-ink .who{background:#fff;color:var(--ink)}
-.pen{margin:34px 0;display:grid;gap:12px;text-align:left}
-.pen div{background:#fffdf5;color:var(--ink);border:2px solid var(--ink);padding:12px 14px 12px 16px;box-shadow:4px 4px 0 var(--ink);border-left-width:14px}
-.pen .r{border-left-color:#e2342b}.pen .bl{border-left-color:#2457d6}.pen .g{border-left-color:#1f9a4b}
-.pen b{display:block;font-weight:900;font-size:15.5px;line-height:1.5}
-.pen span{display:block;font-size:13px;line-height:1.7;margin-top:4px}
-.tier{margin:30px 0;display:grid;gap:10px;text-align:left}
-.tier div{background:#fffdf5;color:var(--ink);border:2px solid var(--ink);padding:12px 14px}
-.tier b{display:inline-block;font-size:12px;letter-spacing:.06em;padding:1px 10px;margin-bottom:6px;border:2px solid var(--ink)}
-.tier .hi b{background:var(--lime)}.tier .mid b{background:var(--yellow)}.tier .lo b{background:#ece8da}
-.tier span{display:block;font-weight:900;font-size:14.5px;line-height:1.7}
-.tier small{display:block;font-size:12px;line-height:1.6;color:#555;font-weight:700;margin-top:2px}
-.cal{margin:30px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
-.cal div{background:#fffdf5;color:var(--ink);border:2px solid var(--ink);padding:10px 4px;box-shadow:3px 3px 0 var(--ink)}
-.cal b{display:block;font-family:var(--latin);font-size:22px;font-weight:400;line-height:1.1}
-.cal span{display:block;font-size:11.5px;font-weight:900;line-height:1.5;margin-top:4px}
-.note{font-size:12.5px;line-height:1.75;opacity:.85;text-align:left;margin-top:-10px}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,400&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dokusho.css">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="/sheet.css?v=2">
 </head>
@@ -54,25 +33,18 @@
 <div class="page" id="top">
 <header class="topbar"><a class="brand" href="../">まるごと<b>ゼミ</b><small>総合型選抜9年選手運営</small></a><nav class="chips" aria-label="技法の番号"><a href="#k1" data-nav="k1" aria-label="技法1">①</a><a href="#k2" data-nav="k2" aria-label="技法2">②</a><a href="#k3" data-nav="k3" aria-label="技法3">③</a><a href="#k4" data-nav="k4" aria-label="技法4">④</a><a href="#k5" data-nav="k5" aria-label="技法5">⑤</a><a href="#k6" data-nav="k6" aria-label="技法6">⑥</a><a href="#k7" data-nav="k7" aria-label="技法7">⑦</a></nav></header>
 
-<section class="band b-lime cover dots">
+<section class="band cover">
   <span class="issue">思考の武器庫 ／ 考具</span>
   <h1><small>科学的な読書の仕方</small>読み返すだけの<br>読書を、<br><span>やめる。</span></h1>
-  <div class="hero"><svg viewBox="0 0 400 250" role="img" aria-label="閉じた本と、白紙に書き出したメモ">
-  <defs><pattern id="ht" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="2" fill="#0c0c10"/></pattern></defs>
-  <g transform="rotate(-6 130 140)"><rect x="40" y="60" width="170" height="150" rx="6" fill="#0c0c10"/><rect x="52" y="70" width="150" height="130" rx="3" fill="#fff"/><rect x="52" y="70" width="150" height="130" fill="url(#ht)" opacity=".12"/>
-  <text x="127" y="128" text-anchor="middle" font-family="'Dela Gothic One',sans-serif" font-size="26" fill="#0c0c10">本を</text><text x="127" y="164" text-anchor="middle" font-family="'Dela Gothic One',sans-serif" font-size="26" fill="#0c0c10">閉じる</text></g>
-  <g transform="rotate(5 290 130)"><rect x="220" y="40" width="150" height="180" fill="#fffdf5" stroke="#0c0c10" stroke-width="4"/>
-  <path d="M238 78h96" stroke="#e2342b" stroke-width="7" stroke-linecap="round"/><path d="M238 108h112M238 132h80" stroke="#2457d6" stroke-width="7" stroke-linecap="round"/><path d="M238 162h100" stroke="#1f9a4b" stroke-width="7" stroke-linecap="round"/>
-  <text x="295" y="204" text-anchor="middle" font-family="Anton,sans-serif" font-size="20" fill="#0c0c10">RECALL</text></g>
-  <g transform="rotate(12 350 40)"><circle cx="350" cy="40" r="28" fill="#ffe500" stroke="#0c0c10" stroke-width="4"/><text x="350" y="52" text-anchor="middle" font-family="'Dela Gothic One',sans-serif" font-size="32" fill="#0c0c10">?</text></g>
-</svg></div>
+  <div class="tategaki" aria-hidden="true"><i class="s">科</i><i class="s">学</i><i class="s">的</i><i class="s">な</i><i>読</i><i>書</i></div>
   <p class="dek">線を引いて、もう一度読んで、わかった気になる。それでも一週間たつと、ほとんど言えません。この章では、日本の読書家と海外の研究がそろって勧める「頭に残る読み方」を、7つの技法にまとめます。</p>
+  <figure class="ill cov"><svg viewBox="0 0 600 400" role="img" aria-label="開いた本から、文字が鳥になって飛び去っていく"><defs><pattern id="dtc" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#cfe5df"/><rect x="0" y="250" width="600" height="150" fill="url(#dtc)" opacity=".35"/><path d="M110 300 C190 270 260 275 300 300 C340 275 410 270 490 300 L490 330 C410 302 340 308 300 330 C260 308 190 302 110 330Z" fill="#151515"/><path d="M120 292 C195 262 262 266 298 290 L298 318 C262 296 195 292 120 320Z" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M302 290 C338 266 405 262 480 292 L480 320 C405 292 338 296 302 318Z" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M140 292" /><path d="M150 290 C200 272 250 274 285 290" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><path d="M150 296 C200 278 250 280 285 296" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><path d="M150 302 C200 284 250 286 285 302" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><path d="M150 308 C200 290 250 292 285 308" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><path d="M315 290 C350 274 400 272 450 290" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><path d="M315 296 C350 280 400 278 450 296" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><path d="M315 302 C350 286 400 284 450 302" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><path d="M315 308 C350 292 400 290 450 308" stroke="#151515" stroke-width="2.5" fill="none" opacity=".45"/><rect x="330" y="248" width="16" height="5" fill="#151515" opacity=".7"/><rect x="352" y="232" width="12" height="5" fill="#151515" opacity=".6"/><path transform="translate(372 206) rotate(-10) scale(0.6)" d="M-20 0 C-12 -10 -4 -10 0 -2 C4 -10 12 -10 20 0 C12 -5 4 -4 0 4 C-4 -4 -12 -5 -20 0Z" fill="#151515"/><path transform="translate(410 170) rotate(-14) scale(0.8)" d="M-20 0 C-12 -10 -4 -10 0 -2 C4 -10 12 -10 20 0 C12 -5 4 -4 0 4 C-4 -4 -12 -5 -20 0Z" fill="#0f7a6c"/><path transform="translate(452 128) rotate(-8) scale(1)" d="M-20 0 C-12 -10 -4 -10 0 -2 C4 -10 12 -10 20 0 C12 -5 4 -4 0 4 C-4 -4 -12 -5 -20 0Z" fill="#151515"/><path transform="translate(500 92) rotate(-12) scale(1.2)" d="M-20 0 C-12 -10 -4 -10 0 -2 C4 -10 12 -10 20 0 C12 -5 4 -4 0 4 C-4 -4 -12 -5 -20 0Z" fill="#0f7a6c"/><path transform="translate(398 118) rotate(6) scale(0.7)" d="M-20 0 C-12 -10 -4 -10 0 -2 C4 -10 12 -10 20 0 C12 -5 4 -4 0 4 C-4 -4 -12 -5 -20 0Z" fill="#151515"/><path transform="translate(540 46) rotate(-6) scale(1.4)" d="M-20 0 C-12 -10 -4 -10 0 -2 C4 -10 12 -10 20 0 C12 -5 4 -4 0 4 C-4 -4 -12 -5 -20 0Z" fill="#151515"/><path transform="translate(470 58) rotate(4) scale(0.9)" d="M-20 0 C-12 -10 -4 -10 0 -2 C4 -10 12 -10 20 0 C12 -5 4 -4 0 4 C-4 -4 -12 -5 -20 0Z" fill="#0f7a6c"/><circle cx="120" cy="96" r="42" fill="#e8b04a" opacity=".9"/></svg><figcaption>読んだはずの文字は、閉じた瞬間に飛んでいく。</figcaption></figure>
   <div class="meta"><span>読む時間 約11分</span><span>年内入試攻略まるごとゼミ</span></div>
 </section>
 
-<section class="band b-ink index"><h2>CONTENTS</h2><ol><li class="rv"><a href="#k0"><span class="n">◎</span><span class="ttl">なぜ、読んだのに残らないのか<small>INTRODUCTION</small></span><span class="min"></span></a></li><li class="rv"><a href="#k1"><span class="n">①</span><span class="ttl">読む前に、問いを立てる<small>GIHO 01</small></span><span class="min"></span></a></li><li class="rv"><a href="#k2"><span class="n">②</span><span class="ttl">先に地図を見る。全部読もうとしない<small>GIHO 02</small></span><span class="min"></span></a></li><li class="rv"><a href="#k3"><span class="n">③</span><span class="ttl">線は、色で分けて少なく<small>GIHO 03</small></span><span class="min"></span></a></li><li class="rv"><a href="#k4"><span class="n">④</span><span class="ttl">本を閉じて、思い出す<small>GIHO 04</small></span><span class="min"></span></a></li><li class="rv"><a href="#k5"><span class="n">⑤</span><span class="ttl">「なぜ？」を自分に説明する<small>GIHO 05</small></span><span class="min"></span></a></li><li class="rv"><a href="#k6"><span class="n">⑥</span><span class="ttl">日をあけて、もう一度思い出す<small>GIHO 06</small></span><span class="min"></span></a></li><li class="rv"><a href="#k7"><span class="n">⑦</span><span class="ttl">話す、引用する、重ねて読む<small>GIHO 07</small></span><span class="min"></span></a></li><li class="rv"><a href="#kc"><span class="n">＋</span><span class="ttl">番外　紙か、画面か<small>COLUMN</small></span><span class="min"></span></a></li><li class="rv"><a href="#k8"><span class="n">⑧</span><span class="ttl">読書のチェックリスト<small>CHECK</small></span><span class="min"></span></a></li></ol></section>
+<section class="band index"><h2>CONTENTS</h2><ol><li class="rv"><a href="#k0"><span class="n">◎</span><span class="ttl">なぜ、読んだのに残らないのか<small>INTRODUCTION</small></span><span class="min"></span></a></li><li class="rv"><a href="#k1"><span class="n">①</span><span class="ttl">読む前に、問いを立てる<small>GIHO 01</small></span><span class="min"></span></a></li><li class="rv"><a href="#k2"><span class="n">②</span><span class="ttl">先に地図を見る。全部読もうとしない<small>GIHO 02</small></span><span class="min"></span></a></li><li class="rv"><a href="#k3"><span class="n">③</span><span class="ttl">線は、色で分けて少なく<small>GIHO 03</small></span><span class="min"></span></a></li><li class="rv"><a href="#k4"><span class="n">④</span><span class="ttl">本を閉じて、思い出す<small>GIHO 04</small></span><span class="min"></span></a></li><li class="rv"><a href="#k5"><span class="n">⑤</span><span class="ttl">「なぜ？」を自分に説明する<small>GIHO 05</small></span><span class="min"></span></a></li><li class="rv"><a href="#k6"><span class="n">⑥</span><span class="ttl">日をあけて、もう一度思い出す<small>GIHO 06</small></span><span class="min"></span></a></li><li class="rv"><a href="#k7"><span class="n">⑦</span><span class="ttl">話す、引用する、重ねて読む<small>GIHO 07</small></span><span class="min"></span></a></li><li class="rv"><a href="#kc"><span class="n">＋</span><span class="ttl">番外　紙か、画面か<small>COLUMN</small></span><span class="min"></span></a></li><li class="rv"><a href="#k8"><span class="n">⑧</span><span class="ttl">読書のチェックリスト<small>CHECK</small></span><span class="min"></span></a></li></ol></section>
 
-<section class="band b-cream chap dots" id="k0" data-ch="k0">
+<section class="band chap" id="k0" data-ch="k0">
   <span class="no">INTRODUCTION</span>
   <h2 style="margin-top:26px">なぜ、<br>読んだのに残らないのか</h2>
 
@@ -95,12 +67,13 @@
     <p class="t rv">おもしろいのは、齋藤孝さん、読書猿さん、千葉雅也さんといった日本の書き手が勧めてきた読み方が、この研究の結果とよく重なることです。ここからは、両方を並べながら7つの技法を見ていきます。</p>
 </section>
 
-<section class="band b-paper chap dots" id="k1" data-ch="k1">
+<section class="band chap" id="k1" data-ch="k1">
   <span class="no">GIHO 01</span>
-  <div class="circ">①</div>
+  <div class="circ" data-n="01">①</div>
   <h2>読む前に、<br>問いを立てる</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="本からのびたしおりが、はてなマークの形になっている"><defs><pattern id="dtq" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#f6f3ee"/><circle cx="300" cy="210" r="150" fill="url(#dtq)" opacity=".3"/><rect x="200" y="110" width="200" height="250" rx="6" fill="#0f7a6c"/><rect x="212" y="110" width="180" height="250" fill="#fff" stroke="#151515" stroke-width="3"/><rect x="200" y="110" width="14" height="250" fill="#151515"/><path d="M240 170h130" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 188h93" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 206h116" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 224h79" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 242h102" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 260h125" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 278h88" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 296h111" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M240 314h74" stroke="#151515" stroke-width="4" stroke-linecap="round" opacity="0.35"/><path d="M330 110 L330 70 C330 30 400 30 400 70 C400 100 360 105 360 135 L360 170" fill="none" stroke="#e8b04a" stroke-width="14" stroke-linecap="round"/><circle cx="360" cy="200" r="9" fill="#e8b04a"/><path d="M330 110 L330 70 C330 30 400 30 400 70 C400 100 360 105 360 135 L360 170" fill="none" stroke="#151515" stroke-width="3" stroke-linecap="round" opacity=".25"/></svg><figcaption>読む前に、しおりを「問い」の形にしておく。</figcaption></figure>
 
-    <p class="t rv">何を知りたくて読むのか。それが決まらないまま読むと、目は文字を追っても、頭は何も拾いません。</p>
+    <p class="t rv first">何を知りたくて読むのか。それが決まらないまま読むと、目は文字を追っても、頭は何も拾いません。</p>
     <p class="t rv">1940年に出たアメリカの読書法の古典、モーティマー・アドラーの『本を読む本（How to Read a Book）』は、読み手が持つべき問いを4つに絞っています。</p>
     <div class="ms rv">
       <div><b>全体として何の本か</b><span>ひとことで言うと、何について書いてあるか。</span></div>
@@ -117,10 +90,11 @@
     <p class="t rv">アメリカの教育心理学者ロビンソンが1946年に広めた「SQ3R」という読み方も、最初の2つは「全体をざっと見る」「問いを立てる」です。読む前の30秒が、読んだあとの記憶を決めます。</p>
 </section>
 
-<section class="band b-blue chap dots" id="k2" data-ch="k2">
+<section class="band chap" id="k2" data-ch="k2">
   <span class="no">GIHO 02</span>
-  <div class="circ">②</div>
+  <div class="circ" data-n="02">②</div>
   <h2>先に地図を見る。<br>全部読もうとしない</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="本のページが地図になり、点線の道筋が目的地までのびている"><defs><pattern id="dtm" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#cfe5df"/><path d="M80 120 L220 90 L380 120 L520 90 L520 320 L380 350 L220 320 L80 350Z" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M220 90 L220 320 M380 120 L380 350" stroke="#151515" stroke-width="2" opacity=".4"/><path d="M80 120 L220 90 L220 320 L80 350Z" fill="url(#dtm)" opacity=".35"/><path d="M115 310 C170 250 150 200 230 190 C310 180 290 280 370 250 C430 228 420 160 480 140" fill="none" stroke="#0f7a6c" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/><circle cx="115" cy="310" r="10" fill="#151515"/><path d="M480 150 C480 120 455 112 455 96 a25 25 0 1 1 50 0 c0 16 -25 24 -25 54Z" fill="#e8b04a" stroke="#151515" stroke-width="3"/><circle cx="480" cy="96" r="8" fill="#fff"/><rect x="250" y="140" width="90" height="6" fill="#151515" opacity=".3"/><rect x="250" y="160" width="70" height="6" fill="#151515" opacity=".3"/><rect x="250" y="300" width="100" height="6" fill="#151515" opacity=".3"/><rect x="410" y="200" width="80" height="6" fill="#151515" opacity=".3"/><rect x="410" y="220" width="60" height="6" fill="#151515" opacity=".3"/><rect x="110" y="160" width="70" height="6" fill="#151515" opacity=".3"/><rect x="110" y="180" width="50" height="6" fill="#151515" opacity=".3"/></svg><figcaption>一字一句より先に、全体の地図を。</figcaption></figure>
 
     <p class="t rv">1ページ目から一字一句、順番に読む。それがまじめな読み方だと思っていませんか。</p>
     <p class="t rv">アドラーは、じっくり読む前に「点検読書」をするよう勧めています。まず、題名、まえがき、目次、索引、カバーの紹介文を見る。次に、わからないところで止まらず、最後までざっと通す。どこに何が書いてあるかの地図を、先に頭に入れるのです。</p>
@@ -141,12 +115,13 @@
     <p class="t rv">齋藤孝さんにも『「遅読」のすすめ』という本があり、時間をかけて読むこと、同じ本を何度も読むことを勧めています。地図で全体をつかむのは、寄り道を捨てるためではありません。どこで立ち止まるかを、自分で選ぶためです。大事な章は、次の技法でじっくり読みます。</p>
 </section>
 
-<section class="band b-yellow chap dots" id="k3" data-ch="k3">
+<section class="band chap" id="k3" data-ch="k3">
   <span class="no">GIHO 03</span>
-  <div class="circ">③</div>
+  <div class="circ" data-n="03">③</div>
   <h2>線は、<br>色で分けて少なく</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="本文に赤・青・緑の線が引かれ、三本のボールペンが置かれている"><defs><pattern id="dtp" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#f6f3ee"/><rect x="60" y="60" width="480" height="300" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M100 110h380" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 132h340" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 154h370" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 176h300" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 198h380" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 220h350" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 242h320" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 264h380" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 286h360" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 308h280" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 330h330" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.25"/><path d="M100 132h300" stroke="#e2342b" stroke-width="6" stroke-linecap="round"/><path d="M100 198h230M100 220h300" stroke="#2457d6" stroke-width="6" stroke-linecap="round"/><path d="M100 308h200" stroke="#1f9a4b" stroke-width="6" stroke-linecap="round"/><ellipse cx="250" cy="132" rx="70" ry="16" fill="none" stroke="#e2342b" stroke-width="3" transform="rotate(-3 250 132)"/><g transform="translate(420 170) rotate(28)"><rect x="-9" y="-150" width="18" height="230" rx="9" fill="#e2342b" stroke="#151515" stroke-width="3"/><path d="M-9 80 L0 112 L9 80Z" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M-2 104 L0 112 L2 104Z" fill="#151515"/><rect x="-4" y="-170" width="8" height="26" fill="#151515"/></g><g transform="translate(458 196) rotate(34)"><rect x="-9" y="-150" width="18" height="230" rx="9" fill="#2457d6" stroke="#151515" stroke-width="3"/><path d="M-9 80 L0 112 L9 80Z" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M-2 104 L0 112 L2 104Z" fill="#151515"/><rect x="-4" y="-170" width="8" height="26" fill="#151515"/></g><g transform="translate(496 222) rotate(40)"><rect x="-9" y="-150" width="18" height="230" rx="9" fill="#1f9a4b" stroke="#151515" stroke-width="3"/><path d="M-9 80 L0 112 L9 80Z" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M-2 104 L0 112 L2 104Z" fill="#151515"/><rect x="-4" y="-170" width="8" height="26" fill="#151515"/></g></svg><figcaption>赤は少なく、青は気楽に、緑は自分の「おっ」。</figcaption></figure>
 
-    <p class="t rv">蛍光ペンで、ページの半分が黄色。研究の評価で線を引くことが下のほうにあったのは、線を引くだけでは「どこが大事か」を考えなくてすむからです。</p>
+    <p class="t rv first">蛍光ペンで、ページの半分が黄色。研究の評価で線を引くことが下のほうにあったのは、線を引くだけでは「どこが大事か」を考えなくてすむからです。</p>
     <p class="t rv">齋藤孝さんは『読書力』（岩波新書、2002年）で、線を引きながら読むことを勧め、その道具として三色ボールペンを挙げています。ポイントは、色ごとに「選ぶ基準」を変えることです。</p>
     <div class="pen rv">
       <div class="r"><b>赤　客観的に、とても大事</b><span>そこだけ読めば主旨が伝わるところ。いちばん少なく。キーワードは丸で囲む。</span></div>
@@ -161,12 +136,13 @@
     </div>
 </section>
 
-<section class="band b-pink chap dots" id="k4" data-ch="k4">
+<section class="band chap" id="k4" data-ch="k4">
   <span class="no">GIHO 04</span>
-  <div class="circ">④</div>
+  <div class="circ" data-n="04">④</div>
   <h2>本を閉じて、<br>思い出す</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="閉じた本の横で、白い紙に覚えていることを書き出している"><defs><pattern id="dtr" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#cfe5df"/><rect x="0" y="0" width="600" height="400" fill="url(#dtr)" opacity=".25"/><g transform="rotate(-8 170 220)"><rect x="80" y="120" width="190" height="230" rx="6" fill="#151515"/><rect x="92" y="128" width="170" height="214" fill="#0f7a6c"/><rect x="120" y="170" width="114" height="44" fill="#f6f3ee"/><path d="M140 192h74" stroke="#151515" stroke-width="5"/><path d="M224 120 v-30 l12 10 l12 -10 v30" fill="#e8b04a" stroke="#151515" stroke-width="3"/></g><g transform="rotate(4 420 210)"><rect x="320" y="70" width="210" height="280" fill="#fff" stroke="#151515" stroke-width="3"/><path d="M345 115h150" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.7"/><path d="M345 141h110" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.7"/><path d="M345 167h135" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.7"/><path d="M345 193h80" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity="0.7"/><path d="M345 245h60" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity=".7"/><path d="M415 245h70" stroke="#e2342b" stroke-width="5" stroke-linecap="round" stroke-dasharray="6 9"/><path d="M345 275h120" stroke="#151515" stroke-width="5" stroke-linecap="round" opacity=".7"/><text x="500" y="250" font-family="serif" font-size="30" fill="#e2342b">?</text></g><g transform="translate(540 330) rotate(40)"><rect x="-7" y="-120" width="14" height="110" fill="#e8b04a" stroke="#151515" stroke-width="3"/><path d="M-7 -10 L0 12 L7 -10Z" fill="#fff" stroke="#151515" stroke-width="3"/></g></svg><figcaption>本を閉じて、白紙に書く。書けない所が「わかったつもり」。</figcaption></figure>
 
-    <p class="t rv">この章が、いちばん大事です。</p>
+    <p class="t rv first">この章が、いちばん大事です。</p>
     <p class="t rv">冒頭の実験で差がついたのは、「思い出す」をしたかどうかでした。研究では「テスト効果」「検索練習」と呼ばれます。思い出そうとする、その苦労そのものが、記憶を強くします。ダンロスキーらの評価でも、効果が高いとされた2つのうちの1つです。</p>
     <p class="t rv">読書でやるなら、こうです。</p>
     <ul class="chk rv">
@@ -179,12 +155,13 @@
     <p class="t rv">思い出せないと、気分はよくありません。でもその「うっ」となる感じこそが、効いているしるしです。</p>
 </section>
 
-<section class="band b-cream chap dots" id="k5" data-ch="k5">
+<section class="band chap" id="k5" data-ch="k5">
   <span class="no">GIHO 05</span>
-  <div class="circ">⑤</div>
+  <div class="circ" data-n="05">⑤</div>
   <h2>「なぜ？」を<br>自分に説明する</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="考える人の横顔から「なぜ？」「つまり」「〇〇対△△」の吹き出しが続く"><defs><pattern id="dtw" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#f6f3ee"/><circle cx="160" cy="250" r="110" fill="url(#dtw)" opacity=".3"/><path d="M110 360 C100 300 90 270 105 220 C115 180 150 150 195 152 C245 154 270 190 268 228 C266 245 280 252 274 262 C270 270 262 268 262 280 C262 292 252 296 238 296 C226 296 226 318 228 360Z" fill="#151515"/><path d="M300 150 h120 a18 18 0 0 1 18 18 v44 a18 18 0 0 1 -18 18 h-80 l-26 22 v-22 h-14 a18 18 0 0 1 -18 -18 v-44 a18 18 0 0 1 18 -18Z" fill="#fff" stroke="#151515" stroke-width="3"/><text x="360" y="203" text-anchor="middle" font-family="'Shippori Mincho B1',serif" font-weight="800" font-size="32" fill="#151515">なぜ？</text><path d="M420 60 h110 a16 16 0 0 1 16 16 v38 a16 16 0 0 1 -16 16 h-70 l-22 20 v-20 h-18 a16 16 0 0 1 -16 -16 v-38 a16 16 0 0 1 16 -16Z" fill="#0f7a6c"/><text x="475" y="104" text-anchor="middle" font-family="'Shippori Mincho B1',serif" font-weight="800" font-size="26" fill="#fff">つまり</text><path d="M400 290 h130 a16 16 0 0 1 16 16 v38 a16 16 0 0 1 -16 16 h-130 a16 16 0 0 1 -16 -16 v-38 a16 16 0 0 1 16 -16Z" fill="#e8b04a" stroke="#151515" stroke-width="3"/><text x="465" y="334" text-anchor="middle" font-family="'Shippori Mincho B1',serif" font-weight="800" font-size="24" fill="#151515">〇〇 対 △△</text><path d="M440 232 C450 255 455 268 462 286" stroke="#151515" stroke-width="2.5" fill="none" stroke-dasharray="4 6"/></svg><figcaption>「なぜ？」から「つまり」へ。自分の言葉で言い直す。</figcaption></figure>
 
-    <p class="t rv">書いてあることを、そのまま覚えようとしても残りません。すでに知っていることと、つなげたときに残ります。</p>
+    <p class="t rv first">書いてあることを、そのまま覚えようとしても残りません。すでに知っていることと、つなげたときに残ります。</p>
     <p class="t rv">ダンロスキーらが「中くらいの効果」とした方法のうち、読書に使えるのが次の2つです。</p>
     <div class="ms one rv">
       <div><b>「なぜ？」と問う（精緻化質問）</b><span>「なぜそう言えるのか？」「なぜそうなるのか？」を、自分に聞きながら読む。</span></div>
@@ -198,12 +175,13 @@
     </div>
 </section>
 
-<section class="band b-lime chap dots" id="k6" data-ch="k6">
+<section class="band chap" id="k6" data-ch="k6">
   <span class="no">GIHO 06</span>
-  <div class="circ">⑥</div>
+  <div class="circ" data-n="06">⑥</div>
   <h2>日をあけて、<br>もう一度思い出す</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="0日、1日、7日、30日と書かれた日めくりカレンダーが点線でつながっている"><defs><pattern id="dts" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#cfe5df"/><rect x="0" y="300" width="600" height="100" fill="url(#dts)" opacity=".35"/><path d="M40 250 C140 200 200 290 300 230 S470 200 560 240" fill="none" stroke="#151515" stroke-width="3" stroke-dasharray="3 10" stroke-linecap="round"/><g transform="translate(40 110)"><rect width="100" height="120" fill="#0f7a6c" stroke="#151515" stroke-width="3"/><rect width="100" height="26" fill="#151515"/><circle cx="25" cy="13" r="5" fill="#f6f3ee"/><circle cx="75" cy="13" r="5" fill="#f6f3ee"/><text x="50" y="96" text-anchor="middle" font-family="'Bodoni Moda',serif" font-size="56" fill="#fff">0</text></g><g transform="translate(180 160)"><rect width="100" height="120" fill="#0f7a6c" stroke="#151515" stroke-width="3"/><rect width="100" height="26" fill="#151515"/><circle cx="25" cy="13" r="5" fill="#f6f3ee"/><circle cx="75" cy="13" r="5" fill="#f6f3ee"/><text x="50" y="96" text-anchor="middle" font-family="'Bodoni Moda',serif" font-size="56" fill="#fff">1</text></g><g transform="translate(320 120)"><rect width="100" height="120" fill="#0f7a6c" stroke="#151515" stroke-width="3"/><rect width="100" height="26" fill="#151515"/><circle cx="25" cy="13" r="5" fill="#f6f3ee"/><circle cx="75" cy="13" r="5" fill="#f6f3ee"/><text x="50" y="96" text-anchor="middle" font-family="'Bodoni Moda',serif" font-size="56" fill="#fff">7</text></g><g transform="translate(460 160)"><rect width="100" height="120" fill="#0f7a6c" stroke="#151515" stroke-width="3"/><rect width="100" height="26" fill="#151515"/><circle cx="25" cy="13" r="5" fill="#f6f3ee"/><circle cx="75" cy="13" r="5" fill="#f6f3ee"/><text x="50" y="96" text-anchor="middle" font-family="'Bodoni Moda',serif" font-size="56" fill="#fff">30</text></g><text x="300" y="380" text-anchor="middle" font-family="'Bodoni Moda',serif" font-style="italic" font-size="22" fill="#151515">day 0 · 1 · 7 · 30</text></svg><figcaption>間をあけて、何度でも「思い出す」。</figcaption></figure>
 
-    <p class="t rv">一晩で一冊を何度もくり返すより、間をあけて何回かに分けたほうが残ります。「分散学習」と呼ばれ、ダンロスキーらの評価で効果が高いとされた、もう1つの方法です。</p>
+    <p class="t rv first">一晩で一冊を何度もくり返すより、間をあけて何回かに分けたほうが残ります。「分散学習」と呼ばれ、ダンロスキーらの評価で効果が高いとされた、もう1つの方法です。</p>
     <p class="t rv">2006年、セペダらは、184本の論文、317の実験を集めて分析しました。わかったのは、<b>覚えておきたい期間が長いほど、くり返しの間隔も長くとったほうがよい</b>ということです。来週のテストなら数日おき。半年後の面接なら、もっと広くあけてかまいません。</p>
     <p class="t rv">読書なら、たとえばこう組みます。</p>
     <div class="cal rv">
@@ -216,12 +194,13 @@
     <p class="t rv">ポイントは、2回目以降も「読み返す」ではなく「思い出す」から始めることです。技法④と⑥は、組み合わせたときにいちばん効きます。</p>
 </section>
 
-<section class="band b-orange chap dots" id="k7" data-ch="k7">
+<section class="band chap" id="k7" data-ch="k7">
   <span class="no">GIHO 07</span>
-  <div class="circ">⑦</div>
+  <div class="circ" data-n="07">⑦</div>
   <h2>話す、引用する、<br>重ねて読む</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="色ちがいの本が積み重なり、その横で二つの吹き出しが会話している"><defs><pattern id="dtt" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#f6f3ee"/><circle cx="190" cy="250" r="140" fill="url(#dtt)" opacity=".3"/><rect x="90" y="320" width="220" height="34" fill="#0f7a6c" stroke="#151515" stroke-width="3" transform="rotate(0 200.0 337.0)"/><rect x="110" y="286" width="190" height="34" fill="#fff" stroke="#151515" stroke-width="3" transform="rotate(-2 205.0 303.0)"/><rect x="96" y="252" width="210" height="34" fill="#e8b04a" stroke="#151515" stroke-width="3" transform="rotate(1.5 201.0 269.0)"/><rect x="120" y="218" width="170" height="34" fill="#151515" stroke="#151515" stroke-width="3" transform="rotate(-1 205.0 235.0)"/><rect x="104" y="184" width="200" height="34" fill="#cfe5df" stroke="#151515" stroke-width="3" transform="rotate(2 204.0 201.0)"/><path d="M150 201h60" stroke="#151515" stroke-width="4"/><path d="M140 269h80" stroke="#151515" stroke-width="4"/><path d="M150 303h60" stroke="#151515" stroke-width="4"/><path d="M360 90 h170 a18 18 0 0 1 18 18 v48 a18 18 0 0 1 -18 18 h-120 l-30 26 v-26 h-20 a18 18 0 0 1 -18 -18 v-48 a18 18 0 0 1 18 -18Z" fill="#fff" stroke="#151515" stroke-width="3"/><text x="445" y="142" text-anchor="middle" font-family="'Shippori Mincho B1',serif" font-weight="800" font-size="21" fill="#151515">ひとことで言うと</text><path d="M380 230 h150 a18 18 0 0 1 18 18 v48 a18 18 0 0 1 -18 18 h-20 v26 l-30 -26 h-100 a18 18 0 0 1 -18 -18 v-48 a18 18 0 0 1 18 -18Z" fill="#0f7a6c"/><text x="455" y="282" text-anchor="middle" font-family="'Shippori Mincho B1',serif" font-weight="800" font-size="18" fill="#fff">どこが意外だった？</text></svg><figcaption>同じテーマを重ねて読み、だれかに話す。</figcaption></figure>
 
-    <p class="t rv">読んだ本は、使ったときに自分のものになります。</p>
+    <p class="t rv first">読んだ本は、使ったときに自分のものになります。</p>
     <p class="t rv">齋藤孝さんの『読書力』には、「本を引用する会話」「本を読んだら人に話す」という節があります。人に話そうとすると、思い出すことになり、自分の言葉で説明することになります。技法④と⑤が、自然に一度に起きるのです。</p>
     <div class="ask rv">
       <p>この本、ひとことで言うと〇〇って話なんだけど。</p>
@@ -234,9 +213,10 @@
     <p class="t rv">学部別の入門冊子には、それぞれ「読んでおきたい本」を並べています。読んだ本を志望理由につなげる考え方は、<a href="../gokui/shibou">志望理由書の極意</a>にまとめました。</p>
 </section>
 
-<section class="band b-ink chap dots" id="kc" data-ch="kc">
+<section class="band chap" id="kc" data-ch="kc">
   <span class="no">COLUMN</span>
   <h2 style="margin-top:26px">紙か、<br>画面か</h2>
+    <figure class="ill rv"><svg viewBox="0 0 600 400" role="img" aria-label="開いた紙の本と、文章が表示されたスマートフォンが並んでいる"><defs><pattern id="dtk" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#0f7a6c"/></pattern></defs><rect width="600" height="400" fill="#1f1f1f"/><rect x="0" y="0" width="600" height="400" fill="url(#dtk)" opacity=".25"/><g transform="rotate(-6 200 210)"><path d="M70 120 C130 100 170 105 200 120 C230 105 270 100 330 120 L330 310 C270 290 230 295 200 310 C170 295 130 290 70 310Z" fill="#f6f3ee" stroke="#f6f3ee" stroke-width="2"/><path d="M200 120 V310" stroke="#151515" stroke-width="2" opacity=".5"/><path d="M90 150 C120 142 160 142 188 150" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 150 C240 142 280 142 310 150" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M90 168 C120 160 160 160 188 168" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 168 C240 160 280 160 310 168" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M90 186 C120 178 160 178 188 186" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 186 C240 178 280 178 310 186" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M90 204 C120 196 160 196 188 204" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 204 C240 196 280 196 310 204" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M90 222 C120 214 160 214 188 222" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 222 C240 214 280 214 310 222" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M90 240 C120 232 160 232 188 240" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 240 C240 232 280 232 310 240" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M90 258 C120 250 160 250 188 258" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 258 C240 250 280 250 310 258" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M90 276 C120 268 160 268 188 276" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/><path d="M212 276 C240 268 280 268 310 276" stroke="#151515" stroke-width="3" fill="none" opacity=".45"/></g><g transform="rotate(7 450 210)"><rect x="385" y="85" width="130" height="250" rx="20" fill="#151515" stroke="#555" stroke-width="3"/><rect x="395" y="110" width="110" height="200" rx="4" fill="#2a3b39"/><rect x="405" y="125" width="90" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="141" width="67" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="157" width="84" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="173" width="61" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="189" width="78" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="205" width="55" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="221" width="72" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="237" width="89" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="253" width="66" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="269" width="83" height="5" fill="#cfe5df" opacity=".7"/><rect x="405" y="285" width="60" height="5" fill="#cfe5df" opacity=".7"/><rect x="430" y="94" width="40" height="6" rx="3" fill="#555"/></g><text x="300" y="380" text-anchor="middle" font-family="'Bodoni Moda',serif" font-style="italic" font-size="26" fill="#cfe5df">paper  /  screen</text></svg><figcaption>時間内に、説明文を、深く。そのときは紙。</figcaption></figure>
 
     <p class="t rv">スマホやタブレットで読んでも、同じように頭に残るのか。スペインとイスラエルの研究者デルガドらは、2000〜2017年の54の研究、のべ17万人あまりのデータをまとめて分析しました（2018年）。</p>
     <p class="t rv">結果は、<b>紙で読んだほうが、内容の理解がやや上</b>でした。差が目立ったのは、次のときです。</p>
@@ -248,9 +228,9 @@
     <p class="t rv">差はそれほど大きくありません。画面で読むなとは言いません。ただ、試験の課題文や、志望理由書のために読む専門書のような「時間内に、説明文を、深く」読む場面では、紙を選ぶ理由があります。</p>
 </section>
 
-<section class="band b-paper chap dots" id="k8" data-ch="k8">
+<section class="band chap" id="k8" data-ch="k8">
   <span class="no">CHECK</span>
-  <div class="circ">⑧</div>
+  <div class="circ" data-n="08">⑧</div>
   <h2>読書の<br>チェックリスト</h2>
 
     <p class="t rv"><b>読む前</b></p>
@@ -274,7 +254,7 @@
     </ul>
 </section>
 
-<section class="band b-ink final">
+<section class="band final">
   <div class="center"><span class="stamp pop" style="font-family:var(--display);font-size:18px;letter-spacing:.06em;padding:6px 16px">ひとことで言うと</span></div>
   <p class="lead big rv">本は、読んだ回数では残りません。閉じて思い出した回数で残ります。</p>
   <div class="vdots rv"><i></i><i></i><i></i></div>
@@ -283,12 +263,12 @@
   <a class="next rv" href="presentation.html"><small>あわせて読む</small>プレゼンの技法｜読み上げるだけのプレゼンを、やめる。 →</a>
 </section>
 
-<section class="band b-cream cta">
+<section class="band cta">
   <p class="rv">志望校・志望学部・受験方式に合わせた<br>「攻略の手引き」を、<br>ひとりずつ無料でお作りしています。</p>
   <a class="btn line rv" href="https://lin.ee/QtevyPN" target="_blank" rel="noopener">LINEで受け取る →</a>
 </section>
 
-<section class="band b-ink sources">
+<section class="band sources">
   <h3>参考にした資料</h3>
   <ul><li><a href="https://pubmed.ncbi.nlm.nih.gov/16507066/" target="_blank" rel="noopener">Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <i>Psychological Science</i>, 17(3), 249–255.</a></li>
 <li><a href="https://www.psychologicalscience.org/journals/pspi/1529100612453266/" target="_blank" rel="noopener">Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques. <i>Psychological Science in the Public Interest</i>.</a></li>
@@ -306,7 +286,7 @@
 <li><a href="https://books.bunshun.jp/ud/book/num/9784163905365" target="_blank" rel="noopener">千葉雅也『勉強の哲学 来たるべきバカのために』文藝春秋、2017年</a></li>
 <li><a href="https://bunshun.jp/articles/-/2371" target="_blank" rel="noopener">千葉雅也『勉強の哲学』「はじめに」（文春オンライン）</a></li>
 <li><a href="https://gendai.media/articles/-/85307" target="_blank" rel="noopener">山口尚「千葉雅也の思想を読む」（現代ビジネス、2021年）</a></li></ul>
-  <p class="note" style="margin-top:14px">※日本の著者の本の内容は、目次と、著者本人の文章・発言を載せた記事で確かめた範囲で書いています。SQ3Rは、F. P. Robinson『Effective Study』（1946年）で広まった読み方です。2026年11月28日時点の情報です。</p>
+  <p class="note" style="margin-top:14px">※挿絵はすべて、このページのために描いたオリジナルです。日本の著者の本の内容は、目次と、著者本人の文章・発言を載せた記事で確かめた範囲で書いています。SQ3Rは、F. P. Robinson『Effective Study』（1946年）で広まった読み方です。2026年11月28日時点の情報です。</p>
   <div class="center"><a class="btn ghost" href="../#jiji">思考の武器庫へ戻る →</a></div>
 </section>
 
